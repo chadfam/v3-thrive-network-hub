@@ -4,9 +4,8 @@ import BizArgument from "@/components/businesses/BizArgument";
 import BizProfitPartners from "@/components/businesses/BizProfitPartners";
 import BizMastermindPassport from "@/components/businesses/BizMastermindPassport";
 import BizCommandCentral from "@/components/businesses/BizCommandCentral";
-import BizTeamWellness from "@/components/businesses/BizTeamWellness";
-import BizMatrix from "@/components/businesses/BizMatrix";
 import BizWer1Band from "@/components/businesses/BizWer1Band";
+import BizTeamWellness from "@/components/businesses/BizTeamWellness";
 import BizWhoInside from "@/components/businesses/BizWhoInside";
 import BizApply from "@/components/businesses/BizApply";
 
@@ -21,9 +20,8 @@ const Businesses = () => (
     <BizProfitPartners />
     <BizMastermindPassport />
     <BizCommandCentral />
-    <BizTeamWellness />
-    <BizMatrix />
     <BizWer1Band />
+    <BizTeamWellness />
     <BizWhoInside />
     <BizApply />
   </Layout>

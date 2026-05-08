@@ -5,15 +5,11 @@ import Layout from "@/components/site/Layout";
 type Ctx = { label: string; headline: string; preselect?: string };
 
 const ROLE_MAP: Record<string, Ctx> = {
+  "profit-partners":  { label: "PROFIT PARTNERS",      headline: "Apply to Profit Partners.",         preselect: "Profit Partners" },
   promoter:           { label: "WER1 PROMOTER",        headline: "Apply to become a WER1 promoter.",  preselect: "WER1 promoter" },
   "local-leader":     { label: "LOCAL LEADER",         headline: "Apply to become a Local Leader.",   preselect: "Local Leader" },
   "fam-guide":        { label: "FAM GUIDE",            headline: "Apply to become a FAM Guide.",      preselect: "FAM Guide" },
   "expert-faculty":   { label: "EXPERT FACULTY",       headline: "Apply to Expert Faculty.",          preselect: "Expert Faculty" },
-};
-const TIER_MAP: Record<string, Ctx> = {
-  "profit-partner":   { label: "TIER ONE · PROFIT PARTNER", headline: "Apply at Tier One: Profit Partner.", preselect: "Profit Partner" },
-  "mastermind":       { label: "TIER TWO · MASTERMIND",     headline: "Apply at Tier Two: Mastermind.",     preselect: "Mastermind tier" },
-  "inner-circle":     { label: "TIER THREE · INNER CIRCLE", headline: "Apply at Tier Three: Inner Circle.", preselect: "Inner Circle tier" },
 };
 const PROGRAM_MAP: Record<string, Ctx> = {
   "mastermind-passport": { label: "MASTERMIND PASSPORT", headline: "Apply for the Mastermind Passport.", preselect: "Mastermind Passport" },
@@ -33,12 +29,10 @@ const Apply = () => {
   const [submitted, setSubmitted] = useState(false);
 
   const role = params.get("role") ?? "";
-  const tier = params.get("tier") ?? "";
   const program = params.get("program") ?? "";
 
   const ctx: Ctx =
     ROLE_MAP[role] ??
-    TIER_MAP[tier] ??
     PROGRAM_MAP[program] ??
     { label: "APPLY", headline: "Apply to United to Thrive." };
 

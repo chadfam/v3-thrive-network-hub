@@ -205,12 +205,15 @@ All colors MUST be HSL.
   .bg-brand-blue-hover { background-color: var(--brand-blue-hover); }
   .bg-brand-blue-light { background-color: var(--brand-blue-light); }
   .bg-brand-navy { background-color: var(--brand-navy); }
+  .bg-brand-gold { background-color: var(--brand-gold); }
+  .bg-brand-gold-soft { background-color: var(--brand-gold-soft); }
   .bg-section-tint { background-color: var(--section-tint); }
   .bg-subtle-tint { background-color: var(--subtle-tint); }
   .text-brand-blue { color: var(--brand-blue); }
   .text-brand-gold { color: var(--brand-gold); }
   .text-brand-navy { color: var(--brand-navy); }
   .border-brand-blue { border-color: var(--brand-blue); }
+  .border-brand-gold { border-color: var(--brand-gold); }
   .border-light { border-color: var(--border-light); }
 
   .hero-headline {
