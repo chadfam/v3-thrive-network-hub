@@ -5,20 +5,20 @@ const HowWavesOfPay = () => {
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div>
           <p className="text-[13px] font-medium uppercase tracking-[0.16em] text-slate-500">
-            THE PATENTED MECHANIC
+            THE COMPENSATION MODEL
           </p>
           <h2
             className="mt-6 font-serif-display text-slate-ink"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
           >
-            Why we patented this.
+            Why this works.
           </h2>
           <div className="mt-8 space-y-6 max-w-[480px]">
             <p className="text-[19px] leading-relaxed text-slate-700">
               Most affiliate models stop at one tier. The person who clicks your link generates a commission. Anyone they bring in is invisible to your earnings. WER1 doesn't work that way.
             </p>
             <p className="text-[19px] leading-relaxed text-slate-700">
-              The Waves of Pay model is patented because it solves a specific problem. When you bring someone into the network and they go on to make introductions, you don't disappear from the math. The platform keeps tracking. The percentage decreases as the wave moves outward, but it never zeros out.
+              The Waves of Pay model solves a specific problem. When you bring someone into the network and they go on to make introductions, you don't disappear from the math. The platform keeps tracking. The percentage decreases as the wave moves outward, but it never zeros out.
             </p>
             <p className="text-[19px] leading-relaxed text-slate-700">
               This is what we mean by movement-driven commerce. The whole network is built so that doing the work of connecting actually keeps paying.

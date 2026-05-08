@@ -24,7 +24,7 @@ const W1Earnings = () => {
               A typical affiliate platform pays you when someone clicks your link and buys. That's it. The relationship ends with the first transaction. The person who clicked your link goes on to introduce three other people, and you never see any of it.
             </p>
             <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-              WER1's patented Waves of Pay model works differently. The first wave is direct: someone clicks your link, they buy, you earn. The second wave is the people they bring in: you earn a smaller percentage. The third wave is the next layer out. The percentages decrease as the wave moves outward, but they don't zero out. The platform tracks the chain and pays accordingly.
+              WER1's Waves of Pay model works differently. The first wave is direct: someone clicks your link, they buy, you earn. The second wave is the people they bring in: you earn a smaller percentage. The third wave is the next layer out. The percentages decrease as the wave moves outward, but they don't zero out. The platform tracks the chain and pays accordingly.
             </p>
             <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
               Promoters who bring in active people early often build a stream of small payments that rolls in for years. The work was making the introduction. The payment keeps coming because the introduction keeps producing.

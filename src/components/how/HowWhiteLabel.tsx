@@ -24,7 +24,7 @@ const HowWhiteLabel = () => {
           </h2>
           <div className="mt-8 space-y-6 max-w-[480px]">
             <p className="text-[19px] leading-relaxed text-white/90">
-              If you have a business that needs an affiliate or referral program, we can configure WER1 to run it. Same patented platform you see here, branded for your company.
+              If you have a business that needs an affiliate or referral program, we can configure WER1 to run it. Same platform you see here, branded for your company.
             </p>
             <p className="text-[19px] leading-relaxed text-white/90">
               Your customers become your promoters. Your promoters become your sales team. The Waves of Pay model means a single happy customer can move outward through their network and keep generating attribution back to your business for years.

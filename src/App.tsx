@@ -18,6 +18,8 @@ import LocalLeaders from "./pages/LocalLeaders.tsx";
 import FamGuides from "./pages/FamGuides.tsx";
 import ExpertFaculty from "./pages/ExpertFaculty.tsx";
 import Wer1 from "./pages/Wer1.tsx";
+import PromoEngine from "./pages/PromoEngine.tsx";
+import FamCentral from "./pages/FamCentral.tsx";
 import Apply from "./pages/Apply.tsx";
 import Contact from "./pages/Contact.tsx";
 import Nominate from "./pages/Nominate.tsx";
@@ -47,6 +49,8 @@ const App = () => (
           <Route path="/fam-guides" element={<FamGuides />} />
           <Route path="/expert-faculty" element={<ExpertFaculty />} />
           <Route path="/wer1" element={<Wer1 />} />
+          <Route path="/promo-engine" element={<PromoEngine />} />
+          <Route path="/fam-central" element={<FamCentral />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/nominate" element={<Nominate />} />

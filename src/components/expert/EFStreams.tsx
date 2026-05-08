@@ -40,7 +40,7 @@ const streams = [
     num: "04",
     label: "STREAM FOUR",
     name: "Affiliate and referral earnings.",
-    body: "Participate in the WER1 affiliate platform. Earn commissions when families upgrade or make purchases through your influence on the platform. The patented Waves of Pay model means you also earn from the activity of people you bring into the network, for as long as they keep generating activity.",
+    body: "Participate in the WER1 affiliate platform. Earn commissions when families upgrade or make purchases through your influence on the platform. The Waves of Pay compensation model means you also earn from the activity of people you bring into the network, for as long as they keep generating activity.",
     items: [
       "Direct affiliate commissions on family upgrades",
       "Referral earnings from people you bring in",

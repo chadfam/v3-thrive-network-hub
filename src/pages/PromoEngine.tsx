@@ -1,0 +1,145 @@
+import Layout from "@/components/site/Layout";
+
+const features = [
+  {
+    title: "Centralized control",
+    body: "Set strategy at the corporate level. Empower locations to execute within clear guidelines. Manage roles, permissions, and campaigns without slowing down operations.",
+  },
+  {
+    title: "Brand consistency",
+    body: "Maintain control over messaging, offers, and customer experience. Every campaign stays on-brand and aligned with your standards across every location.",
+  },
+  {
+    title: "Total visibility",
+    body: "See exactly how each location and campaign performs in real time. Track true revenue, not just clicks. Make smarter decisions backed by data.",
+  },
+  {
+    title: "Drive repeat visits",
+    body: "Turn one-time customers into repeat customers. Increase visit frequency and maximize the value of the traffic you already have.",
+  },
+  {
+    title: "Built to scale",
+    body: "Whether you have 5 locations or 500, Promo Engine grows with you. Launch campaigns across every location in minutes without adding complexity or headcount.",
+  },
+  {
+    title: "Smarter decisions",
+    body: "Access clear, actionable insights without digging through data. Understand performance at a glance and report on revenue with confidence.",
+  },
+];
+
+const steps = [
+  { n: "1", name: "Create it", body: "Use the builder to create your promotion as a buy-now offer or coupon. Set your terms, publish it instantly as its own dedicated landing page." },
+  { n: "2", name: "Send it", body: "Promo Engine delivers offers through a variety of distribution channels, each with its own custom tracking links so you can reach customers wherever they engage." },
+  { n: "3", name: "Earn it", body: "As soon as a customer purchases an offer, the payment is processed and deposited directly into your bank account." },
+  { n: "4", name: "Track it", body: "Know exactly where revenue comes from with unique links for every channel. See which emails, texts, or posts are actually driving sales." },
+  { n: "5", name: "Scale it", body: "Every purchaser is automatically added to your customer database. Build lasting loyalty through automated birthday offers, referral programs, and ongoing engagement." },
+];
+
+const PromoEngine = () => (
+  <Layout
+    title="Promo Engine"
+    description="Sell high-converting promotions online and capture revenue before customers walk in. Built for in-person businesses with one location or five hundred. Part of the United to Thrive network."
+    canonical="/promo-engine"
+  >
+    <section style={{ backgroundColor: "#0B1F3F" }} className="text-white">
+      <div className="mx-auto max-w-[920px] px-6 sm:px-8 md:px-10 pt-24 md:pt-32 pb-20 md:pb-24 text-center">
+        <p className="text-[13px] tracking-[0.18em] uppercase text-white/70">PROMO ENGINE</p>
+        <h1
+          className="mt-6 font-serif-display text-white"
+          style={{ fontSize: "clamp(2.25rem, 6vw, 4.5rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
+        >
+          Turn future visits into <span style={{ color: "#FBBF24" }}>revenue today</span>.
+        </h1>
+        <p className="mt-8 text-[17px] md:text-[21px] leading-relaxed text-white/90 max-w-[720px] mx-auto">
+          Promo Engine is a promotional marketing platform built to turn customer demand into immediate, trackable revenue by allowing in-person businesses to sell high-converting promotions before the visit ever happens.
+        </p>
+        <div className="mt-10 flex flex-wrap gap-3 justify-center">
+          <a
+            href="https://promoengine.com/?ref=unitedtothrive"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-slate-ink bg-white hover:bg-brand-gold transition-colors"
+          >
+            Visit promoengine.com →
+          </a>
+          <a
+            href="/contact?topic=promo-engine"
+            className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white border border-white hover:bg-white hover:text-slate-ink transition-colors"
+          >
+            Book a demo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section className="bg-background">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
+        <div className="text-center max-w-[760px] mx-auto">
+          <p className="text-[13px] font-medium tracking-[0.18em] uppercase text-[hsl(var(--slate-500))]">
+            STOP WAITING FOR REVENUE. START CAPTURING IT.
+          </p>
+          <h2 className="mt-6 font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
+            Enterprise ready.<br />Location proven.
+          </h2>
+          <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+            Whether your internal marketing team wants full control to create, launch, and optimize campaigns across locations, or you prefer a more hands-off approach, our team can handle everything from strategy and execution to reporting on revenue and performance.
+          </p>
+        </div>
+
+        <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {features.map((f) => (
+            <div key={f.title} className="card-surface card-surface-hover rounded-2xl p-7 md:p-8">
+              <h3 className="font-serif-display text-slate-ink text-[22px] leading-tight">{f.title}</h3>
+              <p className="mt-4 text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">{f.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="surface-muted">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
+        <div className="text-center max-w-[760px] mx-auto">
+          <p className="text-[13px] font-medium tracking-[0.18em] uppercase text-[hsl(var(--slate-500))]">
+            HOW IT WORKS
+          </p>
+          <h2 className="mt-6 font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
+            From offer to revenue.<br />And beyond.
+          </h2>
+        </div>
+        <div className="mt-16 md:mt-20 grid md:grid-cols-5 gap-6 md:gap-8">
+          {steps.map((s) => (
+            <div key={s.n} className="bg-white rounded-2xl p-7 md:p-8 border border-[hsl(var(--slate-200))]">
+              <div className="font-serif-display text-brand-blue" style={{ fontSize: 48, lineHeight: 1 }}>
+                {s.n}
+              </div>
+              <h3 className="mt-4 font-serif-display text-slate-ink text-[20px] leading-tight">{s.name}</h3>
+              <p className="mt-3 text-[15px] leading-relaxed text-[hsl(var(--slate-700))]">{s.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="navy-cta-band">
+      <div className="mx-auto max-w-3xl px-6 sm:px-8 md:px-10 py-16 md:py-24 text-center">
+        <h2 className="font-serif-display text-white" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}>
+          See exactly how Promo Engine can generate revenue <span className="text-brand-gold">before the customer walks in</span>.
+        </h2>
+        <p className="mt-6 text-[17px] md:text-[19px] text-white/80 leading-relaxed">
+          In just a few minutes, we'll walk you through how it works and what it could look like for your locations.
+        </p>
+        <div className="mt-10">
+          <a
+            href="/contact?topic=promo-engine"
+            className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium bg-white text-brand-navy hover:bg-brand-gold hover:text-brand-navy transition-colors"
+          >
+            Book a demo & strategy session
+          </a>
+        </div>
+      </div>
+    </section>
+  </Layout>
+);
+
+export default PromoEngine;

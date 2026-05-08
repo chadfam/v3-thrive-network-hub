@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Local-only context files (brand docs, drafts, private notes)
+_context/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

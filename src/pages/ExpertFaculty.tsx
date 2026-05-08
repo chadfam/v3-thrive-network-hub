@@ -1,6 +1,4 @@
-import { Helmet } from "react-helmet-async";
-import Header from "@/components/site/Header";
-import Footer from "@/components/site/Footer";
+import Layout from "@/components/site/Layout";
 import EFHero from "@/components/expert/EFHero";
 import EFWhy from "@/components/expert/EFWhy";
 import EFDistribution from "@/components/expert/EFDistribution";
@@ -11,31 +9,22 @@ import EFWhoFits from "@/components/expert/EFWhoFits";
 import EFExperts from "@/components/expert/EFExperts";
 import EFApply from "@/components/expert/EFApply";
 
-const ExpertFaculty = () => {
-  return (
-    <div className="min-h-screen bg-background text-slate-ink">
-      <Helmet>
-        <title>Expert Faculty | United to Thrive</title>
-        <meta
-          name="description"
-          content="Five income streams for the expertise you've already built. Expert Faculty connects authors, speakers, coaches, and category leaders to families who came to FAM Central looking for trusted experts."
-        />
-      </Helmet>
-      <Header />
-      <main>
-        <EFHero />
-        <EFWhy />
-        <EFDistribution />
-        <EFStreams />
-        <EFCategories />
-        <EFHowItWorks />
-        <EFWhoFits />
-        <EFExperts />
-        <EFApply />
-      </main>
-      <Footer />
-    </div>
-  );
-};
+const ExpertFaculty = () => (
+  <Layout
+    title="Expert Faculty"
+    description="Five income streams for the expertise you've already built. Expert Faculty connects authors, speakers, coaches, and category leaders to families who came to FAM Central looking for trusted experts."
+    canonical="/expert-faculty"
+  >
+    <EFHero />
+    <EFWhy />
+    <EFDistribution />
+    <EFStreams />
+    <EFCategories />
+    <EFHowItWorks />
+    <EFWhoFits />
+    <EFExperts />
+    <EFApply />
+  </Layout>
+);
 
 export default ExpertFaculty;

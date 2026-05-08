@@ -14,8 +14,7 @@ const nav: NavItem[] = [
     items: [
       { label: "Overview", description: "For Businesses", href: "/businesses", isOverview: true },
       { label: "Profit Partners™", description: "The flagship working alliance", href: "/profit-partners" },
-      { label: "Team Wellness Hub", description: "Section 125 wellness program", href: "/team-wellness-hub" },
-      { label: "Mastermind Passport™", description: "Access to 40+ elite mastermind communities", href: "/mastermind-passport" },
+      { label: "Mastermind Passport™", description: "Access to elite mastermind communities", href: "/mastermind-passport" },
       { label: "Command Central™", description: "The vetted operating bench", href: "/command-central" },
     ],
   },
@@ -24,9 +23,18 @@ const nav: NavItem[] = [
     href: "/leaders",
     items: [
       { label: "Overview", description: "For Leaders", href: "/leaders", isOverview: true },
-      { label: "Local Leaders", description: "One leader per industry per zip code", href: "/local-leaders" },
       { label: "FAM Guides", description: "Family coaching practice with a platform underneath", href: "/fam-guides" },
+      { label: "Local Leaders", description: "One leader per industry per zip code", href: "/local-leaders" },
       { label: "Expert Faculty", description: "Five income streams for established experts", href: "/expert-faculty" },
+    ],
+  },
+  {
+    label: "Solutions",
+    href: "/promo-engine",
+    items: [
+      { label: "Promo Engine", description: "Sell promotions online before customers walk in", href: "/promo-engine" },
+      { label: "Team Wellness Hub", description: "Section 125 wellness program", href: "/team-wellness-hub" },
+      { label: "WER1", description: "The affiliate and referral platform", href: "/wer1" },
     ],
   },
   {
@@ -34,7 +42,7 @@ const nav: NavItem[] = [
     href: "/how-it-works",
     items: [
       { label: "The Network", description: "How United to Thrive works end to end", href: "/how-it-works", isOverview: true },
-      { label: "WER1", description: "The patented platform underneath", href: "/wer1" },
+      { label: "WER1", description: "The platform underneath", href: "/wer1" },
     ],
   },
   {

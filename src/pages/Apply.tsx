@@ -1,8 +1,6 @@
-import { useState } from "react";
+import { cloneElement, useId, useState, type ReactElement } from "react";
 import { useSearchParams } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import Header from "@/components/site/Header";
-import Footer from "@/components/site/Footer";
+import Layout from "@/components/site/Layout";
 
 type Ctx = { label: string; headline: string; preselect?: string };
 
@@ -22,9 +20,7 @@ const PROGRAM_MAP: Record<string, Ctx> = {
 };
 
 const ROLE_OPTIONS = [
-  "Profit Partner",
-  "Mastermind tier",
-  "Inner Circle tier",
+  "Profit Partners",
   "Local Leader",
   "FAM Guide",
   "Expert Faculty",
@@ -47,72 +43,72 @@ const Apply = () => {
     { label: "APPLY", headline: "Apply to United to Thrive." };
 
   return (
-    <div className="min-h-screen bg-background text-slate-ink">
-      <Helmet>
-        <title>Apply | United to Thrive</title>
-        <meta name="description" content="Apply to a United to Thrive program. We review every application and follow up within five business days." />
-      </Helmet>
-      <Header />
-      <main>
-        <section className="bg-background">
-          <div className="mx-auto max-w-4xl px-6 sm:px-8 md:px-10 pt-24 md:pt-32 pb-12 md:pb-16">
-            <p className="text-[13px] tracking-[0.18em] uppercase text-[hsl(var(--slate-500))]">{ctx.label}</p>
-            <h1 className="mt-6 font-serif-display text-slate-ink" style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
-              {ctx.headline}
-            </h1>
-            <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[640px]">
-              The application takes about ten minutes. We review every one and follow up within five business days. If there's a fit, we set up a 30-minute conversation.
-            </p>
-          </div>
-        </section>
+    <Layout
+      title="Apply"
+      description="Apply to a United to Thrive program. We review every application and follow up within five business days."
+      canonical="/apply"
+    >
+      <section className="bg-background">
+        <div className="mx-auto max-w-4xl px-6 sm:px-8 md:px-10 pt-24 md:pt-32 pb-12 md:pb-16">
+          <p className="text-[13px] tracking-[0.18em] uppercase text-[hsl(var(--slate-500))]">{ctx.label}</p>
+          <h1 className="mt-6 font-serif-display text-slate-ink" style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
+            {ctx.headline}
+          </h1>
+          <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[640px]">
+            The application takes about ten minutes. We review every one and follow up within five business days. If there's a fit, we set up a 30-minute conversation.
+          </p>
+        </div>
+      </section>
 
-        <section className="bg-background">
-          <div className="mx-auto max-w-2xl px-6 sm:px-8 md:px-10 pb-24 md:pb-32">
-            {submitted ? (
-              <div className="rounded-2xl border border-slate-ink/10 p-10 text-center">
-                <p className="font-serif-display text-[28px] text-slate-ink">Thank you, we'll be in touch within five business days.</p>
-              </div>
-            ) : (
-              <form
-                onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
-                className="grid gap-6"
-              >
-                <Field label="Full name" required><input required type="text" className={inputCls} /></Field>
-                <Field label="Email address" required><input required type="email" className={inputCls} /></Field>
-                <Field label="Phone number"><input type="tel" className={inputCls} /></Field>
-                <Field label="Business name (if applicable)"><input type="text" className={inputCls} /></Field>
-                <Field label="Website"><input type="url" className={inputCls} /></Field>
-                <Field label="Role of interest">
-                  <select defaultValue={ctx.preselect ?? ""} className={inputCls}>
-                    <option value="" disabled>Select a role</option>
-                    {ROLE_OPTIONS.map((r) => <option key={r} value={r}>{r}</option>)}
-                  </select>
-                </Field>
-                <Field label="Brief description of your business or background">
-                  <textarea rows={5} className={inputCls} />
-                </Field>
-                <button type="submit" className="mt-2 inline-flex items-center justify-center w-full sm:w-auto sm:self-start min-h-[48px] px-6 py-3.5 rounded-lg text-[15px] font-medium text-white bg-slate-ink hover:opacity-90 transition-opacity">
-                  Submit application →
-                </button>
-              </form>
-            )}
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
+      <section className="bg-background">
+        <div className="mx-auto max-w-2xl px-6 sm:px-8 md:px-10 pb-24 md:pb-32">
+          {submitted ? (
+            <div className="rounded-2xl border border-slate-ink/10 p-10 text-center">
+              <p className="font-serif-display text-[28px] text-slate-ink">Thank you, we'll be in touch within five business days.</p>
+            </div>
+          ) : (
+            <form
+              onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
+              className="grid gap-6"
+            >
+              <Field label="Full name" required><input required type="text" className={inputCls} /></Field>
+              <Field label="Email address" required><input required type="email" className={inputCls} /></Field>
+              <Field label="Phone number"><input type="tel" className={inputCls} /></Field>
+              <Field label="Business name (if applicable)"><input type="text" className={inputCls} /></Field>
+              <Field label="Website"><input type="url" className={inputCls} /></Field>
+              <Field label="Role of interest">
+                <select defaultValue={ctx.preselect ?? ""} className={inputCls}>
+                  <option value="" disabled>Select a role</option>
+                  {ROLE_OPTIONS.map((r) => <option key={r} value={r}>{r}</option>)}
+                </select>
+              </Field>
+              <Field label="Brief description of your business or background">
+                <textarea rows={5} className={inputCls} />
+              </Field>
+              <button type="submit" className="mt-2 inline-flex items-center justify-center w-full sm:w-auto sm:self-start min-h-[48px] px-6 py-3.5 rounded-lg text-[15px] font-medium text-white bg-slate-ink hover:opacity-90 transition-opacity">
+                Submit application →
+              </button>
+            </form>
+          )}
+        </div>
+      </section>
+    </Layout>
   );
 };
 
 const inputCls = "w-full min-h-[48px] rounded-lg border border-slate-ink/20 bg-white px-4 py-3 text-[16px] text-slate-ink focus:outline-none focus:border-slate-ink transition-colors";
 
-const Field = ({ label, required, children }: { label: string; required?: boolean; children: React.ReactNode }) => (
-  <label className="block">
-    <span className="block text-[13px] font-medium text-slate-ink mb-2">
-      {label} {required && <span className="text-[hsl(var(--slate-500))]">*</span>}
-    </span>
-    {children}
-  </label>
-);
+const Field = ({ label, required, children }: { label: string; required?: boolean; children: ReactElement<{ id?: string }> }) => {
+  const id = useId();
+  return (
+    <div>
+      <label htmlFor={id} className="block text-[13px] font-medium text-slate-ink mb-2">
+        {label} {required && <span className="text-[hsl(var(--slate-500))]" aria-hidden>*</span>}
+        {required && <span className="sr-only"> (required)</span>}
+      </label>
+      {cloneElement(children, { id })}
+    </div>
+  );
+};
 
 export default Apply;

@@ -20,7 +20,7 @@ const cards = [
   {
     n: "04",
     role: "The promoter who shared",
-    body: "Anyone can become a WER1 promoter. Share what you love. Get paid when people buy. Through the patented Waves of Pay model, you also earn from the introductions made by the people you brought into the network.",
+    body: "Anyone can become a WER1 promoter. Share what you love. Get paid when people buy. Through the Waves of Pay compensation model, you also earn from the introductions made by the people you brought into the network.",
     example: "A promoter shares a Profit Partners business on social media. Three people sign up through her link. Two of them buy from network businesses. She earns on those purchases and on the future earnings of everyone she brought in.",
   },
 ];

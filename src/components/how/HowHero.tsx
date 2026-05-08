@@ -13,7 +13,7 @@ const HowHero = () => {
           className="mx-auto mt-8 text-white/90"
           style={{ fontSize: "clamp(17px, 1.5vw, 21px)", lineHeight: 1.55, maxWidth: 720 }}
         >
-          WER1 is the patented referral platform we own. It tracks every introduction inside the United to Thrive network and pays the four people whose work made the deal happen. The family who recommended. The leader who connected. The partner who introduced. The promoter who shared. The mechanics are below.
+          WER1 is the referral platform we own. It tracks every introduction inside the United to Thrive network and pays the four people whose work made the deal happen. The family who recommended. The leader who connected. The partner who introduced. The promoter who shared. The mechanics are below.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">

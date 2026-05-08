@@ -14,7 +14,7 @@ const cards = [
   {
     label: "PATH TWO",
     heading: "For businesses.",
-    body: "Run your entire affiliate, referral, or customer-loyalty program on top of the WER1 platform. Branded for your business. Configured for your structure. Underpinned by the patented Waves of Pay model.",
+    body: "Run your entire affiliate, referral, or customer-loyalty program on top of the WER1 platform. Branded for your business. Configured for your structure. Underpinned by the Waves of Pay compensation model.",
     highlights: [
       "White-labeled for your brand",
       "Single-tier or multi-tier configurations",
@@ -37,7 +37,7 @@ const W1TwoWays = () => {
             Two ways to use WER1.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[720px] mx-auto">
-            The platform serves two distinct audiences. Promoters share what they trust and earn through the network. Businesses run their entire affiliate or referral program on the platform we built. Both paths use the same patented Waves of Pay model underneath.
+            The platform serves two distinct audiences. Promoters share what they trust and earn through the network. Businesses run their entire affiliate or referral program on the platform we built. Both paths use the same Waves of Pay compensation model underneath.
           </p>
         </div>
 

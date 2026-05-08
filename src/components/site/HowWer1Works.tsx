@@ -11,11 +11,11 @@ const points: { lead: string; body: string }[] = [
   },
   {
     lead: "For partners with their own businesses.",
-    body: "We can configure WER1 as the affiliate or referral engine behind your business. The same patented platform you see here, branded for your company.",
+    body: "We can configure WER1 as the affiliate or referral engine behind your business. The same platform you see here, branded for your company.",
   },
   {
     lead: "For promoters.",
-    body: "Share what you love. Get paid when people buy. Our patented Waves of Pay model means you also earn from the introductions made by people you brought into the network.",
+    body: "Share what you love. Get paid when people buy. The Waves of Pay compensation model means you also earn from the introductions made by people you brought into the network.",
   },
 ];
 
@@ -36,7 +36,7 @@ const HowWer1Works = () => {
             <br /> This one pays four.
           </h2>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-white/90">
-            WER1 is the patented affiliate and referral platform we acquired to power the entire United to Thrive network. When a referral turns into business, the platform pays four kinds of people automatically: the family who made the recommendation, the local leader who made the connection, the partner who made the introduction, and the promoter who made the share. Most B2B networks ask members to keep their own records and trust the rest. Ours doesn't ask. It runs.
+            WER1 is the affiliate and referral platform we acquired to power the entire United to Thrive network. When a referral turns into business, the platform pays four kinds of people automatically: the family who made the recommendation, the local leader who made the connection, the partner who made the introduction, and the promoter who made the share. Most B2B networks ask members to keep their own records and trust the rest. Ours doesn't ask. It runs.
           </p>
 
           <ul className="mt-10 space-y-6">

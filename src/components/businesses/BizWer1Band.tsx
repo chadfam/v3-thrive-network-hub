@@ -6,11 +6,11 @@ const BizWer1Band = () => {
           One platform. <span className="ppx-italic">Every introduction.</span>
         </h2>
         <p className="mt-6 mx-auto max-w-2xl text-[17px] md:text-[19px] leading-relaxed text-white/80">
-          All four programs run on WER1, the patented referral platform we own. Every introduction inside the network gets attributed to its source and paid automatically.
+          All three programs run on WER1, the referral platform we own. Every introduction inside the network gets attributed to its source and paid automatically.
         </p>
         <div className="mt-12 grid grid-cols-3 gap-6 md:gap-12 max-w-3xl mx-auto">
           <div>
-            <div className="gold-stat-num">4</div>
+            <div className="gold-stat-num">3</div>
             <p className="mt-3 text-[13px] md:text-[14px] text-white/70">Programs running on one engine</p>
           </div>
           <div>

@@ -11,7 +11,7 @@ const configs = [
   },
   {
     name: "Multi-tier Waves of Pay",
-    body: "The full WER1 model. Wave 1 direct earnings, Wave 2 from people you brought in, Wave 3 and outward at decreasing percentages. The patented version.",
+    body: "The full WER1 model. Wave 1 direct earnings, Wave 2 from people you brought in, Wave 3 and outward at decreasing percentages.",
     fit: "Businesses where word of mouth keeps building outward and the customer base spreads through introductions.",
   },
   {

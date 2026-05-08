@@ -1,4 +1,4 @@
-import Header from "@/components/site/Header";
+import Layout from "@/components/site/Layout";
 import Hero from "@/components/site/Hero";
 import Argument from "@/components/site/Argument";
 import ThreePaths from "@/components/site/ThreePaths";
@@ -7,25 +7,21 @@ import HowWer1Works from "@/components/site/HowWer1Works";
 import TheRoom from "@/components/site/TheRoom";
 import WhyFamilies from "@/components/site/WhyFamilies";
 import NextStep from "@/components/site/NextStep";
-import Footer from "@/components/site/Footer";
 
-const Index = () => {
-  return (
-    <div className="min-h-screen bg-background text-slate-ink">
-      <Header />
-      <main>
-        <Hero />
-        <Argument />
-        <ThreePaths />
-        <HowWer1Works />
-        <FullNetwork />
-        <TheRoom />
-        <WhyFamilies />
-        <NextStep />
-      </main>
-      <Footer />
-    </div>
-  );
-};
+const Index = () => (
+  <Layout
+    description="The network behind Profit Partners, Mastermind Passport, Command Central, and the WER1 referral engine. Where businesses become famous for families."
+    canonical="/"
+  >
+    <Hero />
+    <Argument />
+    <ThreePaths />
+    <HowWer1Works />
+    <FullNetwork />
+    <TheRoom />
+    <WhyFamilies />
+    <NextStep />
+  </Layout>
+);
 
 export default Index;

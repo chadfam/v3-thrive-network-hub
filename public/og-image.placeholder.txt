@@ -1,0 +1,16 @@
+TODO: Create a real og-image.png at this location.
+
+Required: 1200 × 630 pixels (Facebook/LinkedIn standard for og:image)
+Recommended content:
+  - Background: navy #0B1F3F or blue #2563EB
+  - Thrive logo (use /thrive-logo.svg as a starting point)
+  - Tagline: "Famous for families."
+  - Optional accent: gold #FBBF24
+
+Until this exists, social shares (Facebook, LinkedIn, X/Twitter) will not show
+a preview image. The site will still work; previews will just be blank/text-only.
+
+Tools to generate quickly:
+  - Figma / Canva (1200×630 template)
+  - https://og-playground.vercel.app/ (Vercel's free generator)
+  - Screenshot of the home page hero, scaled to 1200×630

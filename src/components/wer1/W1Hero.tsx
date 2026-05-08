@@ -12,10 +12,10 @@ const W1Hero = () => {
           className="mt-8 font-serif-display text-white"
           style={{ fontSize: "clamp(1.75rem, 4.5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
         >
-          The patented affiliate platform behind the network.
+          The affiliate platform behind the network.
         </h1>
         <p className="mt-8 text-[17px] md:text-[21px] leading-relaxed text-white/90 max-w-[720px] mx-auto">
-          WER1 is a patented affiliate and referral platform built on a Waves of Pay model that pays multiple people per transaction. We use it to power every program inside United to Thrive. We also offer it as a promoter platform for individuals and as a white-label engine for partner businesses.
+          WER1 is an affiliate and referral platform built on a Waves of Pay compensation model that pays multiple people per transaction. We use it to power every program inside United to Thrive. We also offer it as a promoter platform for individuals and as a white-label engine for partner businesses.
         </p>
         <div className="mt-10 flex flex-wrap gap-3 justify-center">
           <a

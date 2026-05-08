@@ -23,14 +23,14 @@ const W1WhiteLabel = () => {
             className="mt-6 font-serif-display text-white"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
           >
-            Your affiliate program. Our patented platform.
+            Your affiliate program. Our platform.
           </h2>
           <div className="mt-8 space-y-6 max-w-[540px]">
             <p className="text-[17px] md:text-[19px] leading-relaxed text-white/90">
               If you have a business that needs an affiliate program, a referral program, or a customer-loyalty engine, we can configure WER1 to run it. Branded for your company. Hosted on your domain or ours. Configured for your specific structure.
             </p>
             <p className="text-[17px] md:text-[19px] leading-relaxed text-white/90">
-              The patent on Waves of Pay is real intellectual property. Most off-the-shelf affiliate tools can't replicate it because they don't have rights to it. Your customers become promoters. Your promoters earn from the people they bring in. The result is a referral program that gets stronger over time instead of plateauing at the first ring of advocates.
+              The Waves of Pay compensation model is what most off-the-shelf affiliate tools don't do. Your customers become promoters. Your promoters earn from the people they bring in. The result is a referral program that gets stronger over time instead of plateauing at the first ring of advocates.
             </p>
           </div>
           <a href="/contact?topic=white-label" className="group mt-8 inline-flex items-center gap-2 text-[16px] text-white">

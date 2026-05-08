@@ -5,13 +5,18 @@ type LinkItem = { label: string; to: string; external?: boolean };
 
 const programs: LinkItem[] = [
   { label: "Profit Partners™", to: "/profit-partners" },
-  { label: "Team Wellness Hub", to: "/team-wellness-hub" },
   { label: "Mastermind Passport™", to: "/mastermind-passport" },
   { label: "Command Central™", to: "/command-central" },
-  { label: "Local Leaders", to: "/local-leaders" },
   { label: "FAM Guides", to: "/fam-guides" },
+  { label: "Local Leaders", to: "/local-leaders" },
   { label: "Expert Faculty", to: "/expert-faculty" },
+];
+
+const solutions: LinkItem[] = [
+  { label: "Promo Engine", to: "/promo-engine" },
+  { label: "Team Wellness Hub", to: "/team-wellness-hub" },
   { label: "WER1", to: "/wer1" },
+  { label: "FAM Central", to: "/fam-central" },
 ];
 
 const company: LinkItem[] = [
@@ -23,9 +28,10 @@ const company: LinkItem[] = [
 ];
 
 const network: LinkItem[] = [
-  { label: "WER1.com", to: "https://wer1.com", external: true },
-  { label: "ProfitPartnersPHX.com", to: "https://profitpartnersphx.com", external: true },
   { label: "UnitedToThrive.com", to: "/" },
+  { label: "ProfitPartnersPHX.com", to: "https://profitpartnersphx.com", external: true },
+  { label: "PromoEngine.com", to: "https://promoengine.com", external: true },
+  { label: "WER1.com", to: "https://wer1.com", external: true },
 ];
 
 const ColHeader = ({ children }: { children: string }) => (
@@ -64,10 +70,14 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="mt-12 grid md:grid-cols-4 gap-10">
+        <div className="mt-12 grid md:grid-cols-5 gap-10">
           <div>
             <ColHeader>Programs</ColHeader>
             <ul className="space-y-3">{programs.map((p) => <li key={p.label}>{renderLink(p)}</li>)}</ul>
+          </div>
+          <div>
+            <ColHeader>Solutions</ColHeader>
+            <ul className="space-y-3">{solutions.map((p) => <li key={p.label}>{renderLink(p)}</li>)}</ul>
           </div>
           <div>
             <ColHeader>Company</ColHeader>

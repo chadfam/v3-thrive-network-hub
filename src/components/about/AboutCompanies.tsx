@@ -1,13 +1,14 @@
 const programs = [
-  { name: "Profit Partners™", desc: "The flagship business alliance. A working referral network of owners building joint ventures and partnerships. Three annual tiers." },
-  { name: "WER1", desc: "The patented affiliate and referral platform we acquired. The technical layer underneath every program in the network. Available as white-label for partner businesses." },
+  { name: "Profit Partners™", desc: "The flagship business alliance. A working referral network of owners building joint ventures and partnerships." },
+  { name: "WER1", desc: "The affiliate and referral platform we acquired. The technical layer underneath every program in the network. Available as white-label for partner businesses." },
   { name: "FAM Central", desc: "The family engagement platform. Where families connect with local leaders, expert content, and the businesses that earn their recommendation. Operates as a related property to United to Thrive." },
   { name: "Local Leaders", desc: "The community connector role. One leader per industry per zip code. Featured at FAM Central events. Earns through introductions made inside the local network." },
   { name: "FAM Guides", desc: "The family coaching role. Coaches who work with families one-on-one or in small cohorts on the work of being more present. Recurring monthly revenue." },
   { name: "Expert Faculty", desc: "The expertise role. Authors, speakers, coaches, and category leaders whose content gets distributed across the FAM Central platform. Five income streams." },
-  { name: "Mastermind Passport™", desc: "Guest access into 40+ elite mastermind communities through one membership. Included from the Mastermind tier of Profit Partners." },
-  { name: "Command Central™", desc: "A vetted bench of experts and service providers across coaching, marketing, sales, operations, technology, legal, and finance. Available to Profit Partners members at the Mastermind tier and above." },
+  { name: "Mastermind Passport™", desc: "Guest access into elite mastermind communities through one membership. Included with Profit Partners participation at the right level." },
+  { name: "Command Central™", desc: "A vetted bench of experts and service providers across coaching, marketing, sales, operations, technology, legal, and finance. Available to Profit Partners members." },
   { name: "Team Wellness Hub", desc: "A Section 125 wellness program for businesses with W-2 employees. Saves the business in payroll taxes. Adds $1,500 or more to employee take-home pay." },
+  { name: "Promo Engine", desc: "A B2B platform that helps in-person businesses sell promotions online and capture revenue before customers walk in. Built for multi-location operators." },
 ];
 
 const AboutCompanies = () => {
