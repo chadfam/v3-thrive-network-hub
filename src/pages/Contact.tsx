@@ -60,9 +60,9 @@ const Contact = () => {
             </div>
           ) : (
             <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} className="grid gap-6">
-              <Field label="Full name" required><input required type="text" className={inputCls} /></Field>
-              <Field label="Email address" required><input required type="email" className={inputCls} /></Field>
-              <Field label="Company or business name"><input type="text" className={inputCls} /></Field>
+              <Field label="Full name" required><input required type="text" autoComplete="name" className={inputCls} /></Field>
+              <Field label="Email address" required><input required type="email" autoComplete="email" inputMode="email" className={inputCls} /></Field>
+              <Field label="Company or business name"><input type="text" autoComplete="organization" className={inputCls} /></Field>
               <Field label="Topic">
                 <select defaultValue={ctx.preselect ?? "General inquiry"} className={inputCls}>
                   {TOPIC_OPTIONS.map((t) => <option key={t} value={t}>{t}</option>)}

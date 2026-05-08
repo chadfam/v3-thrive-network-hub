@@ -100,6 +100,17 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", onDoc);
   }, [openIdx]);
 
+  // Lock body scroll while the mobile drawer is open
+  useEffect(() => {
+    if (mobileOpen) {
+      const previous = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = previous;
+      };
+    }
+  }, [mobileOpen]);
+
   const clearTimers = () => {
     if (openTimer.current) { window.clearTimeout(openTimer.current); openTimer.current = null; }
     if (closeTimer.current) { window.clearTimeout(closeTimer.current); closeTimer.current = null; }
@@ -241,15 +252,22 @@ const Header = () => {
         <div className="flex items-center gap-3">
           <Link
             to="/apply"
-            className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-[14px] font-medium text-white bg-brand-blue hover:bg-brand-blue-hover transition-colors"
+            className="hidden sm:inline-flex items-center justify-center min-h-[44px] px-5 py-2.5 rounded-full text-[14px] font-medium text-white bg-brand-blue hover:bg-brand-blue-hover transition-colors"
           >
             Apply with Profit Partners
           </Link>
+          <Link
+            to="/apply"
+            className="sm:hidden inline-flex items-center justify-center min-h-[44px] px-4 py-2 rounded-full text-[14px] font-medium text-white bg-brand-blue hover:bg-brand-blue-hover transition-colors"
+          >
+            Apply
+          </Link>
           <button
-            className="md:hidden p-2 text-slate-ink"
+            className="md:hidden inline-flex items-center justify-center w-11 h-11 text-slate-ink"
             onClick={() => setMobileOpen(true)}
             aria-label="Open menu"
             aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           </button>
@@ -258,10 +276,10 @@ const Header = () => {
 
       {/* Mobile drawer */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-50 bg-background md:hidden overflow-y-auto">
+        <div id="mobile-menu" className="fixed inset-0 z-50 bg-background md:hidden overflow-y-auto">
           <div className="h-16 px-6 flex items-center justify-between border-b border-slate-ink/10">
             <img src={thriveLogo} alt="Thrive" className="h-7 w-auto" />
-            <button onClick={() => setMobileOpen(false)} aria-label="Close menu" className="p-2 text-slate-ink">
+            <button onClick={() => setMobileOpen(false)} aria-label="Close menu" className="inline-flex items-center justify-center w-11 h-11 text-slate-ink">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
           </div>

@@ -3,7 +3,9 @@ const EFHero = () => {
     <section className="hero-fullbleed bg-background">
       <img
         className="hero-fullbleed-img"
-        src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=2400&q=80&auto=format&fit=crop"
+        src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&auto=format&fit=crop&w=1200"
+        srcSet="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&auto=format&fit=crop&w=640 640w, https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&auto=format&fit=crop&w=1200 1200w, https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&auto=format&fit=crop&w=2400 2400w"
+        sizes="(max-width: 640px) 100vw, (max-width: 1200px) 100vw, 2400px"
         alt="Podcast host at a studio microphone, focused, warm light."
         loading="eager"
       />

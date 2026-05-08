@@ -3,7 +3,9 @@ const PassHero = () => {
     <section style={{ backgroundColor: "#0B1F3F" }} className="hero-fullbleed text-white">
       <img
         className="hero-fullbleed-img"
-        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2400&q=80"
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200"
+        srcSet="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200 1200w, https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=2400 2400w"
+        sizes="(max-width: 640px) 100vw, (max-width: 1200px) 100vw, 2400px"
         alt="Private mastermind gathering in warm light"
         loading="eager"
       />

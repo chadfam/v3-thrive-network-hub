@@ -33,24 +33,29 @@ const Nominate = () => {
           ) : (
             <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} className="grid gap-6">
               <Field label="Your name (optional)">
-                <input type="text" disabled={anon} className={inputCls} />
+                <input type="text" autoComplete="name" disabled={anon} className={inputCls} />
               </Field>
-              <label className="flex items-center gap-3 text-[14px] text-slate-ink min-h-[44px] py-2">
-                <input type="checkbox" checked={anon} onChange={(e) => setAnon(e.target.checked)} className="h-5 w-5" />
+              <label className="flex items-center gap-3 text-[15px] text-slate-ink min-h-[44px] py-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={anon}
+                  onChange={(e) => setAnon(e.target.checked)}
+                  className="h-6 w-6 accent-brand-blue cursor-pointer"
+                />
                 Keep me anonymous
               </label>
               <Field label="Your email" required>
-                <input required type="email" className={inputCls} />
+                <input required type="email" autoComplete="email" inputMode="email" className={inputCls} />
               </Field>
 
               <div className="mt-2 pt-6 border-t border-slate-ink/10">
                 <p className="text-[12px] tracking-[0.18em] uppercase text-[hsl(var(--slate-500))] mb-4">Who you're nominating</p>
               </div>
 
-              <Field label="Full name" required><input required type="text" className={inputCls} /></Field>
-              <Field label="Their email or phone" required><input required type="text" className={inputCls} /></Field>
-              <Field label="Their zip code or city" required><input required type="text" className={inputCls} /></Field>
-              <Field label="Their industry or category" required><input required type="text" className={inputCls} /></Field>
+              <Field label="Full name" required><input required type="text" autoComplete="off" className={inputCls} /></Field>
+              <Field label="Their email or phone" required><input required type="text" autoComplete="off" className={inputCls} /></Field>
+              <Field label="Their zip code or city" required><input required type="text" autoComplete="off" className={inputCls} /></Field>
+              <Field label="Their industry or category" required><input required type="text" autoComplete="off" className={inputCls} /></Field>
               <Field label="Why this person" required>
                 <textarea required rows={5} placeholder="Briefly tell us why this person is the right Local Leader for their community" className={inputCls} />
               </Field>

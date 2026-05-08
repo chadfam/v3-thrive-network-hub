@@ -7,7 +7,9 @@ const LeadHero = () => {
     <section id="top" className="hero-fullbleed bg-background">
       <img
         className="hero-fullbleed-img"
-        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2400&q=80"
+        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1200"
+        srcSet="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1200 1200w, https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=2400 2400w"
+        sizes="(max-width: 640px) 100vw, (max-width: 1200px) 100vw, 2400px"
         alt="Three adults in animated conversation at a casual coffee-shop table, natural light."
         loading="eager"
       />

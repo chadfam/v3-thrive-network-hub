@@ -65,11 +65,11 @@ const Apply = () => {
               onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
               className="grid gap-6"
             >
-              <Field label="Full name" required><input required type="text" className={inputCls} /></Field>
-              <Field label="Email address" required><input required type="email" className={inputCls} /></Field>
-              <Field label="Phone number"><input type="tel" className={inputCls} /></Field>
-              <Field label="Business name (if applicable)"><input type="text" className={inputCls} /></Field>
-              <Field label="Website"><input type="url" className={inputCls} /></Field>
+              <Field label="Full name" required><input required type="text" autoComplete="name" className={inputCls} /></Field>
+              <Field label="Email address" required><input required type="email" autoComplete="email" inputMode="email" className={inputCls} /></Field>
+              <Field label="Phone number"><input type="tel" autoComplete="tel" inputMode="tel" className={inputCls} /></Field>
+              <Field label="Business name (if applicable)"><input type="text" autoComplete="organization" className={inputCls} /></Field>
+              <Field label="Website"><input type="url" autoComplete="url" inputMode="url" className={inputCls} /></Field>
               <Field label="Role of interest">
                 <select defaultValue={ctx.preselect ?? ""} className={inputCls}>
                   <option value="" disabled>Select a role</option>
