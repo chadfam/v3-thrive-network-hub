@@ -1,22 +1,10 @@
-const communities = [
-  "Genius Network",
-  "Strategic Coach",
-  "GoBundance",
-  "Flight Club",
-  "Speakeasy Mastermind",
-  "Optimus AI",
-  "Liberty Spenders",
-  "Driven Mastermind",
-  "Mavericks 1000",
-  "Jets and Capital",
-  "Hero Club",
-  "Board of Advisors",
-  "Dream Team 100",
-  "No BS Inner Circle",
-  "San Juan Social Club",
-  "Four Rooms",
-  "Epic Network",
-  "Flow",
+const benefits = [
+  "Guest invitations into curated mastermind communities",
+  "Strategic introductions to other Passport members",
+  "Curated networking events and entrepreneur retreats",
+  "Investor gatherings and joint venture opportunities",
+  "Access to the Mastermind Passport member directory",
+  "Priority introductions to qualified leaders in your field",
 ];
 
 const BizMastermindPassport = () => {
@@ -29,7 +17,7 @@ const BizMastermindPassport = () => {
             Mastermind Passport™
           </h2>
           <p className="mt-6 max-w-[440px] text-[17px] md:text-[19px] font-medium">
-            Guest access into 40+ elite mastermind communities through one membership.
+            Guest access into elite mastermind communities through one membership.
           </p>
           <p className="mt-8 max-w-[440px] text-[17px] leading-relaxed text-white/90">
             Most of the rooms worth being in are invite-only, hard to find, and expensive to test. People spend years getting into the right one and end up paying retail to figure out it wasn't the right one.
@@ -37,22 +25,24 @@ const BizMastermindPassport = () => {
           <p className="mt-6 max-w-[440px] text-[17px] leading-relaxed text-white/90">
             The Passport is a single membership that gets you guest invitations into a curated set of those rooms. You walk in introduced. You meet the room. You find out which one fits without committing to any of them.
           </p>
-          <a href="/mastermind-passport" className="mt-8 inline-block text-[15px] text-white">
-            <span className="hover:bg-gradient-warm hover:bg-clip-text hover:text-transparent">
-              Mastermind Passport details →
-            </span>
+          <a href="/mastermind-passport" className="mt-8 inline-block text-[15px] text-white hover:text-brand-gold transition-colors">
+            Mastermind Passport details →
           </a>
         </div>
         <div>
-          <ul className="space-y-2">
-            {communities.map((c) => (
-              <li key={c} className="text-[16px] md:text-[19px] font-medium text-white/80">
-                {c}
+          <p className="text-[13px] font-medium tracking-[0.14em] uppercase text-brand-gold">
+            INSIDE THE PASSPORT
+          </p>
+          <ul className="mt-6 space-y-3">
+            {benefits.map((b) => (
+              <li key={b} className="flex gap-3 items-start text-[16px] md:text-[18px] leading-relaxed text-white/90">
+                <span aria-hidden className="mt-[10px] inline-block w-2 h-2 rounded-full bg-brand-gold flex-shrink-0" />
+                <span>{b}</span>
               </li>
             ))}
           </ul>
           <p className="mt-6 italic text-[15px] text-white/60">
-            And more, added as the network grows.
+            Specific community access is shared during the membership conversation.
           </p>
         </div>
       </div>

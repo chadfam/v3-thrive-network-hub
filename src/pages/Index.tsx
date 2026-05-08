@@ -4,7 +4,6 @@ import Argument from "@/components/site/Argument";
 import ThreePaths from "@/components/site/ThreePaths";
 import FullNetwork from "@/components/site/FullNetwork";
 import HowWer1Works from "@/components/site/HowWer1Works";
-import TheRoom from "@/components/site/TheRoom";
 import WhyFamilies from "@/components/site/WhyFamilies";
 import NextStep from "@/components/site/NextStep";
 
@@ -18,7 +17,6 @@ const Index = () => (
     <ThreePaths />
     <HowWer1Works />
     <FullNetwork />
-    <TheRoom />
     <WhyFamilies />
     <NextStep />
   </Layout>

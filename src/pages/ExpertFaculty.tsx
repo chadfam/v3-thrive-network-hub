@@ -6,7 +6,6 @@ import EFStreams from "@/components/expert/EFStreams";
 import EFCategories from "@/components/expert/EFCategories";
 import EFHowItWorks from "@/components/expert/EFHowItWorks";
 import EFWhoFits from "@/components/expert/EFWhoFits";
-import EFExperts from "@/components/expert/EFExperts";
 import EFApply from "@/components/expert/EFApply";
 
 const ExpertFaculty = () => (
@@ -22,7 +21,6 @@ const ExpertFaculty = () => (
     <EFCategories />
     <EFHowItWorks />
     <EFWhoFits />
-    <EFExperts />
     <EFApply />
   </Layout>
 );

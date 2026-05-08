@@ -6,7 +6,6 @@ import LeadLocalLeaders from "@/components/leaders/LeadLocalLeaders";
 import LeadExpertFaculty from "@/components/leaders/LeadExpertFaculty";
 import LeadWhichRole from "@/components/leaders/LeadWhichRole";
 import LeadWer1Band from "@/components/leaders/LeadWer1Band";
-import LeadExperts from "@/components/leaders/LeadExperts";
 import LeadApply from "@/components/leaders/LeadApply";
 
 const Leaders = () => (
@@ -22,7 +21,6 @@ const Leaders = () => (
     <LeadExpertFaculty />
     <LeadWhichRole />
     <LeadWer1Band />
-    <LeadExperts />
     <LeadApply />
   </Layout>
 );

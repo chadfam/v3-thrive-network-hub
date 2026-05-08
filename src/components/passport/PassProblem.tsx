@@ -7,7 +7,7 @@ const PassProblem = () => {
           The problem with masterminds.
         </h2>
         <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Most of the rooms worth being in are invite-only, hard to discover, and limited to small circles. The names you've heard of, like Genius Network, Strategic Coach, GoBundance, are gated by application, sponsorship, or someone vouching for you. The names you haven't heard of are sometimes the ones that change a business the most, but they're impossible to find from the outside.
+          Most of the rooms worth being in are invite-only, hard to discover, and limited to small circles. The names you've heard of are gated by application, sponsorship, or someone vouching for you. The names you haven't heard of are sometimes the ones that change a business the most, but they're impossible to find from the outside.
         </p>
         <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
           The other problem is the math. Annual membership in any one of these communities typically runs into the tens of thousands. Most owners can't afford to test three or four to find out which one fits. They commit to one, hope it's the right one, and find out a year and twenty thousand dollars later that it wasn't.
