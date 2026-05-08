@@ -36,7 +36,7 @@ const HowTracks = () => {
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((c) => (
             <div key={c.name} className="rounded-2xl border border-slate-200 bg-background p-8">
-              <div className="h-[2px] w-8 bg-gradient-warm" />
+              <div className="h-[2px] w-8 bg-brand-blue" />
               <h3 className="mt-5 font-serif-display text-slate-ink" style={{ fontSize: 24, lineHeight: 1.2 }}>
                 {c.name}
               </h3>

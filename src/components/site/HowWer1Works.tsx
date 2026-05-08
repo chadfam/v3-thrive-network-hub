@@ -42,7 +42,7 @@ const HowWer1Works = () => {
           <ul className="mt-10 space-y-6">
             {points.map((p) => (
               <li key={p.lead} className="flex gap-4 text-[17px] text-white leading-relaxed">
-                <span className="mt-2 shrink-0 w-2 h-2 rounded-full bg-gradient-warm-diag" />
+                <span className="bullet-dot-on-dark" />
                 <span>
                   <span className="font-medium">{p.lead}</span>{" "}
                   <span className="text-white/90">{p.body}</span>
@@ -51,18 +51,8 @@ const HowWer1Works = () => {
             ))}
           </ul>
 
-          <Link
-            to="/how-it-works"
-            className="group mt-10 inline-flex items-center gap-2 text-[16px] text-white"
-          >
-            <span className="relative">
-              <span className="bg-gradient-warm bg-clip-text text-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute inset-0">
-                How WER1 works →
-              </span>
-              <span className="group-hover:opacity-0 transition-opacity duration-300">
-                How WER1 works →
-              </span>
-            </span>
+          <Link to="/how-it-works" className="mt-10 text-link-on-dark">
+            How WER1 works →
           </Link>
         </div>
 

@@ -22,7 +22,7 @@ const EFCategories = () => {
         <div className="mt-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
           {tiles.map((t) => (
             <div key={t.name} className="rounded-xl bg-background border border-[hsl(var(--slate)/0.12)] p-7 text-center">
-              <div className="mx-auto h-[2px] w-8 bg-gradient-warm" />
+              <div className="mx-auto h-[2px] w-8 bg-brand-blue" />
               <h3 className="mt-5 font-serif-display text-[22px] text-slate-ink leading-tight">{t.name}</h3>
               <p className="mt-3 text-[14px] leading-relaxed text-[hsl(var(--slate-700))]">{t.desc}</p>
             </div>

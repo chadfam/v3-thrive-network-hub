@@ -37,7 +37,7 @@ const FGWhoFits = () => {
                   key={it}
                   className="flex items-start gap-3 text-[17px] text-[hsl(var(--slate-700))]"
                 >
-                  <span className="mt-[10px] inline-block w-2 h-2 rounded-full bg-gradient-warm shrink-0" />
+                  <span className="bullet-dot" />
                   <span>{it}</span>
                 </li>
               ))}

@@ -11,9 +11,8 @@ const AboutHero = () => {
           United to Thrive is the company behind Profit Partners, FAM Central, Local Leaders, and the WER1 Impact Network. We acquired the platforms, integrated the programs, and built one community around them. Here's why.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          <a href="/businesses" className="group relative inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white bg-slate-ink overflow-hidden">
-            <span className="absolute inset-0 bg-gradient-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <span className="relative">See the programs</span>
+          <a href="/businesses" className="btn-primary">
+            See the programs
           </a>
           <a href="/apply" className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-slate-ink border border-slate-ink hover:bg-slate-ink hover:text-white transition-colors">
             Apply now

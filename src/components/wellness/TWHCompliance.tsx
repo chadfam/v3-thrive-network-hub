@@ -45,7 +45,7 @@ const TWHCompliance = () => {
               <ul className="mt-6 space-y-3">
                 {items.map((it) => (
                   <li key={it} className="flex items-start gap-3 text-[16px] text-[hsl(var(--slate-700))]">
-                    <span className="mt-[9px] inline-block w-2 h-2 rounded-full bg-gradient-warm shrink-0" />
+                    <span className="bullet-dot" />
                     <span>{it}</span>
                   </li>
                 ))}

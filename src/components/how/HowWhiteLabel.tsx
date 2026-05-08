@@ -31,15 +31,8 @@ const HowWhiteLabel = () => {
             </p>
           </div>
 
-          <a href="/contact?topic=white-label" className="group mt-8 inline-flex items-center gap-2 text-[16px] text-white">
-            <span className="relative">
-              <span className="bg-gradient-warm bg-clip-text text-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute inset-0">
-                Talk to us about white-label →
-              </span>
-              <span className="group-hover:opacity-0 transition-opacity duration-300">
-                Talk to us about white-label →
-              </span>
-            </span>
+          <a href="/contact?topic=white-label" className="mt-8 text-link-on-dark">
+            Talk to us about white-label →
           </a>
         </div>
 
@@ -50,7 +43,7 @@ const HowWhiteLabel = () => {
           <ul className="mt-6 space-y-4">
             {useCases.map((u) => (
               <li key={u} className="flex gap-4 text-[18px] leading-relaxed text-white">
-                <span className="mt-2 shrink-0 w-2 h-2 rounded-full bg-gradient-warm" />
+                <span className="bullet-dot" />
                 <span>{u}</span>
               </li>
             ))}

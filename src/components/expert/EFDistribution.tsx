@@ -25,7 +25,7 @@ const EFDistribution = () => {
               key={s.name}
               className={`rounded-xl bg-background border border-[hsl(var(--slate)/0.12)] p-7 ${i === 4 ? "md:col-span-2 md:max-w-[50%] md:mx-auto lg:col-span-1 lg:max-w-none lg:mx-0" : ""}`}
             >
-              <div className="h-[2px] w-8 bg-gradient-warm" />
+              <div className="h-[2px] w-8 bg-brand-blue" />
               <h3 className="mt-5 font-serif-display text-[22px] text-slate-ink leading-tight">{s.name}</h3>
               <p className="mt-3 text-[14px] leading-relaxed text-[hsl(var(--slate-700))]">{s.body}</p>
             </div>

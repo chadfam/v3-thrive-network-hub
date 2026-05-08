@@ -25,7 +25,7 @@ const EFHowItWorks = () => {
               <h3 className="mt-4 font-serif-display text-[24px] text-slate-ink leading-tight">{s.name}</h3>
               <p className="mt-3 text-[16px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[240px]">{s.desc}</p>
               {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-7 -right-3 h-px w-6 bg-gradient-warm" />
+                <div className="hidden md:block absolute top-7 -right-3 h-px w-6 bg-brand-blue" />
               )}
             </div>
           ))}

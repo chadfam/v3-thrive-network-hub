@@ -2,7 +2,7 @@ const HowWhy = () => {
   return (
     <section className="bg-background">
       <div className="mx-auto px-6 sm:px-8 md:px-10 py-16 md:py-32 text-center" style={{ maxWidth: 760 }}>
-        <div className="mx-auto h-[2px] w-20 bg-gradient-warm" />
+        <div className="mx-auto section-accent" />
         <h2
           className="mt-8 font-serif-display text-slate-ink"
           style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}

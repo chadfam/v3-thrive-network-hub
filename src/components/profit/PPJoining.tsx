@@ -2,7 +2,7 @@ const PPJoining = () => {
   return (
     <section className="bg-background">
       <div className="mx-auto max-w-[760px] px-6 sm:px-8 md:px-10 py-16 md:py-32 text-center">
-        <span className="block mx-auto h-[2px] w-20 bg-gradient-warm" aria-hidden />
+        <span className="block mx-auto section-accent" aria-hidden />
         <h2 className="mt-10 font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
           What you're joining.
         </h2>

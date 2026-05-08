@@ -57,7 +57,7 @@ const TWHBenefits = () => {
               className="bg-background rounded-2xl p-10 border"
               style={{ borderColor: "#E0E3E7" }}
             >
-              <div className="h-[2px] w-8 bg-gradient-warm" />
+              <div className="h-[2px] w-8 bg-brand-blue" />
               <h3 className="mt-6 font-serif-display text-slate-ink text-[24px]">{c.name}</h3>
               <p className="mt-4 text-[16px] text-[hsl(var(--slate-700))] leading-relaxed">
                 {c.body}
@@ -65,7 +65,7 @@ const TWHBenefits = () => {
               <ul className="mt-6 space-y-3">
                 {c.examples.map((e) => (
                   <li key={e} className="flex items-start gap-3 text-[16px] text-[hsl(var(--slate-700))]">
-                    <span className="mt-[9px] inline-block w-2 h-2 rounded-full bg-gradient-warm shrink-0" />
+                    <span className="bullet-dot" />
                     <span>{e}</span>
                   </li>
                 ))}

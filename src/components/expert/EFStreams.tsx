@@ -89,7 +89,7 @@ const EFStreams = () => {
                   <ul className="mt-6 space-y-3">
                     {s.items.map((item) => (
                       <li key={item} className="flex items-start gap-3 text-[15px] text-white/80">
-                        <span className="mt-[9px] inline-block h-1.5 w-1.5 rounded-full bg-gradient-warm shrink-0" />
+                        <span className="bullet-dot" />
                         <span>{item}</span>
                       </li>
                     ))}

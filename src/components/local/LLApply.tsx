@@ -20,7 +20,7 @@ const LLApply = () => {
     <section className="bg-background">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
         <div className="text-center max-w-[760px] mx-auto">
-          <div className="mx-auto h-[2px] w-20 bg-gradient-warm" />
+          <div className="mx-auto section-accent" />
           <h2
             className="mt-10 font-serif-display text-slate-ink tracking-hero"
             style={{ fontSize: "clamp(2.25rem, 6vw, 4rem)", lineHeight: 1.05 }}
@@ -51,11 +51,10 @@ const LLApply = () => {
               <div className="mt-8">
                 <a
                   href={c.href}
-                  className="group relative inline-flex items-center justify-center px-6 py-3 rounded-lg text-[15px] font-medium text-white bg-slate-ink overflow-hidden"
+                  className="btn-primary"
                 >
-                  <span className="absolute inset-0 bg-gradient-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="relative">{c.cta}</span>
-                </a>
+            {c.cta}
+          </a>
               </div>
             </div>
           ))}

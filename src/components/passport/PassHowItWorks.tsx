@@ -27,14 +27,14 @@ const PassHowItWorks = () => {
           {steps.map((s, idx) => (
             <div key={s.n} className="flex md:flex-col items-start gap-6 md:gap-0 flex-1">
               <div className="md:w-full">
-                <p aria-hidden className="font-serif-display text-transparent bg-clip-text bg-gradient-warm" style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)", lineHeight: 1 }}>
+                <p aria-hidden className="font-serif-display text-transparent bg-clip-text bg-brand-blue" style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)", lineHeight: 1 }}>
                   {s.n}
                 </p>
                 <p className="mt-4 font-serif-display text-[24px] text-slate-ink leading-tight">{s.name}</p>
                 <p className="mt-3 max-w-[240px] text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">{s.desc}</p>
               </div>
               {idx < steps.length - 1 && (
-                <span aria-hidden className="hidden md:block self-center mt-12 mx-2 h-px w-6 bg-gradient-warm flex-shrink-0" />
+                <span aria-hidden className="hidden md:block self-center mt-12 mx-2 h-px w-6 bg-brand-blue flex-shrink-0" />
               )}
             </div>
           ))}

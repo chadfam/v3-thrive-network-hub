@@ -59,7 +59,7 @@ const TWHHowItWorks = () => {
                 {s.desc}
               </p>
               {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-6 -right-3 w-6 h-px bg-gradient-warm" />
+                <div className="hidden md:block absolute top-6 -right-3 w-6 h-px bg-brand-blue" />
               )}
             </div>
           ))}

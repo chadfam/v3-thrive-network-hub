@@ -32,7 +32,7 @@ const W1PromoterHow = () => {
               </h3>
               <p className="mt-4 text-[16px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[240px]">{s.body}</p>
               {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-7 right-[-12px] w-6 h-px bg-gradient-warm" />
+                <div className="hidden md:block absolute top-7 right-[-12px] w-6 h-px bg-brand-blue" />
               )}
             </div>
           ))}

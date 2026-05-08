@@ -30,7 +30,7 @@ const CCDisciplines = () => {
               }`}
               style={{ border: "1px solid #E0E3E7" }}
             >
-              <div className="mx-auto h-[2px] w-8 bg-gradient-warm" />
+              <div className="mx-auto h-[2px] w-8 bg-brand-blue" />
               <h3 className="mt-5 font-serif-display text-[24px] leading-snug text-slate-ink">
                 {t.name}
               </h3>

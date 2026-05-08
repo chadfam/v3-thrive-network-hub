@@ -43,10 +43,8 @@ const BizTeamWellness = () => {
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
             Most owners haven't set this up because the existing wellness vendors price it like enterprise software. The Hub runs it for a flat fee that's covered by the savings in the first quarter. It sits on top of whatever insurance you already offer. There's no enrollment disruption, no plan switching, no benefits committee.
           </p>
-          <a href="/team-wellness-hub" className="mt-8 inline-block text-[15px] text-slate-ink">
-            <span className="hover:bg-gradient-warm hover:bg-clip-text hover:text-transparent">
-              Team Wellness Hub details →
-            </span>
+          <a href="/team-wellness-hub" className="mt-8 text-link">
+            Team Wellness Hub details →
           </a>
         </div>
       </div>

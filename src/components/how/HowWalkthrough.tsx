@@ -47,12 +47,12 @@ const HowWalkthrough = () => {
             <li key={s.n} className="relative grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-6 pb-12 last:pb-0">
               {i < steps.length - 1 && (
                 <span
-                  className="absolute left-[30px] md:left-[40px] top-[60px] bottom-0 w-px bg-gradient-warm opacity-50"
+                  className="absolute left-[30px] md:left-[40px] top-[60px] bottom-0 w-px bg-brand-blue opacity-40"
                   aria-hidden
                 />
               )}
               <div
-                className="font-serif-display bg-gradient-warm bg-clip-text text-transparent text-center"
+                className="font-serif-display text-brand-blue text-center"
                 style={{ fontSize: "clamp(36px, 5vw, 48px)", lineHeight: 1 }}
               >
                 {s.n}

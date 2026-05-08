@@ -40,11 +40,10 @@ const PassAccess = () => {
               <p className="mt-5 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] flex-grow">{c.body}</p>
               <a
                 href={c.href}
-                className="group relative mt-8 inline-flex self-start items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white bg-slate-ink overflow-hidden"
+                className="btn-primary mt-8 self-start"
               >
-                <span className="absolute inset-0 bg-gradient-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="relative">{c.cta}</span>
-              </a>
+            {c.cta}
+          </a>
             </div>
           ))}
         </div>

@@ -39,7 +39,7 @@ const LeadFamGuides = () => {
           <ul className="mt-6 space-y-4">
             {items.map((it) => (
               <li key={it} className="flex items-start gap-4 text-[18px] text-white">
-                <span className="mt-2.5 inline-block w-2.5 h-2.5 rounded-full bg-gradient-warm shrink-0" aria-hidden />
+                <span className="mt-2.5 inline-block w-2.5 h-2.5 rounded-full bg-brand-blue shrink-0" aria-hidden />
                 <span>{it}</span>
               </li>
             ))}

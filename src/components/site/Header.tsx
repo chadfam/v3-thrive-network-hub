@@ -177,7 +177,7 @@ const Header = () => {
                     sActive && "font-medium"
                   )}
                 >
-                  <span className={cn("relative", sActive && "after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-[2px] after:bg-gradient-warm")}>
+                  <span className={cn("relative", sActive && "after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-[2px] after:bg-brand-blue")}>
                     {item.label}
                   </span>
                   <ChevronDown
@@ -211,14 +211,14 @@ const Header = () => {
                             role="menuitem"
                             aria-current={active ? "page" : undefined}
                             tabIndex={isOpen ? 0 : -1}
-                            className="group relative block rounded-lg px-3 py-3 min-h-[44px] hover:bg-gradient-warm/[0.08] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-ink/20"
+                            className="group relative block rounded-lg px-3 py-3 min-h-[44px] hover:bg-brand-blue/[0.08] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-ink/20"
                           >
                             {sub.isOverview && (
-                              <span aria-hidden className="block w-6 h-[2px] bg-gradient-warm mb-1.5 rounded-full" />
+                              <span aria-hidden className="block w-6 h-[2px] bg-brand-blue mb-1.5 rounded-full" />
                             )}
                             <div className="flex items-center gap-2">
                               {active && (
-                                <span aria-hidden className="w-1.5 h-1.5 rounded-full bg-gradient-warm shrink-0" />
+                                <span aria-hidden className="w-1.5 h-1.5 rounded-full bg-brand-blue shrink-0" />
                               )}
                               <span className={cn("font-serif-display text-[17px] text-slate-ink leading-tight", active && "font-medium")}>
                                 {sub.label}
@@ -271,7 +271,7 @@ const Header = () => {
               const sActive = sectionActive(item);
               return (
                 <div key={item.label} className={cn("relative border-b border-slate-ink/5", sActive && "border-l-[3px] border-l-transparent")}>
-                  {sActive && <span aria-hidden className="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-warm" />}
+                  {sActive && <span aria-hidden className="absolute left-0 top-0 bottom-0 w-[3px] bg-brand-blue" />}
                   <div className="flex items-stretch">
                     <Link
                       to={item.href}
@@ -303,7 +303,7 @@ const Header = () => {
                               className="block py-2 min-h-[44px]"
                             >
                               <div className="flex items-center gap-2">
-                                {active && <span aria-hidden className="w-1.5 h-1.5 rounded-full bg-gradient-warm shrink-0" />}
+                                {active && <span aria-hidden className="w-1.5 h-1.5 rounded-full bg-brand-blue shrink-0" />}
                                 <span className={cn("font-serif-display text-[17px] text-slate-ink", active && "font-medium")}>
                                   {sub.label}
                                 </span>

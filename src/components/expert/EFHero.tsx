@@ -22,10 +22,8 @@ const EFHero = () => {
           <div className="mt-10 flex flex-wrap gap-3">
             <a
               href="/apply?role=expert-faculty"
-              className="group relative inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white bg-slate-ink overflow-hidden"
-            >
-              <span className="absolute inset-0 bg-gradient-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span className="relative">Apply now</span>
+              className="btn-primary">
+            Apply now
             </a>
             <a
               href="#income-streams"

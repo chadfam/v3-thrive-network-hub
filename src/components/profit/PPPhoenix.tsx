@@ -14,7 +14,7 @@ const categories = [
 ];
 
 const Dot = () => (
-  <span aria-hidden className="inline-block w-2 h-2 rounded-full bg-gradient-warm flex-shrink-0 mt-[9px]" />
+  <span aria-hidden className="bullet-dot" />
 );
 
 const PPPhoenix = () => {

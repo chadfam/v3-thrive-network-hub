@@ -23,7 +23,7 @@ const PPLCA = () => {
         <ol className="space-y-8">
           {steps.map((s) => (
             <li key={s.n} className="flex gap-6 items-start">
-              <span aria-hidden className="font-serif-display text-[40px] leading-none text-transparent bg-clip-text bg-gradient-warm flex-shrink-0">
+              <span aria-hidden className="font-serif-display text-[40px] leading-none text-transparent bg-clip-text bg-brand-blue flex-shrink-0">
                 {s.n}
               </span>
               <div>

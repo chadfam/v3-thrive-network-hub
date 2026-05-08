@@ -21,9 +21,8 @@ const LeadHero = () => {
             Three programs for the connectors, coaches, and experts whose work is already changing how families live. Apply, and we'll match you to the role that fits.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <a href="/apply" className="group relative inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white bg-slate-ink overflow-hidden">
-              <span className="absolute inset-0 bg-gradient-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span className="relative">Apply now</span>
+            <a href="/apply" className="btn-primary">
+            Apply now
             </a>
             <a href="#local-leaders" onClick={handleAnchor} className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-slate-ink border border-slate-ink hover:bg-slate-ink hover:text-white transition-colors">
               See the three programs

@@ -31,7 +31,7 @@ const EFWhoFits = () => {
           <ul className="mt-6 space-y-4">
             {profile.map((p) => (
               <li key={p} className="flex items-start gap-3 text-[17px] text-[hsl(var(--slate-700))]">
-                <span className="mt-[10px] inline-block h-1.5 w-1.5 rounded-full bg-gradient-warm shrink-0" />
+                <span className="bullet-dot" />
                 <span>{p}</span>
               </li>
             ))}

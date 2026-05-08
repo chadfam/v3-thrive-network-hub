@@ -9,9 +9,8 @@ const LeadApply = () => {
           The application takes about ten minutes. We review every one and follow up with the next step for the role that fits.
         </p>
         <div className="mt-10 flex flex-col items-center gap-4">
-          <a href="/apply" className="group relative inline-flex items-center justify-center px-7 py-4 rounded-lg text-[15px] font-medium text-white bg-slate-ink overflow-hidden">
-            <span className="absolute inset-0 bg-gradient-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <span className="relative">Apply now →</span>
+          <a href="/apply" className="btn-primary text-[15px] py-4 px-7">
+            Apply now →
           </a>
           <a href="/nominate" className="group inline-flex items-center text-[15px] text-slate-ink">
             <span className="group-hover:text-gradient-warm transition-colors">Or nominate someone in your community →</span>

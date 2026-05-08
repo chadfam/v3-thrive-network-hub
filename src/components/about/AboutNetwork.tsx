@@ -2,7 +2,7 @@ const AboutNetwork = () => {
   return (
     <section className="bg-background">
       <div className="mx-auto max-w-[760px] px-6 sm:px-8 md:px-10 py-16 md:py-32 text-center">
-        <div className="mx-auto mb-10 h-[2px] w-20 bg-gradient-warm" aria-hidden />
+        <div className="mx-auto mb-10 section-accent" aria-hidden />
         <h2 className="font-serif-display text-slate-ink section-headline tracking-section">
           How the network came together.
         </h2>

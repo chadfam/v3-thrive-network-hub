@@ -411,9 +411,198 @@ All colors MUST be HSL.
     box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
   }
 
+  /* Canonical bordered card — use for content panels with internal lists. */
+  .card-bordered {
+    background-color: #FFFFFF;
+    border: 1px solid hsl(var(--slate-200));
+    border-radius: 16px;
+  }
+
   /* Global migration helpers: legacy slate-ink button surface → PPX blue. */
   .bg-slate-ink { background-color: var(--brand-blue) !important; }
   .hover\:bg-slate-ink:hover { background-color: var(--brand-blue-hover) !important; color: #fff !important; }
   .border-slate-ink { border-color: var(--brand-blue) !important; }
   .text-slate-ink { color: var(--text-ink); }
+
+  /* ============================================================
+     CANONICAL DESIGN PRIMITIVES
+     Use these utilities everywhere instead of re-inventing inline.
+     ============================================================ */
+
+  /* Buttons */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--brand-blue);
+    transition: background-color 200ms ease;
+    min-height: 48px;
+  }
+  .btn-primary:hover { background-color: var(--brand-blue-hover); }
+
+  .btn-on-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--brand-navy);
+    background-color: #fff;
+    transition: background-color 200ms ease, color 200ms ease;
+    min-height: 48px;
+  }
+  .btn-on-dark:hover { background-color: var(--brand-gold); color: var(--brand-navy); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-ink);
+    background-color: transparent;
+    border: 1px solid hsl(var(--slate-200));
+    transition: border-color 200ms ease, color 200ms ease;
+    min-height: 48px;
+  }
+  .btn-secondary:hover { border-color: var(--brand-blue); color: var(--brand-blue); }
+
+  .btn-secondary-on-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: background-color 200ms ease, color 200ms ease;
+    min-height: 48px;
+  }
+  .btn-secondary-on-dark:hover { background-color: #fff; color: var(--text-ink); }
+
+  /* Eyebrow labels (the small uppercase text above headlines) */
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: hsl(var(--slate-500));
+  }
+  .eyebrow-on-dark {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .eyebrow-gold {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brand-gold);
+  }
+  .eyebrow-blue {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brand-blue);
+  }
+
+  /* Subtle text links — "Learn more →", "See more →" */
+  .text-link {
+    display: inline-block;
+    font-size: 15px;
+    color: var(--text-ink);
+    transition: color 200ms ease;
+    text-underline-offset: 4px;
+  }
+  .text-link:hover { color: var(--brand-blue); text-decoration: underline; }
+
+  .text-link-on-dark {
+    display: inline-block;
+    font-size: 15px;
+    color: #fff;
+    transition: color 200ms ease;
+    text-underline-offset: 4px;
+  }
+  .text-link-on-dark:hover { color: var(--brand-gold); text-decoration: underline; }
+
+  /* Section accent divider (the small horizontal line above some headlines) */
+  .section-accent {
+    display: block;
+    height: 2px;
+    width: 80px;
+    background-color: var(--brand-gold);
+    border-radius: 1px;
+  }
+  .section-accent-blue {
+    display: block;
+    height: 2px;
+    width: 80px;
+    background-color: var(--brand-blue);
+    border-radius: 1px;
+  }
+
+  /* Canonical bullet point dot for unordered lists */
+  .bullet-dot {
+    flex-shrink: 0;
+    margin-top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background-color: var(--brand-blue);
+  }
+  .bullet-dot-gold {
+    flex-shrink: 0;
+    margin-top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background-color: var(--brand-gold);
+  }
+  /* On navy/dark sections, use gold for the dot. */
+  .bullet-dot-on-dark {
+    flex-shrink: 0;
+    margin-top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background-color: var(--brand-gold);
+  }
+
+  /* Section padding rhythm — apply to the section element OR to its inner container */
+  .section-py {
+    padding-top: 5rem;       /* py-20 */
+    padding-bottom: 5rem;
+  }
+  @media (min-width: 768px) {
+    .section-py {
+      padding-top: 8rem;     /* md:py-32 */
+      padding-bottom: 8rem;
+    }
+  }
+  .section-py-compact {
+    padding-top: 3rem;       /* py-12 */
+    padding-bottom: 3rem;
+  }
+  @media (min-width: 768px) {
+    .section-py-compact {
+      padding-top: 4rem;     /* md:py-16 */
+      padding-bottom: 4rem;
+    }
+  }
 }

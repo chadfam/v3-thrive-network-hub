@@ -10,7 +10,7 @@ const AboutEngage = () => {
       <div className="absolute inset-0 pointer-events-none" aria-hidden style={{ backgroundImage: "none" }} />
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32">
         <div className="text-center max-w-[720px] mx-auto">
-          <div className="mx-auto mb-8 h-[2px] w-20 bg-gradient-warm" aria-hidden />
+          <div className="mx-auto mb-8 section-accent" aria-hidden />
           <h2 className="font-serif-display text-slate-ink section-headline tracking-section">How to engage.</h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">Three ways in, depending on what you do.</p>
         </div>
@@ -20,10 +20,9 @@ const AboutEngage = () => {
               <div className="text-[13px] font-medium uppercase tracking-[0.16em] text-[hsl(var(--slate-500))]">{c.label}</div>
               <h3 className="mt-4 font-serif-display text-slate-ink text-[24px] md:text-[28px] leading-tight">{c.heading}</h3>
               <p className="mt-4 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] flex-1">{c.body}</p>
-              <a href={c.route} className="group relative mt-8 inline-flex items-center justify-center px-5 py-3 rounded-lg text-[14px] font-medium text-white bg-slate-ink overflow-hidden self-start">
-                <span className="absolute inset-0 bg-gradient-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="relative">{c.button}</span>
-              </a>
+              <a href={c.route} className="btn-primary text-[14px] py-3 px-5 min-h-0 mt-8 self-start">
+            {c.button}
+          </a>
             </article>
           ))}
         </div>

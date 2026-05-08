@@ -28,10 +28,8 @@ const NextStep = () => {
               </p>
               <Link
                 to={c.to}
-                className="group relative mt-6 inline-flex w-fit items-center justify-center px-5 py-3 rounded-lg text-[14px] font-medium text-white bg-slate-ink overflow-hidden"
-              >
-                <span className="absolute inset-0 bg-gradient-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="relative">{c.btn}</span>
+                className="btn-primary text-[14px] py-3 px-5 min-h-0">
+            {c.btn}
               </Link>
             </article>
           ))}

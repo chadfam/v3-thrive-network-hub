@@ -25,7 +25,7 @@ const AboutCompanies = () => {
           {programs.map((p, idx) => (
             <div key={p.name}>
               <div className="flex items-start gap-6 py-8">
-                <span className="mt-3 inline-block h-3 w-3 rounded-full bg-gradient-warm shrink-0" aria-hidden />
+                <span className="mt-3 inline-block h-3 w-3 rounded-full bg-brand-blue shrink-0" aria-hidden />
                 <div className="min-w-0">
                   <h3 className="font-serif-display text-white text-[24px] md:text-[28px] leading-tight">{p.name}</h3>
                   <p className="mt-2 text-[17px] leading-relaxed text-white/80 max-w-[640px]">{p.desc}</p>

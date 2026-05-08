@@ -49,10 +49,8 @@ const CCAccess = () => {
           </div>
         </div>
 
-        <a href="/profit-partners" className="mt-10 inline-block text-[15px] text-slate-ink">
-          <span className="hover:bg-gradient-warm hover:bg-clip-text hover:text-transparent">
-            See Profit Partners tiers and pricing →
-          </span>
+        <a href="/profit-partners" className="mt-10 text-link">
+          See more on Profit Partners →
         </a>
       </div>
     </section>

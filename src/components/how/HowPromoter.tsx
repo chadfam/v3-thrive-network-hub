@@ -1,7 +1,7 @@
 const HowPromoter = () => {
   return (
     <section className="relative bg-background overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-warm opacity-[0.04] pointer-events-none" />
+      <div className="absolute inset-0 bg-brand-blue opacity-[0.04] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32 text-center">
         <h2
           className="mx-auto font-serif-display text-slate-ink"
@@ -22,23 +22,12 @@ const HowPromoter = () => {
         <div className="mt-10 flex flex-col items-center gap-4">
           <a
             href="/apply?role=promoter"
-            className="group relative inline-flex items-center justify-center px-7 py-4 rounded-lg text-[15px] font-medium bg-slate-ink text-white overflow-hidden transition-colors"
+            className="btn-primary text-[15px] py-4 px-7"
           >
-            <span className="absolute inset-0 bg-gradient-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <span className="relative">Become a promoter →</span>
+            Become a promoter →
           </a>
-          <a
-            href="/apply"
-            className="group inline-flex items-center gap-2 text-[15px] text-slate-ink"
-          >
-            <span className="relative">
-              <span className="bg-gradient-warm bg-clip-text text-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute inset-0">
-                Or apply to a program instead →
-              </span>
-              <span className="group-hover:opacity-0 transition-opacity duration-300">
-                Or apply to a program instead →
-              </span>
-            </span>
+          <a href="/apply" className="text-link">
+            Or apply to a program instead →
           </a>
         </div>
       </div>

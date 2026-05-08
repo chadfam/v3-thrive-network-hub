@@ -10,7 +10,7 @@ const caps = [
 const W1Technical = () => {
   return (
     <section id="technical-layer" className="relative bg-background overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-warm opacity-[0.04] pointer-events-none" />
+      <div className="absolute inset-0 bg-brand-blue opacity-[0.04] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
         <div className="text-center max-w-[760px] mx-auto">
           <h2

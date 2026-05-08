@@ -18,10 +18,10 @@ const cards = [
 const W1Apply = () => {
   return (
     <section className="relative bg-background overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-warm opacity-[0.04] pointer-events-none" />
+      <div className="absolute inset-0 bg-brand-blue opacity-[0.04] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32">
         <div className="text-center max-w-[760px] mx-auto">
-          <div className="mx-auto w-20 h-[2px] bg-gradient-warm" />
+          <div className="mx-auto section-accent" />
           <h2
             className="mt-8 font-serif-display text-slate-ink"
             style={{ fontSize: "clamp(2.25rem, 5.5vw, 4rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
@@ -44,10 +44,8 @@ const W1Apply = () => {
               <div className="mt-8">
                 <a
                   href={c.href}
-                  className="group relative inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white bg-slate-ink overflow-hidden"
-                >
-                  <span className="absolute inset-0 bg-gradient-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="relative">{c.cta}</span>
+                  className="btn-primary">
+            {c.cta}
                 </a>
               </div>
             </div>

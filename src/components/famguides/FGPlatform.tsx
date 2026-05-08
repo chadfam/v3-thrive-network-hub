@@ -47,7 +47,7 @@ const FGPlatform = () => {
               className="bg-background rounded-xl p-8 border"
               style={{ borderColor: "#E0E3E7" }}
             >
-              <div className="h-[2px] w-8 bg-gradient-warm" />
+              <div className="h-[2px] w-8 bg-brand-blue" />
               <h3 className="mt-4 font-serif-display text-slate-ink text-[22px]">{c.name}</h3>
               <p className="mt-4 text-[15px] text-[hsl(var(--slate-700))] leading-relaxed">
                 {c.body}

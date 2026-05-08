@@ -52,7 +52,7 @@ const W1TwoWays = () => {
               <ul className="mt-8 space-y-3">
                 {c.highlights.map((h) => (
                   <li key={h} className="flex gap-3 text-[16px] text-[hsl(var(--slate-700))]">
-                    <span className="mt-2 shrink-0 w-2 h-2 rounded-full bg-gradient-warm" />
+                    <span className="bullet-dot" />
                     <span>{h}</span>
                   </li>
                 ))}
@@ -60,10 +60,8 @@ const W1TwoWays = () => {
               <div className="mt-10">
                 <a
                   href={c.href}
-                  className="group relative inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white bg-slate-ink overflow-hidden"
-                >
-                  <span className="absolute inset-0 bg-gradient-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="relative">{c.cta}</span>
+                  className="btn-primary">
+            {c.cta}
                 </a>
               </div>
             </div>

@@ -28,7 +28,7 @@ const PassExperience = () => {
         <div className="mt-14 grid md:grid-cols-3 gap-6 md:gap-8">
           {cards.map((c) => (
             <div key={c.n} className="rounded-2xl bg-white p-10" style={{ border: "1px solid #E0E3E7" }}>
-              <p aria-hidden className="font-serif-display text-[40px] leading-none text-transparent bg-clip-text bg-gradient-warm">
+              <p aria-hidden className="font-serif-display text-[40px] leading-none text-transparent bg-clip-text bg-brand-blue">
                 {c.n}
               </p>
               <h3 className="mt-5 font-serif-display text-[24px] text-slate-ink leading-tight">{c.heading}</h3>

@@ -2,7 +2,7 @@ const LeadWhy = () => {
   return (
     <section className="bg-background">
       <div className="mx-auto max-w-[760px] px-6 sm:px-8 md:px-10 py-16 md:py-32 text-center">
-        <div className="mx-auto mb-10 h-[2px] w-20 bg-gradient-warm" />
+        <div className="mx-auto mb-10 section-accent" />
         <h2 className="font-serif-display tracking-section text-slate-ink" style={{ fontSize: "clamp(1.75rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
           Why we built this for leaders.
         </h2>

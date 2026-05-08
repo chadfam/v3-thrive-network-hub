@@ -40,7 +40,7 @@ const W1Configurations = () => {
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {configs.map((c) => (
             <div key={c.name} className="bg-white border border-[#E0E3E7] rounded-xl p-8 flex flex-col">
-              <div className="w-8 h-[2px] bg-gradient-warm" />
+              <div className="w-8 h-[2px] bg-brand-blue" />
               <h3 className="mt-5 font-serif-display text-slate-ink text-[22px]" style={{ letterSpacing: "-0.01em" }}>
                 {c.name}
               </h3>

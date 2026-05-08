@@ -3,7 +3,7 @@ const EFApply = () => {
     <section className="relative bg-background">
       <div className="absolute inset-0 warm-tint-bg pointer-events-none" aria-hidden style={{ opacity: 0.8 }} />
       <div className="relative mx-auto max-w-3xl px-6 sm:px-8 md:px-10 py-20 md:py-32 text-center">
-        <div className="mx-auto mb-10 h-[2px] w-20 bg-gradient-warm" />
+        <div className="mx-auto mb-10 section-accent" />
         <h2 className="font-serif-display tracking-section text-slate-ink" style={{ fontSize: "clamp(2.25rem, 5.5vw, 4rem)", lineHeight: 1.05 }}>
           Bring your expertise into a network built for it.
         </h2>
@@ -13,10 +13,9 @@ const EFApply = () => {
         <div className="mt-10 flex flex-col items-center gap-4">
           <a
             href="/apply?role=expert-faculty"
-            className="group relative inline-flex items-center justify-center px-7 py-4 rounded-lg text-[15px] font-medium text-white bg-slate-ink overflow-hidden"
+            className="btn-primary text-[15px] py-4 px-7"
           >
-            <span className="absolute inset-0 bg-gradient-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <span className="relative">Apply as Expert Faculty →</span>
+            Apply as Expert Faculty →
           </a>
           <a
             href="/contact?topic=expert-faculty"

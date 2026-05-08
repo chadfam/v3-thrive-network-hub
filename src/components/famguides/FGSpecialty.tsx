@@ -81,7 +81,7 @@ const FGSpecialty = () => {
                     key={e}
                     className="flex items-start gap-3 text-[16px] text-[hsl(var(--slate-700))]"
                   >
-                    <span className="mt-[9px] inline-block w-2 h-2 rounded-full bg-gradient-warm shrink-0" />
+                    <span className="bullet-dot" />
                     <span>{e}</span>
                   </li>
                 ))}

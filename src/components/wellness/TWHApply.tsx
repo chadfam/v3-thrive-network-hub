@@ -10,7 +10,7 @@ const TWHApply = () => {
         }}
       />
       <div className="relative mx-auto max-w-[760px] px-6 sm:px-8 md:px-10 py-20 md:py-32 text-center">
-        <div className="mx-auto h-[2px] w-20 bg-gradient-warm" />
+        <div className="mx-auto section-accent" />
         <h2
           className="mt-10 font-serif-display text-slate-ink tracking-hero"
           style={{ fontSize: "clamp(2.25rem, 6vw, 4rem)", lineHeight: 1.05 }}
@@ -23,17 +23,11 @@ const TWHApply = () => {
           The savings analysis is the no-commitment first step. We review your payroll census and tell you exactly what the plan is worth to you and your team in actual dollars. If the math doesn't work for your situation, we say so.
         </p>
         <div className="mt-10 flex flex-col items-center gap-4">
-          <a
-            href="/contact?topic=team-wellness-hub-analysis"
-            className="group relative inline-flex items-center justify-center px-6 py-3 rounded-lg text-[15px] font-medium text-white bg-slate-ink overflow-hidden"
-          >
-            <span className="absolute inset-0 bg-gradient-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <span className="relative">Request a savings analysis →</span>
+          <a href="/contact?topic=team-wellness-hub-analysis" className="btn-primary">
+            Request a savings analysis →
           </a>
-          <a href="/profit-partners" className="text-[15px] text-slate-ink">
-            <span className="hover:bg-gradient-warm hover:bg-clip-text hover:text-transparent">
-              Or apply through Profit Partners →
-            </span>
+          <a href="/profit-partners" className="text-link">
+            Or apply through Profit Partners →
           </a>
         </div>
       </div>

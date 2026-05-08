@@ -30,10 +30,8 @@ const BizCommandCentral = () => {
           <p className="mt-6 max-w-[440px] italic text-[15px] text-[hsl(var(--slate-500))]">
             Included from the Mastermind tier of Profit Partners and above.
           </p>
-          <a href="/command-central" className="mt-8 inline-block text-[15px] text-slate-ink">
-            <span className="hover:bg-gradient-warm hover:bg-clip-text hover:text-transparent">
-              Command Central details →
-            </span>
+          <a href="/command-central" className="mt-8 text-link">
+            Command Central details →
           </a>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">

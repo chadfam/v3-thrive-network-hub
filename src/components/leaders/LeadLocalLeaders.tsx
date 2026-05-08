@@ -25,7 +25,7 @@ const LeadLocalLeaders = () => {
             Each Local Leader holds one industry in one zip code. When that category is claimed, it's claimed. You become the recognized connector in your category, featured at FAM Central events in your area, and you earn when families in your network make decisions through your introductions.
           </p>
           <div className="mt-6">
-            <span className="inline-block bg-gradient-warm text-white text-[12px] font-medium uppercase tracking-[0.12em] px-1.5 py-1 rounded">
+            <span className="inline-block bg-brand-blue text-white text-[12px] font-medium uppercase tracking-[0.12em] px-1.5 py-1 rounded">
               ONE LEADER PER INDUSTRY PER ZIP CODE
             </span>
           </div>
@@ -47,7 +47,7 @@ const LeadLocalLeaders = () => {
                   <p className="mt-3 text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">{s.body}</p>
                 </div>
                 {i < stages.length - 1 && (
-                  <div className="hidden md:block self-center w-6 h-px bg-gradient-warm mt-10" />
+                  <div className="hidden md:block self-center w-6 h-px bg-brand-blue mt-10" />
                 )}
               </React.Fragment>
             ))}

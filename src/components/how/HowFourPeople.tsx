@@ -48,7 +48,7 @@ const HowFourPeople = () => {
               className="rounded-2xl border border-slate-200 bg-background p-10"
             >
               <div
-                className="font-serif-display bg-gradient-warm bg-clip-text text-transparent"
+                className="font-serif-display text-brand-blue"
                 style={{ fontSize: 48, lineHeight: 1 }}
               >
                 {c.n}

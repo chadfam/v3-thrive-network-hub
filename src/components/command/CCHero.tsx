@@ -25,11 +25,10 @@ const CCHero = () => {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#catalog"
-              className="group relative inline-flex items-center justify-center px-6 py-3 rounded-lg text-[15px] font-medium text-white bg-slate-ink overflow-hidden"
+              className="btn-primary"
             >
-              <span className="absolute inset-0 bg-gradient-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span className="relative">See what's in the catalog</span>
-            </a>
+            See what's in the catalog
+          </a>
             <a
               href="/profit-partners"
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-[15px] font-medium text-slate-ink border border-slate-ink hover:bg-slate-ink hover:text-white transition-colors"

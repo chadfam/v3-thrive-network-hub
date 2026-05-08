@@ -37,7 +37,7 @@ const TWHMath = () => {
               <Row label="Pre-tax wellness allocation" value="$6,000" />
               <Row label="New taxable wages" value="$54,000" />
             </div>
-            <div className="my-4 h-[2px] w-full bg-gradient-warm" />
+            <div className="my-4 h-[2px] w-full bg-brand-blue" />
             <div>
               <Row label="Federal income tax saved (22% bracket)" value="$1,320" />
               <Row label="Employee FICA saved (7.65%)" value="$459" />
