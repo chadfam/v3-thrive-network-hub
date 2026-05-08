@@ -1,0 +1,77 @@
+const cards = [
+  {
+    label: "PATH ONE",
+    heading: "For promoters.",
+    body: "Sign up, share what you love, and earn when people buy. The Waves of Pay model means you also earn from the people you bring into the network, for as long as they keep referring.",
+    highlights: [
+      "No business of your own required",
+      "Branded sharing links and tracking",
+      "Earn from direct shares and from people you brought in",
+    ],
+    cta: "Become a promoter →",
+    href: "/apply?role=promoter",
+  },
+  {
+    label: "PATH TWO",
+    heading: "For businesses.",
+    body: "Run your entire affiliate, referral, or customer-loyalty program on top of the WER1 platform. Branded for your business. Configured for your structure. Underpinned by the patented Waves of Pay model.",
+    highlights: [
+      "White-labeled for your brand",
+      "Single-tier or multi-tier configurations",
+      "Family-unit attribution available",
+    ],
+    cta: "Talk to us about white-label →",
+    href: "/contact?topic=white-label",
+  },
+];
+
+const W1TwoWays = () => {
+  return (
+    <section id="two-ways" className="bg-background">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32">
+        <div className="text-center max-w-[760px] mx-auto">
+          <h2
+            className="font-serif-display text-slate-ink"
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
+          >
+            Two ways to use WER1.
+          </h2>
+          <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[720px] mx-auto">
+            The platform serves two distinct audiences. Promoters share what they trust and earn through the network. Businesses run their entire affiliate or referral program on the platform we built. Both paths use the same patented Waves of Pay model underneath.
+          </p>
+        </div>
+
+        <div className="mt-16 grid md:grid-cols-2 gap-6 md:gap-8">
+          {cards.map((c) => (
+            <div key={c.label} className="bg-white border border-[#E0E3E7] rounded-2xl p-10 md:p-14 flex flex-col">
+              <p className="text-[13px] font-medium uppercase tracking-[0.16em] text-[hsl(var(--slate-500))]">{c.label}</p>
+              <h3 className="mt-6 font-serif-display text-slate-ink" style={{ fontSize: "clamp(1.75rem, 3vw, 2.25rem)", letterSpacing: "-0.01em" }}>
+                {c.heading}
+              </h3>
+              <p className="mt-6 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[380px]">{c.body}</p>
+              <ul className="mt-8 space-y-3">
+                {c.highlights.map((h) => (
+                  <li key={h} className="flex gap-3 text-[16px] text-[hsl(var(--slate-700))]">
+                    <span className="mt-2 shrink-0 w-2 h-2 rounded-full bg-gradient-warm" />
+                    <span>{h}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-10">
+                <a
+                  href={c.href}
+                  className="group relative inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white bg-slate-ink overflow-hidden"
+                >
+                  <span className="absolute inset-0 bg-gradient-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="relative">{c.cta}</span>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default W1TwoWays;
