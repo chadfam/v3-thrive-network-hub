@@ -20,16 +20,10 @@ const PPHero = () => {
             A working alliance of business owners building predictable referral revenue together. The only program in the United to Thrive network you apply to directly. Everything else opens up once you're in.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <a
-              href="/apply"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white bg-brand-blue hover:bg-brand-blue-hover transition-colors"
-            >
+            <a href="/apply" className="btn-primary">
               Apply now
             </a>
-            <a
-              href="#benefits"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-slate-ink border border-[hsl(var(--slate-200))] hover:border-brand-blue hover:text-brand-blue transition-colors"
-            >
+            <a href="#benefits" className="btn-secondary">
               See what's included
             </a>
           </div>

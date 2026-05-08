@@ -30,16 +30,10 @@ const Hero = () => {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-3">
-            <Link
-              to="/businesses"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white bg-brand-blue hover:bg-brand-blue-hover transition-colors"
-            >
+            <Link to="/businesses" className="btn-primary">
               For Businesses
             </Link>
-            <Link
-              to="/leaders"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-slate-ink border border-[hsl(var(--slate-200))] hover:border-brand-blue hover:text-brand-blue transition-colors"
-            >
+            <Link to="/leaders" className="btn-secondary">
               For Leaders
             </Link>
           </div>

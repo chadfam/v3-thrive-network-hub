@@ -25,7 +25,7 @@ const HowHero = () => {
           </a>
           <a
             href="/businesses"
-            className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium border border-white text-white hover:bg-white hover:text-slate-ink transition-colors"
+            className="btn-secondary-on-dark"
           >
             See the programs
           </a>

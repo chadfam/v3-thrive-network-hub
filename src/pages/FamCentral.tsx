@@ -23,16 +23,10 @@ const FamCentral = () => (
           The platform is in development. This page is a placeholder while the product comes together. If you want to be notified when FAM Central launches, send us a note.
         </p>
         <div className="mt-10 flex flex-wrap gap-3 justify-center">
-          <a
-            href="/contact?topic=fam-central"
-            className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-slate-ink bg-white hover:bg-brand-gold transition-colors"
-          >
+          <a href="/contact?topic=fam-central" className="btn-on-dark">
             Stay informed
           </a>
-          <a
-            href="/about"
-            className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white border border-white hover:bg-white hover:text-slate-ink transition-colors"
-          >
+          <a href="/about" className="btn-secondary-on-dark">
             Learn about the network
           </a>
         </div>

@@ -69,7 +69,7 @@ const Contact = () => {
                 </select>
               </Field>
               <Field label="Message" required><textarea required rows={5} className={inputCls} /></Field>
-              <button type="submit" className="mt-2 inline-flex items-center justify-center w-full sm:w-auto sm:self-start min-h-[48px] px-6 py-3.5 rounded-lg text-[15px] font-medium text-white bg-slate-ink hover:opacity-90 transition-opacity">
+              <button type="submit" className="btn-primary mt-2 w-full sm:w-auto sm:self-start">
                 Send →
               </button>
             </form>

@@ -23,10 +23,7 @@ const TWHHero = () => {
           >
             See the math
           </a>
-          <a
-            href="/contact?topic=team-wellness-hub"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-[15px] font-medium text-slate-ink border border-slate-ink hover:bg-slate-ink hover:text-white transition-colors"
-          >
+          <a href="/contact?topic=team-wellness-hub" className="btn-secondary">
             Talk to us about setup
           </a>
         </div>

@@ -27,10 +27,7 @@ const EFHero = () => {
               className="btn-primary">
             Apply now
             </a>
-            <a
-              href="#income-streams"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-slate-ink border border-slate-ink hover:bg-slate-ink hover:text-white transition-colors"
-            >
+            <a href="#income-streams" className="btn-secondary">
               See how the income works
             </a>
           </div>

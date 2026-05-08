@@ -14,7 +14,7 @@ const AboutHero = () => {
           <a href="/businesses" className="btn-primary">
             See the programs
           </a>
-          <a href="/apply" className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-slate-ink border border-slate-ink hover:bg-slate-ink hover:text-white transition-colors">
+          <a href="/apply" className="btn-secondary">
             Apply now
           </a>
         </div>

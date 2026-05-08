@@ -25,7 +25,7 @@ const BizWer1Band = () => {
         <div className="mt-12">
           <a
             href="/how-it-works"
-            className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium bg-white text-brand-navy hover:bg-brand-gold hover:text-brand-navy transition-colors"
+            className="btn-on-dark"
           >
             How WER1 works →
           </a>

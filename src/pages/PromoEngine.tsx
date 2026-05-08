@@ -58,14 +58,11 @@ const PromoEngine = () => (
             href="https://promoengine.com/?ref=unitedtothrive"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-slate-ink bg-white hover:bg-brand-gold transition-colors"
+            className="btn-on-dark"
           >
             Visit promoengine.com →
           </a>
-          <a
-            href="/contact?topic=promo-engine"
-            className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white border border-white hover:bg-white hover:text-slate-ink transition-colors"
-          >
+          <a href="/contact?topic=promo-engine" className="btn-secondary-on-dark">
             Book a demo
           </a>
         </div>
@@ -130,10 +127,7 @@ const PromoEngine = () => (
           In just a few minutes, we'll walk you through how it works and what it could look like for your locations.
         </p>
         <div className="mt-10">
-          <a
-            href="/contact?topic=promo-engine"
-            className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium bg-white text-brand-navy hover:bg-brand-gold hover:text-brand-navy transition-colors"
-          >
+          <a href="/contact?topic=promo-engine" className="btn-on-dark">
             Book a demo & strategy session
           </a>
         </div>

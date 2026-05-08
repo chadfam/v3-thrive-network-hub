@@ -32,10 +32,7 @@ const FGHero = () => {
               >
             Apply now
           </a>
-              <a
-                href="#specialty-paths"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-[15px] font-medium text-slate-ink border border-slate-ink hover:bg-slate-ink hover:text-white transition-colors"
-              >
+              <a href="#specialty-paths" className="btn-secondary">
                 See the specialty paths
               </a>
             </div>

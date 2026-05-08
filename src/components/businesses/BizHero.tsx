@@ -2,7 +2,6 @@ const anchors = [
   { label: "Profit Partners", id: "profit-partners" },
   { label: "Mastermind Passport", id: "mastermind-passport" },
   { label: "Command Central", id: "command-central" },
-  { label: "Team Wellness Hub", id: "team-wellness-hub" },
 ];
 
 const BizHero = () => {
@@ -28,21 +27,18 @@ const BizHero = () => {
             Where <span className="ppx-italic">partnerships</span><br />replace ads.
           </h1>
           <p className="mt-8 max-w-[540px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Four programs and one referral platform for business owners who'd rather earn a recommendation than buy attention. Apply to Profit Partners. The rest unlocks from there.
+            Three core programs and one referral platform for business owners who'd rather earn a recommendation than buy attention. Apply to Profit Partners. The rest unlocks from there.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <a
-              href="/apply"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white bg-brand-blue hover:bg-brand-blue-hover transition-colors"
-            >
+            <a href="/apply" className="btn-primary">
               Apply as a Profit Partner
             </a>
             <a
               href="#profit-partners"
               onClick={(e) => handleAnchor(e, "profit-partners")}
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-slate-ink border border-[hsl(var(--slate-200))] hover:border-brand-blue hover:text-brand-blue transition-colors"
+              className="btn-secondary"
             >
-              See the four programs
+              See the three programs
             </a>
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] font-medium text-[hsl(var(--slate-500))]">

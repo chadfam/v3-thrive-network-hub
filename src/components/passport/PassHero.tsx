@@ -25,16 +25,11 @@ const PassHero = () => {
             Guest access into 40+ elite mastermind communities through one membership. The rooms most owners spend years trying to find. You walk in as a guest of the network instead of paying retail to test each one.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="/apply"
-              className="btn-on-dark">
-            Apply now
+            <a href="/apply" className="btn-on-dark">
+              Apply now
             </a>
-            <a
-              href="#rooms"
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white border border-white/60 hover:bg-white hover:text-slate-ink transition-colors"
-            >
-              See the rooms
+            <a href="/profit-partners" className="btn-secondary-on-dark">
+              Through Profit Partners
             </a>
           </div>
         </div>

@@ -20,10 +20,7 @@ const NotFound = () => {
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[560px] mx-auto">
             The link may be old or mistyped. Head back to the home page or use the navigation above to find what you were looking for.
           </p>
-          <Link
-            to="/"
-            className="mt-10 inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white bg-brand-blue hover:bg-brand-blue-hover transition-colors"
-          >
+          <Link to="/" className="btn-primary mt-10">
             Return to home
           </Link>
         </div>

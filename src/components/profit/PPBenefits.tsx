@@ -111,10 +111,7 @@ const PPBenefits = () => {
           <p className="mt-6 text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
             Every Profit Partner relationship is shaped on a private call. We talk through where you are, what you need, and what makes sense to invest in. The right starting point depends on your business — and that's the conversation we'd rather have together than predict on a webpage.
           </p>
-          <a
-            href="/apply"
-            className="mt-10 inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-[15px] font-medium text-white bg-brand-blue hover:bg-brand-blue-hover transition-colors"
-          >
+          <a href="/apply" className="btn-primary mt-10">
             Apply to Profit Partners
           </a>
         </div>
