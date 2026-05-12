@@ -123,6 +123,76 @@ const LightMark = ({ size = 88, tone = "color", ...over }: { size?: number; tone
   <ThriveMark size={size} tone={tone} spokeW={size * 0.05} nodeR={size * 0.072} hubR={size * 0.14} ringR={size * 0.33} {...over} />
 );
 
+// ════════════════════════════════════════════════════════════════════════════
+// THE ORGANIC HUB (refined S3) — the chosen direction.
+// A living network: hub set off-centre, nodes at deliberately-irregular
+// distances and angles, spokes of varying length. Carefully composed so the
+// visual mass stays balanced even though nothing is symmetric.
+// Designed on a 32-unit square so it works as a favicon / app icon too.
+// ════════════════════════════════════════════════════════════════════════════
+
+// Node layouts, hand-tuned (not random). [x, y, "blue"|"navy", radiusScale]
+type ONode = readonly [number, number, "blue" | "navy", number];
+const ORG_HUB = [13, 16] as const; // hub centre, off to the lower-left
+const ORG_NODES: Record<string, { hub: readonly [number, number]; nodes: ONode[] }> = {
+  // 6 nodes = the six programs; balanced asymmetry
+  six:   { hub: ORG_HUB, nodes: [
+    [5, 6, "navy", 1], [25, 4, "blue", 1.05], [29, 17, "navy", 0.92],
+    [22, 28, "blue", 1], [7, 28, "navy", 1], [17, 10, "blue", 0.85],
+  ]},
+  // 5 nodes — closer to the original S3 mock
+  five:  { hub: [14, 17] as const, nodes: [
+    [5, 7, "navy", 1], [27, 5, "blue", 1.05], [29, 19, "navy", 0.95],
+    [20, 29, "blue", 1], [7, 28, "navy", 0.95],
+  ]},
+  // 6 nodes, all the same blue (equal members)
+  sixBlue: { hub: ORG_HUB, nodes: [
+    [5, 6, "blue", 1], [25, 4, "blue", 1.05], [29, 17, "blue", 0.92],
+    [22, 28, "blue", 1], [7, 28, "blue", 1], [17, 10, "blue", 0.85],
+  ]},
+};
+
+const OrganicMark = ({
+  size = 88,
+  tone = "color",            // "color" | "mono" | "reversed"
+  layout = "six",            // key into ORG_NODES
+  weight = "light",          // "light" | "medium" | "bold"
+}: { size?: number; tone?: "color" | "mono" | "reversed"; layout?: keyof typeof ORG_NODES; weight?: "light" | "medium" | "bold" }) => {
+  const s = size / 32;       // scale factor from the 32-unit design grid
+  const w = weight === "bold" ? 1.5 : weight === "medium" ? 1.2 : 0.95;   // spoke width on the 32-grid
+  const baseNodeR = weight === "bold" ? 3.2 : weight === "medium" ? 2.7 : 2.4;
+  const hubR = weight === "bold" ? 4.6 : weight === "medium" ? 4.2 : 3.8;
+  const { hub, nodes } = ORG_NODES[layout];
+  const [hx, hy] = hub;
+  const spoke = tone === "reversed" ? "rgba(255,255,255,0.85)" : tone === "mono" ? "currentColor" : NAVY;
+  const colBlue = tone === "reversed" ? "#FFFFFF" : tone === "mono" ? "currentColor" : BLUE;
+  const colNavy = tone === "reversed" ? "rgba(255,255,255,0.78)" : tone === "mono" ? "currentColor" : NAVY;
+  const hubFill = tone === "mono" ? "currentColor" : GOLD;
+  return (
+    <svg viewBox="0 0 32 32" width={size} height={size} aria-label="thrive mark">
+      {nodes.map(([x, y], i) => <line key={`s${i}`} x1={hx} y1={hy} x2={x} y2={y} stroke={spoke} strokeWidth={w} strokeLinecap="round" />)}
+      {nodes.map(([x, y, c, rs], i) => <circle key={`n${i}`} cx={x} cy={y} r={baseNodeR * rs} fill={c === "blue" ? colBlue : colNavy} />)}
+      <circle cx={hx} cy={hy} r={hubR} fill={hubFill} />
+      {/* keep s referenced (svg already scales via width/height) */}
+      {false && <rect width={s} height={s} />}
+    </svg>
+  );
+};
+
+// Lockup using the organic mark.
+const OrgLockup = ({ tone = "color", h = 48, layout = "six", weight = "light" }: { tone?: "color" | "reversed"; h?: number; layout?: keyof typeof ORG_NODES; weight?: "light" | "medium" | "bold" }) => {
+  const dark = tone === "reversed";
+  const mark = h * 0.7;
+  const gap = h * 0.16;
+  const wmX = mark + gap;
+  return (
+    <svg viewBox={`0 0 ${wmX + 150} ${h}`} height={h} className="w-auto" aria-label="thrive">
+      <g transform={`translate(0, ${(h - mark) / 2})`}><OrganicMark size={mark} tone={dark ? "reversed" : "color"} layout={layout} weight={weight} /></g>
+      <text x={wmX} y={h * 0.95} fontFamily={FONT} fontWeight={800} fontSize={h} letterSpacing={h * -0.034} fill={dark ? "#FFFFFF" : NAVY}>thrive</text>
+    </svg>
+  );
+};
+
 // The horizontal lockup: light-register mark + Montserrat wordmark.
 // `markScale` = mark height as a fraction of cap height; `gapScale` = gap as fraction of cap height.
 const ThriveLockup = ({ tone = "color", h = 44, markScale = 0.66, gapScale = 0.2, markProps = {} }: {
@@ -1206,15 +1276,129 @@ const LogoConcepts = () => (
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pt-16 md:pt-24 pb-8">
         <p className="eyebrow">INTERNAL PREVIEW · NOT INDEXED</p>
         <h1 className="mt-6 font-serif-display text-slate-ink" style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-          The chosen direction — a hub-and-spoke logo system
+          The chosen direction — S3, the organic hub
         </h1>
         <p className="mt-6 max-w-[820px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          One direction, built as a system. A simplified hub-and-spoke <strong>symbol</strong> — gold centre (United to Thrive, the family at the middle), six equal-blue nodes (the programs), navy spokes (the structure) — drawn on a clean 26-unit square grid so it survives at favicon size. Paired with the <strong>Montserrat</strong> wordmark for the full lockup. Below: the lockup, the mark alone, the favicon, one-colour, reversed-on-navy, and on a photo. The earlier exploration sections (meshed, hub-study, etc.) stay further down for reference.
+          Refining <strong>S3</strong> — the living-network hub: gold centre set off to one side (United to Thrive, the family at the middle), nodes at deliberately-irregular distances and angles (the programs), spokes of varying length (the structure that grew, not a diagram). Composed so the visual mass stays balanced even though nothing is symmetric — and drawn on a 32-unit square so it works as a favicon / app icon. Paired with the <strong>Montserrat</strong> wordmark. The light-mark study and earlier explorations stay below for reference.
         </p>
       </div>
     </section>
 
-    {/* ── REFINE THE LIGHT MARK ───────────────────────────────────────────── */}
+    {/* ── REFINING S3 — THE ORGANIC HUB ──────────────────────────────────── */}
+    <section className="bg-background">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pb-12 space-y-10">
+        <div className="border-b-2 border-brand-gold pb-4">
+          <p className="eyebrow-gold">REFINING S3 · ORGANIC HUB-AND-SPOKE + MONTSERRAT WORDMARK</p>
+          <h2 className="mt-2 font-serif-display text-slate-ink text-[26px] md:text-[32px]">The living-network mark, cleaned up</h2>
+        </div>
+
+        {/* Primary lockup */}
+        <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
+          <p className="eyebrow-blue">PRIMARY LOCKUP</p>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">Horizontal — the default (6 nodes, light weight)</h3>
+          <div className="mt-6 grid md:grid-cols-2 gap-4">
+            <div className="flex items-center justify-center px-8 py-12 rounded-xl bg-white border border-[hsl(var(--slate-200))]"><OrgLockup tone="color" h={52} /></div>
+            <div className="flex items-center justify-center px-8 py-12 rounded-xl bg-brand-navy"><OrgLockup tone="reversed" h={52} /></div>
+          </div>
+        </article>
+
+        {/* The mark alone */}
+        <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
+          <p className="eyebrow-blue">THE MARK ALONE</p>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">For square spaces — app icon, social avatar, stamp</h3>
+          <div className="mt-6 grid md:grid-cols-3 gap-4">
+            <div className="flex items-center justify-center p-12 rounded-xl bg-white border border-[hsl(var(--slate-200))]"><OrganicMark size={96} /></div>
+            <div className="flex items-center justify-center p-12 rounded-xl bg-brand-navy"><OrganicMark size={96} tone="reversed" /></div>
+            <div className="flex items-center justify-center p-12 rounded-xl bg-brand-blue"><OrganicMark size={96} tone="reversed" /></div>
+          </div>
+        </article>
+
+        {/* Favicon sizes */}
+        <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
+          <p className="eyebrow-blue">FAVICON / TINY SIZES</p>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">Does the organic mark survive at 16 / 24 / 32 / 48 px?</h3>
+          <div className="mt-6 flex flex-wrap items-end gap-7">
+            {[16, 24, 32, 48].map((px) => (
+              <div key={px} className="flex flex-col items-center gap-2">
+                <div className="flex items-center justify-center rounded bg-white border border-[hsl(var(--slate-200))]" style={{ width: px + 10, height: px + 10 }}><OrganicMark size={px} /></div>
+                <span className="text-[11px] text-[hsl(var(--slate-500))]">{px}px</span>
+              </div>
+            ))}
+            {[16, 24, 32, 48].map((px) => (
+              <div key={`d${px}`} className="flex flex-col items-center gap-2">
+                <div className="flex items-center justify-center rounded bg-brand-navy" style={{ width: px + 10, height: px + 10 }}><OrganicMark size={px} tone="reversed" /></div>
+                <span className="text-[11px] text-[hsl(var(--slate-500))]">{px}px · dark</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-4 text-[14px] italic text-[hsl(var(--slate-500))]">If 16px is mush at the light weight, the favicon falls back to the <strong>medium</strong> or <strong>bold</strong> version of the same mark (shown below), or to a stripped 3-node version. Tell me what you see.</p>
+        </article>
+
+        {/* One-color + on photo */}
+        <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
+          <p className="eyebrow-blue">ONE-COLOUR · ON A PHOTO</p>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">The non-negotiable tests</h3>
+          <div className="mt-6 grid md:grid-cols-3 gap-4">
+            <div className="flex items-center justify-center px-8 py-12 rounded-xl bg-white border border-[hsl(var(--slate-200))] text-slate-ink">
+              <svg viewBox="0 0 190 52" height={52} className="w-auto"><g transform="translate(0,7)"><OrganicMark size={38} tone="mono" /></g><text x="46" y="49" fontFamily={FONT} fontWeight={800} fontSize={52} letterSpacing="-1.8" fill="currentColor">thrive</text></svg>
+            </div>
+            <div className="flex items-center justify-center px-8 py-12 rounded-xl bg-slate-ink text-white">
+              <svg viewBox="0 0 190 52" height={52} className="w-auto"><g transform="translate(0,7)"><OrganicMark size={38} tone="mono" /></g><text x="46" y="49" fontFamily={FONT} fontWeight={800} fontSize={52} letterSpacing="-1.8" fill="currentColor">thrive</text></svg>
+            </div>
+            <div
+              className="relative flex items-center justify-center px-8 py-12 rounded-xl overflow-hidden"
+              style={{ backgroundImage: "url(https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=640)", backgroundSize: "cover", backgroundPosition: "center" }}
+            >
+              <div className="absolute inset-0 bg-brand-navy/55" />
+              <div className="relative"><OrgLockup tone="reversed" h={40} /></div>
+            </div>
+          </div>
+        </article>
+
+        {/* Layout variants */}
+        <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
+          <p className="eyebrow-blue">ARRANGEMENT — PICK ONE</p>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">Node count & colour mix</h3>
+          <div className="mt-6 grid md:grid-cols-3 gap-4">
+            {([
+              { k: "six" as const, label: "6 nodes · navy + blue (the six programs, varied)" },
+              { k: "five" as const, label: "5 nodes · navy + blue (closest to the original S3)" },
+              { k: "sixBlue" as const, label: "6 nodes · all blue (equal members of the network)" },
+            ]).map((v) => (
+              <div key={v.k} className="rounded-xl border border-[hsl(var(--slate-200))] p-6">
+                <div className="flex items-center justify-center py-4"><OrganicMark size={88} layout={v.k} /></div>
+                <div className="mt-3 flex items-center px-3 py-2 rounded bg-white border border-[hsl(var(--slate-200))]"><OrgLockup tone="color" h={34} layout={v.k} /></div>
+                <p className="mt-2 text-[13px] text-[hsl(var(--slate-700))] text-center">{v.label}</p>
+              </div>
+            ))}
+          </div>
+        </article>
+
+        {/* Weight variants of the organic mark */}
+        <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
+          <p className="eyebrow-blue">WEIGHT — PICK ONE</p>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">Same organic mark, three weights</h3>
+          <div className="mt-6 grid md:grid-cols-3 gap-4">
+            {(["light", "medium", "bold"] as const).map((w) => (
+              <div key={w} className="rounded-xl border border-[hsl(var(--slate-200))] p-6">
+                <div className="flex items-center justify-center py-4"><OrganicMark size={88} weight={w} /></div>
+                <div className="mt-3 flex justify-center gap-3">{[16, 24].map((px) => <div key={px} className="flex items-center justify-center rounded bg-white border border-[hsl(var(--slate-200))]" style={{ width: px + 8, height: px + 8 }}><OrganicMark size={px} weight={w} /></div>)}</div>
+                <p className="mt-2 text-[13px] text-[hsl(var(--slate-700))] text-center capitalize">{w}{w === "light" ? " — your pick (most delicate)" : w === "medium" ? " — favicon-safe middle ground" : " — survives the tiniest"}</p>
+              </div>
+            ))}
+          </div>
+        </article>
+
+        <div className="rounded-2xl bg-brand-navy p-8 md:p-12 text-white">
+          <h3 className="font-serif-display text-[24px] md:text-[28px]">If this is the one, I'll wire it in.</h3>
+          <p className="mt-4 text-[17px] leading-relaxed text-white/80 max-w-[760px]">
+            Confirm the arrangement (6 / 5 / all-blue) and the weight (light / medium / bold for use; the favicon may use a heavier one), and say the word. I'll then: build a <code>&lt;ThriveLogo&gt;</code> component (so Montserrat renders in the header), swap it into Header & Footer, replace <code>favicon.svg</code> with the mark (heavier variant for legibility), export the SVG file set, and add a one-page brand sheet (clearspace, min sizes, colour values, do's/don'ts).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* ── REFINE THE LIGHT MARK (reference) ───────────────────────────────── */}
     <section className="bg-background">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pb-12 space-y-10">
         <div className="border-b-2 border-brand-gold pb-4">
