@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- United to Thrive — horizontal lockup: "thrive" wordmark with the organic
-     hub-and-spoke mark connected out of the top-right of the "e".
+     hub-and-spoke mark connecting out of the top-right of the "e". The mark is
+     a single colour — brand blue (#2563EB).
      The wordmark uses Montserrat with a system fallback; when this file is used
      outside the site (e.g. handed to a printer or another tool), outline the
      "thrive" text in a vector editor for pixel-exact rendering. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 44" role="img" aria-label="United to Thrive">
   <text x="4" y="39" font-family="'Montserrat', system-ui, -apple-system, sans-serif" font-weight="800" font-size="44" letter-spacing="-1.5" fill="#0F172A">thrive</text>
-  <g stroke="#0F172A" stroke-width="2" stroke-linecap="round">
-    <line x1="116" y1="19" x2="137" y2="11"/>
-    <line x1="137" y1="11" x2="127" y2="4"/>
-    <line x1="137" y1="11" x2="149" y2="4"/>
-    <line x1="137" y1="11" x2="163" y2="11"/>
-    <line x1="137" y1="11" x2="159" y2="24"/>
-    <line x1="137" y1="11" x2="140" y2="27"/>
+  <g stroke="#2563EB" stroke-width="2" stroke-linecap="round">
+    <line x1="116" y1="18" x2="143" y2="21"/>
+    <line x1="143" y1="21" x2="133" y2="8"/>
+    <line x1="143" y1="21" x2="158" y2="6"/>
+    <line x1="143" y1="21" x2="163" y2="22"/>
+    <line x1="143" y1="21" x2="154" y2="36"/>
+    <line x1="143" y1="21" x2="136" y2="36"/>
+    <line x1="143" y1="21" x2="148" y2="13"/>
   </g>
-  <circle cx="127" cy="4" r="2.84" fill="#0F172A"/>
-  <circle cx="149" cy="4" r="2.97" fill="#2563EB"/>
-  <circle cx="163" cy="11" r="2.57" fill="#0F172A"/>
-  <circle cx="159" cy="24" r="2.84" fill="#2563EB"/>
-  <circle cx="140" cy="27" r="2.7" fill="#0F172A"/>
-  <circle cx="137" cy="11" r="4.4" fill="#FBBF24"/>
+  <g fill="#2563EB">
+    <circle cx="133" cy="8" r="2.84"/>
+    <circle cx="158" cy="6" r="2.97"/>
+    <circle cx="163" cy="22" r="2.57"/>
+    <circle cx="154" cy="36" r="2.84"/>
+    <circle cx="136" cy="36" r="2.7"/>
+    <circle cx="148" cy="13" r="2.43"/>
+    <circle cx="143" cy="21" r="4.4"/>
+  </g>
 </svg>
