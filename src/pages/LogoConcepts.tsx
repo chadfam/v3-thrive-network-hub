@@ -71,6 +71,7 @@ const Link = ({ d, to = [HUB_X, HUB_Y], w = 1.5 }: { d: boolean; to?: readonly [
 
 // Reusable mark. `tone`: "color" (navy spokes, blue nodes, gold hub),
 // "mono" (single colour), "reversed" (for dark backgrounds).
+// All sizes are fractions of `size` so the mark scales cleanly.
 const ThriveMark = ({
   size = 26,
   tone = "color",
@@ -79,37 +80,62 @@ const ThriveMark = ({
   hubR = 4.8,
   ringR = 8.6,
   weights = 6,
+  rotate = 0,
+  spokeGapOuter = 0,        // spoke stops this far (units) short of the node
+  nodeStyle = "fill",       // "fill" | "ring"
+  nodeStrokeW = 1.2,
+  hubStyle = "fill",        // "fill" | "ring" | "halo"
+  hubHaloR = 0,
 }: {
   size?: number; tone?: "color" | "mono" | "reversed"; spokeW?: number;
-  nodeR?: number; hubR?: number; ringR?: number; weights?: number;
+  nodeR?: number; hubR?: number; ringR?: number; weights?: number; rotate?: number;
+  spokeGapOuter?: number; nodeStyle?: "fill" | "ring"; nodeStrokeW?: number;
+  hubStyle?: "fill" | "ring" | "halo"; hubHaloR?: number;
 }) => {
   const c = size / 2;
   const pts = Array.from({ length: weights }, (_, i) => {
-    const a = ((i * 360) / weights - 90) * Math.PI / 180;
-    return [c + ringR * Math.cos(a), c + ringR * Math.sin(a)] as const;
+    const a = ((i * 360) / weights - 90 + rotate) * Math.PI / 180;
+    return [c + ringR * Math.cos(a), c + ringR * Math.sin(a), a] as const;
   });
   const spoke = tone === "reversed" ? "rgba(255,255,255,0.85)" : tone === "mono" ? "currentColor" : NAVY;
   const node = tone === "reversed" ? "#FFFFFF" : tone === "mono" ? "currentColor" : BLUE;
   const hub = tone === "mono" ? "currentColor" : GOLD;
   return (
     <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size} aria-label="thrive mark">
-      {pts.map(([x, y], i) => <line key={`s${i}`} x1={c} y1={c} x2={x} y2={y} stroke={spoke} strokeWidth={spokeW} strokeLinecap="round" />)}
-      {pts.map(([x, y], i) => <circle key={`n${i}`} cx={x} cy={y} r={nodeR} fill={node} />)}
-      <circle cx={c} cy={c} r={hubR} fill={hub} />
+      {pts.map(([x, y, a], i) => {
+        const outerR = ringR - (spokeGapOuter + (nodeStyle === "ring" ? 0 : 0));
+        const ex = c + outerR * Math.cos(a), ey = c + outerR * Math.sin(a);
+        return <line key={`s${i}`} x1={c} y1={c} x2={ex} y2={ey} stroke={spoke} strokeWidth={spokeW} strokeLinecap="round" />;
+      })}
+      {pts.map(([x, y], i) => nodeStyle === "ring"
+        ? <circle key={`n${i}`} cx={x} cy={y} r={nodeR} fill="none" stroke={node} strokeWidth={nodeStrokeW} />
+        : <circle key={`n${i}`} cx={x} cy={y} r={nodeR} fill={node} />)}
+      {hubStyle === "halo" && <circle cx={c} cy={c} r={hubHaloR || hubR * 1.7} fill="none" stroke={hub} strokeWidth={Math.max(0.6, hubR * 0.18)} opacity="0.45" />}
+      {hubStyle === "ring"
+        ? <circle cx={c} cy={c} r={hubR} fill="none" stroke={hub} strokeWidth={Math.max(1, hubR * 0.42)} />
+        : <circle cx={c} cy={c} r={hubR} fill={hub} />}
     </svg>
   );
 };
 
-// The horizontal lockup: mark + Montserrat wordmark.
-const ThriveLockup = ({ tone = "color", h = 44 }: { tone?: "color" | "reversed"; h?: number }) => {
+// Convenience: a "light"-register mark at any size, all fractions tuned for delicacy.
+const LightMark = ({ size = 88, tone = "color", ...over }: { size?: number; tone?: "color" | "mono" | "reversed" } & Partial<Parameters<typeof ThriveMark>[0]>) => (
+  <ThriveMark size={size} tone={tone} spokeW={size * 0.05} nodeR={size * 0.072} hubR={size * 0.14} ringR={size * 0.33} {...over} />
+);
+
+// The horizontal lockup: light-register mark + Montserrat wordmark.
+// `markScale` = mark height as a fraction of cap height; `gapScale` = gap as fraction of cap height.
+const ThriveLockup = ({ tone = "color", h = 44, markScale = 0.66, gapScale = 0.2, markProps = {} }: {
+  tone?: "color" | "reversed"; h?: number; markScale?: number; gapScale?: number; markProps?: Partial<Parameters<typeof ThriveMark>[0]>;
+}) => {
   const dark = tone === "reversed";
-  const mark = h * 0.62;          // mark sits a touch smaller than cap height
-  const gap = h * 0.18;
+  const mark = h * markScale;
+  const gap = h * gapScale;
   const wmX = mark + gap;
   return (
     <svg viewBox={`0 0 ${wmX + 150} ${h}`} height={h} className="w-auto" aria-label="thrive">
-      <g transform={`translate(0, ${(h - mark) / 2})`}>
-        <ThriveMark size={mark} tone={dark ? "reversed" : "color"} spokeW={mark * 0.075} nodeR={mark * 0.105} hubR={mark * 0.185} ringR={mark * 0.33} />
+      <g transform={`translate(0, ${(h - mark) / 2 - h * 0.04})`}>
+        <LightMark size={mark} tone={dark ? "reversed" : "color"} {...markProps} />
       </g>
       <text x={wmX} y={h * 0.95} fontFamily={FONT} fontWeight={800} fontSize={h} letterSpacing={h * -0.034} fill={dark ? "#FFFFFF" : NAVY}>thrive</text>
     </svg>
@@ -1188,12 +1214,83 @@ const LogoConcepts = () => (
       </div>
     </section>
 
-    {/* ── FINAL DIRECTION ─────────────────────────────────────────────────── */}
+    {/* ── REFINE THE LIGHT MARK ───────────────────────────────────────────── */}
     <section className="bg-background">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pb-12 space-y-10">
         <div className="border-b-2 border-brand-gold pb-4">
-          <p className="eyebrow-gold">THE SYSTEM · HUB-AND-SPOKE SYMBOL + MONTSERRAT WORDMARK</p>
-          <h2 className="mt-2 font-serif-display text-slate-ink text-[26px] md:text-[32px]">United to Thrive — logo system v1</h2>
+          <p className="eyebrow-gold">REFINING THE LIGHT MARK · GOLD HUB · BLUE NODES · NAVY SPOKES</p>
+          <h2 className="mt-2 font-serif-display text-slate-ink text-[26px] md:text-[32px]">Dial in the proportions</h2>
+          <p className="mt-3 max-w-[700px] text-[15px] text-[hsl(var(--slate-700))]">Same recipe in every one (light weight, your colour roles) — varying node count, spoke length, node/hub treatment, and padding. Each shown big, at 16/24 px, and in the lockup. Tell me the letter you like (and any tweak).</p>
+        </div>
+
+        {([
+          { id: "L-A", name: "Baseline — 6 nodes, one pointing up, solid", p: {} },
+          { id: "L-B", name: "6 nodes, flat top (rotated 30°) — more grounded", p: { rotate: 30 } },
+          { id: "L-C", name: "5 nodes — odd count reads more organic / dynamic", p: { weights: 5 } },
+          { id: "L-D", name: "7 nodes — denser network, still light", p: { weights: 7 } },
+          { id: "L-E", name: "8 nodes (flat sides) — fullest wheel", p: { weights: 8, rotate: 22.5 } },
+          { id: "L-F", name: "6 nodes, spokes stop short of the nodes — airier", p: { spokeGapOuter: 4 } },
+          { id: "L-G", name: "6 nodes drawn as open rings — most delicate", p: { nodeStyle: "ring" as const, nodeR: 3.2 } },
+          { id: "L-H", name: "6 nodes, gold halo around the hub — a touch richer", p: { hubStyle: "halo" as const } },
+          { id: "L-I", name: "6 nodes, hub is an open gold ring — 'the space everything holds'", p: { hubStyle: "ring" as const } },
+          { id: "L-J", name: "6 nodes, tighter to the edges — favicon-optimised", p: { ringR: 88 * 0.37, nodeR: 88 * 0.082 } },
+          { id: "L-K", name: "6 nodes, roomier padding — most elegant", p: { ringR: 88 * 0.29 } },
+          { id: "L-L", name: "Delicate combo — open ring nodes + short spokes + solid gold hub", p: { nodeStyle: "ring" as const, nodeR: 3.2, spokeGapOuter: 3 } },
+        ] as { id: string; name: string; p: Partial<Parameters<typeof ThriveMark>[0]> }[]).map((v) => {
+          // scale node-radius-style props that were given in 88-units down for the small previews
+          const small = (px: number) => {
+            const sp: Partial<Parameters<typeof ThriveMark>[0]> = { ...v.p };
+            if (typeof sp.ringR === "number" && sp.ringR > 10) sp.ringR = sp.ringR / 88 * px;
+            if (typeof sp.nodeR === "number" && sp.nodeR > 5) sp.nodeR = sp.nodeR / 88 * px;
+            if (typeof sp.spokeGapOuter === "number") sp.spokeGapOuter = sp.spokeGapOuter / 88 * px;
+            return sp;
+          };
+          return (
+            <article key={v.id} className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-8">
+              <div className="flex flex-wrap items-baseline gap-3">
+                <p className="eyebrow-blue">{v.id}</p>
+                <h3 className="font-serif-display text-slate-ink text-[18px] md:text-[20px]">{v.name}</h3>
+              </div>
+              <div className="mt-6 grid md:grid-cols-[120px_120px_1fr] gap-4 items-center">
+                <div className="flex items-center justify-center p-6 rounded-xl bg-white border border-[hsl(var(--slate-200))]"><LightMark size={88} {...v.p} /></div>
+                <div className="flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white border border-[hsl(var(--slate-200))]">
+                  {[16, 24].map((px) => <div key={px} className="flex items-center justify-center rounded bg-white border border-[hsl(var(--slate-200))]" style={{ width: px + 10, height: px + 10 }}><LightMark size={px} {...small(px)} /></div>)}
+                </div>
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-center px-6 py-4 rounded-xl bg-white border border-[hsl(var(--slate-200))]"><ThriveLockup tone="color" h={42} markProps={v.p} /></div>
+                  <div className="flex items-center px-6 py-4 rounded-xl bg-brand-navy"><ThriveLockup tone="reversed" h={42} markProps={v.p} /></div>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+
+        {/* Lockup proportion options */}
+        <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-8">
+          <p className="eyebrow-blue">LOCKUP PROPORTIONS</p>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[18px] md:text-[20px]">Mark size & gap relative to the wordmark</h3>
+          <div className="mt-6 space-y-3">
+            {[
+              { label: "Mark small, generous gap — wordmark leads", ms: 0.56, gs: 0.26 },
+              { label: "Balanced — the recommended default", ms: 0.66, gs: 0.20 },
+              { label: "Mark large, tight gap — symbol leads", ms: 0.78, gs: 0.14 },
+            ].map((o) => (
+              <div key={o.label}>
+                <div className="flex items-center px-6 py-4 rounded-xl bg-white border border-[hsl(var(--slate-200))]"><ThriveLockup tone="color" h={48} markScale={o.ms} gapScale={o.gs} /></div>
+                <p className="mt-1 text-[12px] text-[hsl(var(--slate-500))]">{o.label}</p>
+              </div>
+            ))}
+          </div>
+        </article>
+      </div>
+    </section>
+
+    {/* ── FINAL DIRECTION (the v1 system, for context) ────────────────────── */}
+    <section className="surface-muted">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-12 md:py-20 space-y-10">
+        <div className="border-b border-[hsl(var(--slate-200))] pb-4">
+          <p className="eyebrow-blue">THE SYSTEM · HUB-AND-SPOKE SYMBOL + MONTSERRAT WORDMARK</p>
+          <h2 className="mt-2 font-serif-display text-slate-ink text-[24px] md:text-[28px]">United to Thrive — logo system v1 (baseline)</h2>
         </div>
 
         {/* Primary lockup */}
