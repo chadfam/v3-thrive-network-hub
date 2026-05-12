@@ -29,7 +29,12 @@ const blu = (d: boolean) => (d ? BLUE_LIGHT : BLUE);
 
 type Concept = { id: string; name: string; note: string; render: (dark: boolean) => ReactNode; tall?: boolean };
 
-const FONT_W = (d: boolean, x: number, y: number, size = 44, ls = "-1.5") => ({ fontFamily: FONT, fontWeight: 800, fontSize: size, letterSpacing: ls } as const);
+// Wordmark, always first / on the left. Width ~152 at 44px ExtraBold.
+const WM = (d: boolean) => (
+  <text x="2" y="42" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>thrive</text>
+);
+// Icons sit to the RIGHT of the wordmark, in a 56-tall band starting at x≈162.
+const ICON_X = 162;
 
 // ── SHORTLIST · hub-and-spoke + chains + word-of-mouth bubbles ───────────────
 const shortlist: Concept[] = [
@@ -45,11 +50,13 @@ const shortlist: Concept[] = [
         return [cx + r * Math.cos(a), cy + r * Math.sin(a)] as const;
       });
       return (
-        <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-          {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={d ? "rgba(255,255,255,0.45)" : "#CBD5E1"} strokeWidth="1.5" />)}
-          {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="4.5" fill={i % 2 === 0 ? blu(d) : ink(d)} />)}
-          <circle cx={cx} cy={cy} r="7.5" fill={GOLD} />
-          <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
+        <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={d ? "rgba(255,255,255,0.45)" : "#CBD5E1"} strokeWidth="1.5" />)}
+            {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="4.5" fill={i % 2 === 0 ? blu(d) : ink(d)} />)}
+            <circle cx={cx} cy={cy} r="7.5" fill={GOLD} />
+          </g>
         </svg>
       );
     },
@@ -59,15 +66,17 @@ const shortlist: Concept[] = [
     name: "Hub & spoke as a 'T'",
     note: "The hub-and-spoke arranged into the letter T — three satellite hubs across the top (the crossbar), the hub at the join, two more dropping down (the stem). Symbol + monogram + network, all at once. Hub gold, satellites navy/blue.",
     render: (d) => (
-      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-        <g stroke={d ? "rgba(255,255,255,0.45)" : "#CBD5E1"} strokeWidth="1.5">
-          <line x1="24" y1="12" x2="6" y2="12" /><line x1="24" y1="12" x2="42" y2="12" />
-          <line x1="24" y1="12" x2="24" y2="28" /><line x1="24" y1="28" x2="24" y2="44" />
+      <svg viewBox="0 0 215 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        {WM(d)}
+        <g transform={`translate(${ICON_X}, 0)`}>
+          <g stroke={d ? "rgba(255,255,255,0.45)" : "#CBD5E1"} strokeWidth="1.5">
+            <line x1="24" y1="12" x2="6" y2="12" /><line x1="24" y1="12" x2="42" y2="12" />
+            <line x1="24" y1="12" x2="24" y2="28" /><line x1="24" y1="28" x2="24" y2="44" />
+          </g>
+          <circle cx="6" cy="12" r="4.5" fill={ink(d)} /><circle cx="42" cy="12" r="4.5" fill={ink(d)} />
+          <circle cx="24" cy="28" r="4.5" fill={blu(d)} /><circle cx="24" cy="44" r="4.5" fill={blu(d)} />
+          <circle cx="24" cy="12" r="7" fill={GOLD} />
         </g>
-        <circle cx="6" cy="12" r="4.5" fill={ink(d)} /><circle cx="42" cy="12" r="4.5" fill={ink(d)} />
-        <circle cx="24" cy="28" r="4.5" fill={blu(d)} /><circle cx="24" cy="44" r="4.5" fill={blu(d)} />
-        <circle cx="24" cy="12" r="7" fill={GOLD} />
-        <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
@@ -81,11 +90,13 @@ const shortlist: Concept[] = [
         [4, 8, ink(d)], [42, 6, blu(d)], [46, 30, ink(d)], [10, 46, blu(d)], [34, 47, ink(d)],
       ];
       return (
-        <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-          {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={d ? "rgba(255,255,255,0.4)" : "#CBD5E1"} strokeWidth="1.5" />)}
-          {pts.map(([x, y, c], i) => <circle key={`c${i}`} cx={x} cy={y} r="4" fill={c} />)}
-          <circle cx={cx} cy={cy} r="7.5" fill={GOLD} />
-          <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
+        <svg viewBox="0 0 215 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={d ? "rgba(255,255,255,0.4)" : "#CBD5E1"} strokeWidth="1.5" />)}
+            {pts.map(([x, y, c], i) => <circle key={`c${i}`} cx={x} cy={y} r="4" fill={c} />)}
+            <circle cx={cx} cy={cy} r="7.5" fill={GOLD} />
+          </g>
         </svg>
       );
     },
@@ -101,24 +112,26 @@ const shortlist: Concept[] = [
         return [cx + 14 * Math.cos(a), cy + 14 * Math.sin(a), deg] as const;
       });
       return (
-        <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-          {mid.map(([x, y, deg], i) => {
-            const a = (deg * Math.PI) / 180;
-            const o1 = [x + 7 * Math.cos(a - 0.5), y + 7 * Math.sin(a - 0.5)] as const;
-            const o2 = [x + 7 * Math.cos(a + 0.5), y + 7 * Math.sin(a + 0.5)] as const;
-            return (
-              <g key={i}>
-                <line x1={cx} y1={cy} x2={x} y2={y} stroke={d ? "rgba(255,255,255,0.4)" : "#CBD5E1"} strokeWidth="1.5" />
-                <line x1={x} y1={y} x2={o1[0]} y2={o1[1]} stroke={d ? "rgba(255,255,255,0.3)" : "#E2E8F0"} strokeWidth="1" />
-                <line x1={x} y1={y} x2={o2[0]} y2={o2[1]} stroke={d ? "rgba(255,255,255,0.3)" : "#E2E8F0"} strokeWidth="1" />
-                <circle cx={o1[0]} cy={o1[1]} r="2.2" fill={blu(d)} />
-                <circle cx={o2[0]} cy={o2[1]} r="2.2" fill={blu(d)} />
-                <circle cx={x} cy={y} r="4" fill={ink(d)} />
-              </g>
-            );
-          })}
-          <circle cx={cx} cy={cy} r="7" fill={GOLD} />
-          <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
+        <svg viewBox="0 0 215 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            {mid.map(([x, y, deg], i) => {
+              const a = (deg * Math.PI) / 180;
+              const o1 = [x + 7 * Math.cos(a - 0.5), y + 7 * Math.sin(a - 0.5)] as const;
+              const o2 = [x + 7 * Math.cos(a + 0.5), y + 7 * Math.sin(a + 0.5)] as const;
+              return (
+                <g key={i}>
+                  <line x1={cx} y1={cy} x2={x} y2={y} stroke={d ? "rgba(255,255,255,0.4)" : "#CBD5E1"} strokeWidth="1.5" />
+                  <line x1={x} y1={y} x2={o1[0]} y2={o1[1]} stroke={d ? "rgba(255,255,255,0.3)" : "#E2E8F0"} strokeWidth="1" />
+                  <line x1={x} y1={y} x2={o2[0]} y2={o2[1]} stroke={d ? "rgba(255,255,255,0.3)" : "#E2E8F0"} strokeWidth="1" />
+                  <circle cx={o1[0]} cy={o1[1]} r="2.2" fill={blu(d)} />
+                  <circle cx={o2[0]} cy={o2[1]} r="2.2" fill={blu(d)} />
+                  <circle cx={x} cy={y} r="4" fill={ink(d)} />
+                </g>
+              );
+            })}
+            <circle cx={cx} cy={cy} r="7" fill={GOLD} />
+          </g>
         </svg>
       );
     },
@@ -134,16 +147,18 @@ const shortlist: Concept[] = [
         return [cx + r * Math.cos(a), cy + r * Math.sin(a), deg - 90] as const;
       });
       return (
-        <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-          {pts.map(([x, y, deg], i) => (
-            <g key={i}>
-              <line x1={cx} y1={cy} x2={x} y2={y} stroke={blu(d)} strokeWidth="2" />
-              <path d="M 0 0 L -4 -3 L -4 3 Z" fill={blu(d)} transform={`translate(${x},${y}) rotate(${deg}) translate(2,0)`} />
-              <circle cx={x} cy={y} r="2.5" fill={ink(d)} opacity="0.4" />
-            </g>
-          ))}
-          <circle cx={cx} cy={cy} r="8" fill={GOLD} />
-          <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
+        <svg viewBox="0 0 215 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            {pts.map(([x, y, deg], i) => (
+              <g key={i}>
+                <line x1={cx} y1={cy} x2={x} y2={y} stroke={blu(d)} strokeWidth="2" />
+                <path d="M 0 0 L -4 -3 L -4 3 Z" fill={blu(d)} transform={`translate(${x},${y}) rotate(${deg}) translate(2,0)`} />
+                <circle cx={x} cy={y} r="2.5" fill={ink(d)} opacity="0.4" />
+              </g>
+            ))}
+            <circle cx={cx} cy={cy} r="8" fill={GOLD} />
+          </g>
         </svg>
       );
     },
@@ -159,11 +174,13 @@ const shortlist: Concept[] = [
         return [cx + r * Math.cos(a), cy + r * Math.sin(a)] as const;
       });
       return (
-        <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-          {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={i === 5 ? GOLD : (d ? "rgba(255,255,255,0.35)" : "#E2E8F0")} strokeWidth={i === 5 ? 3 : 1.5} />)}
-          {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r={i === 5 ? 5.5 : 4} fill={i === 5 ? GOLD : "none"} stroke={i === 5 ? "none" : (d ? "rgba(255,255,255,0.5)" : "#CBD5E1")} strokeWidth="2" />)}
-          <circle cx={cx} cy={cy} r="7.5" fill={ink(d)} />
-          <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
+        <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={i === 5 ? GOLD : (d ? "rgba(255,255,255,0.35)" : "#E2E8F0")} strokeWidth={i === 5 ? 3 : 1.5} />)}
+            {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r={i === 5 ? 5.5 : 4} fill={i === 5 ? GOLD : "none"} stroke={i === 5 ? "none" : (d ? "rgba(255,255,255,0.5)" : "#CBD5E1")} strokeWidth="2" />)}
+            <circle cx={cx} cy={cy} r="7.5" fill={ink(d)} />
+          </g>
         </svg>
       );
     },
@@ -174,13 +191,13 @@ const shortlist: Concept[] = [
     name: "Ascending chain — straight up (M4, vertical)",
     note: "Three interlocking links climbing vertically, each a step higher and a colour brighter: navy → blue → gold. Cleaner and more iconic than the diagonal M4. 'The chain is the point' — and the chain rises.",
     render: (d) => (
-      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-        <g fill="none" strokeWidth="4.5" strokeLinecap="round">
-          <ellipse cx="14" cy="44" rx="6.5" ry="9.5" stroke={ink(d)} transform="rotate(18 14 44)" />
-          <ellipse cx="20" cy="28" rx="6.5" ry="9.5" stroke={blu(d)} transform="rotate(18 20 28)" />
-          <ellipse cx="26" cy="12" rx="6.5" ry="9.5" stroke={GOLD} transform="rotate(18 26 12)" />
+      <svg viewBox="0 0 200 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        {WM(d)}
+        <g transform={`translate(${ICON_X}, 0)`} fill="none" strokeWidth="4.5" strokeLinecap="round">
+          <ellipse cx="10" cy="44" rx="6.5" ry="9.5" stroke={ink(d)} transform="rotate(18 10 44)" />
+          <ellipse cx="16" cy="28" rx="6.5" ry="9.5" stroke={blu(d)} transform="rotate(18 16 28)" />
+          <ellipse cx="22" cy="12" rx="6.5" ry="9.5" stroke={GOLD} transform="rotate(18 22 12)" />
         </g>
-        <text x="48" y="42" {...FONT_W(d, 48, 42)} fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
@@ -189,15 +206,15 @@ const shortlist: Concept[] = [
     name: "Chain forms the 'T'",
     note: "Three links across the top make the T's crossbar; the middle link drops two more to form the stem. The brand monogram, built entirely out of connected links. Crossbar navy/blue, stem ends in a gold link.",
     render: (d) => (
-      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-        <g fill="none" strokeWidth="4" strokeLinecap="round">
+      <svg viewBox="0 0 215 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        {WM(d)}
+        <g transform={`translate(${ICON_X}, 0)`} fill="none" strokeWidth="4" strokeLinecap="round">
           <ellipse cx="10" cy="12" rx="9" ry="6" stroke={ink(d)} />
           <ellipse cx="24" cy="12" rx="9" ry="6" stroke={blu(d)} />
           <ellipse cx="38" cy="12" rx="9" ry="6" stroke={ink(d)} />
           <ellipse cx="24" cy="26" rx="6" ry="9" stroke={blu(d)} />
           <ellipse cx="24" cy="42" rx="6" ry="9" stroke={GOLD} />
         </g>
-        <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
@@ -212,11 +229,13 @@ const shortlist: Concept[] = [
         return [cx + r * Math.cos(a), cy + r * Math.sin(a), deg] as const;
       });
       return (
-        <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-          {links.map(([x, y, deg], i) => (
-            <ellipse key={i} cx={x} cy={y} rx="5.5" ry="9" fill="none" strokeWidth="4" stroke={i === 0 ? GOLD : (i % 2 === 0 ? ink(d) : blu(d))} transform={`rotate(${deg} ${x} ${y})`} />
-          ))}
-          <text x="56" y="42" {...FONT_W(d, 56, 42)} fill={ink(d)}>thrive</text>
+        <svg viewBox="0 0 215 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            {links.map(([x, y, deg], i) => (
+              <ellipse key={i} cx={x} cy={y} rx="5.5" ry="9" fill="none" strokeWidth="4" stroke={i === 0 ? GOLD : (i % 2 === 0 ? ink(d) : blu(d))} transform={`rotate(${deg} ${x} ${y})`} />
+            ))}
+          </g>
         </svg>
       );
     },
@@ -227,13 +246,13 @@ const shortlist: Concept[] = [
     name: "Chorus of recommendations — overlapping bubbles",
     note: "Three speech bubbles cascading — many voices, many recommendations. The business model in a mark: people talking. Back navy, middle blue, front gold.",
     render: (d) => (
-      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-        <g>
+      <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        {WM(d)}
+        <g transform={`translate(${ICON_X}, 0)`}>
           <path d="M 4 4 h 22 a 6 6 0 0 1 6 6 v 8 a 6 6 0 0 1 -6 6 h -10 l -7 6 v -6 h -5 a 6 6 0 0 1 -6 -6 v -8 a 6 6 0 0 1 6 -6 z" fill={ink(d)} />
           <path d="M 14 14 h 22 a 6 6 0 0 1 6 6 v 8 a 6 6 0 0 1 -6 6 h -10 l -7 6 v -6 h -5 a 6 6 0 0 1 -6 -6 v -8 a 6 6 0 0 1 6 -6 z" fill={blu(d)} />
           <path d="M 22 26 h 22 a 6 6 0 0 1 6 6 v 8 a 6 6 0 0 1 -6 6 h -10 l -7 6 v -6 h -5 a 6 6 0 0 1 -6 -6 v -8 a 6 6 0 0 1 6 -6 z" fill={GOLD} />
         </g>
-        <text x="60" y="42" {...FONT_W(d, 60, 42)} fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
@@ -242,13 +261,15 @@ const shortlist: Concept[] = [
     name: "Recommendation → chain (the bubble has a tail of links)",
     note: "A speech bubble whose pointer tail extends into two chain links — a recommendation that connects people downstream, and pays each of them. Word-of-mouth meets 'the chain is the point.' Bubble blue, links navy → gold.",
     render: (d) => (
-      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-        <path d="M 4 4 h 30 a 7 7 0 0 1 7 7 v 14 a 7 7 0 0 1 -7 7 h -14 l -6 7 v -7 h -10 a 7 7 0 0 1 -7 -7 v -14 a 7 7 0 0 1 7 -7 z" fill={blu(d)} />
-        <g fill="none" strokeWidth="3.5" strokeLinecap="round">
-          <ellipse cx="22" cy="40" rx="5" ry="7.5" stroke={ink(d)} transform="rotate(25 22 40)" />
-          <ellipse cx="32" cy="48" rx="5" ry="7.5" stroke={GOLD} transform="rotate(25 32 48)" />
+      <svg viewBox="0 0 218 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        {WM(d)}
+        <g transform={`translate(${ICON_X}, 0)`}>
+          <path d="M 4 4 h 30 a 7 7 0 0 1 7 7 v 14 a 7 7 0 0 1 -7 7 h -14 l -6 7 v -7 h -10 a 7 7 0 0 1 -7 -7 v -14 a 7 7 0 0 1 7 -7 z" fill={blu(d)} />
+          <g fill="none" strokeWidth="3.5" strokeLinecap="round">
+            <ellipse cx="22" cy="40" rx="5" ry="7.5" stroke={ink(d)} transform="rotate(25 22 40)" />
+            <ellipse cx="32" cy="48" rx="5" ry="7.5" stroke={GOLD} transform="rotate(25 32 48)" />
+          </g>
         </g>
-        <text x="56" y="42" {...FONT_W(d, 56, 42)} fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
@@ -257,23 +278,25 @@ const shortlist: Concept[] = [
     name: "What people say is about the network (bubble holds a hub)",
     note: "A speech bubble containing a tiny hub-and-spoke. The recommendation (the bubble) and the network it points to (the hub inside) are one thing. Bubble navy outline, hub gold, satellites blue.",
     render: (d) => (
-      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-        <path d="M 3 4 h 40 a 7 7 0 0 1 7 7 v 18 a 7 7 0 0 1 -7 7 h -20 l -7 7 v -7 h -13 a 7 7 0 0 1 -7 -7 v -18 a 7 7 0 0 1 7 -7 z" fill="none" stroke={ink(d)} strokeWidth="2.5" />
-        <g transform="translate(23, 20)">
-          {[0, 90, 180, 270].map((deg) => {
-            const a = (deg * Math.PI) / 180;
-            const x = 9 * Math.cos(a), y = 9 * Math.sin(a);
-            return <g key={deg}><line x1="0" y1="0" x2={x} y2={y} stroke={d ? "rgba(255,255,255,0.4)" : "#CBD5E1"} strokeWidth="1.2" /><circle cx={x} cy={y} r="2.5" fill={blu(d)} /></g>;
-          })}
-          <circle cx="0" cy="0" r="4" fill={GOLD} />
+      <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        {WM(d)}
+        <g transform={`translate(${ICON_X}, 0)`}>
+          <path d="M 3 4 h 40 a 7 7 0 0 1 7 7 v 18 a 7 7 0 0 1 -7 7 h -20 l -7 7 v -7 h -13 a 7 7 0 0 1 -7 -7 v -18 a 7 7 0 0 1 7 -7 z" fill="none" stroke={ink(d)} strokeWidth="2.5" />
+          <g transform="translate(23, 20)">
+            {[0, 90, 180, 270].map((deg) => {
+              const a = (deg * Math.PI) / 180;
+              const x = 9 * Math.cos(a), y = 9 * Math.sin(a);
+              return <g key={deg}><line x1="0" y1="0" x2={x} y2={y} stroke={d ? "rgba(255,255,255,0.4)" : "#CBD5E1"} strokeWidth="1.2" /><circle cx={x} cy={y} r="2.5" fill={blu(d)} /></g>;
+            })}
+            <circle cx="0" cy="0" r="4" fill={GOLD} />
+          </g>
         </g>
-        <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
 ];
 
-// ── SECTION 0 · Meaning-aligned directions ───────────────────────────────────
+// ── SECTION 0 · Meaning-aligned directions (icon on the RIGHT) ───────────────
 // Each mark embodies a specific thing United to Thrive stands for.
 const meaning: Concept[] = [
   {
@@ -281,16 +304,14 @@ const meaning: Concept[] = [
     name: "United → Thrive — two forms become one",
     note: "A 'U' (an open vessel — united, gathering) with a 'T' rising out of it (thrive). One reads into the other: united, then thriving. The literal name as a mark. U in blue, T in navy, gold pivot dot.",
     render: (d) => (
-      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-        <g transform="translate(2, 4)">
-          {/* U — open bowl */}
+      <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        {WM(d)}
+        <g transform={`translate(${ICON_X}, 4)`}>
           <path d="M 4 2 V 22 a 14 14 0 0 0 28 0 V 2" fill="none" stroke={blu(d)} strokeWidth="7" strokeLinecap="round" />
-          {/* T — rising from the bowl */}
           <rect x="6" y="6" width="28" height="6.5" rx="2" fill={ink(d)} />
           <rect x="16.75" y="6" width="6.5" height="26" rx="2" fill={ink(d)} />
           <circle cx="20" cy="38" r="3.5" fill={GOLD} />
         </g>
-        <text x="56" y="42" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
@@ -299,15 +320,15 @@ const meaning: Concept[] = [
     name: "Convergence — the many become one, then rise",
     note: "Several lines (the programs, the people, the chapters) start spread apart and converge to a single point — then continue as one bold stroke lifting upward. 'We unite them all,' and the united thing thrives. Navy lines, gold rising stroke.",
     render: (d) => (
-      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-        <g transform="translate(2, 4)" fill="none" strokeWidth="3" strokeLinecap="round">
+      <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        {WM(d)}
+        <g transform={`translate(${ICON_X}, 4)`} fill="none" strokeWidth="3" strokeLinecap="round">
           <path d="M 2 4 L 26 24" stroke={ink(d)} />
           <path d="M 2 24 L 26 24" stroke={blu(d)} />
           <path d="M 2 44 L 26 24" stroke={ink(d)} />
           <path d="M 26 24 L 42 4" stroke={GOLD} strokeWidth="5" />
           <path d="M 42 4 L 36 2 L 36 9 Z" fill={GOLD} stroke="none" transform="rotate(-30 42 4)" />
         </g>
-        <text x="56" y="42" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
@@ -316,14 +337,14 @@ const meaning: Concept[] = [
     name: "Family at the hub — everyone orbits the family",
     note: "A gold heart-dot at the center; navy/blue petals radiating out (the businesses, leaders, partners that serve them). 'Famous for families' rendered literally — families at the center, the whole network revolving around them.",
     render: (d) => (
-      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-        <g transform="translate(24, 28)">
+      <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        {WM(d)}
+        <g transform={`translate(${ICON_X + 24}, 28)`}>
           {[0, 60, 120, 180, 240, 300].map((deg, i) => (
             <ellipse key={deg} cx="0" cy="-13" rx="4.5" ry="11" fill={i % 2 === 0 ? blu(d) : ink(d)} transform={`rotate(${deg})`} />
           ))}
           <circle cx="0" cy="0" r="7" fill={GOLD} />
         </g>
-        <text x="56" y="42" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
@@ -332,13 +353,13 @@ const meaning: Concept[] = [
     name: "The ascending chain — 'the chain is the point'",
     note: "Interlocking links climbing left-to-right, each a step up — and a colour step too: navy → blue → gold. The referral chain that pays everyone, the relationships that compound, the network rising. The single most literal expression of the WER1 idea.",
     render: (d) => (
-      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-        <g fill="none" strokeWidth="4.5" strokeLinecap="round">
+      <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        {WM(d)}
+        <g transform={`translate(${ICON_X}, 0)`} fill="none" strokeWidth="4.5" strokeLinecap="round">
           <ellipse cx="14" cy="40" rx="10" ry="7" stroke={ink(d)} transform="rotate(-30 14 40)" />
           <ellipse cx="26" cy="28" rx="10" ry="7" stroke={blu(d)} transform="rotate(-30 26 28)" />
           <ellipse cx="38" cy="16" rx="10" ry="7" stroke={GOLD} transform="rotate(-30 38 16)" />
         </g>
-        <text x="58" y="42" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
@@ -348,15 +369,13 @@ const meaning: Concept[] = [
     note: "Above a horizon line: a two-leaf sprout (visible thriving). Below it: a small web of connected nodes (the partnership network that feeds the growth). The whole philosophy in one mark — what you see growing is built on relationships you don't.",
     tall: true,
     render: (d) => (
-      <svg viewBox="0 0 250 72" className="h-12 md:h-14 w-auto" aria-label="thrive">
-        <g transform="translate(20, 4)">
-          {/* sprout above */}
+      <svg viewBox="0 0 220 72" className="h-12 md:h-14 w-auto" aria-label="thrive">
+        <text x="2" y="48" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>thrive</text>
+        <g transform={`translate(${ICON_X + 18}, 4)`}>
           <path d="M 0 30 V 8" stroke={blu(d)} strokeWidth="3" strokeLinecap="round" fill="none" />
           <path d="M 0 14 q -11 -3 -13 -13 q 11 0 13 13" fill={GOLD} />
           <path d="M 0 18 q 11 -3 13 -13 q -11 0 -13 13" fill={blu(d)} />
-          {/* horizon line */}
           <line x1="-18" y1="32" x2="18" y2="32" stroke={d ? "rgba(255,255,255,0.4)" : "#CBD5E1"} strokeWidth="1.5" />
-          {/* root network below */}
           <g stroke={ink(d)} strokeWidth="1.5" fill={ink(d)}>
             <line x1="0" y1="32" x2="-12" y2="46" />
             <line x1="0" y1="32" x2="11" y2="44" />
@@ -367,7 +386,6 @@ const meaning: Concept[] = [
             <circle cx="2" cy="56" r="3" />
           </g>
         </g>
-        <text x="56" y="48" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
@@ -376,7 +394,7 @@ const meaning: Concept[] = [
     name: "Trust → abundance — the gradient is the message",
     note: "A simple rising arc (or half-sun on a horizon) filled navy → blue → gold. Brandon's exact framing — blue is trust, gold is wealth — made into the mark itself: you move from trust to abundance. Optimistic, clean, scales to anything.",
     render: (d) => (
-      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+      <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         <defs>
           <linearGradient id={`m6-${d ? "d" : "l"}`} x1="0" y1="1" x2="1" y2="0">
             <stop offset="0" stopColor={ink(d)} />
@@ -384,13 +402,13 @@ const meaning: Concept[] = [
             <stop offset="1" stopColor={GOLD} />
           </linearGradient>
         </defs>
-        <g transform="translate(4, 0)">
+        {WM(d)}
+        <g transform={`translate(${ICON_X}, 0)`}>
           <path d="M 2 44 A 20 20 0 0 1 42 44" fill="none" stroke={`url(#m6-${d ? "d" : "l"})`} strokeWidth="6" strokeLinecap="round" />
           {[8, 22, 36].map((x, i) => (
             <line key={x} x1={x} y1={44 - Math.sqrt(Math.max(0, 400 - (x - 22) ** 2))} x2={x} y2="48" stroke={i === 2 ? GOLD : blu(d)} strokeWidth="2.5" strokeLinecap="round" />
           ))}
         </g>
-        <text x="58" y="42" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
@@ -399,13 +417,13 @@ const meaning: Concept[] = [
     name: "Interlocked rings — the bond, made permanent",
     note: "Two interlocked rings — the business and the family — with a small third ring (the leader who connects them). Unity, partnership, permanence; the link that doesn't come apart. Navy + blue rings, gold link-point.",
     render: (d) => (
-      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-        <g transform="translate(4, 6)" fill="none" strokeWidth="4.5">
+      <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        {WM(d)}
+        <g transform={`translate(${ICON_X}, 6)`} fill="none" strokeWidth="4.5">
           <circle cx="16" cy="22" r="13" stroke={ink(d)} />
           <circle cx="32" cy="22" r="13" stroke={blu(d)} />
           <circle cx="24" cy="22" r="6" stroke={GOLD} strokeWidth="3.5" />
         </g>
-        <text x="58" y="42" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
@@ -414,12 +432,12 @@ const meaning: Concept[] = [
     name: "The home + the growth",
     note: "A clean roofline (a chevron, a home) with an upward shoot rising through the peak. 'Strong communities start with strong families' — the home is the foundation; thriving grows out of it. Navy roof, gold shoot.",
     render: (d) => (
-      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-        <g transform="translate(4, 4)">
+      <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        {WM(d)}
+        <g transform={`translate(${ICON_X}, 4)`}>
           <path d="M 2 40 L 24 14 L 46 40" fill="none" stroke={ink(d)} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
           <path d="M 24 24 V 4 M 24 12 L 18 6 M 24 12 L 30 6" fill="none" stroke={GOLD} strokeWidth="4" strokeLinecap="round" />
         </g>
-        <text x="60" y="42" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
@@ -428,13 +446,13 @@ const meaning: Concept[] = [
     name: "The table — united at it, thriving from it",
     note: "A 'T' whose crossbar is a long meeting table with three figures seated at it (the mastermind, the alliance, the community), the stem its foundation. Everything good here happens at a table; this puts the table in the mark. People dots alternate blue/gold.",
     render: (d) => (
-      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-        <g transform="translate(4, 4)">
+      <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        {WM(d)}
+        <g transform={`translate(${ICON_X}, 4)`}>
           <rect x="2" y="20" width="44" height="6" rx="3" fill={ink(d)} />
           <rect x="20" y="20" width="6" height="22" rx="3" fill={ink(d)} />
           {[8, 23, 38].map((x, i) => <circle key={x} cx={x} cy="13" r="4.5" fill={i === 1 ? GOLD : blu(d)} />)}
         </g>
-        <text x="58" y="42" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
@@ -443,14 +461,14 @@ const meaning: Concept[] = [
     name: "Growth rings — the network adds a ring every year",
     note: "Concentric arcs like tree-growth rings — innermost navy, then blue, the outermost (newest) gold. A tree thrives by adding rings; the network grows the same way, outward, year over year. Quiet, organic, premium.",
     render: (d) => (
-      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-        <g transform="translate(28, 28)" fill="none" strokeLinecap="round">
+      <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        {WM(d)}
+        <g transform={`translate(${ICON_X + 26}, 28)`} fill="none" strokeLinecap="round">
           <circle cx="0" cy="0" r="5" fill={ink(d)} stroke="none" />
           <circle cx="0" cy="0" r="11" stroke={blu(d)} strokeWidth="2.5" />
           <circle cx="0" cy="0" r="18" stroke={blu(d)} strokeWidth="2.5" opacity="0.6" />
           <circle cx="0" cy="0" r="25" stroke={GOLD} strokeWidth="2.5" />
         </g>
-        <text x="62" y="42" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>thrive</text>
       </svg>
     ),
   },
