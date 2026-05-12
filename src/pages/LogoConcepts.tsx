@@ -35,6 +35,236 @@ const WM = (d: boolean) => (
 );
 // Icons sit to the RIGHT of the wordmark, in a 56-tall band starting at x≈162.
 const ICON_X = 162;
+const SPOKE = (d: boolean) => (d ? "rgba(255,255,255,0.4)" : "#CBD5E1");
+const SPOKE_FAINT = (d: boolean) => (d ? "rgba(255,255,255,0.28)" : "#E2E8F0");
+
+// Six satellites = the six offerings (Profit Partners, Mastermind Passport,
+// Command Central, FAM Central, WER1, PromoEngine).
+const ring6 = (cx: number, cy: number, r: number) =>
+  [0, 60, 120, 180, 240, 300].map((deg) => {
+    const a = ((deg - 90) * Math.PI) / 180;
+    return [cx + r * Math.cos(a), cy + r * Math.sin(a)] as const;
+  });
+
+// ── HUB-AND-SPOKE STUDY · 10 variations of S1/S3 ────────────────────────────
+const hubStudy: Concept[] = [
+  {
+    id: "HS1",
+    name: "Refined six-spoke — gold hub, halo ring",
+    note: "S1, tightened. A gold center hub with a faint gold halo ring; six satellites — the six offerings — alternating navy and blue; hairline spokes. The cleanest, most legible read of 'United to Thrive is the hub.'",
+    render: (d) => {
+      const cx = 25, cy = 28, pts = ring6(cx, cy, 22);
+      return (
+        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.25" />)}
+            {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="4" fill={i % 2 === 0 ? blu(d) : ink(d)} />)}
+            <circle cx={cx} cy={cy} r="11" fill="none" stroke={GOLD} strokeWidth="1" opacity="0.45" />
+            <circle cx={cx} cy={cy} r="7" fill={GOLD} />
+          </g>
+        </svg>
+      );
+    },
+  },
+  {
+    id: "HS2",
+    name: "Organic scatter — equal members, curved spokes",
+    note: "S3, refined. Satellites placed at irregular distances and angles — all the SAME blue, because every program is an equal member of the network. Gold hub. Spokes gently curve, so it reads as a living network, not a diagram.",
+    render: (d) => {
+      const cx = 23, cy = 27;
+      const sats: [number, number][] = [[5, 9], [44, 6], [47, 31], [10, 47], [33, 49], [26, 3]];
+      return (
+        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            {sats.map(([x, y], i) => {
+              const mx = (cx + x) / 2 + (y - cy) * 0.12;
+              const my = (cy + y) / 2 - (x - cx) * 0.12;
+              return <path key={i} d={`M ${cx} ${cy} Q ${mx} ${my} ${x} ${y}`} fill="none" stroke={SPOKE(d)} strokeWidth="1.25" />;
+            })}
+            {sats.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r={i === 1 ? 4.5 : 3.8} fill={blu(d)} />)}
+            <circle cx={cx} cy={cy} r="7.5" fill={GOLD} />
+          </g>
+        </svg>
+      );
+    },
+  },
+  {
+    id: "HS3",
+    name: "Warm center — the family is a home, not a dot",
+    note: "Same six-spoke ring, but the hub is a small rounded-square home shape in gold — 'famous for families' lives in the center. Navy satellites, hairline spokes. Subtle, human, still scales clean.",
+    render: (d) => {
+      const cx = 25, cy = 28, pts = ring6(cx, cy, 22);
+      return (
+        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.25" />)}
+            {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="4" fill={ink(d)} />)}
+            <rect x={cx - 7} y={cy - 7} width="14" height="14" rx="4" fill={GOLD} />
+          </g>
+        </svg>
+      );
+    },
+  },
+  {
+    id: "HS4",
+    name: "Orbit ring — everything circles the family",
+    note: "No radial spokes — the satellites sit ON a thin orbit ring around the gold hub. Quieter and more iconic; says 'the programs revolve around the center' rather than 'the center pushes out to them.' Navy/blue satellites on a hairline ring.",
+    render: (d) => {
+      const cx = 25, cy = 28, R = 19, pts = ring6(cx, cy, R);
+      return (
+        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            <circle cx={cx} cy={cy} r={R} fill="none" stroke={SPOKE(d)} strokeWidth="1.25" />
+            {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="3.8" fill={i % 2 === 0 ? blu(d) : ink(d)} />)}
+            <circle cx={cx} cy={cy} r="7.5" fill={GOLD} />
+          </g>
+        </svg>
+      );
+    },
+  },
+  {
+    id: "HS5",
+    name: "One path lit — the network, with a deal moving on it",
+    note: "Five satellites quietly outlined in navy on hairline spokes; one spoke and one satellite glow gold — a referral flowing through right now. Captures both the structure AND the fact that it's working. Navy hub.",
+    render: (d) => {
+      const cx = 25, cy = 28, pts = ring6(cx, cy, 22);
+      return (
+        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={i === 1 ? GOLD : SPOKE_FAINT(d)} strokeWidth={i === 1 ? 3 : 1.25} />)}
+            {pts.map(([x, y], i) => i === 1
+              ? <circle key={`c${i}`} cx={x} cy={y} r="5.5" fill={GOLD} />
+              : <circle key={`c${i}`} cx={x} cy={y} r="4" fill="none" stroke={d ? "rgba(255,255,255,0.5)" : "#CBD5E1"} strokeWidth="2" />)}
+            <circle cx={cx} cy={cy} r="7.5" fill={ink(d)} />
+          </g>
+        </svg>
+      );
+    },
+  },
+  {
+    id: "HS6",
+    name: "Reaching fan — the hub broadcasts outward",
+    note: "Hub on the left of the band; satellites fan out to the right at increasing distance — the network reaching, promoting, distributing. Reads as 'we put you in front of people.' Gold hub, navy/blue satellites, blue spokes.",
+    render: (d) => {
+      const hx = 8, hy = 28;
+      const sats = [-48, -24, 0, 24, 48].map((deg, i) => {
+        const a = (deg * Math.PI) / 180;
+        const dist = 26 + i * 3;
+        return [hx + dist * Math.cos(a) + dist, hy + dist * Math.sin(a)] as const;
+      });
+      // simpler explicit fan to the right:
+      const fan: [number, number][] = [[40, 6], [44, 16], [46, 28], [44, 40], [40, 50]];
+      void sats;
+      return (
+        <svg viewBox="0 0 224 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            {fan.map(([x, y], i) => <line key={i} x1={hx} y1={hy} x2={x} y2={y} stroke={blu(d)} strokeWidth="1.75" />)}
+            {fan.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="3.8" fill={i % 2 === 0 ? ink(d) : blu(d)} />)}
+            <circle cx={hx} cy={hy} r="8" fill={GOLD} />
+          </g>
+        </svg>
+      );
+    },
+  },
+  {
+    id: "HS7",
+    name: "Layered hub — family, community, network",
+    note: "The center tells the whole story by itself: a gold dot (the family) inside a blue ring (the community) inside a navy ring (the network). Four small satellites confirm it's a hub. The most 'concept-dense' option — and a great favicon.",
+    render: (d) => {
+      const cx = 25, cy = 28;
+      const sats = [[cx, cy - 21], [cx + 21, cy], [cx, cy + 21], [cx - 21, cy]] as const;
+      return (
+        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            {sats.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.25" />)}
+            {sats.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="3.5" fill={ink(d)} />)}
+            <circle cx={cx} cy={cy} r="13" fill="none" stroke={ink(d)} strokeWidth="3" />
+            <circle cx={cx} cy={cy} r="8" fill="none" stroke={blu(d)} strokeWidth="3" />
+            <circle cx={cx} cy={cy} r="3.5" fill={GOLD} />
+          </g>
+        </svg>
+      );
+    },
+  },
+  {
+    id: "HS8",
+    name: "Networks within — each program is its own hub",
+    note: "Cleaner than S4. The center hub, four satellites, and each satellite has one small dot beyond it on a short spoke — each program brings its own people in. 'A network of networks,' said simply.",
+    render: (d) => {
+      const cx = 25, cy = 28;
+      const mids = [45, 135, 225, 315].map((deg) => {
+        const a = (deg * Math.PI) / 180;
+        return [cx + 15 * Math.cos(a), cy + 15 * Math.sin(a), deg] as const;
+      });
+      return (
+        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            {mids.map(([x, y, deg], i) => {
+              const a = (deg * Math.PI) / 180;
+              const ox = x + 8 * Math.cos(a), oy = y + 8 * Math.sin(a);
+              return (
+                <g key={i}>
+                  <line x1={cx} y1={cy} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.25" />
+                  <line x1={x} y1={y} x2={ox} y2={oy} stroke={SPOKE_FAINT(d)} strokeWidth="1" />
+                  <circle cx={ox} cy={oy} r="2.2" fill={blu(d)} />
+                  <circle cx={x} cy={y} r="4" fill={ink(d)} />
+                </g>
+              );
+            })}
+            <circle cx={cx} cy={cy} r="7" fill={GOLD} />
+          </g>
+        </svg>
+      );
+    },
+  },
+  {
+    id: "HS9",
+    name: "Plus-network — four arms, one center",
+    note: "Stripped down to a plus/cross: four satellites at the compass points, gold hub, blue spokes. The most iconic and favicon-ready of the bunch, and the plus quietly nods to 'more' / 'add value.'",
+    render: (d) => {
+      const cx = 25, cy = 28;
+      const sats = [[cx, cy - 20], [cx + 20, cy], [cx, cy + 20], [cx - 20, cy]] as const;
+      return (
+        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            {sats.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={blu(d)} strokeWidth="2.5" strokeLinecap="round" />)}
+            {sats.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="4.5" fill={ink(d)} />)}
+            <circle cx={cx} cy={cy} r="7.5" fill={GOLD} />
+          </g>
+        </svg>
+      );
+    },
+  },
+  {
+    id: "HS10",
+    name: "The 't' hub — the name at the center",
+    note: "Same six-spoke network, but the hub is a tiny gold lowercase 't' — the brand initial sitting at the center of everything. Ties the symbol straight to the name. Navy/blue satellites, hairline spokes.",
+    render: (d) => {
+      const cx = 25, cy = 28, pts = ring6(cx, cy, 22);
+      return (
+        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          <g transform={`translate(${ICON_X}, 0)`}>
+            {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.25" />)}
+            {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="4" fill={i % 2 === 0 ? blu(d) : ink(d)} />)}
+            <circle cx={cx} cy={cy} r="8.5" fill={d ? "rgba(255,255,255,0.08)" : "#fff"} stroke={GOLD} strokeWidth="1" opacity={d ? 0.4 : 1} />
+            <rect x={cx - 2} y={cy - 6} width="4" height="13" rx="1" fill={GOLD} />
+            <rect x={cx - 4.5} y={cy - 2.5} width="9" height="3.5" rx="1" fill={GOLD} />
+          </g>
+        </svg>
+      );
+    },
+  },
+];
 
 // ── SHORTLIST · hub-and-spoke + chains + word-of-mouth bubbles ───────────────
 const shortlist: Concept[] = [
@@ -750,20 +980,33 @@ const LogoConcepts = () => (
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pt-16 md:pt-24 pb-8">
         <p className="eyebrow">INTERNAL PREVIEW · NOT INDEXED</p>
         <h1 className="mt-6 font-serif-display text-slate-ink" style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-          Logo concepts — the shortlist
+          Logo concepts — the hub-and-spoke study
         </h1>
         <p className="mt-6 max-w-[780px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Honing in on what you liked: <strong>chains / links</strong> (like M4), <strong>word-of-mouth bubbles</strong> (like C4), and a <strong>hub-and-spoke</strong> — United to Thrive as the central hub connecting Profit Partners, Mastermind Passport, Command Central, FAM Central, WER1, and PromoEngine. The Shortlist below has 12 of these (6 hub-and-spoke, 3 chain, 3 bubble). Earlier rounds stay below for reference.
+          Focusing on what you locked onto — <strong>S1</strong> (the clean six-spoke network) and <strong>S3</strong> (the organic one). The 10 variations below stay true to that idea and to the brand: a <strong>gold center</strong> (United to Thrive — and the family — at the middle of everything), <strong>navy + blue satellites</strong> (the six programs: Profit Partners, Mastermind Passport, Command Central, FAM Central, WER1, PromoEngine), connected by clean spokes. Icon sits to the right of the wordmark. The earlier rounds stay below for reference.
         </p>
       </div>
     </section>
 
-    {/* ── SHORTLIST · hub-and-spoke + chains + bubbles ────────────────────── */}
+    {/* ── HUB-AND-SPOKE STUDY ─────────────────────────────────────────────── */}
     <section className="bg-background">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pb-12">
         <div className="border-b-2 border-brand-gold pb-4">
-          <p className="eyebrow-gold">SHORTLIST · HUB-AND-SPOKE · CHAINS · WORD-OF-MOUTH</p>
-          <h2 className="mt-2 font-serif-display text-slate-ink text-[26px] md:text-[32px]">The directions you're circling</h2>
+          <p className="eyebrow-gold">HUB-AND-SPOKE · 10 VARIATIONS OF S1 / S3</p>
+          <h2 className="mt-2 font-serif-display text-slate-ink text-[26px] md:text-[32px]">The network mark, refined</h2>
+        </div>
+        <div className="mt-8 space-y-8">
+          {hubStudy.map((c) => <ConceptCard key={c.id} c={c} />)}
+        </div>
+      </div>
+    </section>
+
+    {/* ── SHORTLIST · hub-and-spoke + chains + bubbles ────────────────────── */}
+    <section className="surface-muted">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-12 md:py-20">
+        <div className="border-b border-[hsl(var(--slate-200))] pb-4">
+          <p className="eyebrow-blue">SHORTLIST · HUB-AND-SPOKE · CHAINS · WORD-OF-MOUTH (REFERENCE)</p>
+          <h2 className="mt-2 font-serif-display text-slate-ink text-[24px] md:text-[28px]">Earlier shortlist — incl. the original S1 / S3</h2>
         </div>
         <div className="mt-8 space-y-8">
           {shortlist.map((c) => <ConceptCard key={c.id} c={c} />)}
