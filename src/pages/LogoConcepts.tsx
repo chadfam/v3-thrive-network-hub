@@ -61,6 +61,160 @@ const Link = ({ d, to = [HUB_X, HUB_Y], w = 1.5 }: { d: boolean; to?: readonly [
   <line x1={LINK_X} y1={LINK_Y} x2={to[0]} y2={to[1]} stroke={SPOKE(d)} strokeWidth={w} />
 );
 
+// ── MESHED · the network woven INTO the wordmark ────────────────────────────
+// "thrive" at 44px ExtraBold ≈ 150px wide. Rough letter centres:
+//   t≈12  h≈33  r≈54  i≈67  v≈84  e≈106   baseline y=42, x-height top ≈ y=15.
+const meshed: Concept[] = [
+  {
+    id: "X1",
+    name: "Word inside the network",
+    note: "A thin ring encircles the whole word; satellites — the programs — sit on the ring; one is the gold hub (United to Thrive / the family). The word isn't NEXT to the network; it's IN it.",
+    render: (d) => {
+      const cx = 75, cy = 28, rx = 92, ry = 28;
+      const pts = [200, 240, 290, 340, 20, 70, 110, 160].map((deg, i) => {
+        const a = (deg * Math.PI) / 180;
+        return [cx + rx * Math.cos(a), cy + ry * Math.sin(a), i] as const;
+      });
+      return (
+        <svg viewBox="-10 -8 188 72" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          <ellipse cx={cx} cy={cy} rx={rx} ry={ry} fill="none" stroke={SPOKE(d)} strokeWidth="1.25" />
+          {pts.map(([x, y], i) => <circle key={i} cx={x} cy={y} r={i === 0 ? 6 : 3.6} fill={i === 0 ? GOLD : (i % 2 === 0 ? blu(d) : ink(d))} />)}
+          {WM(d)}
+        </svg>
+      );
+    },
+  },
+  {
+    id: "X2",
+    name: "The word hangs from the network",
+    note: "A small gold hub floats above the centre of the word; hairline spokes drop from it and touch the tops of t, h, i and v — the word is suspended from the network it belongs to. The 'e' completes it as the last node.",
+    render: (d) => {
+      const hx = 64, hy = 4;
+      const tops: [number, number][] = [[12, 6], [33, 6], [67, 11], [84, 14], [106, 14]];
+      return (
+        <svg viewBox="-4 -6 168 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {tops.map(([x, y], i) => <line key={i} x1={hx} y1={hy} x2={x} y2={y} stroke={i === 4 ? GOLD : SPOKE(d)} strokeWidth={i === 4 ? 2 : 1.25} />)}
+          {WM(d)}
+          {tops.map(([x, y], i) => i === 4 ? <circle key={`c${i}`} cx={x} cy={y} r="3.6" fill={GOLD} /> : <circle key={`c${i}`} cx={x} cy={y} r="2.8" fill={blu(d)} />)}
+          <circle cx={hx} cy={hy} r="5.5" fill={GOLD} />
+        </svg>
+      );
+    },
+  },
+  {
+    id: "X3",
+    name: "Network behind the word",
+    note: "A faint hub-and-spoke sits BEHIND the wordmark, centred on the 'rive'. The word is in front, on the network — same space, layered. The hub peeks out above and below the letters; the gold centre glows through.",
+    render: (d) => {
+      const cx = 78, cy = 27, pts = ring6(cx, cy, 24);
+      return (
+        <svg viewBox="-6 -8 174 72" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          <g opacity={d ? 0.5 : 0.55}>
+            {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.25" />)}
+            {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="3.4" fill={i % 2 === 0 ? blu(d) : ink(d)} />)}
+          </g>
+          <circle cx={cx} cy={cy} r="5.5" fill={GOLD} opacity="0.85" />
+          {WM(d)}
+        </svg>
+      );
+    },
+  },
+  {
+    id: "X4",
+    name: "The 't' crossbar becomes a spoke",
+    note: "The horizontal stroke of the 't' keeps going — out over the top of the word — and lands on a small hub-and-spoke sitting just past the 'e'. The first letter and the network share the same stroke. They can't be separated.",
+    render: (d) => {
+      const hx = 130, hy = 8, pts = ringR(hx, hy, 13);
+      return (
+        <svg viewBox="-2 -6 168 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {/* extended t-crossbar arcs from the 't' (≈x10,y18) up and right to the hub */}
+          <path d={`M 10 18 C 40 4, 90 0, ${hx} ${hy}`} fill="none" stroke={ink(d)} strokeWidth="4.5" strokeLinecap="round" />
+          {WM(d)}
+          {pts.map(([x, y], i) => <line key={i} x1={hx} y1={hy} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.1" />)}
+          {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="2.6" fill={i % 2 === 0 ? blu(d) : ink(d)} />)}
+          <circle cx={hx} cy={hy} r="5" fill={GOLD} />
+        </svg>
+      );
+    },
+  },
+  {
+    id: "X5",
+    name: "The 'i' dot is a node",
+    note: "Smallest change, tightest mesh: the tittle of the 'i' in 'thrive' becomes a gold node with a thin halo ring — the network is literally inside the letter. Works because Montserrat's i-dot is already a chunky square; we just make it the centre of a tiny hub.",
+    render: (d) => {
+      const ix = 66, iy = 9; // i-dot position
+      const minis = [200, 320, 90].map((deg) => {
+        const a = (deg * Math.PI) / 180;
+        return [ix + 9 * Math.cos(a), iy + 9 * Math.sin(a)] as const;
+      });
+      return (
+        <svg viewBox="-2 -6 160 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {WM(d)}
+          {/* cover the original tittle area, then draw the node */}
+          <rect x={ix - 4} y={iy - 4} width="8" height="8" fill={d ? NAVY : "#fff"} opacity={d ? 0 : 0} />
+          {minis.map(([x, y], i) => <line key={i} x1={ix} y1={iy} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1" />)}
+          {minis.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="1.6" fill={blu(d)} />)}
+          <circle cx={ix} cy={iy} r="6" fill="none" stroke={GOLD} strokeWidth="1" opacity="0.5" />
+          <circle cx={ix} cy={iy} r="3" fill={GOLD} />
+        </svg>
+      );
+    },
+  },
+  {
+    id: "X6",
+    name: "Hub replaces the 'i' — thr⊙ve",
+    note: "Go all the way: the 'i' is gone — in its place, a small hub-and-spoke at the i's height. The word reads 'thr-(network)-ve'. The network isn't decoration on the wordmark; it IS a letter of it.",
+    render: (d) => (
+      <svg viewBox="-2 -6 168 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <text x="2" y="42" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>thr</text>
+        {/* hub standing in for the 'i', occupying ≈x60–74 */}
+        <g transform="translate(67, 27)">
+          {[210, 270, 330, 30, 90, 150].map((deg, i) => {
+            const a = (deg * Math.PI) / 180; const x = 9 * Math.cos(a), y = 9 * Math.sin(a);
+            return <g key={deg}><line x1="0" y1="0" x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.1" /><circle cx={x} cy={y} r="2" fill={i % 2 === 0 ? blu(d) : ink(d)} /></g>;
+          })}
+          <circle cx="0" cy="-15" r="2.2" fill={GOLD} />
+          <line x1="0" y1="0" x2="0" y2="-13" stroke={GOLD} strokeWidth="1.4" />
+          <circle cx="0" cy="0" r="4" fill={GOLD} />
+        </g>
+        <text x="78" y="42" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>ve</text>
+      </svg>
+    ),
+  },
+  {
+    id: "X7",
+    name: "The network underlines the word",
+    note: "A horizontal line runs beneath 'thrive' with nodes on it like stops on a transit line — the word sits ON the network, its foundation. The middle stop is the gold hub. Echoes the gold accent rule used across the site.",
+    render: (d) => {
+      const y = 50, xs = [10, 35, 60, 85, 110, 135];
+      return (
+        <svg viewBox="-2 -2 160 60" className="h-11 md:h-13 w-auto" aria-label="thrive">
+          {WM(d)}
+          <line x1="6" y1={y} x2="142" y2={y} stroke={SPOKE(d)} strokeWidth="2" strokeLinecap="round" />
+          {xs.map((x, i) => <circle key={x} cx={x} cy={y} r={i === 2 ? 5 : 3.2} fill={i === 2 ? GOLD : (i % 2 === 0 ? blu(d) : ink(d))} />)}
+        </svg>
+      );
+    },
+  },
+  {
+    id: "X8",
+    name: "Network canopy over the word",
+    note: "A gentle arc over the wordmark with the programs hanging from it — a canopy, a roof of relationships sheltering the word. The apex of the arc is the gold hub. Reads as 'the network holds the brand up.'",
+    render: (d) => {
+      const xs = [16, 40, 64, 88, 112, 136];
+      const arcY = (x: number) => 6 + 0.0016 * (x - 76) ** 2; // shallow upward arc, low in the middle
+      return (
+        <svg viewBox="-2 -8 164 58" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          <path d={`M 8 ${arcY(8)} Q 76 -4 144 ${arcY(144)}`} fill="none" stroke={SPOKE(d)} strokeWidth="1.5" />
+          {xs.map((x) => <line key={x} x1={x} y1={arcY(x) + 1} x2={x} y2="14" stroke={SPOKE(d)} strokeWidth="1" />)}
+          {xs.map((x, i) => <circle key={`c${x}`} cx={x} cy={arcY(x)} r={i === 2 ? 5 : 3.2} fill={i === 2 ? GOLD : (i % 2 === 0 ? blu(d) : ink(d))} />)}
+          {WM(d)}
+        </svg>
+      );
+    },
+  },
+];
+
 // ── HUB-AND-SPOKE STUDY · 10 variations, integrated with the wordmark ───────
 const hubStudy: Concept[] = [
   {
@@ -971,20 +1125,33 @@ const LogoConcepts = () => (
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pt-16 md:pt-24 pb-8">
         <p className="eyebrow">INTERNAL PREVIEW · NOT INDEXED</p>
         <h1 className="mt-6 font-serif-display text-slate-ink" style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-          Logo concepts — the hub-and-spoke study
+          Logo concepts — the network, woven in
         </h1>
-        <p className="mt-6 max-w-[780px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Focusing on what you locked onto — <strong>S1</strong> (the clean six-spoke network) and <strong>S3</strong> (the organic one). The 10 variations below stay true to that idea and to the brand: a <strong>gold center</strong> (United to Thrive — and the family — at the middle of everything), <strong>navy + blue satellites</strong> (the six programs: Profit Partners, Mastermind Passport, Command Central, FAM Central, WER1, PromoEngine), connected by clean spokes. Icon sits to the right of the wordmark. The earlier rounds stay below for reference.
+        <p className="mt-6 max-w-[800px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+          Per your note — not "wordmark + a separate icon," but the hub-and-spoke <strong>fused into</strong> the wordmark itself: encircling it, behind it, hanging it, replacing a letter. Same brand logic — <strong>gold center</strong> = United to Thrive / the family at the middle; <strong>navy + blue nodes</strong> = the programs. Section X (below) is the meshed set. The detached hub-and-spoke study and earlier rounds stay further down for reference.
         </p>
       </div>
     </section>
 
-    {/* ── HUB-AND-SPOKE STUDY ─────────────────────────────────────────────── */}
+    {/* ── MESHED ──────────────────────────────────────────────────────────── */}
     <section className="bg-background">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pb-12">
         <div className="border-b-2 border-brand-gold pb-4">
-          <p className="eyebrow-gold">HUB-AND-SPOKE · 10 VARIATIONS OF S1 / S3</p>
-          <h2 className="mt-2 font-serif-display text-slate-ink text-[26px] md:text-[32px]">The network mark, refined</h2>
+          <p className="eyebrow-gold">SECTION X · NETWORK WOVEN INTO THE WORDMARK</p>
+          <h2 className="mt-2 font-serif-display text-slate-ink text-[26px] md:text-[32px]">Meshed marks</h2>
+        </div>
+        <div className="mt-8 space-y-8">
+          {meshed.map((c) => <ConceptCard key={c.id} c={c} />)}
+        </div>
+      </div>
+    </section>
+
+    {/* ── HUB-AND-SPOKE STUDY (detached, reference) ──────────────────────────── */}
+    <section className="surface-muted">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-12 md:py-20">
+        <div className="border-b border-[hsl(var(--slate-200))] pb-4">
+          <p className="eyebrow-blue">HUB-AND-SPOKE STUDY · 10 VARIATIONS OF S1 / S3 (REFERENCE)</p>
+          <h2 className="mt-2 font-serif-display text-slate-ink text-[24px] md:text-[28px]">The network mark, as a separate symbol</h2>
         </div>
         <div className="mt-8 space-y-8">
           {hubStudy.map((c) => <ConceptCard key={c.id} c={c} />)}
