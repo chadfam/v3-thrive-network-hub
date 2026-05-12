@@ -61,6 +61,61 @@ const Link = ({ d, to = [HUB_X, HUB_Y], w = 1.5 }: { d: boolean; to?: readonly [
   <line x1={LINK_X} y1={LINK_Y} x2={to[0]} y2={to[1]} stroke={SPOKE(d)} strokeWidth={w} />
 );
 
+// ════════════════════════════════════════════════════════════════════════════
+// FINAL DIRECTION · hub-and-spoke symbol + Montserrat wordmark (a system)
+// Built on a simple 26-unit square grid so the mark survives at favicon size.
+// Gold centre = United to Thrive / the family at the middle.
+// Six nodes = the six programs (all the same blue — equal members of the network).
+// Navy spokes = the structure that connects them.
+// ════════════════════════════════════════════════════════════════════════════
+
+// Reusable mark. `tone`: "color" (navy spokes, blue nodes, gold hub),
+// "mono" (single colour), "reversed" (for dark backgrounds).
+const ThriveMark = ({
+  size = 26,
+  tone = "color",
+  spokeW = 2,
+  nodeR = 2.7,
+  hubR = 4.8,
+  ringR = 8.6,
+  weights = 6,
+}: {
+  size?: number; tone?: "color" | "mono" | "reversed"; spokeW?: number;
+  nodeR?: number; hubR?: number; ringR?: number; weights?: number;
+}) => {
+  const c = size / 2;
+  const pts = Array.from({ length: weights }, (_, i) => {
+    const a = ((i * 360) / weights - 90) * Math.PI / 180;
+    return [c + ringR * Math.cos(a), c + ringR * Math.sin(a)] as const;
+  });
+  const spoke = tone === "reversed" ? "rgba(255,255,255,0.85)" : tone === "mono" ? "currentColor" : NAVY;
+  const node = tone === "reversed" ? "#FFFFFF" : tone === "mono" ? "currentColor" : BLUE;
+  const hub = tone === "mono" ? "currentColor" : GOLD;
+  return (
+    <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size} aria-label="thrive mark">
+      {pts.map(([x, y], i) => <line key={`s${i}`} x1={c} y1={c} x2={x} y2={y} stroke={spoke} strokeWidth={spokeW} strokeLinecap="round" />)}
+      {pts.map(([x, y], i) => <circle key={`n${i}`} cx={x} cy={y} r={nodeR} fill={node} />)}
+      <circle cx={c} cy={c} r={hubR} fill={hub} />
+    </svg>
+  );
+};
+
+// The horizontal lockup: mark + Montserrat wordmark.
+const ThriveLockup = ({ tone = "color", h = 44 }: { tone?: "color" | "reversed"; h?: number }) => {
+  const dark = tone === "reversed";
+  const mark = h * 0.62;          // mark sits a touch smaller than cap height
+  const gap = h * 0.18;
+  const wmX = mark + gap;
+  return (
+    <svg viewBox={`0 0 ${wmX + 150} ${h}`} height={h} className="w-auto" aria-label="thrive">
+      <g transform={`translate(0, ${(h - mark) / 2})`}>
+        <ThriveMark size={mark} tone={dark ? "reversed" : "color"} spokeW={mark * 0.075} nodeR={mark * 0.105} hubR={mark * 0.185} ringR={mark * 0.33} />
+      </g>
+      <text x={wmX} y={h * 0.95} fontFamily={FONT} fontWeight={800} fontSize={h} letterSpacing={h * -0.034} fill={dark ? "#FFFFFF" : NAVY}>thrive</text>
+    </svg>
+  );
+};
+
 // ── MESHED · the network woven INTO the wordmark ────────────────────────────
 // "thrive" at 44px ExtraBold ≈ 150px wide. Rough letter centres:
 //   t≈12  h≈33  r≈54  i≈67  v≈84  e≈106   baseline y=42, x-height top ≈ y=15.
@@ -1125,11 +1180,116 @@ const LogoConcepts = () => (
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pt-16 md:pt-24 pb-8">
         <p className="eyebrow">INTERNAL PREVIEW · NOT INDEXED</p>
         <h1 className="mt-6 font-serif-display text-slate-ink" style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-          Logo concepts — the network, woven in
+          The chosen direction — a hub-and-spoke logo system
         </h1>
-        <p className="mt-6 max-w-[800px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Per your note — not "wordmark + a separate icon," but the hub-and-spoke <strong>fused into</strong> the wordmark itself: encircling it, behind it, hanging it, replacing a letter. Same brand logic — <strong>gold center</strong> = United to Thrive / the family at the middle; <strong>navy + blue nodes</strong> = the programs. Section X (below) is the meshed set. The detached hub-and-spoke study and earlier rounds stay further down for reference.
+        <p className="mt-6 max-w-[820px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+          One direction, built as a system. A simplified hub-and-spoke <strong>symbol</strong> — gold centre (United to Thrive, the family at the middle), six equal-blue nodes (the programs), navy spokes (the structure) — drawn on a clean 26-unit square grid so it survives at favicon size. Paired with the <strong>Montserrat</strong> wordmark for the full lockup. Below: the lockup, the mark alone, the favicon, one-colour, reversed-on-navy, and on a photo. The earlier exploration sections (meshed, hub-study, etc.) stay further down for reference.
         </p>
+      </div>
+    </section>
+
+    {/* ── FINAL DIRECTION ─────────────────────────────────────────────────── */}
+    <section className="bg-background">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pb-12 space-y-10">
+        <div className="border-b-2 border-brand-gold pb-4">
+          <p className="eyebrow-gold">THE SYSTEM · HUB-AND-SPOKE SYMBOL + MONTSERRAT WORDMARK</p>
+          <h2 className="mt-2 font-serif-display text-slate-ink text-[26px] md:text-[32px]">United to Thrive — logo system v1</h2>
+        </div>
+
+        {/* Primary lockup */}
+        <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
+          <p className="eyebrow-blue">PRIMARY LOCKUP</p>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">Horizontal — the default</h3>
+          <div className="mt-6 grid md:grid-cols-2 gap-4">
+            <div className="flex items-center justify-center px-8 py-12 rounded-xl bg-white border border-[hsl(var(--slate-200))]"><ThriveLockup tone="color" h={52} /></div>
+            <div className="flex items-center justify-center px-8 py-12 rounded-xl bg-brand-navy"><ThriveLockup tone="reversed" h={52} /></div>
+          </div>
+        </article>
+
+        {/* The mark alone */}
+        <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
+          <p className="eyebrow-blue">THE MARK ALONE</p>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">For square spaces — app icon, social avatar, stamp</h3>
+          <div className="mt-6 grid md:grid-cols-3 gap-4">
+            <div className="flex items-center justify-center p-12 rounded-xl bg-white border border-[hsl(var(--slate-200))]"><ThriveMark size={88} spokeW={6.6} nodeR={9.2} hubR={16.3} ringR={29} /></div>
+            <div className="flex items-center justify-center p-12 rounded-xl bg-brand-navy"><ThriveMark size={88} tone="reversed" spokeW={6.6} nodeR={9.2} hubR={16.3} ringR={29} /></div>
+            <div className="flex items-center justify-center p-12 rounded-xl bg-brand-blue"><ThriveMark size={88} tone="reversed" spokeW={6.6} nodeR={9.2} hubR={16.3} ringR={29} /></div>
+          </div>
+        </article>
+
+        {/* Favicon sizes */}
+        <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
+          <p className="eyebrow-blue">FAVICON / TINY SIZES</p>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">Does it survive at 16, 32, 48 px?</h3>
+          <div className="mt-6 flex flex-wrap items-end gap-8">
+            {[16, 24, 32, 48].map((px) => (
+              <div key={px} className="flex flex-col items-center gap-2">
+                <div className="flex items-center justify-center rounded bg-white border border-[hsl(var(--slate-200))]" style={{ width: px + 12, height: px + 12 }}>
+                  <ThriveMark size={px} spokeW={px * 0.085} nodeR={px * 0.11} hubR={px * 0.19} ringR={px * 0.33} />
+                </div>
+                <span className="text-[11px] text-[hsl(var(--slate-500))]">{px}px</span>
+              </div>
+            ))}
+            {[16, 24, 32, 48].map((px) => (
+              <div key={`d${px}`} className="flex flex-col items-center gap-2">
+                <div className="flex items-center justify-center rounded bg-brand-navy" style={{ width: px + 12, height: px + 12 }}>
+                  <ThriveMark size={px} tone="reversed" spokeW={px * 0.085} nodeR={px * 0.11} hubR={px * 0.19} ringR={px * 0.33} />
+                </div>
+                <span className="text-[11px] text-[hsl(var(--slate-500))]">{px}px · dark</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-4 text-[14px] italic text-[hsl(var(--slate-500))]">If 16px reads as mush, the favicon falls back to just the gold hub + 4 spokes (a "+"). Tell me how it looks to you.</p>
+        </article>
+
+        {/* One-color + on photo */}
+        <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
+          <p className="eyebrow-blue">ONE-COLOUR · ON A PHOTO</p>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">The non-negotiable tests</h3>
+          <div className="mt-6 grid md:grid-cols-3 gap-4">
+            <div className="flex items-center justify-center px-8 py-12 rounded-xl bg-white border border-[hsl(var(--slate-200))] text-slate-ink">
+              <svg viewBox="0 0 185 52" height={52} className="w-auto"><g transform="translate(0,8)"><ThriveMark size={36} tone="mono" spokeW={2.7} nodeR={3.8} hubR={6.7} ringR={11.9} /></g><text x="44" y="49" fontFamily={FONT} fontWeight={800} fontSize={52} letterSpacing="-1.8" fill="currentColor">thrive</text></svg>
+            </div>
+            <div className="flex items-center justify-center px-8 py-12 rounded-xl bg-slate-ink text-white">
+              <svg viewBox="0 0 185 52" height={52} className="w-auto"><g transform="translate(0,8)"><ThriveMark size={36} tone="mono" spokeW={2.7} nodeR={3.8} hubR={6.7} ringR={11.9} /></g><text x="44" y="49" fontFamily={FONT} fontWeight={800} fontSize={52} letterSpacing="-1.8" fill="currentColor">thrive</text></svg>
+            </div>
+            <div
+              className="relative flex items-center justify-center px-8 py-12 rounded-xl overflow-hidden"
+              style={{ backgroundImage: "url(https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=640)", backgroundSize: "cover", backgroundPosition: "center" }}
+            >
+              <div className="absolute inset-0 bg-brand-navy/55" />
+              <div className="relative"><ThriveLockup tone="reversed" h={40} /></div>
+            </div>
+          </div>
+        </article>
+
+        {/* Mark weight options */}
+        <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
+          <p className="eyebrow-blue">DIAL THE WEIGHT</p>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">Three weights of the same mark — pick one</h3>
+          <div className="mt-6 grid md:grid-cols-3 gap-4">
+            {[
+              { label: "Light — delicate, more whitespace", sw: 4.4, nr: 7.6, hr: 14, rr: 30 },
+              { label: "Medium — the recommended default", sw: 6.6, nr: 9.2, hr: 16.3, rr: 29 },
+              { label: "Bold — survives tiniest, most confident", sw: 9.2, nr: 11, hr: 18, rr: 27.5 },
+            ].map((w) => (
+              <div key={w.label} className="rounded-xl border border-[hsl(var(--slate-200))] p-6">
+                <div className="flex items-center justify-center py-6"><ThriveMark size={88} spokeW={w.sw} nodeR={w.nr} hubR={w.hr} ringR={w.rr} /></div>
+                <p className="mt-2 text-[13px] text-[hsl(var(--slate-700))] text-center">{w.label}</p>
+                <div className="mt-3 flex justify-center gap-3">
+                  {[16, 24].map((px) => <div key={px} className="flex items-center justify-center rounded bg-white border border-[hsl(var(--slate-200))]" style={{ width: px + 10, height: px + 10 }}><ThriveMark size={px} spokeW={px * w.sw / 88} nodeR={px * w.nr / 88} hubR={px * w.hr / 88} ringR={px * w.rr / 88} /></div>)}
+                </div>
+              </div>
+            ))}
+          </div>
+        </article>
+
+        <div className="rounded-2xl bg-brand-navy p-8 md:p-12 text-white">
+          <h3 className="font-serif-display text-[24px] md:text-[28px]">If this is right, I'll wire it in.</h3>
+          <p className="mt-4 text-[17px] leading-relaxed text-white/80 max-w-[760px]">
+            Pick a weight (light / medium / bold), confirm the colour roles (gold hub, blue nodes, navy spokes — or want the spokes blue too?), and say the word. I'll then: build a <code>&lt;ThriveLogo&gt;</code> component (so the Montserrat actually renders in the header), swap it into Header & Footer, replace <code>favicon.svg</code> with the simplified mark, and add a short brand sheet (clearspace, min sizes, colour values, do's/don'ts).
+          </p>
+        </div>
       </div>
     </section>
 

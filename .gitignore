@@ -15,6 +15,16 @@ dist-ssr
 # Local-only context files (brand docs, drafts, private notes)
 _context/
 
+# Large local media — screen recordings, raw video/audio (keep these out of git)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.wav
+*.aiff
+*.zip
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
