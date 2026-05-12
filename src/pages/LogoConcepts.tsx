@@ -29,237 +29,228 @@ const blu = (d: boolean) => (d ? BLUE_LIGHT : BLUE);
 
 type Concept = { id: string; name: string; note: string; render: (dark: boolean) => ReactNode; tall?: boolean };
 
-// Wordmark, always first / on the left. Width ~152 at 44px ExtraBold.
+// Wordmark, always first / on the left. "thrive" ≈ 152px wide at 44px ExtraBold.
 const WM = (d: boolean) => (
   <text x="2" y="42" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>thrive</text>
 );
-// Icons sit to the RIGHT of the wordmark, in a 56-tall band starting at x≈162.
-const ICON_X = 162;
-const SPOKE = (d: boolean) => (d ? "rgba(255,255,255,0.4)" : "#CBD5E1");
-const SPOKE_FAINT = (d: boolean) => (d ? "rgba(255,255,255,0.28)" : "#E2E8F0");
+// The wordmark is treated as a NODE in the network. A connecting spoke runs
+// from the end of "thrive" to the hub, so word + mark read as one lockup.
+const LINK_X = 152;       // x where the connecting spoke meets the wordmark
+const LINK_Y = 30;        // y of that connection (optical centre of the word)
+const HUB_X = 184;        // hub centre x — close to the word, with a short spoke between
+const HUB_Y = 28;
+const SPOKE = (d: boolean) => (d ? "rgba(255,255,255,0.45)" : "#C2CCD8");
+const SPOKE_FAINT = (d: boolean) => (d ? "rgba(255,255,255,0.3)" : "#DDE3EA");
+const ICON_X = 162; // legacy, kept for other sections that still reference it
 
-// Six satellites = the six offerings (Profit Partners, Mastermind Passport,
-// Command Central, FAM Central, WER1, PromoEngine).
+// Five satellites on the right/top/bottom; the wordmark fills the sixth "slot".
+const ringR = (cx: number, cy: number, r: number) =>
+  [-60, -20, 25, 70, 115].map((deg) => {
+    const a = (deg * Math.PI) / 180;
+    return [cx + r * Math.cos(a), cy + r * Math.sin(a)] as const;
+  });
+// Full six-satellite ring (for the variants that don't use the word as a node).
 const ring6 = (cx: number, cy: number, r: number) =>
   [0, 60, 120, 180, 240, 300].map((deg) => {
     const a = ((deg - 90) * Math.PI) / 180;
     return [cx + r * Math.cos(a), cy + r * Math.sin(a)] as const;
   });
 
-// ── HUB-AND-SPOKE STUDY · 10 variations of S1/S3 ────────────────────────────
+// Connecting spoke from the wordmark to the hub.
+const Link = ({ d, to = [HUB_X, HUB_Y], w = 1.5 }: { d: boolean; to?: readonly [number, number]; w?: number }) => (
+  <line x1={LINK_X} y1={LINK_Y} x2={to[0]} y2={to[1]} stroke={SPOKE(d)} strokeWidth={w} />
+);
+
+// ── HUB-AND-SPOKE STUDY · 10 variations, integrated with the wordmark ───────
 const hubStudy: Concept[] = [
   {
     id: "HS1",
-    name: "Refined six-spoke — gold hub, halo ring",
-    note: "S1, tightened. A gold center hub with a faint gold halo ring; six satellites — the six offerings — alternating navy and blue; hairline spokes. The cleanest, most legible read of 'United to Thrive is the hub.'",
+    name: "Refined six-spoke — gold hub, the word is the sixth node",
+    note: "S1, integrated. A connecting spoke runs from the end of 'thrive' into the network — the wordmark is the sixth node. Gold hub with a faint halo; five satellites alternating navy/blue; hairline spokes. Reads as one lockup.",
     render: (d) => {
-      const cx = 25, cy = 28, pts = ring6(cx, cy, 22);
+      const pts = ringR(HUB_X, HUB_Y, 18);
       return (
-        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <svg viewBox="0 0 210 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
           {WM(d)}
-          <g transform={`translate(${ICON_X}, 0)`}>
-            {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.25" />)}
-            {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="4" fill={i % 2 === 0 ? blu(d) : ink(d)} />)}
-            <circle cx={cx} cy={cy} r="11" fill="none" stroke={GOLD} strokeWidth="1" opacity="0.45" />
-            <circle cx={cx} cy={cy} r="7" fill={GOLD} />
-          </g>
+          <Link d={d} />
+          {pts.map(([x, y], i) => <line key={i} x1={HUB_X} y1={HUB_Y} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.25" />)}
+          {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="3.8" fill={i % 2 === 0 ? blu(d) : ink(d)} />)}
+          <circle cx={HUB_X} cy={HUB_Y} r="10" fill="none" stroke={GOLD} strokeWidth="1" opacity="0.4" />
+          <circle cx={HUB_X} cy={HUB_Y} r="6.5" fill={GOLD} />
         </svg>
       );
     },
   },
   {
     id: "HS2",
-    name: "Organic scatter — equal members, curved spokes",
-    note: "S3, refined. Satellites placed at irregular distances and angles — all the SAME blue, because every program is an equal member of the network. Gold hub. Spokes gently curve, so it reads as a living network, not a diagram.",
+    name: "Organic — equal members, the word feeds in",
+    note: "S3, integrated. The connecting spoke and five same-blue satellites (every program an equal member) scatter at irregular distances; spokes gently curve. The wordmark connects in as just another node. Gold hub.",
     render: (d) => {
-      const cx = 23, cy = 27;
-      const sats: [number, number][] = [[5, 9], [44, 6], [47, 31], [10, 47], [33, 49], [26, 3]];
+      const sats: [number, number][] = [[174, 9], [206, 14], [202, 38], [170, 46], [192, 50]];
       return (
-        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <svg viewBox="0 0 218 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
           {WM(d)}
-          <g transform={`translate(${ICON_X}, 0)`}>
-            {sats.map(([x, y], i) => {
-              const mx = (cx + x) / 2 + (y - cy) * 0.12;
-              const my = (cy + y) / 2 - (x - cx) * 0.12;
-              return <path key={i} d={`M ${cx} ${cy} Q ${mx} ${my} ${x} ${y}`} fill="none" stroke={SPOKE(d)} strokeWidth="1.25" />;
-            })}
-            {sats.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r={i === 1 ? 4.5 : 3.8} fill={blu(d)} />)}
-            <circle cx={cx} cy={cy} r="7.5" fill={GOLD} />
-          </g>
+          <path d={`M ${LINK_X} ${LINK_Y} Q ${(LINK_X + HUB_X) / 2} ${LINK_Y + 5} ${HUB_X} ${HUB_Y}`} fill="none" stroke={SPOKE(d)} strokeWidth="1.5" />
+          {sats.map(([x, y], i) => {
+            const mx = (HUB_X + x) / 2 + (y - HUB_Y) * 0.14;
+            const my = (HUB_Y + y) / 2 - (x - HUB_X) * 0.14;
+            return <path key={i} d={`M ${HUB_X} ${HUB_Y} Q ${mx} ${my} ${x} ${y}`} fill="none" stroke={SPOKE(d)} strokeWidth="1.25" />;
+          })}
+          {sats.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r={i === 1 ? 4.4 : 3.7} fill={blu(d)} />)}
+          <circle cx={HUB_X} cy={HUB_Y} r="7" fill={GOLD} />
         </svg>
       );
     },
   },
   {
     id: "HS3",
-    name: "Warm center — the family is a home, not a dot",
-    note: "Same six-spoke ring, but the hub is a small rounded-square home shape in gold — 'famous for families' lives in the center. Navy satellites, hairline spokes. Subtle, human, still scales clean.",
+    name: "Warm center — the word connects to a home",
+    note: "The hub is a small gold home shape ('famous for families' at the centre). A connecting spoke joins the wordmark to it; five navy satellites complete the network. Subtle, human, still tidy at small sizes.",
     render: (d) => {
-      const cx = 25, cy = 28, pts = ring6(cx, cy, 22);
+      const pts = ringR(HUB_X, HUB_Y, 18);
       return (
-        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <svg viewBox="0 0 210 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
           {WM(d)}
-          <g transform={`translate(${ICON_X}, 0)`}>
-            {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.25" />)}
-            {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="4" fill={ink(d)} />)}
-            <rect x={cx - 7} y={cy - 7} width="14" height="14" rx="4" fill={GOLD} />
-          </g>
+          <Link d={d} to={[HUB_X - 7, HUB_Y]} />
+          {pts.map(([x, y], i) => <line key={i} x1={HUB_X} y1={HUB_Y} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.25" />)}
+          {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="3.8" fill={ink(d)} />)}
+          <rect x={HUB_X - 7} y={HUB_Y - 7} width="14" height="14" rx="4" fill={GOLD} />
         </svg>
       );
     },
   },
   {
     id: "HS4",
-    name: "Orbit ring — everything circles the family",
-    note: "No radial spokes — the satellites sit ON a thin orbit ring around the gold hub. Quieter and more iconic; says 'the programs revolve around the center' rather than 'the center pushes out to them.' Navy/blue satellites on a hairline ring.",
+    name: "Orbit ring — the word joins the orbit",
+    note: "No radial spokes. Five satellites sit on a thin orbit ring around the gold hub, and the connecting spoke brings the wordmark onto the same ring. 'Everything circles the centre.' Navy/blue satellites.",
     render: (d) => {
-      const cx = 25, cy = 28, R = 19, pts = ring6(cx, cy, R);
+      const R = 17, pts = ringR(HUB_X, HUB_Y, R);
       return (
-        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <svg viewBox="0 0 210 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
           {WM(d)}
-          <g transform={`translate(${ICON_X}, 0)`}>
-            <circle cx={cx} cy={cy} r={R} fill="none" stroke={SPOKE(d)} strokeWidth="1.25" />
-            {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="3.8" fill={i % 2 === 0 ? blu(d) : ink(d)} />)}
-            <circle cx={cx} cy={cy} r="7.5" fill={GOLD} />
-          </g>
+          <Link d={d} to={[HUB_X - R, HUB_Y]} />
+          <circle cx={HUB_X} cy={HUB_Y} r={R} fill="none" stroke={SPOKE(d)} strokeWidth="1.25" />
+          {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="3.7" fill={i % 2 === 0 ? blu(d) : ink(d)} />)}
+          <circle cx={HUB_X} cy={HUB_Y} r="7" fill={GOLD} />
         </svg>
       );
     },
   },
   {
     id: "HS5",
-    name: "One path lit — the network, with a deal moving on it",
-    note: "Five satellites quietly outlined in navy on hairline spokes; one spoke and one satellite glow gold — a referral flowing through right now. Captures both the structure AND the fact that it's working. Navy hub.",
+    name: "One path lit — and the lit path is the word",
+    note: "Four satellites quietly outlined in navy on hairline spokes; one spoke glows gold — and it's the one running back to 'thrive'. The wordmark is the deal in motion. Navy hub.",
     render: (d) => {
-      const cx = 25, cy = 28, pts = ring6(cx, cy, 22);
+      const pts = ringR(HUB_X, HUB_Y, 18);
       return (
-        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <svg viewBox="0 0 210 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
           {WM(d)}
-          <g transform={`translate(${ICON_X}, 0)`}>
-            {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={i === 1 ? GOLD : SPOKE_FAINT(d)} strokeWidth={i === 1 ? 3 : 1.25} />)}
-            {pts.map(([x, y], i) => i === 1
-              ? <circle key={`c${i}`} cx={x} cy={y} r="5.5" fill={GOLD} />
-              : <circle key={`c${i}`} cx={x} cy={y} r="4" fill="none" stroke={d ? "rgba(255,255,255,0.5)" : "#CBD5E1"} strokeWidth="2" />)}
-            <circle cx={cx} cy={cy} r="7.5" fill={ink(d)} />
-          </g>
+          <line x1={LINK_X} y1={LINK_Y} x2={HUB_X} y2={HUB_Y} stroke={GOLD} strokeWidth="3" />
+          {pts.map(([x, y], i) => <line key={i} x1={HUB_X} y1={HUB_Y} x2={x} y2={y} stroke={SPOKE_FAINT(d)} strokeWidth="1.25" />)}
+          {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="3.8" fill="none" stroke={d ? "rgba(255,255,255,0.5)" : "#C2CCD8"} strokeWidth="2" />)}
+          <circle cx={HUB_X} cy={HUB_Y} r="7" fill={ink(d)} />
         </svg>
       );
     },
   },
   {
     id: "HS6",
-    name: "Reaching fan — the hub broadcasts outward",
-    note: "Hub on the left of the band; satellites fan out to the right at increasing distance — the network reaching, promoting, distributing. Reads as 'we put you in front of people.' Gold hub, navy/blue satellites, blue spokes.",
+    name: "Reaching fan — the word powers the broadcast",
+    note: "The connecting spoke feeds into the hub, which fans satellites out to the right at increasing distance — the network reaching, promoting, distributing. 'We put you in front of people.' Gold hub, navy/blue satellites, blue spokes.",
     render: (d) => {
-      const hx = 8, hy = 28;
-      const sats = [-48, -24, 0, 24, 48].map((deg, i) => {
-        const a = (deg * Math.PI) / 180;
-        const dist = 26 + i * 3;
-        return [hx + dist * Math.cos(a) + dist, hy + dist * Math.sin(a)] as const;
-      });
-      // simpler explicit fan to the right:
-      const fan: [number, number][] = [[40, 6], [44, 16], [46, 28], [44, 40], [40, 50]];
-      void sats;
+      const hx = HUB_X - 14, hy = HUB_Y;
+      const fan: [number, number][] = [[hx + 18, hy - 16], [hx + 24, hy - 6], [hx + 26, hy + 5], [hx + 24, hy + 16], [hx + 18, hy + 25]];
       return (
-        <svg viewBox="0 0 224 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
           {WM(d)}
-          <g transform={`translate(${ICON_X}, 0)`}>
-            {fan.map(([x, y], i) => <line key={i} x1={hx} y1={hy} x2={x} y2={y} stroke={blu(d)} strokeWidth="1.75" />)}
-            {fan.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="3.8" fill={i % 2 === 0 ? ink(d) : blu(d)} />)}
-            <circle cx={hx} cy={hy} r="8" fill={GOLD} />
-          </g>
+          <Link d={d} to={[hx, hy]} w={2} />
+          {fan.map(([x, y], i) => <line key={i} x1={hx} y1={hy} x2={x} y2={y} stroke={blu(d)} strokeWidth="1.75" />)}
+          {fan.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="3.7" fill={i % 2 === 0 ? ink(d) : blu(d)} />)}
+          <circle cx={hx} cy={hy} r="7.5" fill={GOLD} />
         </svg>
       );
     },
   },
   {
     id: "HS7",
-    name: "Layered hub — family, community, network",
-    note: "The center tells the whole story by itself: a gold dot (the family) inside a blue ring (the community) inside a navy ring (the network). Four small satellites confirm it's a hub. The most 'concept-dense' option — and a great favicon.",
-    render: (d) => {
-      const cx = 25, cy = 28;
-      const sats = [[cx, cy - 21], [cx + 21, cy], [cx, cy + 21], [cx - 21, cy]] as const;
-      return (
-        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
-          {WM(d)}
-          <g transform={`translate(${ICON_X}, 0)`}>
-            {sats.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.25" />)}
-            {sats.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="3.5" fill={ink(d)} />)}
-            <circle cx={cx} cy={cy} r="13" fill="none" stroke={ink(d)} strokeWidth="3" />
-            <circle cx={cx} cy={cy} r="8" fill="none" stroke={blu(d)} strokeWidth="3" />
-            <circle cx={cx} cy={cy} r="3.5" fill={GOLD} />
-          </g>
-        </svg>
-      );
-    },
+    name: "Layered hub — the word connects to family / community / network",
+    note: "The centre tells the story: a gold dot (family) inside a blue ring (community) inside a navy ring (network). The connecting spoke joins the wordmark to the outer ring; two small satellites complete it. The strongest standalone favicon of the set.",
+    render: (d) => (
+      <svg viewBox="0 0 208 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        {WM(d)}
+        <Link d={d} to={[HUB_X - 13, HUB_Y]} />
+        <line x1={HUB_X} y1={HUB_Y} x2={HUB_X + 4} y2={HUB_Y - 19} stroke={SPOKE(d)} strokeWidth="1.25" />
+        <line x1={HUB_X} y1={HUB_Y} x2={HUB_X + 6} y2={HUB_Y + 18} stroke={SPOKE(d)} strokeWidth="1.25" />
+        <circle cx={HUB_X + 4} cy={HUB_Y - 19} r="3.4" fill={ink(d)} />
+        <circle cx={HUB_X + 6} cy={HUB_Y + 18} r="3.4" fill={ink(d)} />
+        <circle cx={HUB_X} cy={HUB_Y} r="13" fill="none" stroke={ink(d)} strokeWidth="3" />
+        <circle cx={HUB_X} cy={HUB_Y} r="8" fill="none" stroke={blu(d)} strokeWidth="3" />
+        <circle cx={HUB_X} cy={HUB_Y} r="3.4" fill={GOLD} />
+      </svg>
+    ),
   },
   {
     id: "HS8",
-    name: "Networks within — each program is its own hub",
-    note: "Cleaner than S4. The center hub, four satellites, and each satellite has one small dot beyond it on a short spoke — each program brings its own people in. 'A network of networks,' said simply.",
+    name: "Networks within — the word feeds a network of networks",
+    note: "The connecting spoke joins the wordmark to the centre hub; four satellites, each with its own small dot beyond it — each program brings its own people in. 'A network of networks,' integrated into the lockup.",
     render: (d) => {
-      const cx = 25, cy = 28;
       const mids = [45, 135, 225, 315].map((deg) => {
         const a = (deg * Math.PI) / 180;
-        return [cx + 15 * Math.cos(a), cy + 15 * Math.sin(a), deg] as const;
+        return [HUB_X + 14 * Math.cos(a), HUB_Y + 14 * Math.sin(a), deg] as const;
       });
       return (
-        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <svg viewBox="0 0 212 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
           {WM(d)}
-          <g transform={`translate(${ICON_X}, 0)`}>
-            {mids.map(([x, y, deg], i) => {
-              const a = (deg * Math.PI) / 180;
-              const ox = x + 8 * Math.cos(a), oy = y + 8 * Math.sin(a);
-              return (
-                <g key={i}>
-                  <line x1={cx} y1={cy} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.25" />
-                  <line x1={x} y1={y} x2={ox} y2={oy} stroke={SPOKE_FAINT(d)} strokeWidth="1" />
-                  <circle cx={ox} cy={oy} r="2.2" fill={blu(d)} />
-                  <circle cx={x} cy={y} r="4" fill={ink(d)} />
-                </g>
-              );
-            })}
-            <circle cx={cx} cy={cy} r="7" fill={GOLD} />
-          </g>
+          <Link d={d} />
+          {mids.map(([x, y, deg], i) => {
+            const a = (deg * Math.PI) / 180;
+            const ox = x + 7.5 * Math.cos(a), oy = y + 7.5 * Math.sin(a);
+            return (
+              <g key={i}>
+                <line x1={HUB_X} y1={HUB_Y} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.25" />
+                <line x1={x} y1={y} x2={ox} y2={oy} stroke={SPOKE_FAINT(d)} strokeWidth="1" />
+                <circle cx={ox} cy={oy} r="2" fill={blu(d)} />
+                <circle cx={x} cy={y} r="3.7" fill={ink(d)} />
+              </g>
+            );
+          })}
+          <circle cx={HUB_X} cy={HUB_Y} r="6.5" fill={GOLD} />
         </svg>
       );
     },
   },
   {
     id: "HS9",
-    name: "Plus-network — four arms, one center",
-    note: "Stripped down to a plus/cross: four satellites at the compass points, gold hub, blue spokes. The most iconic and favicon-ready of the bunch, and the plus quietly nods to 'more' / 'add value.'",
+    name: "Plus-network — the word is the fourth arm",
+    note: "Stripped to a plus/cross: the connecting spoke is the left arm, three satellites are the others, gold hub. The most iconic and favicon-ready of the set; the plus quietly nods to 'more / add value.' Blue spokes.",
     render: (d) => {
-      const cx = 25, cy = 28;
-      const sats = [[cx, cy - 20], [cx + 20, cy], [cx, cy + 20], [cx - 20, cy]] as const;
+      const sats = [[HUB_X, HUB_Y - 18], [HUB_X + 18, HUB_Y], [HUB_X, HUB_Y + 18]] as const;
       return (
-        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <svg viewBox="0 0 210 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
           {WM(d)}
-          <g transform={`translate(${ICON_X}, 0)`}>
-            {sats.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={blu(d)} strokeWidth="2.5" strokeLinecap="round" />)}
-            {sats.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="4.5" fill={ink(d)} />)}
-            <circle cx={cx} cy={cy} r="7.5" fill={GOLD} />
-          </g>
+          <line x1={LINK_X} y1={LINK_Y} x2={HUB_X} y2={HUB_Y} stroke={blu(d)} strokeWidth="2.5" strokeLinecap="round" />
+          {sats.map(([x, y], i) => <line key={i} x1={HUB_X} y1={HUB_Y} x2={x} y2={y} stroke={blu(d)} strokeWidth="2.5" strokeLinecap="round" />)}
+          {sats.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="4.2" fill={ink(d)} />)}
+          <circle cx={HUB_X} cy={HUB_Y} r="7" fill={GOLD} />
         </svg>
       );
     },
   },
   {
     id: "HS10",
-    name: "The 't' hub — the name at the center",
-    note: "Same six-spoke network, but the hub is a tiny gold lowercase 't' — the brand initial sitting at the center of everything. Ties the symbol straight to the name. Navy/blue satellites, hairline spokes.",
+    name: "The 't' hub — the word loops back to its initial",
+    note: "The connecting spoke runs from 'thrive' to a hub that IS a tiny gold lowercase 't' — the brand initial at the centre of the network it labels. Five navy/blue satellites; hairline spokes. The most self-referential, in a good way.",
     render: (d) => {
-      const cx = 25, cy = 28, pts = ring6(cx, cy, 22);
+      const pts = ringR(HUB_X, HUB_Y, 18);
       return (
-        <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <svg viewBox="0 0 210 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
           {WM(d)}
-          <g transform={`translate(${ICON_X}, 0)`}>
-            {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.25" />)}
-            {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="4" fill={i % 2 === 0 ? blu(d) : ink(d)} />)}
-            <circle cx={cx} cy={cy} r="8.5" fill={d ? "rgba(255,255,255,0.08)" : "#fff"} stroke={GOLD} strokeWidth="1" opacity={d ? 0.4 : 1} />
-            <rect x={cx - 2} y={cy - 6} width="4" height="13" rx="1" fill={GOLD} />
-            <rect x={cx - 4.5} y={cy - 2.5} width="9" height="3.5" rx="1" fill={GOLD} />
-          </g>
+          <Link d={d} to={[HUB_X - 8.5, HUB_Y]} />
+          {pts.map(([x, y], i) => <line key={i} x1={HUB_X} y1={HUB_Y} x2={x} y2={y} stroke={SPOKE(d)} strokeWidth="1.25" />)}
+          {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="3.8" fill={i % 2 === 0 ? blu(d) : ink(d)} />)}
+          <circle cx={HUB_X} cy={HUB_Y} r="8.5" fill={d ? "rgba(255,255,255,0.06)" : "#fff"} stroke={GOLD} strokeWidth="1" opacity={d ? 0.4 : 1} />
+          <rect x={HUB_X - 2} y={HUB_Y - 6} width="4" height="13" rx="1" fill={GOLD} />
+          <rect x={HUB_X - 4.5} y={HUB_Y - 2.5} width="9" height="3.5" rx="1" fill={GOLD} />
         </svg>
       );
     },
