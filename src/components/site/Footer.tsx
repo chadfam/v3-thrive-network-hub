@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import thriveLogo from "@/assets/thrive-logo.svg";
+import ThriveLogo from "@/components/site/ThriveLogo";
 
 type LinkItem = { label: string; to: string; external?: boolean };
 
@@ -64,7 +64,7 @@ const Footer = () => {
     <footer style={{ backgroundColor: "#FFFFFF", borderTop: "1px solid #E2E8F0" }} className="text-[#0F172A]">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-12 md:py-16">
         <div className="max-w-3xl">
-          <img src={thriveLogo} alt="Thrive" className="h-9 w-auto" />
+          <ThriveLogo className="h-9 w-auto" />
           <p className="mt-4 text-[14px] text-[#64748B] leading-relaxed max-w-xl">
             United to Thrive is the network behind Profit Partners, FAM Central, Local Leaders, and the WER1 Impact Network.
           </p>

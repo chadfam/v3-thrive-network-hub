@@ -179,16 +179,17 @@ const OrganicMark = ({
   );
 };
 
-// Lockup using the organic mark.
+// Lockup using the organic mark — wordmark first, mark on the RIGHT.
 const OrgLockup = ({ tone = "color", h = 48, layout = "six", weight = "light" }: { tone?: "color" | "reversed"; h?: number; layout?: keyof typeof ORG_NODES; weight?: "light" | "medium" | "bold" }) => {
   const dark = tone === "reversed";
-  const mark = h * 0.7;
+  const mark = h * 0.72;
   const gap = h * 0.16;
-  const wmX = mark + gap;
+  const wordW = h * 3.4;            // approx advance width of "thrive" at fontSize h
+  const markX = wordW + gap;
   return (
-    <svg viewBox={`0 0 ${wmX + 150} ${h}`} height={h} className="w-auto" aria-label="thrive">
-      <g transform={`translate(0, ${(h - mark) / 2})`}><OrganicMark size={mark} tone={dark ? "reversed" : "color"} layout={layout} weight={weight} /></g>
-      <text x={wmX} y={h * 0.95} fontFamily={FONT} fontWeight={800} fontSize={h} letterSpacing={h * -0.034} fill={dark ? "#FFFFFF" : NAVY}>thrive</text>
+    <svg viewBox={`0 0 ${markX + mark + 2} ${h}`} height={h} className="w-auto" aria-label="thrive">
+      <text x={4} y={h * 0.95} fontFamily={FONT} fontWeight={800} fontSize={h} letterSpacing={h * -0.034} fill={dark ? "#FFFFFF" : NAVY}>thrive</text>
+      <g transform={`translate(${markX}, ${(h - mark) / 2})`}><OrganicMark size={mark} tone={dark ? "reversed" : "color"} layout={layout} weight={weight} /></g>
     </svg>
   );
 };
