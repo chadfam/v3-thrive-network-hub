@@ -29,6 +29,250 @@ const blu = (d: boolean) => (d ? BLUE_LIGHT : BLUE);
 
 type Concept = { id: string; name: string; note: string; render: (dark: boolean) => ReactNode; tall?: boolean };
 
+const FONT_W = (d: boolean, x: number, y: number, size = 44, ls = "-1.5") => ({ fontFamily: FONT, fontWeight: 800, fontSize: size, letterSpacing: ls } as const);
+
+// ── SHORTLIST · hub-and-spoke + chains + word-of-mouth bubbles ───────────────
+const shortlist: Concept[] = [
+  // ---- HUB AND SPOKE ----
+  {
+    id: "S1",
+    name: "Hub & spoke — the network, plainly",
+    note: "A gold center hub (United to Thrive / the family) with six satellite hubs around it — Profit Partners, Mastermind Passport, Command Central, FAM Central, WER1, PromoEngine. Thin spokes connect them all. The mark IS the company structure.",
+    render: (d) => {
+      const cx = 24, cy = 28, r = 22;
+      const pts = [0, 60, 120, 180, 240, 300].map((deg) => {
+        const a = (deg * Math.PI) / 180;
+        return [cx + r * Math.cos(a), cy + r * Math.sin(a)] as const;
+      });
+      return (
+        <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={d ? "rgba(255,255,255,0.45)" : "#CBD5E1"} strokeWidth="1.5" />)}
+          {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r="4.5" fill={i % 2 === 0 ? blu(d) : ink(d)} />)}
+          <circle cx={cx} cy={cy} r="7.5" fill={GOLD} />
+          <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
+        </svg>
+      );
+    },
+  },
+  {
+    id: "S2",
+    name: "Hub & spoke as a 'T'",
+    note: "The hub-and-spoke arranged into the letter T — three satellite hubs across the top (the crossbar), the hub at the join, two more dropping down (the stem). Symbol + monogram + network, all at once. Hub gold, satellites navy/blue.",
+    render: (d) => (
+      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <g stroke={d ? "rgba(255,255,255,0.45)" : "#CBD5E1"} strokeWidth="1.5">
+          <line x1="24" y1="12" x2="6" y2="12" /><line x1="24" y1="12" x2="42" y2="12" />
+          <line x1="24" y1="12" x2="24" y2="28" /><line x1="24" y1="28" x2="24" y2="44" />
+        </g>
+        <circle cx="6" cy="12" r="4.5" fill={ink(d)} /><circle cx="42" cy="12" r="4.5" fill={ink(d)} />
+        <circle cx="24" cy="28" r="4.5" fill={blu(d)} /><circle cx="24" cy="44" r="4.5" fill={blu(d)} />
+        <circle cx="24" cy="12" r="7" fill={GOLD} />
+        <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
+      </svg>
+    ),
+  },
+  {
+    id: "S3",
+    name: "Hub & spoke — organic, real-network",
+    note: "Hub off-center; satellites at irregular distances and angles, spokes of varying length. Reads less like a diagram, more like a living network that grew. Hub gold, satellites navy/blue.",
+    render: (d) => {
+      const cx = 22, cy = 27;
+      const pts: [number, number, string][] = [
+        [4, 8, ink(d)], [42, 6, blu(d)], [46, 30, ink(d)], [10, 46, blu(d)], [34, 47, ink(d)],
+      ];
+      return (
+        <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={d ? "rgba(255,255,255,0.4)" : "#CBD5E1"} strokeWidth="1.5" />)}
+          {pts.map(([x, y, c], i) => <circle key={`c${i}`} cx={x} cy={y} r="4" fill={c} />)}
+          <circle cx={cx} cy={cy} r="7.5" fill={GOLD} />
+          <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
+        </svg>
+      );
+    },
+  },
+  {
+    id: "S4",
+    name: "Hub & spoke — networks within the network",
+    note: "A center hub, a ring of mid-hubs, and each mid-hub has its own two little satellites. Fractal: each program is itself a hub. Says 'a network of networks' — which is exactly what United to Thrive is.",
+    render: (d) => {
+      const cx = 24, cy = 28;
+      const mid = [45, 135, 225, 315].map((deg) => {
+        const a = (deg * Math.PI) / 180;
+        return [cx + 14 * Math.cos(a), cy + 14 * Math.sin(a), deg] as const;
+      });
+      return (
+        <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {mid.map(([x, y, deg], i) => {
+            const a = (deg * Math.PI) / 180;
+            const o1 = [x + 7 * Math.cos(a - 0.5), y + 7 * Math.sin(a - 0.5)] as const;
+            const o2 = [x + 7 * Math.cos(a + 0.5), y + 7 * Math.sin(a + 0.5)] as const;
+            return (
+              <g key={i}>
+                <line x1={cx} y1={cy} x2={x} y2={y} stroke={d ? "rgba(255,255,255,0.4)" : "#CBD5E1"} strokeWidth="1.5" />
+                <line x1={x} y1={y} x2={o1[0]} y2={o1[1]} stroke={d ? "rgba(255,255,255,0.3)" : "#E2E8F0"} strokeWidth="1" />
+                <line x1={x} y1={y} x2={o2[0]} y2={o2[1]} stroke={d ? "rgba(255,255,255,0.3)" : "#E2E8F0"} strokeWidth="1" />
+                <circle cx={o1[0]} cy={o1[1]} r="2.2" fill={blu(d)} />
+                <circle cx={o2[0]} cy={o2[1]} r="2.2" fill={blu(d)} />
+                <circle cx={x} cy={y} r="4" fill={ink(d)} />
+              </g>
+            );
+          })}
+          <circle cx={cx} cy={cy} r="7" fill={GOLD} />
+          <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
+        </svg>
+      );
+    },
+  },
+  {
+    id: "S5",
+    name: "Hub & spoke — value flowing outward",
+    note: "The hub sends value OUT to each satellite — spokes drawn as arrows pointing from the center to the programs. Says: United to Thrive promotes you, distributes to you, feeds the network. Arrows blue, hub gold.",
+    render: (d) => {
+      const cx = 24, cy = 28, r = 21;
+      const pts = [0, 72, 144, 216, 288].map((deg) => {
+        const a = ((deg - 90) * Math.PI) / 180;
+        return [cx + r * Math.cos(a), cy + r * Math.sin(a), deg - 90] as const;
+      });
+      return (
+        <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {pts.map(([x, y, deg], i) => (
+            <g key={i}>
+              <line x1={cx} y1={cy} x2={x} y2={y} stroke={blu(d)} strokeWidth="2" />
+              <path d="M 0 0 L -4 -3 L -4 3 Z" fill={blu(d)} transform={`translate(${x},${y}) rotate(${deg}) translate(2,0)`} />
+              <circle cx={x} cy={y} r="2.5" fill={ink(d)} opacity="0.4" />
+            </g>
+          ))}
+          <circle cx={cx} cy={cy} r="8" fill={GOLD} />
+          <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
+        </svg>
+      );
+    },
+  },
+  {
+    id: "S6",
+    name: "Hub & spoke — one path lit up (a deal in motion)",
+    note: "The full network sits quietly in grey — except one spoke and one satellite glow gold: a referral flowing through right now. Captures the network AND the action on it. Hub navy, lit path gold.",
+    render: (d) => {
+      const cx = 24, cy = 28, r = 22;
+      const pts = [0, 60, 120, 180, 240, 300].map((deg) => {
+        const a = (deg * Math.PI) / 180;
+        return [cx + r * Math.cos(a), cy + r * Math.sin(a)] as const;
+      });
+      return (
+        <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {pts.map(([x, y], i) => <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={i === 5 ? GOLD : (d ? "rgba(255,255,255,0.35)" : "#E2E8F0")} strokeWidth={i === 5 ? 3 : 1.5} />)}
+          {pts.map(([x, y], i) => <circle key={`c${i}`} cx={x} cy={y} r={i === 5 ? 5.5 : 4} fill={i === 5 ? GOLD : "none"} stroke={i === 5 ? "none" : (d ? "rgba(255,255,255,0.5)" : "#CBD5E1")} strokeWidth="2" />)}
+          <circle cx={cx} cy={cy} r="7.5" fill={ink(d)} />
+          <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
+        </svg>
+      );
+    },
+  },
+  // ---- CHAIN (more like M4) ----
+  {
+    id: "S7",
+    name: "Ascending chain — straight up (M4, vertical)",
+    note: "Three interlocking links climbing vertically, each a step higher and a colour brighter: navy → blue → gold. Cleaner and more iconic than the diagonal M4. 'The chain is the point' — and the chain rises.",
+    render: (d) => (
+      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <g fill="none" strokeWidth="4.5" strokeLinecap="round">
+          <ellipse cx="14" cy="44" rx="6.5" ry="9.5" stroke={ink(d)} transform="rotate(18 14 44)" />
+          <ellipse cx="20" cy="28" rx="6.5" ry="9.5" stroke={blu(d)} transform="rotate(18 20 28)" />
+          <ellipse cx="26" cy="12" rx="6.5" ry="9.5" stroke={GOLD} transform="rotate(18 26 12)" />
+        </g>
+        <text x="48" y="42" {...FONT_W(d, 48, 42)} fill={ink(d)}>thrive</text>
+      </svg>
+    ),
+  },
+  {
+    id: "S8",
+    name: "Chain forms the 'T'",
+    note: "Three links across the top make the T's crossbar; the middle link drops two more to form the stem. The brand monogram, built entirely out of connected links. Crossbar navy/blue, stem ends in a gold link.",
+    render: (d) => (
+      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <g fill="none" strokeWidth="4" strokeLinecap="round">
+          <ellipse cx="10" cy="12" rx="9" ry="6" stroke={ink(d)} />
+          <ellipse cx="24" cy="12" rx="9" ry="6" stroke={blu(d)} />
+          <ellipse cx="38" cy="12" rx="9" ry="6" stroke={ink(d)} />
+          <ellipse cx="24" cy="26" rx="6" ry="9" stroke={blu(d)} />
+          <ellipse cx="24" cy="42" rx="6" ry="9" stroke={GOLD} />
+        </g>
+        <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
+      </svg>
+    ),
+  },
+  {
+    id: "S9",
+    name: "Chain loop — the flywheel",
+    note: "Five links forming a closed ring — the referral flywheel, recurring revenue, relationships that loop back and keep paying. One link gold (the active deal). Reads as 'this never stops.'",
+    render: (d) => {
+      const cx = 24, cy = 28, r = 14;
+      const links = [0, 72, 144, 216, 288].map((deg) => {
+        const a = ((deg - 90) * Math.PI) / 180;
+        return [cx + r * Math.cos(a), cy + r * Math.sin(a), deg] as const;
+      });
+      return (
+        <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+          {links.map(([x, y, deg], i) => (
+            <ellipse key={i} cx={x} cy={y} rx="5.5" ry="9" fill="none" strokeWidth="4" stroke={i === 0 ? GOLD : (i % 2 === 0 ? ink(d) : blu(d))} transform={`rotate(${deg} ${x} ${y})`} />
+          ))}
+          <text x="56" y="42" {...FONT_W(d, 56, 42)} fill={ink(d)}>thrive</text>
+        </svg>
+      );
+    },
+  },
+  // ---- SPEECH BUBBLE (more like C4) ----
+  {
+    id: "S10",
+    name: "Chorus of recommendations — overlapping bubbles",
+    note: "Three speech bubbles cascading — many voices, many recommendations. The business model in a mark: people talking. Back navy, middle blue, front gold.",
+    render: (d) => (
+      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <g>
+          <path d="M 4 4 h 22 a 6 6 0 0 1 6 6 v 8 a 6 6 0 0 1 -6 6 h -10 l -7 6 v -6 h -5 a 6 6 0 0 1 -6 -6 v -8 a 6 6 0 0 1 6 -6 z" fill={ink(d)} />
+          <path d="M 14 14 h 22 a 6 6 0 0 1 6 6 v 8 a 6 6 0 0 1 -6 6 h -10 l -7 6 v -6 h -5 a 6 6 0 0 1 -6 -6 v -8 a 6 6 0 0 1 6 -6 z" fill={blu(d)} />
+          <path d="M 22 26 h 22 a 6 6 0 0 1 6 6 v 8 a 6 6 0 0 1 -6 6 h -10 l -7 6 v -6 h -5 a 6 6 0 0 1 -6 -6 v -8 a 6 6 0 0 1 6 -6 z" fill={GOLD} />
+        </g>
+        <text x="60" y="42" {...FONT_W(d, 60, 42)} fill={ink(d)}>thrive</text>
+      </svg>
+    ),
+  },
+  {
+    id: "S11",
+    name: "Recommendation → chain (the bubble has a tail of links)",
+    note: "A speech bubble whose pointer tail extends into two chain links — a recommendation that connects people downstream, and pays each of them. Word-of-mouth meets 'the chain is the point.' Bubble blue, links navy → gold.",
+    render: (d) => (
+      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <path d="M 4 4 h 30 a 7 7 0 0 1 7 7 v 14 a 7 7 0 0 1 -7 7 h -14 l -6 7 v -7 h -10 a 7 7 0 0 1 -7 -7 v -14 a 7 7 0 0 1 7 -7 z" fill={blu(d)} />
+        <g fill="none" strokeWidth="3.5" strokeLinecap="round">
+          <ellipse cx="22" cy="40" rx="5" ry="7.5" stroke={ink(d)} transform="rotate(25 22 40)" />
+          <ellipse cx="32" cy="48" rx="5" ry="7.5" stroke={GOLD} transform="rotate(25 32 48)" />
+        </g>
+        <text x="56" y="42" {...FONT_W(d, 56, 42)} fill={ink(d)}>thrive</text>
+      </svg>
+    ),
+  },
+  {
+    id: "S12",
+    name: "What people say is about the network (bubble holds a hub)",
+    note: "A speech bubble containing a tiny hub-and-spoke. The recommendation (the bubble) and the network it points to (the hub inside) are one thing. Bubble navy outline, hub gold, satellites blue.",
+    render: (d) => (
+      <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
+        <path d="M 3 4 h 40 a 7 7 0 0 1 7 7 v 18 a 7 7 0 0 1 -7 7 h -20 l -7 7 v -7 h -13 a 7 7 0 0 1 -7 -7 v -18 a 7 7 0 0 1 7 -7 z" fill="none" stroke={ink(d)} strokeWidth="2.5" />
+        <g transform="translate(23, 20)">
+          {[0, 90, 180, 270].map((deg) => {
+            const a = (deg * Math.PI) / 180;
+            const x = 9 * Math.cos(a), y = 9 * Math.sin(a);
+            return <g key={deg}><line x1="0" y1="0" x2={x} y2={y} stroke={d ? "rgba(255,255,255,0.4)" : "#CBD5E1"} strokeWidth="1.2" /><circle cx={x} cy={y} r="2.5" fill={blu(d)} /></g>;
+          })}
+          <circle cx="0" cy="0" r="4" fill={GOLD} />
+        </g>
+        <text x="58" y="42" {...FONT_W(d, 58, 42)} fill={ink(d)}>thrive</text>
+      </svg>
+    ),
+  },
+];
+
 // ── SECTION 0 · Meaning-aligned directions ───────────────────────────────────
 // Each mark embodies a specific thing United to Thrive stands for.
 const meaning: Concept[] = [
@@ -488,21 +732,33 @@ const LogoConcepts = () => (
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pt-16 md:pt-24 pb-8">
         <p className="eyebrow">INTERNAL PREVIEW · NOT INDEXED</p>
         <h1 className="mt-6 font-serif-display text-slate-ink" style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-          Logo concepts — what United to Thrive stands for
+          Logo concepts — the shortlist
         </h1>
-        <p className="mt-6 max-w-[760px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Section 0 (below) is the focus: 10 marks, each one built around a specific thing the brand stands for — partnerships over advertising, families at the center, "the chain is the point," uniting separate programs under one roof, trust → abundance. Sections 1–3 keep the earlier explorations for reference.
+        <p className="mt-6 max-w-[780px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+          Honing in on what you liked: <strong>chains / links</strong> (like M4), <strong>word-of-mouth bubbles</strong> (like C4), and a <strong>hub-and-spoke</strong> — United to Thrive as the central hub connecting Profit Partners, Mastermind Passport, Command Central, FAM Central, WER1, and PromoEngine. The Shortlist below has 12 of these (6 hub-and-spoke, 3 chain, 3 bubble). Earlier rounds stay below for reference.
         </p>
       </div>
     </section>
 
-    {/* ── SECTION 0 · Meaning-aligned ─────────────────────────────────────── */}
+    {/* ── SHORTLIST · hub-and-spoke + chains + bubbles ────────────────────── */}
     <section className="bg-background">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pb-12">
         <div className="border-b-2 border-brand-gold pb-4">
-          <p className="eyebrow-gold">SECTION 0 · WHAT THE BRAND STANDS FOR</p>
-          <h2 className="mt-2 font-serif-display text-slate-ink text-[26px] md:text-[32px]">Meaning-aligned marks</h2>
-          <p className="mt-3 max-w-[680px] text-[15px] text-[hsl(var(--slate-700))]">Each note explains the idea the mark carries — so you can pick on meaning, not just looks.</p>
+          <p className="eyebrow-gold">SHORTLIST · HUB-AND-SPOKE · CHAINS · WORD-OF-MOUTH</p>
+          <h2 className="mt-2 font-serif-display text-slate-ink text-[26px] md:text-[32px]">The directions you're circling</h2>
+        </div>
+        <div className="mt-8 space-y-8">
+          {shortlist.map((c) => <ConceptCard key={c.id} c={c} />)}
+        </div>
+      </div>
+    </section>
+
+    {/* ── SECTION 0 · Meaning-aligned ─────────────────────────────────────── */}
+    <section className="surface-muted">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-12 md:py-20">
+        <div className="border-b border-[hsl(var(--slate-200))] pb-4">
+          <p className="eyebrow-blue">SECTION 0 · WHAT THE BRAND STANDS FOR (REFERENCE)</p>
+          <h2 className="mt-2 font-serif-display text-slate-ink text-[24px] md:text-[28px]">Meaning-aligned marks</h2>
         </div>
         <div className="mt-8 space-y-8">
           {meaning.map((c) => <ConceptCard key={c.id} c={c} />)}
