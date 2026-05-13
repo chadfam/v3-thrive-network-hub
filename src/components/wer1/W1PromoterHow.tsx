@@ -14,7 +14,7 @@ const W1PromoterHow = () => {
             className="font-serif-display text-slate-ink"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
           >
-            For promoters, how it works.
+            How promoters earn.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[720px] mx-auto">
             The promoter side of WER1 is the simplest way to engage with the platform. No business required. No quotas. You share what you trust and earn from the activity that follows.

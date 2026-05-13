@@ -28,7 +28,7 @@ const BizCommandCentral = () => {
             Command Central is the answer. In effect, your own board of directors: vetted partners across the disciplines you actually need, each accountable to the network because their next referral depends on the last one going well. You skip the vendor casino. You get a partner with skin in the game.
           </p>
           <p className="mt-6 max-w-[440px] italic text-[15px] text-[hsl(var(--slate-500))]">
-            Included from the Mastermind tier of Profit Partners and above.
+            Included with Profit Partners membership.
           </p>
           <a href="/command-central" className="mt-8 text-link">
             Command Central details →

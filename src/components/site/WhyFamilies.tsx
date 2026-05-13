@@ -20,12 +20,12 @@ const WhyFamilies = () => {
               <h2
                 className="relative font-serif-display text-slate-ink"
                 style={{
-                  fontSize: "clamp(2rem, 5.5vw, 3.5rem)",
+                  fontSize: "clamp(2.25rem, 6vw, 4rem)",
                   lineHeight: 1.08,
                   letterSpacing: "-0.01em",
                 }}
               >
-                A customer who recommends you to three parents in the school pickup line beats ten Facebook clicks.
+                Three parents at school pickup beat ten Facebook clicks.
               </h2>
             </div>
 

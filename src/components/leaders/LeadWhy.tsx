@@ -4,7 +4,7 @@ const LeadWhy = () => {
       <div className="mx-auto max-w-[760px] px-6 sm:px-8 md:px-10 py-16 md:py-32 text-center">
         <div className="mx-auto mb-10 section-accent" />
         <h2 className="font-serif-display tracking-section text-slate-ink" style={{ fontSize: "clamp(1.75rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-          Why we built this for leaders.
+          Get paid for the leadership you already provide.
         </h2>
         <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
           The work of strengthening families used to happen in church basements, school PTAs, and around the kitchen table. It still does. But the connectors who hold those rooms together usually do it for free, on the side, while their day jobs absorb most of their attention. The people best at building community end up with the least time to build it.

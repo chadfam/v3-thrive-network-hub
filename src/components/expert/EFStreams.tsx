@@ -68,7 +68,7 @@ const EFStreams = () => {
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32">
         <div className="text-center max-w-[760px] mx-auto">
           <h2 className="font-serif-display tracking-section text-white" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-            The five income streams.
+            Five ways your expertise earns.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-white/90 max-w-[720px] mx-auto">
             The five ways Expert Faculty earn from the platform. Most active members earn from three or four of the five concurrently. The structure is built so that the more your content reaches families, the more streams activate.

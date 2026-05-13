@@ -12,7 +12,7 @@ const groups: Group[] = [
       "Inclusion in community events and signature gatherings",
       "Networking, educational sessions, and group advisory",
       "Monthly mastermind meetings focused on strategy, partnerships, and deal flow",
-      "Private Inner Circle sessions for senior partners",
+      "Private senior-partner sessions for advanced members",
       "Speaking, media, and premium positioning opportunities",
     ],
   },

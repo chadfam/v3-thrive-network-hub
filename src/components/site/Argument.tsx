@@ -21,7 +21,7 @@ const Argument = () => {
           <div className="md:col-span-12 lg:col-span-5">
             <span className="block h-0.5 w-16 bg-brand-gold rounded-full mb-8" aria-hidden />
             <h2 className="font-serif-display section-headline text-slate-ink">
-              The best businesses aren't the loudest. They're the ones families recommend.
+              The best businesses are the ones families recommend.
             </h2>
             <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
               We built United to Thrive to connect business owners, community leaders, and trusted experts into a single network that runs on relationships and referrals, not ads.

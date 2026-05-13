@@ -7,7 +7,7 @@ const PassApply = () => {
           The right rooms find you<br />once you're in the network.
         </h2>
         <p className="mt-8 mx-auto max-w-[640px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Apply for the Passport directly, or apply to Profit Partners at the Mastermind tier and the Passport comes with it. Either path puts you in front of the rooms most owners spend years trying to reach.
+          Apply for the Passport directly, or apply to Profit Partners and the Passport comes with it. Either path puts you in front of the rooms most owners spend years trying to reach.
         </p>
         <div className="mt-10 flex flex-col items-center gap-4">
           <a

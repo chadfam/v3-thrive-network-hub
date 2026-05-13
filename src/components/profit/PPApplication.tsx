@@ -1,8 +1,8 @@
 const steps = [
-  { n: "01", name: "Apply", desc: "Fill out the application. About ten minutes. We ask about your business, your goals, and which tier you're considering." },
+  { n: "01", name: "Apply", desc: "Fill out the application. About ten minutes. We ask about your business and your goals." },
   { n: "02", name: "Review", desc: "We review the application within five business days. We confirm category alignment in your market and basic fit with the alliance." },
-  { n: "03", name: "Conversation", desc: "A 30-minute conversation with someone from our team. We answer your questions. You get a clear picture of what membership looks like in practice." },
-  { n: "04", name: "Decide", desc: "If both sides agree it's a fit, we send the agreement and onboarding details. You start at your selected tier on the day membership begins." },
+  { n: "03", name: "Conversation", desc: "A 30-minute conversation with someone from our team. We answer your questions and shape the right level of access to your business." },
+  { n: "04", name: "Decide", desc: "If both sides agree it's a fit, we send the agreement and onboarding details. Membership begins right away." },
 ];
 
 const PPApplication = () => {
@@ -11,7 +11,7 @@ const PPApplication = () => {
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
         <div className="text-center max-w-[760px] mx-auto">
           <h2 className="font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-            How the application works.
+            How to get in.
           </h2>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
             Membership is by application. We review every one. The process is structured so that both sides know whether the fit is right before any commitment.

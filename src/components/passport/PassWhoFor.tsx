@@ -17,7 +17,7 @@ const PassWhoFor = () => {
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32 grid md:grid-cols-2 gap-12 md:gap-20 items-start">
         <div>
           <h2 className="font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-            Who the Passport is for.
+            Who walks in introduced.
           </h2>
           <p className="mt-8 max-w-[480px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
             The Passport is built for owners, executives, and investors who are past the stage where networking happens by accident. Most members run businesses doing $1M and up. Many are operating multiple ventures. They're not looking for general business education. They're looking for the room where the next deal, partnership, or investor conversation happens.
