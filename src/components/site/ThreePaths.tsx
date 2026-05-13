@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const cards = [
   {
     headline: "Grow through partnerships, not ads.",
-    body: "Stop spending blind money on cold traffic. Profit Partners is a working alliance where complementary businesses promote each other to the families they already serve — referrals close at a far higher rate than any ad ever will.",
+    body: "Stop spending blind money on cold traffic. Profit Partners is a working alliance where complementary businesses promote each other to the families they already serve. Referrals close at a far higher rate than any ad ever will.",
     meta: "Profit Partners™ · Mastermind Passport™ · Command Central™",
     link: "Explore for businesses →",
     to: "/businesses",
@@ -17,7 +17,7 @@ const cards = [
   },
   {
     headline: "Get paid for what you already do.",
-    body: "You already recommend the people and products you trust. WER1 gives you one magic link to promote any program in the network — and you get paid when people buy, no matter which one they choose.",
+    body: "You already recommend the people and products you trust. WER1 gives you one magic link to promote any program in the network, and you get paid when people buy, no matter which one they choose.",
     meta: "WER1 · One link · Every program",
     link: "See how WER1 works →",
     to: "/wer1",

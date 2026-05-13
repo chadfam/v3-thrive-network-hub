@@ -26,7 +26,7 @@ const Hero = () => {
             Where businesses become <span className="ppx-italic">famous for families</span>.
           </h1>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[540px]">
-            The network behind the businesses families recommend. We connect business owners, community leaders, and trusted experts so your growth comes from relationships and referrals — not ads.
+            The network behind the businesses families recommend. We connect business owners, community leaders, and trusted experts so your growth comes from relationships and referrals, not ads.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-3">

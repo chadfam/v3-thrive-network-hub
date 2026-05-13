@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* United to Thrive — PPX-aligned palette */
+    /* United to Thrive - PPX-aligned palette */
     --background: 0 0% 100%;
     --foreground: 222 47% 11%;        /* TEXT INK #0F172A */
 
@@ -60,7 +60,7 @@ All colors MUST be HSL.
     --text-light-gray: #94A3B8;
     --border-light: #E2E8F0;
 
-    /* Legacy tokens retired — resolve to brand blue so old utilities migrate. */
+    /* Legacy tokens retired - resolve to brand blue so old utilities migrate. */
     --gradient-warm: #2563EB;
     --gradient-warm-diag: #2563EB;
     --gradient-purple: #F8FAFC;
@@ -251,7 +251,7 @@ All colors MUST be HSL.
     background-image: none;
   }
 
-  /* PPX section surfaces — flat light tint, no warm overlays. */
+  /* PPX section surfaces - flat light tint, no warm overlays. */
   .surface-muted {
     background-color: var(--section-tint);
   }
@@ -294,7 +294,7 @@ All colors MUST be HSL.
     border-radius: 0 !important;
     box-shadow: none !important;
   }
-  /* Directional fade variants — fade only the inner edge facing the text column. */
+  /* Directional fade variants - fade only the inner edge facing the text column. */
   .img-blend-fade-left {
     -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 25%, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.85) 80%, #000 100%);
             mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 25%, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.85) 80%, #000 100%);
@@ -362,7 +362,7 @@ All colors MUST be HSL.
     z-index: 1;
   }
 
-  /* PPX navy CTA band — centered headline with three gold stats. */
+  /* PPX navy CTA band - centered headline with three gold stats. */
   .navy-cta-band {
     background-color: var(--brand-navy);
     color: #fff;
@@ -396,7 +396,7 @@ All colors MUST be HSL.
     line-height: 1;
   }
 
-  /* PPX cards — no border, no shadow; subtle hover lift only. */
+  /* PPX cards - no border, no shadow; subtle hover lift only. */
   .card-surface {
     background-color: #FFFFFF;
     border: 0;
@@ -411,7 +411,7 @@ All colors MUST be HSL.
     box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
   }
 
-  /* Canonical bordered card — use for content panels with internal lists. */
+  /* Canonical bordered card - use for content panels with internal lists. */
   .card-bordered {
     background-color: #FFFFFF;
     border: 1px solid hsl(var(--slate-200));
@@ -522,7 +522,7 @@ All colors MUST be HSL.
     color: var(--brand-blue);
   }
 
-  /* Subtle text links — "Learn more →", "See more →" */
+  /* Subtle text links - "Learn more →", "See more →" */
   .text-link {
     display: inline-block;
     font-size: 15px;
@@ -584,7 +584,7 @@ All colors MUST be HSL.
     background-color: var(--brand-gold);
   }
 
-  /* Section padding rhythm — apply to the section element OR to its inner container */
+  /* Section padding rhythm - apply to the section element OR to its inner container */
   .section-py {
     padding-top: 5rem;       /* py-20 */
     padding-bottom: 5rem;

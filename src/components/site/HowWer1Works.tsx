@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 const points: { lead: string; body: string }[] = [
   {
     lead: "Your clients and customers.",
-    body: "Most companies don't have a referral-rewards program. We help you build one — so the people who already love you become brand champions who recommend you by name.",
+    body: "Most companies don't have a referral-rewards program. We help you build one, so the people who already love you become brand champions who recommend you by name.",
   },
   {
     lead: "Complementary businesses.",
-    body: "We help you formalize referral partnerships with the businesses that serve your same perfect prospects — your own power team, all sending each other work.",
+    body: "We help you formalize referral partnerships with the businesses that serve your same perfect prospects. Your own power team, all sending each other work.",
   },
   {
     lead: "Experts and influencers.",
@@ -15,7 +15,7 @@ const points: { lead: string; body: string }[] = [
   },
   {
     lead: "Charities and causes.",
-    body: "Mission-driven partners can monetize their community by recommending businesses in our network — and you can be one of the businesses they recommend.",
+    body: "Mission-driven partners can monetize their community by recommending businesses in our network, and you can be one of the businesses they recommend.",
   },
 ];
 
@@ -36,7 +36,7 @@ const HowWer1Works = () => {
             <br /> All promoting your business.
           </h2>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-white/90">
-            When you're famous for families, you don't carry your own growth — the network does. WER1 is the engine underneath it: it quietly tracks every introduction and pays everyone who helped, automatically. No spreadsheets, no "trust me, I sent you that one." Here's who ends up sending you business:
+            When you're famous for families, you don't carry your own growth. The network does. WER1 is the engine underneath it: it quietly tracks every introduction and pays everyone who helped, automatically. No spreadsheets, no "trust me, I sent you that one." Here's who ends up sending you business:
           </p>
 
           <ul className="mt-10 space-y-6">

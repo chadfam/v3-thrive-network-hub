@@ -10,7 +10,7 @@ import CCApply from "@/components/command/CCApply";
 const CommandCentral = () => (
   <Layout
     title="Command Central"
-    description="Your own board of advisors, experts, and service providers — underneath Profit Partners. Pre-vetted, with set pricing, across coaching, marketing, finance, legal, and tech. Five disciplines, thirty-plus services. So you stop guessing who to trust."
+    description="Your own board of advisors, experts, and service providers underneath Profit Partners. Pre-vetted, with set pricing, across coaching, marketing, finance, legal, and tech. Five disciplines, thirty-plus services. So you stop guessing who to trust."
     canonical="/command-central"
   >
     <CCHero />

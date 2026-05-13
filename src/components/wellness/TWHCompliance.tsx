@@ -22,10 +22,10 @@ const TWHCompliance = () => {
               Set up the way the IRS expects.
             </h2>
             <p className="mt-8 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed max-w-[540px]">
-              This is a pre-tax benefit plan with a defined structure in the IRS code — the same kind of plan large employers have used for decades. Every plan we administer is documented in writing, follows the qualified-benefit definitions, and runs the required annual nondiscrimination testing so benefits are available across the workforce, not just to highly compensated employees.
+              This is a pre-tax benefit plan with a defined structure in the IRS code, the same kind of plan large employers have used for decades. Every plan we administer is documented in writing, follows the qualified-benefit definitions, and runs the required annual nondiscrimination testing so benefits are available across the workforce, not just to highly compensated employees.
             </p>
             <p className="mt-6 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed max-w-[540px]">
-              The structure is well understood by the IRS, payroll providers, and benefits attorneys. The administrative work is what trips up most small businesses, not the law itself — so we handle the documentation, the testing, and the paperwork, and the plan gets set up and run properly.
+              The structure is well understood by the IRS, payroll providers, and benefits attorneys. The administrative work is what trips up most small businesses, not the law itself, so we handle the documentation, the testing, and the paperwork, and the plan gets set up and run properly.
             </p>
             <p className="mt-6 italic text-[14px] text-[hsl(var(--slate-500))] max-w-[540px]">
               This page is informational, not tax advice. Tax outcomes depend on individual circumstances and current IRS regulations. Plans are administered in coordination with qualified benefits and tax professionals. Talk to your CPA before adopting any benefit plan.

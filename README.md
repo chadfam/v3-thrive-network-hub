@@ -1,6 +1,6 @@
 # United to Thrive
 
-Marketing site for United To Thrive LLC — the network behind Profit Partners, Mastermind Passport, Command Central, the WER1 referral engine, and related programs.
+Marketing site for United To Thrive LLC. The network behind Profit Partners, Mastermind Passport, Command Central, the WER1 referral engine, and related programs.
 
 > **Tagline:** Grow through partnerships. Famous for families.
 
@@ -55,21 +55,21 @@ public/
 ├── favicon.svg
 └── og-image.png      # TODO: replace placeholder
 
-_context/             # gitignored — local content reference for Claude
+_context/             # gitignored, local content reference for Claude
 ```
 
 ## SEO
 
 - Per-page metadata is centralized via the `<Layout>` component in [src/components/site/Layout.tsx](src/components/site/Layout.tsx). Each page passes `title`, `description`, and `canonical` props.
 - Organization + WebSite JSON-LD live in [index.html](index.html).
-- Sitemap at [public/sitemap.xml](public/sitemap.xml) — update when adding routes.
+- Sitemap at [public/sitemap.xml](public/sitemap.xml). Update when adding routes.
 - The placeholder OG image at `/og-image.png` should be replaced with a real 1200×630 image before launch.
 
 ## Brand
 
 - **Primary palette:** Brand blue `#2563EB`, navy `#0B1F3F`, gold `#FBBF24` on white. (Tokens defined in [src/index.css](src/index.css).)
 - **Type:** Montserrat throughout.
-- **Voice:** Direct, specific, mission-first. Avoid stock photo aesthetics — this is a people business.
+- **Voice:** Direct, specific, mission-first. Avoid stock photo aesthetics. This is a people business.
 
 ## Trademarks
 

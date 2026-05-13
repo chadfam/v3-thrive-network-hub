@@ -11,7 +11,7 @@ const TWHHero = () => {
           Your business deserves lower taxes.
         </h1>
         <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[21px] text-[hsl(var(--slate-700))] leading-relaxed">
-          Team Wellness Hub gives your team real, supplemental wellness benefits — and because it's set up as a pre-tax benefit (the kind that's been in the tax code for decades), employees take home more pay and the business saves on payroll taxes. It sits alongside whatever insurance you already offer. A raise for the team, without raising payroll.
+          Team Wellness Hub gives your team real, supplemental wellness benefits. Because it's set up as a pre-tax benefit (the kind that's been in the tax code for decades), employees take home more pay and the business saves on payroll taxes. It sits alongside whatever insurance you already offer. A raise for the team, without raising payroll.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <a

@@ -2,25 +2,25 @@
  * United to Thrive logo system.
  *
  * Lockup: the wordmark "thrive" (Montserrat ExtraBold) with the organic
- * hub-and-spoke mark growing out of the TOP-RIGHT of the "e" — a connecting
+ * hub-and-spoke mark growing out of the TOP-RIGHT of the "e" - a connecting
  * spoke runs from inside the "e" to a central hub, and the six program nodes
  * (Profit Partners, Mastermind Passport, Command Central, FAM Central, WER1,
  * PromoEngine) fan out from the hub at deliberately-irregular distances and
  * angles: a network that *grew*, not a diagram. The word is woven into the
- * network. The whole mark is brand blue (#2563EB) — single colour, no gold.
+ * network. The whole mark is brand blue (#2563EB) - single colour, no gold.
  *
  * Variants:
- *   "lockup"  — wordmark + connected mark, horizontal. The default.
- *   "mark"    — the organic mark only, square. (light weight)
- *   "favicon" — the organic mark only, square, slightly heavier (~16 px legible).
+ *   "lockup"  - wordmark + connected mark, horizontal. The default.
+ *   "mark"    - the organic mark only, square. (light weight)
+ *   "favicon" - the organic mark only, square, slightly heavier (~16 px legible).
  *
  * tone: "default" (light backgrounds) | "reversed" (dark backgrounds)
  * Size with `className`, e.g. className="h-7 w-auto".
  */
 import { CSSProperties } from "react";
 
-const NAVY = "#0F172A";   // text-ink — wordmark
-const BLUE = "#2563EB";   // brand blue — the whole mark
+const NAVY = "#0F172A";   // text-ink - wordmark
+const BLUE = "#2563EB";   // brand blue - the whole mark
 const FONT = "'Montserrat', system-ui, -apple-system, sans-serif";
 
 type Tone = "default" | "reversed";
@@ -29,7 +29,7 @@ const colors = (tone: Tone) =>
     ? { stroke: "rgba(255,255,255,0.92)", node: "#FFFFFF", hub: "#FFFFFF", word: "#FFFFFF" }
     : { stroke: BLUE, node: BLUE, hub: BLUE, word: NAVY };
 
-// ── The organic mark — one shape, used everywhere ────────────────────────────
+// ── The organic mark - one shape, used everywhere ────────────────────────────
 // 32×32 grid. Hub off-centre (left of, and level with, the middle); six nodes
 // at hand-tuned irregular spots so it reads as a real network rather than a
 // neat star. Spokes run hub → each node. Entirely brand blue.
@@ -65,7 +65,7 @@ const BASE = 39;
 const E_ANCHOR: readonly [number, number] = [116, 18];   // on the "e", upper-right
 const LOCK_HUB: readonly [number, number] = [143, 21];   // central hub
 const LOCK_NODES: ReadonlyArray<readonly [number, number, number]> = [
-  [133, 8, 1.05],    // upper-left — nearest the "e"
+  [133, 8, 1.05],    // upper-left - nearest the "e"
   [158, 6, 1.1],     // top
   [163, 22, 0.95],   // right
   [154, 36, 1.05],   // lower-right
