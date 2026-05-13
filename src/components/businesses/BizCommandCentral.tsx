@@ -22,10 +22,24 @@ const BizCommandCentral = () => {
             Your own board of advisors, experts, and service providers. Pre-screened, with set pricing, accountable to the network.
           </p>
           <p className="mt-8 max-w-[440px] text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Do you know who to trust?
+            Do you know who to trust? Most owners spend years cycling through vendors:
           </p>
+          <ul className="mt-5 max-w-[440px] space-y-3">
+            <li className="flex items-start gap-3 text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
+              <span aria-hidden className="bullet-dot" />
+              <span>The marketing person who didn't deliver.</span>
+            </li>
+            <li className="flex items-start gap-3 text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
+              <span aria-hidden className="bullet-dot" />
+              <span>The bookkeeper who left at tax season.</span>
+            </li>
+            <li className="flex items-start gap-3 text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
+              <span aria-hidden className="bullet-dot" />
+              <span>The lawyer who didn't return calls.</span>
+            </li>
+          </ul>
           <p className="mt-6 max-w-[440px] text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Most owners spend years cycling through vendors. The marketing person who didn't deliver. The bookkeeper who left at tax season. The lawyer who didn't return calls. By the third or fourth one you stop trusting recommendations entirely.
+            By the third or fourth one you stop trusting recommendations entirely.
           </p>
           <p className="mt-6 max-w-[440px] text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
             Command Central is your own board of directors. Vetted partners across the disciplines you actually need, each accountable to the network because their next referral depends on the last one going well.

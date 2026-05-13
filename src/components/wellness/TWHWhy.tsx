@@ -13,10 +13,32 @@ const TWHWhy = () => {
           Pre-tax wellness benefit plans have been in the tax code since the 1970s. The savings are real. The structure is well-defined. Most large employers have used some version of one for decades.
         </p>
         <p className="mt-6 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-          Most small and mid-sized businesses don't have one for three reasons. The existing wellness vendors price administration like enterprise software. The setup feels like another HR project. And the math is hard to see clearly without someone walking you through it.
+          Most small and mid-sized businesses don't have one for three reasons:
         </p>
-        <p className="mt-6 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-          Team Wellness Hub is the response. We built a plan structure that any business with W-2 employees can adopt at a flat administrative fee that's typically covered by the payroll-tax savings in the first quarter.
+
+        <ol className="mt-8 mx-auto max-w-[640px] grid sm:grid-cols-3 gap-5 text-left">
+          <li className="rounded-2xl bg-white p-6 border border-brand-blue/15">
+            <p className="font-serif-display text-brand-blue text-[28px] leading-none">01</p>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
+              The existing vendors price administration like enterprise software.
+            </p>
+          </li>
+          <li className="rounded-2xl bg-white p-6 border border-brand-blue/15">
+            <p className="font-serif-display text-brand-blue text-[28px] leading-none">02</p>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
+              The setup feels like another HR project.
+            </p>
+          </li>
+          <li className="rounded-2xl bg-white p-6 border border-brand-blue/15">
+            <p className="font-serif-display text-brand-blue text-[28px] leading-none">03</p>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
+              The math is hard to see clearly without someone walking you through it.
+            </p>
+          </li>
+        </ol>
+
+        <p className="mt-10 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
+          Team Wellness Hub is the response. We built a plan structure any business with W-2 employees can adopt at a flat administrative fee. That fee is typically covered by the payroll-tax savings in the first quarter.
         </p>
         <p className="mt-6 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
           Employees opt in voluntarily. The deductions run through your existing payroll. The wellness benefits sit on top of whatever insurance you already provide.

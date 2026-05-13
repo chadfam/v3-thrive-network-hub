@@ -25,13 +25,24 @@ const LeadFamGuides = () => {
             Most parents are doing fine on the structural stuff. Health insurance. After-school activities. College savings.
           </p>
           <p className="mt-4 text-[17px] leading-relaxed text-white/90 max-w-[440px]">
-            What's missing is the connecting work that holds a family together. Phone-free dinners. Hard conversations with teenagers. Weekly rhythms that don't require an app to remember.
+            What's missing is the connecting work that holds a family together:
           </p>
-          <p className="mt-4 text-[17px] leading-relaxed text-white/90 max-w-[440px]">
-            FAM Guides coach families through that work. One-on-one or in small cohorts.
-          </p>
-          <p className="mt-4 text-[17px] leading-relaxed text-white/90 max-w-[440px]">
-            The model is closer to a fitness coach than a therapist. Recurring, results-oriented, low-friction. The training is built around outcomes families can name out loud six months in.
+          <ul className="mt-4 max-w-[440px] space-y-3">
+            <li className="flex items-start gap-3 text-[16px] md:text-[17px] leading-relaxed text-white/90">
+              <span aria-hidden className="mt-2 inline-block w-1.5 h-1.5 rounded-full bg-brand-blue shrink-0" />
+              <span>Phone-free dinners.</span>
+            </li>
+            <li className="flex items-start gap-3 text-[16px] md:text-[17px] leading-relaxed text-white/90">
+              <span aria-hidden className="mt-2 inline-block w-1.5 h-1.5 rounded-full bg-brand-blue shrink-0" />
+              <span>Hard conversations with teenagers.</span>
+            </li>
+            <li className="flex items-start gap-3 text-[16px] md:text-[17px] leading-relaxed text-white/90">
+              <span aria-hidden className="mt-2 inline-block w-1.5 h-1.5 rounded-full bg-brand-blue shrink-0" />
+              <span>Weekly rhythms that don't require an app to remember.</span>
+            </li>
+          </ul>
+          <p className="mt-5 text-[17px] leading-relaxed text-white/90 max-w-[440px]">
+            FAM Guides coach families through that work. One-on-one or in small cohorts. The model is closer to a fitness coach than a therapist. The training is built around outcomes families can name out loud six months in.
           </p>
           <p className="mt-6 italic text-[15px] text-white/70 max-w-[440px]">
             Recurring monthly revenue. The platform handles billing, scheduling, and family matching so you spend your time coaching.
