@@ -42,8 +42,7 @@ const Contact = () => {
     >
       <section className="bg-background">
         <div className="mx-auto max-w-4xl px-6 sm:px-8 md:px-10 pt-24 md:pt-32 pb-12 md:pb-16">
-          <p className="text-[13px] tracking-[0.18em] uppercase text-[hsl(var(--slate-500))]">{ctx.label}</p>
-          <h1 className="mt-6 font-serif-display text-slate-ink" style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
+          <h1 className="font-serif-display text-slate-ink" style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
             {ctx.headline}
           </h1>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[640px]">
@@ -80,8 +79,8 @@ const Contact = () => {
       <section className="bg-background">
         <div className="mx-auto max-w-2xl px-6 sm:px-8 md:px-10 pb-24 md:pb-32">
           <div className="rounded-2xl border border-slate-ink/10 bg-white p-8">
-            <p className="text-[12px] tracking-[0.18em] uppercase text-[hsl(var(--slate-500))]">HEADQUARTERS</p>
-            <address className="mt-4 not-italic text-[16px] text-slate-ink leading-relaxed">
+            <p className="font-serif-display text-[20px] text-slate-ink">Headquarters</p>
+            <address className="mt-3 not-italic text-[16px] text-slate-ink leading-relaxed">
               United To Thrive LLC<br />
               222 S Mill Ave, Suite 800<br />
               Tempe, AZ 85281

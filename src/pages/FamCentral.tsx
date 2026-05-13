@@ -9,9 +9,8 @@ const FamCentral = () => (
   >
     <section style={{ backgroundColor: "#0B1F3F" }} className="text-white">
       <div className="mx-auto max-w-[840px] px-6 sm:px-8 md:px-10 pt-24 md:pt-32 pb-24 md:pb-32 text-center">
-        <p className="text-[13px] tracking-[0.18em] uppercase text-white/70">FAM CENTRAL</p>
         <h1
-          className="mt-6 font-serif-display text-white"
+          className="font-serif-display text-white"
           style={{ fontSize: "clamp(2.25rem, 6vw, 4.5rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
         >
           Built for the families inside the network.

@@ -6,7 +6,7 @@ const BizWer1Band = () => {
           One platform. <span className="ppx-italic">Every introduction.</span>
         </h2>
         <p className="mt-6 mx-auto max-w-2xl text-[17px] md:text-[19px] leading-relaxed text-white/80">
-          All three programs run on WER1, the referral platform we own. Every introduction inside the network gets attributed to its source and paid automatically.
+          Every introduction inside the network gets attributed to its source and paid automatically — through WER1, the engine underneath all of it.
         </p>
         <div className="mt-12 grid grid-cols-3 gap-6 md:gap-12 max-w-3xl mx-auto">
           <div>
@@ -24,10 +24,10 @@ const BizWer1Band = () => {
         </div>
         <div className="mt-12">
           <a
-            href="/how-it-works"
+            href="/wer1"
             className="btn-on-dark"
           >
-            How WER1 works →
+            See how WER1 works →
           </a>
         </div>
       </div>

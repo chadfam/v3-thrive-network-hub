@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const cards = [
   { heading: "Grow your business.", body: "Apply to Profit Partners or browse the rest of the business programs.", btn: "Apply →", to: "/apply" },
   { heading: "Lead your community.", body: "Apply to Local Leaders, FAM Guides, or Expert Faculty.", btn: "Apply →", to: "/apply" },
-  { heading: "Get paid for what you already do.", body: "You're already recommending the people and products you trust. Become a WER1 promoter and start earning from it.", btn: "Become a promoter →", to: "/apply?role=promoter" },
+  { heading: "Get paid for what you already do.", body: "You're already recommending the people and products you trust. Get your WER1 magic link and start earning from it.", btn: "Become a promoter →", to: "/apply?role=promoter" },
 ];
 
 const NextStep = () => {

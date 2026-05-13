@@ -13,8 +13,7 @@ const NotFound = () => {
     <Layout title="Page not found" description="The page you were looking for doesn't exist." noindex>
       <section className="bg-background">
         <div className="mx-auto max-w-3xl px-6 sm:px-8 md:px-10 pt-24 md:pt-32 pb-24 md:pb-32 text-center">
-          <p className="text-[13px] tracking-[0.18em] uppercase text-[hsl(var(--slate-500))]">404</p>
-          <h1 className="mt-6 font-serif-display text-slate-ink" style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
+          <h1 className="font-serif-display text-slate-ink" style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
             We couldn't find that page.
           </h1>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[560px] mx-auto">

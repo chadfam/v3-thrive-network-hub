@@ -13,9 +13,9 @@ const nav: NavItem[] = [
     href: "/businesses",
     items: [
       { label: "Overview", description: "For Businesses", href: "/businesses", isOverview: true },
-      { label: "Profit Partners™", description: "The flagship working alliance", href: "/profit-partners" },
-      { label: "Mastermind Passport™", description: "Access to elite mastermind communities", href: "/mastermind-passport" },
-      { label: "Command Central™", description: "The vetted operating bench", href: "/command-central" },
+      { label: "Profit Partners™", description: "The flagship referral alliance", href: "/profit-partners" },
+      { label: "Mastermind Passport™", description: "Proximity is power — get in the room", href: "/mastermind-passport" },
+      { label: "Command Central™", description: "Your vetted board of advisors & experts", href: "/command-central" },
     ],
   },
   {
@@ -23,9 +23,9 @@ const nav: NavItem[] = [
     href: "/leaders",
     items: [
       { label: "Overview", description: "For Leaders", href: "/leaders", isOverview: true },
-      { label: "FAM Guides", description: "Family coaching practice with a platform underneath", href: "/fam-guides" },
-      { label: "Local Leaders", description: "One leader per industry per zip code", href: "/local-leaders" },
-      { label: "Expert Faculty", description: "Five income streams for established experts", href: "/expert-faculty" },
+      { label: "FAM Guides", description: "Help families feel more connected", href: "/fam-guides" },
+      { label: "Local Leaders", description: "One trusted connector per industry in your area", href: "/local-leaders" },
+      { label: "Expert Faculty", description: "More income streams for established experts", href: "/expert-faculty" },
     ],
   },
   {
@@ -33,16 +33,8 @@ const nav: NavItem[] = [
     href: "/promo-engine",
     items: [
       { label: "Promo Engine", description: "Sell promotions online before customers walk in", href: "/promo-engine" },
-      { label: "Team Wellness Hub", description: "Section 125 wellness program", href: "/team-wellness-hub" },
-      { label: "WER1", description: "The affiliate and referral platform", href: "/wer1" },
-    ],
-  },
-  {
-    label: "How It Works",
-    href: "/how-it-works",
-    items: [
-      { label: "The Network", description: "How United to Thrive works end to end", href: "/how-it-works", isOverview: true },
-      { label: "WER1", description: "The platform underneath", href: "/wer1" },
+      { label: "Team Wellness Hub", description: "Better health for your team, lower taxes for you", href: "/team-wellness-hub" },
+      { label: "WER1", description: "One magic link to promote every program", href: "/wer1" },
     ],
   },
   {

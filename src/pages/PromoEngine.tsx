@@ -43,9 +43,8 @@ const PromoEngine = () => (
   >
     <section style={{ backgroundColor: "#0B1F3F" }} className="text-white">
       <div className="mx-auto max-w-[920px] px-6 sm:px-8 md:px-10 pt-24 md:pt-32 pb-20 md:pb-24 text-center">
-        <p className="text-[13px] tracking-[0.18em] uppercase text-white/70">PROMO ENGINE</p>
         <h1
-          className="mt-6 font-serif-display text-white"
+          className="font-serif-display text-white"
           style={{ fontSize: "clamp(2.25rem, 6vw, 4.5rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
         >
           Turn future visits into <span style={{ color: "#FBBF24" }}>revenue today</span>.
@@ -66,16 +65,55 @@ const PromoEngine = () => (
             Book a demo
           </a>
         </div>
+        <div className="mt-16 md:mt-20 mx-auto max-w-[760px]">
+          <svg viewBox="0 0 760 300" className="w-full h-auto" role="img" aria-label="A promo offer published as its own landing page, distributed across email, text, and social channels, with revenue tracked back to each source.">
+            <defs>
+              <linearGradient id="peCard" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stopColor="#FFFFFF" />
+                <stop offset="1" stopColor="#EEF3FB" />
+              </linearGradient>
+            </defs>
+            {/* offer card (left) */}
+            <rect x="20" y="40" width="220" height="220" rx="14" fill="url(#peCard)" />
+            <rect x="20" y="40" width="220" height="56" rx="14" fill="#2563EB" />
+            <rect x="20" y="82" width="220" height="14" fill="#2563EB" />
+            <circle cx="44" cy="68" r="5" fill="#FFFFFF" opacity="0.85" />
+            <rect x="58" y="63" width="120" height="10" rx="5" fill="#FFFFFF" opacity="0.85" />
+            <rect x="40" y="118" width="180" height="14" rx="7" fill="#0F172A" opacity="0.85" />
+            <rect x="40" y="142" width="140" height="10" rx="5" fill="#0F172A" opacity="0.35" />
+            <rect x="40" y="176" width="180" height="34" rx="17" fill="#FBBF24" />
+            <rect x="76" y="188" width="108" height="10" rx="5" fill="#0F172A" opacity="0.8" />
+            <rect x="40" y="226" width="100" height="10" rx="5" fill="#0F172A" opacity="0.25" />
+            {/* connectors */}
+            <path d="M240 150 H320" stroke="#FFFFFF" strokeOpacity="0.5" strokeWidth="2" />
+            <path d="M320 150 C 360 150, 360 90, 400 90" stroke="#FFFFFF" strokeOpacity="0.5" strokeWidth="2" fill="none" />
+            <path d="M320 150 H400" stroke="#FFFFFF" strokeOpacity="0.5" strokeWidth="2" />
+            <path d="M320 150 C 360 150, 360 210, 400 210" stroke="#FFFFFF" strokeOpacity="0.5" strokeWidth="2" fill="none" />
+            <circle cx="320" cy="150" r="5" fill="#FBBF24" />
+            {/* channel chips */}
+            {[{ y: 76, label: "Email" }, { y: 138, label: "Text" }, { y: 200, label: "Social" }].map((c) => (
+              <g key={c.label}>
+                <rect x="400" y={c.y} width="150" height="34" rx="17" fill="#FFFFFF" opacity="0.12" />
+                <circle cx="422" cy={c.y + 17} r="6" fill="#FBBF24" />
+                <rect x="438" y={c.y + 12} width="92" height="10" rx="5" fill="#FFFFFF" opacity="0.7" />
+              </g>
+            ))}
+            {/* revenue node (right) */}
+            <path d="M550 93 H 620" stroke="#FFFFFF" strokeOpacity="0.5" strokeWidth="2" />
+            <path d="M550 155 H 620" stroke="#FFFFFF" strokeOpacity="0.5" strokeWidth="2" />
+            <path d="M550 217 H 620" stroke="#FFFFFF" strokeOpacity="0.5" strokeWidth="2" />
+            <rect x="620" y="110" width="120" height="80" rx="14" fill="#FBBF24" />
+            <rect x="640" y="132" width="80" height="14" rx="7" fill="#0F172A" opacity="0.85" />
+            <rect x="640" y="156" width="56" height="10" rx="5" fill="#0F172A" opacity="0.5" />
+          </svg>
+        </div>
       </div>
     </section>
 
     <section className="bg-background">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
         <div className="text-center max-w-[760px] mx-auto">
-          <p className="text-[13px] font-medium tracking-[0.18em] uppercase text-[hsl(var(--slate-500))]">
-            STOP WAITING FOR REVENUE. START CAPTURING IT.
-          </p>
-          <h2 className="mt-6 font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
+          <h2 className="font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
             Enterprise ready.<br />Location proven.
           </h2>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
@@ -97,10 +135,7 @@ const PromoEngine = () => (
     <section className="surface-muted">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
         <div className="text-center max-w-[760px] mx-auto">
-          <p className="text-[13px] font-medium tracking-[0.18em] uppercase text-[hsl(var(--slate-500))]">
-            HOW IT WORKS
-          </p>
-          <h2 className="mt-6 font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
+          <h2 className="font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
             From offer to revenue.<br />And beyond.
           </h2>
         </div>

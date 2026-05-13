@@ -7,7 +7,7 @@ const steps = [
   {
     n: "02",
     name: "Plan documentation",
-    desc: "We draft the written plan document, summary plan description, and supporting paperwork required by the IRS for a compliant Section 125 cafeteria plan.",
+    desc: "We draft the written plan document, summary plan description, and supporting paperwork the IRS expects for a properly documented pre-tax wellness benefit plan.",
   },
   {
     n: "03",

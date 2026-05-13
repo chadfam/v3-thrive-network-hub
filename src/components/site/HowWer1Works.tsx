@@ -2,20 +2,20 @@ import { Link } from "react-router-dom";
 
 const points: { lead: string; body: string }[] = [
   {
-    lead: "For families.",
-    body: "When a parent recommends a Local Leader's business and that business closes the deal, the family earns. WER1 is what turns family advocacy into actual income.",
+    lead: "Your clients and customers.",
+    body: "Most companies don't have a referral-rewards program. We help you build one — so the people who already love you become brand champions who recommend you by name.",
   },
   {
-    lead: "For members of any United to Thrive program.",
-    body: "Every introduction inside the network is tracked back to its source. Earning isn't a side feature. It's how the whole community is wired.",
+    lead: "Complementary businesses.",
+    body: "We help you formalize referral partnerships with the businesses that serve your same perfect prospects — your own power team, all sending each other work.",
   },
   {
-    lead: "For partners with their own businesses.",
-    body: "We can configure WER1 as the affiliate or referral engine behind your business. The same platform you see here, branded for your company.",
+    lead: "Experts and influencers.",
+    body: "We enroll trusted voices to recommend your business inside our ecosystem, so your name shows up where buyers already pay attention.",
   },
   {
-    lead: "For promoters.",
-    body: "Share what you love. Get paid when people buy. The Waves of Pay compensation model means you also earn from the introductions made by people you brought into the network.",
+    lead: "Charities and causes.",
+    body: "Mission-driven partners can monetize their community by recommending businesses in our network — and you can be one of the businesses they recommend.",
   },
 ];
 
@@ -32,11 +32,11 @@ const HowWer1Works = () => {
             className="font-serif-display text-white"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
           >
-            Most networks pay one person per deal.
-            <br /> This one pays four.
+            Four kinds of people.
+            <br /> All promoting your business.
           </h2>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-white/90">
-            WER1 is the affiliate and referral platform we acquired to power the entire United to Thrive network. When a referral turns into business, the platform pays four kinds of people automatically: the family who made the recommendation, the local leader who made the connection, the partner who made the introduction, and the promoter who made the share. Most B2B networks ask members to keep their own records and trust the rest. Ours doesn't ask. It runs.
+            When you're famous for families, you don't carry your own growth — the network does. WER1 is the engine underneath it: it quietly tracks every introduction and pays everyone who helped, automatically. No spreadsheets, no "trust me, I sent you that one." Here's who ends up sending you business:
           </p>
 
           <ul className="mt-10 space-y-6">
@@ -51,8 +51,8 @@ const HowWer1Works = () => {
             ))}
           </ul>
 
-          <Link to="/how-it-works" className="mt-10 text-link-on-dark">
-            How WER1 works →
+          <Link to="/wer1" className="mt-10 text-link-on-dark">
+            See how WER1 works →
           </Link>
         </div>
 
@@ -61,7 +61,7 @@ const HowWer1Works = () => {
             viewBox="0 0 500 500"
             className="w-full h-auto"
             role="img"
-            aria-label="Five circles connected by thin lines. One complete path through the network is highlighted in a warm gradient, ending at a circle filled with the same gradient."
+            aria-label="Five circles connected by thin lines. One complete path through the network is highlighted in blue, ending at a filled blue circle."
           >
             <defs>
               <linearGradient id="warmDiag" x1="0%" y1="0%" x2="100%" y2="100%">

@@ -1,7 +1,7 @@
 const stats = [
-  { number: "~7.65%", label: "EMPLOYER FICA SAVINGS PER DOLLAR OF PRE-TAX ALLOCATION" },
-  { number: "$1,500+", label: "AVERAGE ANNUAL TAKE-HOME INCREASE PER PARTICIPATING EMPLOYEE" },
-  { number: "0", label: "DISRUPTION TO EXISTING HEALTH INSURANCE" },
+  { number: "$640+", label: "Annual tax savings for the business — per participating employee" },
+  { number: "$1,500+", label: "Extra take-home pay for each participating employee, annually" },
+  { number: "0", label: "Disruption to the insurance you already offer" },
 ];
 
 const TWHStats = () => {
@@ -23,7 +23,7 @@ const TWHStats = () => {
               >
                 {s.number}
               </p>
-              <p className="mt-4 mx-auto max-w-[280px] text-[12px] font-medium uppercase tracking-[0.12em] text-[hsl(var(--slate-500))]">
+              <p className="mt-4 mx-auto max-w-[280px] text-[14px] text-[hsl(var(--slate-700))] leading-snug">
                 {s.label}
               </p>
             </div>

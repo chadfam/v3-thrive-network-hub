@@ -1,7 +1,7 @@
 const stats = [
-  { number: "$1,500+", label: "ADDED TO EMPLOYEE TAKE-HOME PAY ANNUALLY" },
-  { number: "0", label: "DISRUPTION TO EXISTING INSURANCE" },
-  { number: "100%", label: "TAX-COMPLIANT UNDER SECTION 125" },
+  { number: "$640+", label: "Annual tax savings for the business, per employee" },
+  { number: "$1,500+", label: "Extra take-home pay for each employee, annually" },
+  { number: "0", label: "Disruption to the insurance you already offer" },
 ];
 
 const BizTeamWellness = () => {
@@ -20,7 +20,7 @@ const BizTeamWellness = () => {
           Team Wellness Hub
         </h2>
         <p className="mt-6 mx-auto max-w-[640px] text-[17px] md:text-[21px] font-medium text-slate-ink">
-          A Section 125 wellness program that pays for itself within the first quarter.
+          Your employees deserve better health. Your business deserves lower taxes.
         </p>
 
         <div className="mt-16 grid md:grid-cols-3 gap-10 md:gap-8">
@@ -29,7 +29,7 @@ const BizTeamWellness = () => {
               <p className="font-serif-display text-gradient-warm" style={{ fontSize: "clamp(2.5rem, 5vw, 3.5rem)", lineHeight: 1 }}>
                 {s.number}
               </p>
-              <p className="mt-3 text-[12px] font-medium tracking-[0.12em] text-[hsl(var(--slate-500))]">
+              <p className="mt-3 text-[14px] text-[hsl(var(--slate-700))] leading-snug">
                 {s.label}
               </p>
             </div>
@@ -38,10 +38,10 @@ const BizTeamWellness = () => {
 
         <div className="mt-16 mx-auto max-w-[720px]">
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Section 125 of the IRS code lets businesses redirect a portion of payroll into pre-tax wellness benefits. The business saves on payroll taxes. Employees keep more of their paycheck. The math works because the savings are real and the law is forty years old.
+            Team Wellness Hub gives your team real, supplemental wellness benefits. Because it's structured as a pre-tax benefit — the kind that's been in the tax code for decades — employees keep more of every paycheck and the business saves on payroll taxes. It pays for itself, fast.
           </p>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Most owners haven't set this up because the existing wellness vendors price it like enterprise software. The Hub runs it for a flat fee that's covered by the savings in the first quarter. It sits on top of whatever insurance you already offer. There's no enrollment disruption, no plan switching, no benefits committee.
+            Most owners haven't set this up because the existing wellness vendors price it like enterprise software. The Hub runs it for a flat fee that's typically covered by the savings in the first quarter. It sits on top of whatever insurance you already offer. No enrollment disruption, no plan switching, no benefits committee.
           </p>
           <a href="/team-wellness-hub" className="mt-8 text-link">
             Team Wellness Hub details →

@@ -12,7 +12,7 @@ import TWHApply from "@/components/wellness/TWHApply";
 const TeamWellnessHub = () => (
   <Layout
     title="Team Wellness Hub"
-    description="A Section 125 cafeteria plan that increases employee take-home pay and reduces employer FICA payroll taxes through pre-tax wellness benefits. Sits alongside existing health insurance with no disruption."
+    description="A supplemental, pre-tax wellness program: better health benefits for your team, $1,500+ more in employee take-home pay, and around $640 a year per employee in payroll-tax savings for the business. Sits alongside existing health insurance with no disruption."
     canonical="/team-wellness-hub"
   >
     <TWHHero />

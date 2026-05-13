@@ -3,21 +3,21 @@ import { Link } from "react-router-dom";
 type Tile = { name: string; desc: string; cta: string; to: string };
 
 const businesses: Tile[] = [
-  { name: "Profit Partners™", desc: "A curated alliance of business owners building referral revenue together. By application and category in your market.", cta: "Learn more →", to: "/profit-partners" },
-  { name: "Mastermind Passport™", desc: "Guest invitations into elite mastermind communities. Walk into rooms most owners spend years trying to find.", cta: "Learn more →", to: "/mastermind-passport" },
-  { name: "Command Central™", desc: "A vetted bench of experts across marketing, sales, finance, legal, and tech. The operating layer behind your alliance.", cta: "Learn more →", to: "/command-central" },
+  { name: "Profit Partners™", desc: "A working alliance of business owners building referral revenue together — complementary businesses promoting each other to the families they already serve.", cta: "Learn more →", to: "/profit-partners" },
+  { name: "Mastermind Passport™", desc: "Proximity is power. Walk into the rooms most owners spend years trying to find — where capital, partnerships, and the right introductions move.", cta: "Learn more →", to: "/mastermind-passport" },
+  { name: "Command Central™", desc: "Your own board of advisors, experts, and service providers — vetted, with set pricing, across marketing, sales, finance, legal, and tech. So you stop guessing who to trust.", cta: "Learn more →", to: "/command-central" },
 ];
 
 const leaders: Tile[] = [
-  { name: "FAM Guides", desc: "Coach families through the work of being more present. Real outcomes, recurring income, mission-driven.", cta: "Learn more →", to: "/fam-guides" },
-  { name: "Local Leaders", desc: "The trusted connector in your zip code, one per industry. Lead families. Connect businesses. Earn through impact.", cta: "Learn more →", to: "/local-leaders" },
-  { name: "Expert Faculty", desc: "Share your expertise with families nationwide. Featured across the FAM Central platform. Five income streams.", cta: "Learn more →", to: "/expert-faculty" },
+  { name: "FAM Guides", desc: "Help families feel more connected, with a plan that's actually theirs. A coaching practice with a platform underneath.", cta: "Learn more →", to: "/fam-guides" },
+  { name: "Local Leaders", desc: "Become the trusted connector in your area, one per industry. Lead families. Connect businesses. Earn through impact.", cta: "Learn more →", to: "/local-leaders" },
+  { name: "Expert Faculty", desc: "Bring what you know to the families who need it — featured across the network, with more income streams than a single offer.", cta: "Learn more →", to: "/expert-faculty" },
 ];
 
 const solutions: Tile[] = [
   { name: "Promo Engine", desc: "Sell high-converting promotions online and capture revenue before customers walk in. Built for in-person businesses.", cta: "Learn more →", to: "/promo-engine" },
-  { name: "Team Wellness Hub", desc: "A Section 125 wellness program. Saves the business taxes. Adds $1,500+ to employee take-home pay. No insurance disruption.", cta: "Learn more →", to: "/team-wellness-hub" },
-  { name: "WER1", desc: "The affiliate and referral engine behind every program. Earn from the people you bring in and the people they bring in.", cta: "Learn more →", to: "/wer1" },
+  { name: "Team Wellness Hub", desc: "A supplemental wellness program: better health benefits for your team, $1,500+ more in employee take-home pay, and around $640 a year in tax savings per employee for the business.", cta: "Learn more →", to: "/team-wellness-hub" },
+  { name: "WER1", desc: "One magic link to promote every program in the network. Share it, and get paid when people buy — no matter which program they choose.", cta: "Learn more →", to: "/wer1" },
 ];
 
 const TileCard = ({ tile }: { tile: Tile }) => (
@@ -35,7 +35,7 @@ const TileCard = ({ tile }: { tile: Tile }) => (
 );
 
 const GroupHeader = ({ children }: { children: string }) => (
-  <p className="flex items-center text-[13px] tracking-[0.18em] uppercase text-[hsl(var(--slate-500))] mb-6">
+  <p className="flex items-center font-serif-display text-[20px] text-slate-ink mb-6">
     <span className="inline-block w-2 h-2 rounded-full bg-brand-blue mr-3" aria-hidden />
     {children}
   </p>

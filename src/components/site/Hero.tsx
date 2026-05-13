@@ -26,7 +26,7 @@ const Hero = () => {
             Where businesses become <span className="ppx-italic">famous for families</span>.
           </h1>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[540px]">
-            The network behind Profit Partners, Mastermind Passport, FAM Guides, Local Leaders, the WER1 referral engine, and every program in between. Built on a single idea: the businesses that win are the ones families recommend.
+            The network behind the businesses families recommend. We connect business owners, community leaders, and trusted experts so your growth comes from relationships and referrals — not ads.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-3">
@@ -39,10 +39,10 @@ const Hero = () => {
           </div>
 
           <Link
-            to="/how-it-works"
+            to="/wer1"
             className="mt-6 inline-block text-[14px] text-[hsl(var(--slate-500))] hover:text-slate-ink transition-colors"
           >
-            Want to earn from your introductions? Learn how →
+            Want to earn from the recommendations you already make? See WER1 →
           </Link>
         </div>
       </div>
