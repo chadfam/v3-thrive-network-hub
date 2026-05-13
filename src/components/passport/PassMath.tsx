@@ -2,7 +2,6 @@ const PassMath = () => {
   return (
     <section style={{ backgroundColor: "#0B1F3F" }} className="text-white">
       <div className="mx-auto max-w-[760px] px-6 sm:px-8 md:px-10 py-16 md:py-24 text-center">
-        <p className="text-[13px] font-medium tracking-[0.14em] uppercase text-white/70">THE MATH</p>
         <h2 className="mt-6 font-serif-display text-white tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
           What this saves you.
         </h2>

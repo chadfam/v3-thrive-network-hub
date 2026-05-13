@@ -12,11 +12,8 @@ const EFHero = () => {
       <div className="hero-fullbleed-scrim" />
       <div className="hero-fullbleed-content mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pt-16 md:pt-28 pb-20 md:pb-32 grid md:grid-cols-12">
         <div className="md:col-span-7">
-          <div className="text-[13px] font-medium uppercase tracking-[0.14em] text-[hsl(var(--slate-500))]">
-            DISTRIBUTION AND INCOME FOR EXPERTS WHO HELP FAMILIES
-          </div>
-          <h1 className="mt-6 font-serif-display tracking-hero text-slate-ink" style={{ fontSize: "clamp(2.25rem, 6vw, 4.5rem)", lineHeight: 1.02 }}>
-            Five income streams for the expertise you've already built.
+          <h1 className="font-serif-display tracking-hero text-slate-ink" style={{ fontSize: "clamp(2.25rem, 6vw, 4.5rem)", lineHeight: 1.02 }}>
+            More income streams for the expertise you've already built.
           </h1>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[540px]">
             Expert Faculty connects authors, speakers, coaches, and category leaders to families who came to FAM Central looking for trusted expert content. The platform handles distribution across in-app feeds, local hubs, email campaigns, and events. You focus on creating.

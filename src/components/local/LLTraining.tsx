@@ -35,9 +35,6 @@ const LLTraining = () => {
             </p>
           </div>
           <div className="bg-background rounded-2xl p-10 border" style={{ borderColor: "#E0E3E7" }}>
-            <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-[hsl(var(--slate-500))]">
-              WHAT YOU GET ONCE YOU'RE IN
-            </p>
             <ul className="mt-6 space-y-4">
               {items.map((it) => (
                 <li

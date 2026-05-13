@@ -9,7 +9,6 @@ const PPLCA = () => {
     <section className="bg-background">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32 grid md:grid-cols-[55fr_45fr] gap-12 md:gap-20 items-start">
         <div>
-          <p className="text-[13px] font-medium tracking-[0.14em] uppercase text-[hsl(var(--slate-500))]">INCLUDED AT EVERY TIER</p>
           <h2 className="mt-6 font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
             The Lifetime Client Agency™ system, explained.
           </h2>

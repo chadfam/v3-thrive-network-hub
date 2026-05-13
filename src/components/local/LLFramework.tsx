@@ -139,7 +139,7 @@ const LLFramework = () => {
                   <div className="mt-10 space-y-8">
                     {s.sections.map((sub) => (
                       <div key={sub.h}>
-                        <p className="text-[12px] font-medium uppercase tracking-[0.14em] text-[hsl(var(--slate-500))]">
+                        <p className="text-[14px] text-[hsl(var(--slate-700))]">
                           {sub.h}
                         </p>
                         <ul className="mt-4 space-y-3">

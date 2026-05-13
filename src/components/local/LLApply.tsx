@@ -1,13 +1,13 @@
 const cards = [
   {
-    label: "APPLY DIRECTLY",
+    label: "Apply directly",
     heading: "Step into the role.",
     body: "The application takes about ten minutes. We confirm your category is open in your zip code and follow up within five business days. If both sides agree the fit is right, certification and onboarding start immediately.",
     cta: "Apply now →",
     href: "/apply?role=local-leader",
   },
   {
-    label: "NOMINATE A LEADER",
+    label: "Nominate a leader",
     heading: "Tell us who.",
     body: "If you know the person who's already the connector in your community, nominate them. We reach out, explain the role, and walk them through the application if they're interested. You can stay anonymous or be credited.",
     cta: "Nominate a leader →",
@@ -41,7 +41,7 @@ const LLApply = () => {
               className="bg-background rounded-2xl p-12 border flex flex-col"
               style={{ borderColor: "#E0E3E7" }}
             >
-              <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-[hsl(var(--slate-500))]">
+              <p className="text-[14px] text-[hsl(var(--slate-700))]">
                 {c.label}
               </p>
               <h3 className="mt-4 font-serif-display text-slate-ink text-[28px]">{c.heading}</h3>

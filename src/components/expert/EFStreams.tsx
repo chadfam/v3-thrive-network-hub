@@ -1,7 +1,7 @@
 const streams = [
   {
     num: "01",
-    label: "STREAM ONE",
+    label: "Stream one",
     name: "Content consumption rewards.",
     body: "You get paid as families view, listen to, or complete your content. Blogs, podcasts, videos, courses, and learning modules all qualify. The platform tracks engagement at the family level and pays out monthly based on actual consumption, not impressions or clicks.",
     items: [
@@ -14,7 +14,7 @@ const streams = [
   },
   {
     num: "02",
-    label: "STREAM TWO",
+    label: "Stream two",
     name: "The Expert Faculty Fund.",
     body: "A percentage of overall platform revenue is allocated to a shared pool distributed across Expert Faculty members. Your share of the Fund grows with your engagement metrics over time. The pool exists so that even content that doesn't directly drive paid actions still rewards experts whose work shapes the broader culture of the platform.",
     items: [
@@ -26,7 +26,7 @@ const streams = [
   },
   {
     num: "03",
-    label: "STREAM THREE",
+    label: "Stream three",
     name: "Course and program revenue.",
     body: "Feature your premium courses, programs, or coaching cohorts directly inside FAM Central. The platform handles enrollment, billing, and delivery infrastructure. You set the price and program structure, the platform integrates it into the broader content network.",
     items: [
@@ -38,19 +38,19 @@ const streams = [
   },
   {
     num: "04",
-    label: "STREAM FOUR",
+    label: "Stream four",
     name: "Affiliate and referral earnings.",
-    body: "Participate in the WER1 affiliate platform. Earn commissions when families upgrade or make purchases through your influence on the platform. The Waves of Pay compensation model means you also earn from the activity of people you bring into the network, for as long as they keep generating activity.",
+    body: "Participate in the WER1 affiliate platform with one magic link that covers every program in the network. Earn commissions when families upgrade or buy through your influence, no matter which program they choose. The platform keeps attribution intact so the right people get paid.",
     items: [
-      "Direct affiliate commissions on family upgrades",
-      "Referral earnings from people you bring in",
-      "Wave attribution on second and third-degree connections",
+      "Direct affiliate commissions on family upgrades and purchases",
+      "One magic link works across every program in the network",
+      "Automatic attribution on every introduction you make",
       "WER1 promoter activity tied to your account",
     ],
   },
   {
     num: "05",
-    label: "STREAM FIVE",
+    label: "Stream five",
     name: "Sponsorship and brand opportunities.",
     body: "Get selected for paid campaigns with brands that align with the platform's mission. Lead featured content series, host events, run challenges with sponsor backing, or co-create programs around specific themes. Selection is curated by the platform team based on category fit, audience match, and brand alignment.",
     items: [
@@ -81,7 +81,7 @@ const EFStreams = () => {
               <div className="grid md:grid-cols-12 gap-8 md:gap-10">
                 <div className="md:col-span-3">
                   <div className="font-serif-display text-[80px] leading-none text-brand-gold">{s.num}</div>
-                  <div className="mt-3 text-[12px] font-medium uppercase tracking-[0.14em] text-white/70">{s.label}</div>
+                  <div className="mt-3 text-[14px] text-white/80">{s.label}</div>
                 </div>
                 <div className="md:col-span-9">
                   <h3 className="font-serif-display text-[28px] md:text-[32px] text-white leading-tight">{s.name}</h3>

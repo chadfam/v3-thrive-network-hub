@@ -16,8 +16,8 @@ const cards = [
   },
   {
     n: "04",
-    name: "WER1 wave attribution",
-    body: "When you bring another Local Leader, FAM Guide, or member into the network, you earn through the Waves of Pay compensation model on their network activity over time.",
+    name: "WER1 attribution",
+    body: "Every introduction you make inside the network gets attributed back to you. When the people you brought in keep generating activity, the platform keeps paying you, automatically.",
   },
 ];
 

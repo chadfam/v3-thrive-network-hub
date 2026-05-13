@@ -30,9 +30,6 @@ const BizMastermindPassport = () => {
           </a>
         </div>
         <div>
-          <p className="text-[13px] font-medium tracking-[0.14em] uppercase text-brand-gold">
-            INSIDE THE PASSPORT
-          </p>
           <ul className="mt-6 space-y-3">
             {benefits.map((b) => (
               <li key={b} className="flex gap-3 items-start text-[16px] md:text-[18px] leading-relaxed text-white/90">

@@ -1,7 +1,7 @@
 const cards = [
-  { label: "IF YOU RUN A BUSINESS", heading: "Apply to Profit Partners.", body: "The flagship program and front door for owners building referral revenue.", button: "Apply now →", route: "/apply" },
-  { label: "IF YOU LEAD A COMMUNITY", heading: "Apply for a leadership role.", body: "Local Leaders, FAM Guides, and Expert Faculty applications go through the same form.", button: "Apply now →", route: "/apply" },
-  { label: "IF YOU JUST WANT TO SHARE", heading: "Become a WER1 promoter.", body: "Share what you love. Earn through the Waves of Pay compensation model.", button: "Become a promoter →", route: "/apply?role=promoter" },
+  { label: "If you run a business", heading: "Apply to Profit Partners.", body: "The flagship program and front door for owners building referral revenue.", button: "Apply now →", route: "/apply" },
+  { label: "If you lead a community", heading: "Apply for a leadership role.", body: "Local Leaders, FAM Guides, and Expert Faculty applications go through the same form.", button: "Apply now →", route: "/apply" },
+  { label: "If you just want to share", heading: "Become a WER1 promoter.", body: "Share what you love. One magic link, every program, paid when people buy.", button: "Become a promoter →", route: "/apply?role=promoter" },
 ];
 
 const AboutEngage = () => {
@@ -17,7 +17,7 @@ const AboutEngage = () => {
         <div className="mt-14 md:mt-16 grid md:grid-cols-3 gap-6 md:gap-8">
           {cards.map((c) => (
             <article key={c.label} className="flex flex-col rounded-2xl border border-[hsl(var(--slate)/0.12)] bg-background p-8 md:p-10">
-              <div className="text-[13px] font-medium uppercase tracking-[0.16em] text-[hsl(var(--slate-500))]">{c.label}</div>
+              <div className="text-[14px] text-[hsl(var(--slate-700))]">{c.label}</div>
               <h3 className="mt-4 font-serif-display text-slate-ink text-[24px] md:text-[28px] leading-tight">{c.heading}</h3>
               <p className="mt-4 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] flex-1">{c.body}</p>
               <a href={c.route} className="btn-primary text-[14px] py-3 px-5 min-h-0 mt-8 self-start">

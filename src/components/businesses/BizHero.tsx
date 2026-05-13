@@ -20,7 +20,7 @@ const BizHero = () => {
         alt="Business owners in candid conversation around a table."
         loading="eager"
       />
-      <div className="hero-fullbleed-scrim" />
+      <div className="hero-fullbleed-scrim-soft" />
       <div className="hero-fullbleed-content mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pt-16 md:pt-28 pb-20 md:pb-32 grid md:grid-cols-12">
         <div className="md:col-span-7">
           <h1 className="font-serif-display hero-headline text-slate-ink">

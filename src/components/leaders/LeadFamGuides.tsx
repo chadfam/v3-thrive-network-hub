@@ -35,7 +35,6 @@ const LeadFamGuides = () => {
           </a>
         </div>
         <div>
-          <div className="text-[13px] font-medium uppercase tracking-[0.14em] text-white/70">WHAT FAM GUIDES DO</div>
           <ul className="mt-6 space-y-4">
             {items.map((it) => (
               <li key={it} className="flex items-start gap-4 text-[18px] text-white">

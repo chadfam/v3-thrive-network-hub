@@ -34,7 +34,7 @@ const AboutBeliefs = () => {
         <div className="mt-14 md:mt-20 grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
           {principles.map((p) => (
             <article key={p.label} className="rounded-2xl border border-[hsl(var(--slate)/0.12)] bg-background p-8 md:p-12">
-              <div className="text-[13px] font-medium uppercase tracking-[0.16em] text-[hsl(var(--slate-500))]">{p.label}</div>
+              <div className="text-[14px] text-[hsl(var(--slate-700))]">{p.label}</div>
               <h3 className="mt-4 font-serif-display text-slate-ink text-[26px] md:text-[32px] leading-tight">{p.headline}</h3>
               <p className="mt-5 text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">{p.body}</p>
             </article>

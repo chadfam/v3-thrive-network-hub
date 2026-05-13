@@ -14,7 +14,7 @@ const W1WhyOwn = () => {
             Most networks rent their referral infrastructure. The platform takes a percentage. The brand pays a fee. The affiliates get paid through whatever rules the platform vendor decided to enforce. The chain that connected the deal in the first place stays invisible because the platform wasn't built to see it.
           </p>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            We acquired WER1 specifically so the platform underneath United to Thrive could be built around the principle that the chain is the point. The Waves of Pay model is real, and the platform is built for it. We can configure it for partner businesses because we own the WER1 brand and the integration. The math works because the math was designed before the platform existed, then the platform was built to deliver it.
+            We built our network on top of WER1 so the platform underneath United to Thrive could be built around the principle that the chain is the point. The introduction is the unit of value, the platform is what makes it trackable, and the payout is what makes it sustainable. We can configure it for partner businesses because we own the brand and the integration.
           </p>
         </div>
         <p className="mt-10 font-serif-display italic text-slate-ink text-[24px]" style={{ letterSpacing: "-0.01em" }}>

@@ -1,12 +1,12 @@
+import heroImg from "@/assets/hero-mastermind.jpg";
+
 const PPHero = () => {
   return (
     <section className="hero-fullbleed bg-background">
       <img
         className="hero-fullbleed-img"
-        src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200"
-        srcSet="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200 1200w, https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=2400 2400w"
-        sizes="(max-width: 640px) 100vw, (max-width: 1200px) 100vw, 2400px"
-        alt="Business owners in a working session around a table"
+        src={heroImg}
+        alt="Business owners in a candid mastermind session around a wooden table, warm daylight."
         loading="eager"
       />
       <div className="hero-fullbleed-scrim" />

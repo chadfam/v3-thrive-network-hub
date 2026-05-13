@@ -32,9 +32,6 @@ const CCAccess = () => {
           className="mt-16 mx-auto max-w-[640px] rounded-2xl bg-white p-6 sm:p-8 md:p-10 text-left"
           style={{ border: "1px solid #E0E3E7" }}
         >
-          <p className="text-[13px] font-medium uppercase tracking-[0.18em] text-[hsl(var(--slate-500))] text-center">
-            COMMAND CENTRAL ACCESS BY TIER
-          </p>
           <div className="mt-6">
             {rows.map((r, i) => (
               <div

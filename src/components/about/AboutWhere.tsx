@@ -11,7 +11,6 @@ const AboutWhere = () => {
         </div>
         <div className="md:col-span-5">
           <div className="rounded-2xl border border-[hsl(var(--slate)/0.12)] bg-background p-10 md:p-12 text-center">
-            <div className="text-[13px] font-medium uppercase tracking-[0.16em] text-[hsl(var(--slate-500))]">HEADQUARTERS</div>
             <address className="not-italic mt-6 font-serif-display text-slate-ink text-[22px] md:text-[24px]" style={{ lineHeight: 1.4 }}>
               United To Thrive LLC<br />
               222 S Mill Ave, Suite 800<br />

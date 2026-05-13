@@ -1,6 +1,6 @@
 const cards = [
   {
-    label: "PATH ONE",
+    label: "Path one",
     name: "Routines and Habits",
     body: "Help families build the small repeatable patterns that hold a household together. The work that families say they want to do and then don't get around to without someone running it with them.",
     examples: [
@@ -12,7 +12,7 @@ const cards = [
     ],
   },
   {
-    label: "PATH TWO",
+    label: "Path two",
     name: "Parenting",
     body: "Coach parents through the conversations they don't have a script for. The work of parenting deliberately when the culture is pulling in the other direction.",
     examples: [
@@ -24,7 +24,7 @@ const cards = [
     ],
   },
   {
-    label: "PATH THREE",
+    label: "Path three",
     name: "Couples and Marriage",
     body: "Work with couples in cohort or one-on-one formats. Long-term marriages and early-stage ones both need real practitioners, not just retreat experiences.",
     examples: [
@@ -36,7 +36,7 @@ const cards = [
     ],
   },
   {
-    label: "PATH FOUR",
+    label: "Path four",
     name: "Family Transitions",
     body: "The big shifts. The transitions where most families need a guide they didn't have before and can't easily find on their own.",
     examples: [
@@ -68,7 +68,7 @@ const FGSpecialty = () => {
         <div className="mt-16 grid md:grid-cols-2 gap-6 md:gap-8">
           {cards.map((c) => (
             <div key={c.label} className="bg-background text-slate-ink rounded-2xl p-10 md:p-12">
-              <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-[hsl(var(--slate-500))]">
+              <p className="text-[14px] text-[hsl(var(--slate-700))]">
                 {c.label}
               </p>
               <h3 className="mt-3 font-serif-display text-slate-ink text-[28px]">{c.name}</h3>

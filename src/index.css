@@ -333,6 +333,16 @@ All colors MUST be HSL.
       rgba(255,255,255,0.55) 60%,
       rgba(255,255,255,0.05) 100%);
   }
+  /* Softer variant for hero photos where there are people on the left edge
+     we want to keep visible. Headline still gets enough contrast on top. */
+  .hero-fullbleed > .hero-fullbleed-scrim-soft {
+    position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: linear-gradient(to right,
+      rgba(255,255,255,0.82) 0%,
+      rgba(255,255,255,0.74) 30%,
+      rgba(255,255,255,0.40) 58%,
+      rgba(255,255,255,0.05) 100%);
+  }
   .hero-fullbleed > .hero-fullbleed-scrim-navy {
     position: absolute; inset: 0; z-index: 1; pointer-events: none;
     background: linear-gradient(to right,

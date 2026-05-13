@@ -18,9 +18,6 @@ const LLFambassador = () => {
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           <div>
-            <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-[hsl(var(--slate-500))]">
-              THE PUBLIC ROLE
-            </p>
             <h2
               className="mt-6 font-serif-display text-slate-ink tracking-section"
               style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}
@@ -35,9 +32,6 @@ const LLFambassador = () => {
             </p>
           </div>
           <div className="bg-background rounded-2xl p-10 border" style={{ borderColor: "#E0E3E7" }}>
-            <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-[hsl(var(--slate-500))]">
-              WHAT FAMBASSADORS DO IN PUBLIC
-            </p>
             <ul className="mt-6 space-y-5">
               {items.map((it) => (
                 <li

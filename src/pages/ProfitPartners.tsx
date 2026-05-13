@@ -1,6 +1,7 @@
 import Layout from "@/components/site/Layout";
 import PPHero from "@/components/profit/PPHero";
 import PPJoining from "@/components/profit/PPJoining";
+import PPPowerTeam from "@/components/profit/PPPowerTeam";
 import PPBenefits from "@/components/profit/PPBenefits";
 import PPLCA from "@/components/profit/PPLCA";
 import PPPhoenix from "@/components/profit/PPPhoenix";
@@ -15,6 +16,7 @@ const ProfitPartners = () => (
   >
     <PPHero />
     <PPJoining />
+    <PPPowerTeam />
     <PPBenefits />
     <PPLCA />
     <PPPhoenix />

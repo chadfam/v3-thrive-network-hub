@@ -6,13 +6,13 @@ const configs = [
   },
   {
     name: "Two-tier referral",
-    body: "Affiliates earn directly. They also earn a smaller commission when they bring in another affiliate who closes business. The first wave only.",
+    body: "Affiliates earn directly. They also earn a smaller commission on partners they introduce who close business. Just the first tier, nothing deeper.",
     fit: "Coaching businesses, course creators, and service businesses with active communities.",
   },
   {
-    name: "Multi-tier Waves of Pay",
-    body: "The full WER1 model. Wave 1 direct earnings, Wave 2 from people you brought in, Wave 3 and outward at decreasing percentages.",
-    fit: "Businesses where word of mouth keeps building outward and the customer base spreads through introductions.",
+    name: "Multi-tier referral",
+    body: "Multiple commission layers, configured to match how introductions actually flow through your business. Set the depth, set the rates.",
+    fit: "Businesses where word of mouth keeps building and the customer base spreads through introductions.",
   },
   {
     name: "Family-unit loyalty",
@@ -45,7 +45,7 @@ const W1Configurations = () => {
                 {c.name}
               </h3>
               <p className="mt-4 text-[15px] leading-relaxed text-[hsl(var(--slate-700))] flex-1">{c.body}</p>
-              <p className="mt-6 italic text-[13px] text-[hsl(var(--slate-500))]">FIT FOR: {c.fit}</p>
+              <p className="mt-6 italic text-[14px] text-[hsl(var(--slate-500))]">Fit for: {c.fit}</p>
             </div>
           ))}
         </div>

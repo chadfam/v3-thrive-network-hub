@@ -27,9 +27,6 @@ const LLWhoFits = () => {
             </p>
           </div>
           <div className="md:col-span-5">
-            <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-[hsl(var(--slate-500))]">
-              WHO TENDS TO APPLY
-            </p>
             <ul className="mt-6 space-y-4">
               {items.map((it) => (
                 <li
