@@ -12,7 +12,7 @@ import W1Apply from "@/components/wer1/W1Apply";
 const Wer1 = () => (
   <Layout
     title="WER1"
-    description="WER1 is the referral platform behind United to Thrive. One universal link — your magic link — to promote any program in the network and get paid when people buy, no matter which one. Also available as a white-label engine for partner businesses."
+    description="WER1 is the referral platform behind United to Thrive. One universal link, your magic link, to promote any program in the network and get paid when people buy, no matter which one. Also available as a white-label engine for partner businesses."
     canonical="/wer1"
   >
     <W1Hero />

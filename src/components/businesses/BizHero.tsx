@@ -27,7 +27,7 @@ const BizHero = () => {
             Where <span className="ppx-italic">partnerships</span><br />replace ads.
           </h1>
           <p className="mt-8 max-w-[540px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Customer acquisition is every owner's biggest problem. Referrals and partnerships solve it — and close at a far higher rate than any ad ever will. Apply to Profit Partners. The rest of the network opens from there.
+            Customer acquisition is every owner's biggest problem. Referrals and partnerships solve it, and close at a far higher rate than any ad ever will. Apply to Profit Partners. The rest of the network opens from there.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="/apply" className="btn-primary">

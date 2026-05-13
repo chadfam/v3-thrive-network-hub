@@ -14,7 +14,7 @@ const nav: NavItem[] = [
     items: [
       { label: "Overview", description: "For Businesses", href: "/businesses", isOverview: true },
       { label: "Profit Partners™", description: "The flagship referral alliance", href: "/profit-partners" },
-      { label: "Mastermind Passport™", description: "Proximity is power — get in the room", href: "/mastermind-passport" },
+      { label: "Mastermind Passport™", description: "Proximity is power. Get in the room.", href: "/mastermind-passport" },
       { label: "Command Central™", description: "Your vetted board of advisors & experts", href: "/command-central" },
     ],
   },

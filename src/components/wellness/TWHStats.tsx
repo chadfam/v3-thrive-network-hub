@@ -1,5 +1,5 @@
 const stats = [
-  { number: "$640+", label: "Annual tax savings for the business — per participating employee" },
+  { number: "$640+", label: "Annual tax savings for the business, per participating employee" },
   { number: "$1,500+", label: "Extra take-home pay for each participating employee, annually" },
   { number: "0", label: "Disruption to the insurance you already offer" },
 ];

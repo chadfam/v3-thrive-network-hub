@@ -15,7 +15,7 @@ const W1Hero = () => {
           One magic link. Every program.
         </h1>
         <p className="mt-8 text-[17px] md:text-[21px] leading-relaxed text-white/90 max-w-[720px] mx-auto">
-          WER1 gives you one universal link — your magic link — that you can share to promote any program in the United to Thrive network. When someone buys, you get paid, no matter which program they choose. We use it to power every program in the network. We also offer it as a white-label engine for partner businesses that want to run their own affiliate or referral program on it.
+          WER1 gives you one universal link, your magic link, that you can share to promote any program in the United to Thrive network. When someone buys, you get paid, no matter which program they choose. We use it to power every program in the network. We also offer it as a white-label engine for partner businesses that want to run their own affiliate or referral program on it.
         </p>
         <div className="mt-10 flex flex-wrap gap-3 justify-center">
           <a

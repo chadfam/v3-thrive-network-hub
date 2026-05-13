@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const cards = [
   {
     headline: "Grow through partnerships, not ads.",
-    body: "Stop spending blind money on cold traffic. Profit Partners is a working alliance where complementary businesses promote each other to the families they already serve — referrals close at a far higher rate than any ad ever will.",
+    body: "Profit Partners is a working alliance of complementary businesses that promote each other to the families they already serve. Members also get promoted inside FAM Central. Referrals close at a far higher rate than any ad ever will.",
     meta: "Profit Partners™ · Mastermind Passport™ · Command Central™",
     link: "Explore for businesses →",
     to: "/businesses",
@@ -17,8 +17,8 @@ const cards = [
   },
   {
     headline: "Get paid for what you already do.",
-    body: "You already recommend the people and products you trust. WER1 gives you one magic link to promote any program in the network — and you get paid when people buy, no matter which one they choose.",
-    meta: "WER1 · One link · Every program",
+    body: "You already recommend the people and products you trust. WER1 gives you one magic link to share every program in the network, and you get paid when people buy, no matter which one they choose.",
+    meta: "WER1 · One magic link · Every program",
     link: "See how WER1 works →",
     to: "/wer1",
   },
@@ -29,6 +29,9 @@ const ThreePaths = () => {
     <section className="surface-muted">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-14 md:py-20">
         <h2 className="font-serif-display section-headline text-slate-ink text-center">Three ways to win.</h2>
+        <p className="mt-6 mx-auto max-w-[640px] text-center text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+          Three benefits, depending on what you're already doing well.
+        </p>
         <div className="mt-14 md:mt-20 grid md:grid-cols-3 gap-6 md:gap-8">
           {cards.map((c) => (
             <article

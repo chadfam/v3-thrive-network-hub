@@ -3,21 +3,21 @@ import { Link } from "react-router-dom";
 type Tile = { name: string; desc: string; cta: string; to: string };
 
 const businesses: Tile[] = [
-  { name: "Profit Partners™", desc: "A working alliance of business owners building referral revenue together — complementary businesses promoting each other to the families they already serve.", cta: "Learn more →", to: "/profit-partners" },
-  { name: "Mastermind Passport™", desc: "Proximity is power. Walk into the rooms most owners spend years trying to find — where capital, partnerships, and the right introductions move.", cta: "Learn more →", to: "/mastermind-passport" },
-  { name: "Command Central™", desc: "Your own board of advisors, experts, and service providers — vetted, with set pricing, across marketing, sales, finance, legal, and tech. So you stop guessing who to trust.", cta: "Learn more →", to: "/command-central" },
+  { name: "Profit Partners™", desc: "A working alliance of business owners building referral revenue together. Complementary businesses promoting each other to the families they already serve, plus promotion inside FAM Central.", cta: "Learn more →", to: "/profit-partners" },
+  { name: "Mastermind Passport™", desc: "Proximity is power. Walk into the rooms most owners spend years trying to find, where capital, partnerships, and the right introductions move.", cta: "Learn more →", to: "/mastermind-passport" },
+  { name: "Command Central™", desc: "Your own board of advisors, experts, and service providers. Vetted, with set pricing, across marketing, sales, finance, legal, and tech. So you stop guessing who to trust.", cta: "Learn more →", to: "/command-central" },
 ];
 
 const leaders: Tile[] = [
-  { name: "FAM Guides", desc: "Help families feel more connected, with a plan that's actually theirs. A coaching practice with a platform underneath.", cta: "Learn more →", to: "/fam-guides" },
+  { name: "FAM Guides", desc: "Help families feel more connected with a FAM Plan that's actually theirs. A coaching practice with a platform underneath.", cta: "Learn more →", to: "/fam-guides" },
   { name: "Local Leaders", desc: "Become the trusted connector in your area, one per industry. Lead families. Connect businesses. Earn through impact.", cta: "Learn more →", to: "/local-leaders" },
-  { name: "Expert Faculty", desc: "Bring what you know to the families who need it — featured across the network, with more income streams than a single offer.", cta: "Learn more →", to: "/expert-faculty" },
+  { name: "Expert Faculty", desc: "Bring what you know to the families who need it. Featured across the network, with more income streams than a single offer.", cta: "Learn more →", to: "/expert-faculty" },
 ];
 
 const solutions: Tile[] = [
   { name: "Promo Engine", desc: "Sell high-converting promotions online and capture revenue before customers walk in. Built for in-person businesses.", cta: "Learn more →", to: "/promo-engine" },
   { name: "Team Wellness Hub", desc: "A supplemental wellness program: better health benefits for your team, $1,500+ more in employee take-home pay, and around $640 a year in tax savings per employee for the business.", cta: "Learn more →", to: "/team-wellness-hub" },
-  { name: "WER1", desc: "One magic link to promote every program in the network. Share it, and get paid when people buy — no matter which program they choose.", cta: "Learn more →", to: "/wer1" },
+  { name: "WER1", desc: "One magic link to share every program in the network. Get paid when people buy, no matter which program they choose.", cta: "Learn more →", to: "/wer1" },
 ];
 
 const TileCard = ({ tile }: { tile: Tile }) => (
