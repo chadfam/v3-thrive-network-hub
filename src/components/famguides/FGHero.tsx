@@ -13,17 +13,14 @@ const FGHero = () => {
       <div className="hero-fullbleed-content mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pt-16 md:pt-28 pb-20 md:pb-32">
         <div className="grid md:grid-cols-12">
           <div className="md:col-span-7">
-            <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-[hsl(var(--slate-500))]">
-              A FAMILY COACHING PRACTICE WITH A PLATFORM UNDERNEATH
-            </p>
             <h1
-              className="mt-6 font-serif-display text-slate-ink tracking-hero"
+              className="font-serif-display text-slate-ink tracking-hero"
               style={{ fontSize: "clamp(2.25rem, 6.5vw, 4.5rem)", lineHeight: 1.02 }}
             >
-              Coach families through the work of being more present.
+              Help families feel more connected.
             </h1>
             <p className="mt-8 max-w-[540px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-              FAM Guides are practitioners who work with families on the connecting work most parents don't have a guide for. The platform handles billing, scheduling, and family matching. You handle the coaching. The model is recurring monthly revenue, not one-off sessions.
+              FAM Guides are practitioners who help families feel more connected — building a plan that's actually theirs: the family's own plan for the connecting work most parents don't have a guide for. The platform handles billing, scheduling, and family matching. You handle the coaching. A coaching practice with a platform underneath, on a recurring monthly model — not one-off sessions.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <a

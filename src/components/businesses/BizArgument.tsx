@@ -7,10 +7,10 @@ const BizArgument = () => {
           What this network actually does.
         </h2>
         <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Most growth advice still treats ads as a fair trade. They aren't anymore. Cost per click went up. Conversion rates went down. The customers worth having stopped clicking on them in the first place. The owners who kept growing did something different. They got recommended.
+          Ask any owner what their biggest problem is and you'll hear the same answer: getting customers. The owners who keep growing solved it the same way — they stopped buying attention and started getting recommended. Referrals and partnerships close at a far higher rate than any ad, because the trust transfers from the person who sent them. It's the difference between a stranger clicking once and a neighbor saying your name.
         </p>
         <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          United to Thrive is the network behind that kind of growth. Profit Partners is the working alliance of business owners. Mastermind Passport gets you into the rooms where capital and partnerships move. Command Central gives you a vetted bench when you need outside help. Team Wellness Hub turns payroll taxes into employee take-home pay. Everything runs on WER1, a referral platform that pays everyone in the chain when an introduction turns into business.
+          United to Thrive gives you the one thing most businesses don't have: a real referral engine — partners, customers, experts, and causes all sending you work. Profit Partners is the alliance at the center of it. Mastermind Passport, Command Central, and Team Wellness Hub layer on from there, and all of it runs on WER1, which tracks every introduction and pays everyone in the chain.
         </p>
         <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
           You apply once, to Profit Partners. Once you're in, the rest opens up.

@@ -1,6 +1,6 @@
 const roles = [
-  { name: "Local Leader", def: "The connector in your zip code.", fit: "A fit if you're already the person your neighborhood asks for recommendations and you'd rather lead a community than scale to a national audience." },
-  { name: "FAM Guide", def: "The coach who works with families one at a time.", fit: "A fit if you're a coach, counselor, or mentor at heart and you want recurring revenue without rebuilding your offer every month." },
+  { name: "Local Leader", def: "The connector in your area.", fit: "A fit if you're already the person your neighborhood asks for recommendations and you'd rather lead a community than scale to a national audience." },
+  { name: "FAM Guide", def: "The coach who helps families feel more connected, one at a time.", fit: "A fit if you're a coach, counselor, or mentor at heart and you want recurring revenue without rebuilding your offer every month." },
   { name: "Expert Faculty", def: "The expert whose content reaches the whole network.", fit: "A fit if you've built expertise families benefit from and you'd rather your reach grow through a platform than chase algorithm changes." },
 ];
 

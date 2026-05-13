@@ -11,7 +11,7 @@ import FGApply from "@/components/famguides/FGApply";
 const FamGuides = () => (
   <Layout
     title="FAM Guides"
-    description="A family coaching practice with a platform underneath. Four specialty paths. Recurring revenue model. The platform handles billing, scheduling, and family matching while you handle the coaching."
+    description="Help families feel more connected — with a plan that's actually theirs. A coaching practice with a platform underneath: four specialty paths, a recurring revenue model, and the platform handles billing, scheduling, and family matching while you handle the coaching."
     canonical="/fam-guides"
   >
     <FGHero />

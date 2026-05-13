@@ -19,13 +19,13 @@ const BizCommandCentral = () => {
             Command Central™
           </h2>
           <p className="mt-6 max-w-[440px] text-[17px] md:text-[19px] font-medium text-slate-ink">
-            A vetted bench of experts and service providers. Pre-screened, pre-priced, accountable to the network.
+            Your own board of advisors, experts, and service providers — pre-screened, with set pricing, accountable to the network.
           </p>
           <p className="mt-8 max-w-[440px] text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Most owners spend years cycling through vendors. The marketing person who didn't deliver. The bookkeeper who left at tax season. The lawyer who didn't return calls. By the third or fourth one you stop trusting recommendations entirely.
+            The real problem isn't finding help. It's knowing who to trust. Most owners spend years cycling through vendors — the marketing person who didn't deliver, the bookkeeper who left at tax season, the lawyer who didn't return calls. By the third or fourth one you stop trusting recommendations entirely.
           </p>
           <p className="mt-6 max-w-[440px] text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Command Central is the response to that. A bench of vetted partners across the disciplines you actually need. Each one is accountable to the network because their next referral depends on the last one going well. You skip the vendor casino. You get a partner with skin in the game.
+            Command Central is the answer — in effect, your own board of directors: vetted partners across the disciplines you actually need, each accountable to the network because their next referral depends on the last one going well. You skip the vendor casino. You get a partner with skin in the game.
           </p>
           <p className="mt-6 max-w-[440px] italic text-[15px] text-[hsl(var(--slate-500))]">
             Included from the Mastermind tier of Profit Partners and above.

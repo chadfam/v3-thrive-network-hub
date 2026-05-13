@@ -2,9 +2,10 @@ const highlights = [
   "Working alliance of business owners building referral revenue together",
   "Co-marketing campaigns and structured joint ventures",
   "Quarterly mastermind days and monthly group sessions",
+  "Your business promoted to families inside the FAM Central app",
   "Lifetime Client Agency™ system to activate past clients and databases",
   "Mastermind Passport™ access to elite mastermind communities",
-  "Command Central™ access to vetted operating experts",
+  "Command Central™ — your vetted board of advisors, experts, and service providers",
 ];
 
 const BizProfitPartners = () => {
@@ -20,7 +21,7 @@ const BizProfitPartners = () => {
             The flagship. The only program here you can apply to directly.
           </p>
           <p className="mt-8 max-w-[520px] text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
-            A working alliance of business owners building referral revenue together. Quarterly mastermind days. Structured joint ventures. Co-marketing campaigns. A private network of operators who trade deals instead of business cards.
+            Think of it as your own power team — the businesses that already serve your customers, formally sending each other work. It runs on two engines: you promote and get promoted to the families inside the FAM Central app, and the other businesses in your alliance promote you to the families they serve every day. A private network of operators who trade deals instead of business cards.
           </p>
           <p className="mt-6 max-w-[520px] text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
             Membership is by application and category, with a private call to fit the right level of access to your business. Once you're in, the rest of the network opens up.
@@ -30,8 +31,8 @@ const BizProfitPartners = () => {
           </a>
         </div>
         <div className="rounded-2xl bg-white p-8 md:p-10" style={{ border: "1px solid #E0E3E7" }}>
-          <p className="text-[12px] font-medium tracking-[0.14em] uppercase text-brand-blue">
-            INSIDE THE ALLIANCE
+          <p className="font-serif-display text-[20px] text-slate-ink">
+            Inside the alliance
           </p>
           <ul className="mt-6 space-y-3">
             {highlights.map((h) => (

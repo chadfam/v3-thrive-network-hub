@@ -12,7 +12,7 @@ import LLApply from "@/components/local/LLApply";
 const LocalLeaders = () => (
   <Layout
     title="Local Leaders"
-    description="One Local Leader per industry per zip code. Be the trusted connector your community already gives you. Guide, gather, grow. Earn through introductions, memberships, and partnerships."
+    description="One Local Leader per industry in their area. Be the trusted connector your community already turns to. Guide, gather, grow. Earn through introductions, memberships, and partnerships."
     canonical="/local-leaders"
   >
     <LLHero />
