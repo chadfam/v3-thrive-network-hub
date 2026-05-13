@@ -7,10 +7,19 @@ const EFWhy = () => {
           Why most expert platforms don't work for experts.
         </h2>
         <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          You've spent years building expertise. The audience is real, the work is good, and the people who find you say it changed something for them. The problem isn't the work. The problem is that the platforms most experts publish on were built to harvest attention, not deliver it. You spend most of your time chasing the algorithm. Your income depends on whether the algorithm liked you that week. The audience you actually want to reach has been buried under noise the platform itself created.
+          You've spent years building expertise. The audience is real, the work is good, and the people who find you say it changed something for them.
+        </p>
+        <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+          The problem isn't the work. The problem is that the platforms most experts publish on were built to harvest attention, not deliver it.
+        </p>
+        <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+          You chase the algorithm. Your income depends on whether the algorithm liked you that week. The audience you actually want to reach has been buried under noise the platform itself created.
         </p>
         <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Expert Faculty is structured the other way. The audience is built into the platform. Families joined FAM Central specifically because they want to find experts they can trust on parenting, faith, health, finance, relationships, and family life. Distribution is mission-aligned, not engagement-optimized. Income is tied to the value you deliver to those families, across five different streams.
+          Expert Faculty is structured the other way. The audience is built into the platform.
+        </p>
+        <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+          Families joined FAM Central specifically to find experts they can trust on parenting, faith, health, finance, relationships, and family life. Distribution is mission-aligned, not engagement-optimized. Income is tied to the value you deliver, across five different streams.
         </p>
         <p className="mt-10 italic font-serif-display text-[24px] text-slate-ink">
           You bring the expertise. We bring the network.

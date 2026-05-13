@@ -34,10 +34,16 @@ const FGTraining = () => {
               Training and certification.
             </h2>
             <p className="mt-8 max-w-[480px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-              The FAM Guides certification covers the philosophy of family coaching, the platform's tools, and the structural patterns that work across the four specialty paths. Onboarding takes between four and eight weeks depending on prior experience and the specialty path you're building toward.
+              The FAM Guides certification covers the philosophy of family coaching, the platform's tools, and the structural patterns that work across the four specialty paths.
+            </p>
+            <p className="mt-5 max-w-[480px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
+              Onboarding takes between four and eight weeks, depending on prior experience and the specialty path you're building toward.
             </p>
             <p className="mt-6 max-w-[480px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-              Certification isn't a barrier to clinical practice. FAM Guides aren't therapists, and the work doesn't require a clinical license. What we certify is your fluency in the FAM Guides framework, the platform mechanics, and the standards we hold practitioners to with families on the platform.
+              Certification isn't a barrier to clinical practice. FAM Guides aren't therapists, and the work doesn't require a clinical license.
+            </p>
+            <p className="mt-5 max-w-[480px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
+              What we certify is your fluency in the FAM Guides framework, the platform mechanics, and the standards we hold practitioners to with families on the platform.
             </p>
             <p className="mt-6 max-w-[480px] italic text-[14px] text-[hsl(var(--slate-500))]">
               FAM Guides offers coaching, not psychological or therapeutic services. Guides who hold clinical licenses operate under their own scope. Guides without clinical licenses do not provide diagnosis or treatment.

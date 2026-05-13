@@ -21,10 +21,13 @@ const BizProfitPartners = () => {
             The flagship. The only program here you can apply to directly.
           </p>
           <p className="mt-8 max-w-[520px] text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Think of it as your own power team. The businesses that already serve your customers, formally sending each other work. It runs on two engines: you promote and get promoted to the families inside the FAM Central app, and the other businesses in your alliance promote you to the families they serve every day. A private network of operators who trade deals instead of business cards.
+            Think of it as your own power team. The businesses that already serve your customers, formally sending each other work.
           </p>
           <p className="mt-6 max-w-[520px] text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Membership is by application and category, with a private call to fit the right level of access to your business. Once you're in, the rest of the network opens up.
+            It runs on two engines. You get promoted to the families inside the FAM Central app. And the other businesses in your alliance promote you to the families they serve every day.
+          </p>
+          <p className="mt-6 max-w-[520px] text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
+            A private network of operators who trade deals instead of business cards. Membership is by application and category, with a private call to fit the right level of access to your business.
           </p>
           <a href="/profit-partners" className="mt-8 inline-block text-[15px] text-slate-ink hover:text-brand-blue transition-colors underline-offset-4 hover:underline">
             See what's included →

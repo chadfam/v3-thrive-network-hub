@@ -10,10 +10,16 @@ const TWHWhy = () => {
           Why most owners haven't set this up.
         </h2>
         <p className="mt-8 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-          Pre-tax wellness benefit plans have been in the tax code since the 1970s. The savings are real, the structure is well-defined, and most large employers have used some version of one for decades. The reason most small and mid-sized businesses don't have one is straightforward: the existing wellness vendors price administration like enterprise software, the setup feels like another HR project, and the math is hard to see clearly without someone walking you through it.
+          Pre-tax wellness benefit plans have been in the tax code since the 1970s. The savings are real. The structure is well-defined. Most large employers have used some version of one for decades.
         </p>
         <p className="mt-6 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-          Team Wellness Hub is the response. We built a plan structure that any business with W-2 employees can adopt at a flat administrative fee that's typically covered by the payroll-tax savings in the first quarter. Employees opt in voluntarily, the deductions run through your existing payroll, and the wellness benefits sit on top of whatever insurance you already provide.
+          Most small and mid-sized businesses don't have one for three reasons. The existing wellness vendors price administration like enterprise software. The setup feels like another HR project. And the math is hard to see clearly without someone walking you through it.
+        </p>
+        <p className="mt-6 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
+          Team Wellness Hub is the response. We built a plan structure that any business with W-2 employees can adopt at a flat administrative fee that's typically covered by the payroll-tax savings in the first quarter.
+        </p>
+        <p className="mt-6 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
+          Employees opt in voluntarily. The deductions run through your existing payroll. The wellness benefits sit on top of whatever insurance you already provide.
         </p>
         <p className="mt-12 font-serif-display italic text-slate-ink text-[20px] md:text-[24px] leading-snug">
           The savings have always been there. The infrastructure made them inaccessible.

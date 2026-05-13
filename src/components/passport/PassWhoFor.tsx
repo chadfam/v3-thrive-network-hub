@@ -20,10 +20,19 @@ const PassWhoFor = () => {
             Who the Passport is for.
           </h2>
           <p className="mt-8 max-w-[480px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            The Passport is built for owners, executives, and investors who are past the stage where networking happens by accident. Most members run businesses doing $1M and up. Many are operating multiple ventures. They're not looking for general business education. They're looking for the room where the next deal, partnership, or investor conversation happens.
+            The Passport is built for owners, executives, and investors who are past the stage where networking happens by accident.
+          </p>
+          <p className="mt-5 max-w-[480px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+            Most members run businesses doing $1M and up. Many are operating multiple ventures.
+          </p>
+          <p className="mt-5 max-w-[480px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+            They're not looking for general business education. They're looking for the room where the next deal, partnership, or investor conversation happens.
           </p>
           <p className="mt-6 max-w-[480px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Membership is by application. We confirm fit before introducing you to partner communities, because the partner communities decide their own selection criteria. The Passport coordinates the introduction. The host decides who attends.
+            Membership is by application. We confirm fit before introducing you to partner communities.
+          </p>
+          <p className="mt-5 max-w-[480px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+            The Passport coordinates the introduction. The host decides who attends.
           </p>
         </div>
         <div>

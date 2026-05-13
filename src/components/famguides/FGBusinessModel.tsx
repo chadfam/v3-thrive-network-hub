@@ -33,10 +33,16 @@ const FGBusinessModel = () => {
               Recurring revenue. No reinventing the offer.
             </h2>
             <p className="mt-8 max-w-[540px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-              Most coaches and counselors burn out on the operational layer of their own practice. New clients every month. New offers to sell. New billing problems. New scheduling tetris. The practice never stabilizes because the operating model doesn't.
+              Most coaches and counselors burn out on the operational layer of their own practice. New clients every month. New offers to sell. New billing problems. New scheduling tetris.
+            </p>
+            <p className="mt-5 max-w-[540px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
+              The practice never stabilizes because the operating model doesn't.
             </p>
             <p className="mt-6 max-w-[540px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-              FAM Guides operate inside a different structure. Engagements are recurring by default. Cohorts run on a calendar. The platform handles billing, scheduling, and family matching. Your job is the coaching. Your revenue accumulates from the families and cohorts you serve well, not from how loud you can be on social media.
+              FAM Guides operate inside a different structure. Engagements are recurring by default. Cohorts run on a calendar. The platform handles billing, scheduling, and family matching.
+            </p>
+            <p className="mt-5 max-w-[540px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
+              Your job is the coaching. Your revenue accumulates from the families and cohorts you serve well, not from how loud you can be on social media.
             </p>
           </div>
           <div className="md:col-span-5">

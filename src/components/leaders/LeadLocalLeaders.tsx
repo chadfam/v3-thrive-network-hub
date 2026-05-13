@@ -19,10 +19,16 @@ const LeadLocalLeaders = () => {
             The trusted connector in your area, one per industry.
           </p>
           <p className="mt-8 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[440px]">
-            Local Leaders are the people families turn to when they need a recommendation. The mortgage broker who knows the school board. The realtor who knows the kids' coaches. The wellness practitioner who knows everyone's pediatrician. You probably already know who you'd call in your neighborhood for each of these. United to Thrive turns that role into a position.
+            Local Leaders are the people families turn to when they need a recommendation. The mortgage broker who knows the school board. The realtor who knows the kids' coaches. The wellness practitioner who knows everyone's pediatrician.
           </p>
           <p className="mt-4 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[440px]">
-            Each Local Leader holds one industry in their area, and when that category is claimed, it's claimed. You become the recognized connector in your category, featured at FAM Central events near you, and you earn when families in your network make decisions through your introductions.
+            You probably already know who you'd call in your neighborhood for each of these. United to Thrive turns that role into a position.
+          </p>
+          <p className="mt-4 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[440px]">
+            Each Local Leader holds one industry in their area. When that category is claimed, it's claimed.
+          </p>
+          <p className="mt-4 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[440px]">
+            You become the recognized connector in your category, featured at FAM Central events near you. You earn when families in your network make decisions through your introductions.
           </p>
           <p className="mt-6 italic text-[15px] text-[hsl(var(--slate-500))]">
             Most active Local Leaders earn $3,000 to $10,000 per month within their first year.

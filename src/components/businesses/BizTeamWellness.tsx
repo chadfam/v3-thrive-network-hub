@@ -38,10 +38,16 @@ const BizTeamWellness = () => {
 
         <div className="mt-16 mx-auto max-w-[720px]">
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Team Wellness Hub gives your team real, supplemental wellness benefits. Because it's structured as a pre-tax benefit (the kind that's been in the tax code for decades), employees keep more of every paycheck and the business saves on payroll taxes. It pays for itself, fast.
+            Team Wellness Hub gives your team real, supplemental wellness benefits. It's structured as a pre-tax benefit, the kind that's been in the tax code for decades.
           </p>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Most owners haven't set this up because the existing wellness vendors price it like enterprise software. The Hub runs it for a flat fee that's typically covered by the savings in the first quarter. It sits on top of whatever insurance you already offer. No enrollment disruption, no plan switching, no benefits committee.
+            Employees keep more of every paycheck. The business saves on payroll taxes. It pays for itself, fast.
+          </p>
+          <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+            Most owners haven't set this up because the existing vendors price it like enterprise software. The Hub runs it for a flat fee that's typically covered by the savings in the first quarter.
+          </p>
+          <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+            It sits on top of whatever insurance you already offer. No enrollment disruption, no plan switching, no benefits committee.
           </p>
           <a href="/team-wellness-hub" className="mt-8 text-link">
             Team Wellness Hub details →

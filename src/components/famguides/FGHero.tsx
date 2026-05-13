@@ -20,7 +20,10 @@ const FGHero = () => {
               Help families feel more connected.
             </h1>
             <p className="mt-8 max-w-[540px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-              FAM Guides are practitioners who help families feel more connected, building the FAM Plan: the family's own plan for the connecting work most parents don't have a guide for. The platform handles billing, scheduling, and family matching. You handle the coaching. A coaching practice with a platform underneath, on a recurring monthly model, not one-off sessions.
+              FAM Guides are practitioners who help families feel more connected. The work starts with the FAM Plan: the family's own plan for the connecting work most parents don't have a guide for.
+            </p>
+            <p className="mt-5 max-w-[540px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
+              The platform handles billing, scheduling, and family matching. You handle the coaching. A practice with a platform underneath, on a recurring monthly model, not one-off sessions.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <a

@@ -10,10 +10,19 @@ const FGWhatTheyDo = () => {
           The work, plainly.
         </h2>
         <p className="mt-8 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-          Most parents are doing fine on the structural stuff. Health insurance, after-school activities, college savings, the bedtime routine that mostly works. The thing that's missing isn't structural. It's the connecting work that actually holds a family together. Phone-free dinners that don't fall apart by Wednesday. Hard conversations with teenagers that don't end in slammed doors. Weekly rhythms that don't require an app to remember. Values that get transmitted on purpose instead of by accident.
+          Most parents are doing fine on the structural stuff. Health insurance. After-school activities. College savings. The bedtime routine that mostly works.
         </p>
         <p className="mt-6 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-          FAM Guides coach families through that work, starting with the FAM Plan: the family's own plan for feeling more connected. One-on-one or in small cohorts. The model is closer to how a fitness coach gets paid than how a therapist does. Recurring, results-oriented, low-friction. You're not running diagnostics or treating disorders. You're helping families build the patterns they've been telling each other they want to build but haven't quite gotten to.
+          The thing that's missing isn't structural. It's the connecting work that holds a family together.
+        </p>
+        <p className="mt-6 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
+          Phone-free dinners that don't fall apart by Wednesday. Hard conversations with teenagers that don't end in slammed doors. Weekly rhythms that don't require an app to remember. Values that get transmitted on purpose instead of by accident.
+        </p>
+        <p className="mt-6 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
+          FAM Guides coach families through that work. It starts with the FAM Plan: the family's own plan for feeling more connected. One-on-one or in small cohorts.
+        </p>
+        <p className="mt-6 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
+          The model is closer to a fitness coach than a therapist. Recurring, results-oriented, low-friction. You're not running diagnostics or treating disorders. You're helping families build the patterns they've been telling each other they want to build but haven't quite gotten to.
         </p>
         <p className="mt-12 font-serif-display italic text-slate-ink text-[20px] md:text-[24px] leading-snug">
           Real outcomes families can name out loud six months in.

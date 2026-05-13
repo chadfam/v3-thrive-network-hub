@@ -22,10 +22,16 @@ const LeadFamGuides = () => {
             Coach families through the work of being more present.
           </p>
           <p className="mt-8 text-[17px] leading-relaxed text-white/90 max-w-[440px]">
-            Most parents are doing fine on the structural stuff. Health insurance, after-school activities, college savings. The thing that's missing isn't structural. It's the connecting work that holds a family together. Phone-free dinners. Hard conversations with teenagers. Weekly rhythms that don't require an app to remember.
+            Most parents are doing fine on the structural stuff. Health insurance. After-school activities. College savings.
           </p>
           <p className="mt-4 text-[17px] leading-relaxed text-white/90 max-w-[440px]">
-            FAM Guides coach families through that work. One-on-one or in small cohorts. The model is closer to how a fitness coach gets paid than how a therapist does. Recurring, results-oriented, low-friction. The training is built around outcomes families can name out loud six months in.
+            What's missing is the connecting work that holds a family together. Phone-free dinners. Hard conversations with teenagers. Weekly rhythms that don't require an app to remember.
+          </p>
+          <p className="mt-4 text-[17px] leading-relaxed text-white/90 max-w-[440px]">
+            FAM Guides coach families through that work. One-on-one or in small cohorts.
+          </p>
+          <p className="mt-4 text-[17px] leading-relaxed text-white/90 max-w-[440px]">
+            The model is closer to a fitness coach than a therapist. Recurring, results-oriented, low-friction. The training is built around outcomes families can name out loud six months in.
           </p>
           <p className="mt-6 italic text-[15px] text-white/70 max-w-[440px]">
             Recurring monthly revenue. The platform handles billing, scheduling, and family matching so you spend your time coaching.

@@ -14,7 +14,10 @@ const LeadWhichRole = () => {
             Which role fits.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[720px] mx-auto">
-            Most leaders fit cleanly into one of the three. It's not unusual to be in two at once. A Local Leader who's also Expert Faculty. A FAM Guide who connects families to local businesses through Local Leaders in her network. The roles share an audience and a referral platform underneath.
+            Most leaders fit cleanly into one of the three. It's not unusual to be in two at once.
+          </p>
+          <p className="mt-4 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[720px] mx-auto">
+            A Local Leader who's also Expert Faculty. A FAM Guide who connects families to local businesses through Local Leaders in her network. The roles share an audience and a referral platform underneath.
           </p>
         </div>
         <div className="mt-14 grid md:grid-cols-3 gap-6">

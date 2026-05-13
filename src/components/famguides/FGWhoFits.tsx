@@ -21,10 +21,16 @@ const FGWhoFits = () => {
               Who fits the role.
             </h2>
             <p className="mt-8 max-w-[540px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-              The role is built for practitioners who already do this work or want to. Coaches who have spent years building a practice and are tired of the operational layer. Counselors and clergy whose pastoral work is closer to coaching than they admit. Educators and former educators who naturally end up running family workshops on the side. Parents who built unusual rhythms in their own household and want to help others do the same.
+              The role is built for practitioners who already do this work, or want to.
+            </p>
+            <p className="mt-5 max-w-[540px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
+              Coaches who have spent years building a practice and are tired of the operational layer. Counselors and clergy whose pastoral work is closer to coaching than they admit. Educators who naturally end up running family workshops on the side. Parents who built unusual rhythms in their own household and want to help others do the same.
             </p>
             <p className="mt-6 max-w-[540px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-              We prioritize character, real experience with families, and the kind of grounded presence the work requires. Credentials matter where they matter. Platform mechanics and the FAM Guides framework can be taught. Wisdom about families either shows up in the conversation or it doesn't.
+              We prioritize character, real experience with families, and the kind of grounded presence the work requires.
+            </p>
+            <p className="mt-5 max-w-[540px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
+              Credentials matter where they matter. Platform mechanics and the FAM Guides framework can be taught. Wisdom about families either shows up in the conversation or it doesn't.
             </p>
           </div>
           <div className="md:col-span-5">

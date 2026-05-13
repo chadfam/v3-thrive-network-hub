@@ -18,10 +18,19 @@ const EFWhoFits = () => {
             Who tends to apply.
           </h2>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[540px]">
-            The role fits experts who already have the work and the audience. Authors with books that families read. Speakers whose audiences book them year after year. Coaches and counselors with established practices. Podcast hosts with engaged listeners. Educators with credibility families trust. The platform is built to amplify what's already working, not to launch a brand from zero.
+            The role fits experts who already have the work and the audience.
+          </p>
+          <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[540px]">
+            Authors with books that families read. Speakers whose audiences book them year after year. Coaches and counselors with established practices. Podcast hosts with engaged listeners. Educators with credibility families trust.
+          </p>
+          <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[540px]">
+            The platform is built to amplify what's already working, not to launch a brand from zero.
           </p>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[540px]">
-            We prioritize substance over reach. A counselor with a small but loyal audience often delivers more value to FAM Central families than an influencer with a million followers chasing engagement. The selection is curated by the platform team based on category fit, work quality, and the kind of voice families want to learn from over time.
+            We prioritize substance over reach. A counselor with a small but loyal audience often delivers more value to FAM Central families than an influencer with a million followers chasing engagement.
+          </p>
+          <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[540px]">
+            The selection is curated by the platform team based on category fit, work quality, and the kind of voice families want to learn from over time.
           </p>
         </div>
         <div className="md:col-span-5">

@@ -22,7 +22,10 @@ const CCAccess = () => {
           How to access Command Central.
         </h2>
         <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Command Central is included at the Inner Circle tier of Profit Partners. Members at that tier have on-demand access across all five disciplines without per-engagement upcharges from the network. Specific partners may have their own service fees, which are pre-priced and visible inside the platform before any work begins.
+          Command Central is included at the Inner Circle tier of Profit Partners. Members at that tier have on-demand access across all five disciplines without per-engagement upcharges from the network.
+        </p>
+        <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+          Specific partners may have their own service fees. Those are pre-priced and visible inside the platform before any work begins.
         </p>
         <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
           For members at the Profit Partner and Mastermind tiers who occasionally need a partner on a specific engagement, individual services can be requested on a case-by-case basis. The full bench unlocks at Inner Circle.

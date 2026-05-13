@@ -30,7 +30,10 @@ const W1WhiteLabel = () => {
               If you have a business that needs an affiliate program, a referral program, or a customer-loyalty engine, we can configure WER1 to run it. Branded for your company. Hosted on your domain or ours. Configured for your specific structure.
             </p>
             <p className="text-[17px] md:text-[19px] leading-relaxed text-white/90">
-              The Waves of Pay compensation model is what most off-the-shelf affiliate tools don't do. Your customers become promoters. Your promoters earn from the people they bring in. The result is a referral program that gets stronger over time instead of plateauing at the first ring of advocates.
+              The Waves of Pay compensation model is what most off-the-shelf affiliate tools don't do. Your customers become promoters. Your promoters earn from the people they bring in.
+            </p>
+            <p className="text-[17px] md:text-[19px] leading-relaxed text-white/90">
+              The result is a referral program that gets stronger over time, instead of plateauing at the first ring of advocates.
             </p>
           </div>
           <a href="/contact?topic=white-label" className="mt-8 text-link-on-dark">

@@ -20,10 +20,16 @@ const LeadExpertFaculty = () => {
             Five income streams for experts whose work is already helping families.
           </p>
           <p className="mt-8 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[440px]">
-            If you've spent years building expertise in parenting, faith, health, finance, or relationships, you've probably already built an audience. The problem most experts run into isn't the work or the audience. It's that platforms reward attention instead of impact. You spend your time chasing the algorithm and your income depends on whether the algorithm liked you that month.
+            If you've spent years building expertise in parenting, faith, health, finance, or relationships, you've probably already built an audience.
           </p>
           <p className="mt-4 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[440px]">
-            Expert Faculty is built differently. The network has a built-in audience of families who joined the platform specifically to find experts they can trust. Your content gets distributed across the FAM Central app, local community hubs, email campaigns, and events. You earn five different ways for the work you're already doing.
+            The problem isn't the work or the audience. It's that platforms reward attention instead of impact. You chase the algorithm. Your income depends on whether it liked you that month.
+          </p>
+          <p className="mt-4 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[440px]">
+            Expert Faculty is built differently. The network has a built-in audience of families who joined the platform specifically to find experts they can trust.
+          </p>
+          <p className="mt-4 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[440px]">
+            Your content gets distributed across the FAM Central app, local community hubs, email campaigns, and events. You earn five different ways for the work you're already doing.
           </p>
           <p className="mt-6 italic text-[15px] text-[hsl(var(--slate-500))] max-w-[440px]">
             Categories include parenting and family dynamics, faith and values, health and wellness, financial literacy, relationships and marriage, and education.

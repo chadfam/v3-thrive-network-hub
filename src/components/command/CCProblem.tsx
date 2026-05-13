@@ -10,10 +10,16 @@ const CCProblem = () => {
           Why we built this.
         </h2>
         <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Most owners spend years cycling through vendors. The marketing person who didn't deliver. The bookkeeper who left at tax season. The lawyer who billed for the call where they said hello. By the third or fourth one you stop trusting recommendations entirely. Eventually you give up and pay full retail at a name-brand firm, which solves the trust problem and creates a billing problem.
+          Most owners spend years cycling through vendors. The marketing person who didn't deliver. The bookkeeper who left at tax season. The lawyer who billed for the call where they said hello.
+        </p>
+        <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+          By the third or fourth one you stop trusting recommendations entirely. Eventually you give up and pay full retail at a name-brand firm. That solves the trust problem and creates a billing problem.
         </p>
         <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Command Central is the response. A bench of vetted partners across the disciplines you actually need. Each one is accountable to the network because their next referral depends on the last one going well. You stop guessing and start working with people who already know what good looks like.
+          Command Central is the response. A bench of vetted partners across the disciplines you actually need.
+        </p>
+        <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+          Each one is accountable to the network because their next referral depends on the last one going well. You stop guessing and start working with people who already know what good looks like.
         </p>
         <p className="mt-10 font-serif-display italic text-slate-ink text-[20px] md:text-[24px]">
           Skin in the game on both sides.

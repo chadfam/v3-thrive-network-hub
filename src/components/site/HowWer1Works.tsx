@@ -36,7 +36,10 @@ const HowWer1Works = () => {
             <br /> All promoting your business.
           </h2>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-white/90">
-            When you're famous for families, the network carries your growth, not just you. WER1 sits underneath it as a magic link that quietly tracks every introduction and pays the right person, automatically. No spreadsheets. No "trust me, I sent you that one." Here's who ends up sending you business.
+            When you're famous for families, the network carries your growth, not just you.
+          </p>
+          <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-white/90">
+            WER1 sits underneath it as a magic link that quietly tracks every introduction and pays the right person, automatically. No spreadsheets. No "trust me, I sent you that one." Here's who ends up sending you business.
           </p>
 
           <ul className="mt-10 space-y-6">

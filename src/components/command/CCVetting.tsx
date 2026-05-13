@@ -23,7 +23,10 @@ const CCVetting = () => {
             A vendor list works as long as you only need it once. Networks fall apart when partners stop being accountable to anyone. Command Central works the other way.
           </p>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-white/90 max-w-[480px]">
-            Every partner on the bench has a track record inside the network. They were referred in by an existing member or partner. They were vetted on quality of work and how they handled past introductions. They stay on the bench by being the kind of partner the next member wants referred to them.
+            Every partner on the bench has a track record inside the network. They were referred in by an existing member or partner.
+          </p>
+          <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-white/90 max-w-[480px]">
+            They were vetted on quality of work and how they handled past introductions. They stay on the bench by being the kind of partner the next member wants referred to them.
           </p>
         </div>
         <ol className="space-y-8">
