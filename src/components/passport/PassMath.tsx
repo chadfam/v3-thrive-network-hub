@@ -4,7 +4,7 @@ const PassMath = () => {
       <div className="mx-auto max-w-[760px] px-6 sm:px-8 md:px-10 py-16 md:py-24 text-center">
         <p className="text-[13px] font-medium tracking-[0.14em] uppercase text-white/70">THE MATH</p>
         <h2 className="mt-6 font-serif-display text-white tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-          What this saves you.
+          What this <span className="ppx-italic" style={{ color: "#FBBF24" }}>saves you</span>.
         </h2>
         <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-white/90">
           Most of the elite communities in the Passport network charge $20,000 to $50,000 a year for full membership. Some charge more. To responsibly test three of them on your own, you'd be looking at six figures and a year of travel before you knew which one fit your business.

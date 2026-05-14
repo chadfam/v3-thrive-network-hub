@@ -22,7 +22,7 @@ const PassExperience = () => {
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
         <div className="text-center max-w-[760px] mx-auto">
           <h2 className="font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-            What Passport members experience.
+            What Passport members <span className="text-brand-blue ppx-italic">experience</span>.
           </h2>
         </div>
         <div className="mt-14 grid md:grid-cols-3 gap-6 md:gap-8">

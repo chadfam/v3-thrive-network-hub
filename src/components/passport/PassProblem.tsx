@@ -1,26 +1,46 @@
+import roomMastermind from "@/assets/room-mastermind.jpg";
+
 const PassProblem = () => {
   return (
-    <section className="bg-background">
-      <div className="mx-auto max-w-[760px] px-6 sm:px-8 md:px-10 py-16 md:py-32 text-center">
-        <span className="block mx-auto section-accent" aria-hidden />
-        <h2 className="mt-10 font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-          The problem with masterminds.
-        </h2>
-        <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Most of the rooms worth being in are invite-only, hard to discover, and limited to small circles.
-        </p>
-        <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          The names you've heard of are gated by application, sponsorship, or someone vouching for you. The names you haven't heard of are sometimes the ones that change a business the most, but they're impossible to find from the outside.
-        </p>
-        <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          The other problem is the math. Annual membership in any one of these communities typically runs into the tens of thousands.
-        </p>
-        <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Most owners can't afford to test three or four to find out which one fits. They commit to one, hope it's the right one, and find out a year and twenty thousand dollars later that it wasn't.
-        </p>
-        <p className="mt-10 font-serif-display italic text-slate-ink" style={{ fontSize: "clamp(1.25rem, 2.4vw, 1.5rem)" }}>
-          The Passport is the response to both problems.
-        </p>
+    <section className="bg-brand-blue/5 border-t border-slate-ink/10">
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <h2
+              className="font-serif-display text-slate-ink"
+              style={{
+                fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.025em",
+              }}
+            >
+              The problem with <span className="text-brand-blue ppx-italic">masterminds</span>.
+            </h2>
+
+            <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              Most rooms worth being in are invite-only, hard to discover, and limited to small circles. The names you've heard of are gated by application, sponsorship, or someone vouching for you. The names you haven't heard of are often the ones that change a business the most. They're impossible to find from the outside.
+            </p>
+
+            <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              Then there's the math. Annual membership in any one of these communities runs into the tens of thousands. Most owners can't afford to test three or four to find out which one fits. They commit to one, hope it's the right one, and find out a year and twenty thousand dollars later that it wasn't.
+            </p>
+
+            <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">
+              The Passport gets you introduced. To all of them. For less than the cost of testing one alone.
+            </p>
+          </div>
+
+          <div>
+            <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
+              <img
+                src={roomMastermind}
+                alt="Business owners in a mastermind room around a wooden table in warm daylight."
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

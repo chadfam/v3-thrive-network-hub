@@ -26,7 +26,7 @@ const PassAccess = () => {
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
         <div className="text-center max-w-[760px] mx-auto">
           <h2 className="font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-            Two ways to access the Passport.
+            Two ways to access the <span className="text-brand-blue ppx-italic">Passport</span>.
           </h2>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
             Through a Profit Partners membership at the Mastermind tier and above, or through standalone Passport application.
