@@ -1,61 +1,60 @@
-const items = [
-  "Written plan document",
-  "Summary plan description",
-  "Annual nondiscrimination testing",
-  "Qualified-benefit verification",
-  "Payroll integration setup",
-  "Employee enrollment materials",
-  "Annual plan review and updates",
-  "Recordkeeping and reporting support",
+const stats = [
+  {
+    value: "1970s",
+    label: "Pre-tax wellness benefit plans have been in the IRS code since the 1970s.",
+  },
+  {
+    value: "$2,100+",
+    label: "Combined annual savings per employee, between business payroll-tax savings and employee take-home pay.",
+  },
+  {
+    value: "1Q",
+    label: "Most plans pay back the administrative fee in the first quarter from FICA savings alone.",
+  },
 ];
 
 const TWHCompliance = () => {
   return (
-    <section className="bg-background">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32">
-        <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-start">
-          <div className="md:col-span-7">
-            <h2
-              className="font-serif-display text-slate-ink tracking-section"
-              style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}
-            >
-              Set up the way the IRS expects.
-            </h2>
-            <p className="mt-8 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed max-w-[540px]">
-              This is a pre-tax benefit plan with a defined structure in the IRS code, the same kind of plan large employers have used for decades.
-            </p>
-            <p className="mt-5 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed max-w-[540px]">
-              Every plan we administer is documented in writing. It follows the qualified-benefit definitions. It runs the required annual nondiscrimination testing so benefits are available across the workforce, not just to highly compensated employees.
-            </p>
-            <p className="mt-6 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed max-w-[540px]">
-              The structure is well understood by the IRS, payroll providers, and benefits attorneys. The administrative work is what trips up most small businesses, not the law itself.
-            </p>
-            <p className="mt-5 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed max-w-[540px]">
-              We handle the documentation, the testing, and the paperwork. The plan gets set up and run properly.
-            </p>
-            <p className="mt-6 italic text-[14px] text-[hsl(var(--slate-500))] max-w-[540px]">
-              This page is informational, not tax advice. Tax outcomes depend on individual circumstances and current IRS regulations. Plans are administered in coordination with qualified benefits and tax professionals. Talk to your CPA before adopting any benefit plan.
-            </p>
-          </div>
-          <div className="md:col-span-5">
-            <div
-              className="bg-background rounded-2xl p-10 border"
-              style={{ borderColor: "#E0E3E7" }}
-            >
-              <p className="font-serif-display text-[22px] text-slate-ink">
-                What we handle for you
+    <section style={{ backgroundColor: "#0B1F3F" }}>
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center text-white">
+        <h2
+          className="font-serif-display mx-auto max-w-[820px]"
+          style={{
+            fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+            lineHeight: 1.05,
+            letterSpacing: "-0.025em",
+          }}
+        >
+          Set up the way <span className="ppx-italic" style={{ color: "#FBBF24" }}>the IRS expects</span>.
+        </h2>
+
+        <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-white/85">
+          This is a pre-tax benefit plan with a defined structure in the IRS code, the same kind of plan large employers have used for decades. Every plan we administer is documented in writing, follows the qualified-benefit definitions, and runs the required annual nondiscrimination testing.
+        </p>
+
+        <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-12 md:gap-8">
+          {stats.map((s) => (
+            <div key={s.value}>
+              <p
+                className="font-serif-display leading-none"
+                style={{
+                  fontSize: "clamp(2.5rem, 5.5vw, 4.25rem)",
+                  letterSpacing: "-0.02em",
+                  color: "#FBBF24",
+                }}
+              >
+                {s.value}
               </p>
-              <ul className="mt-6 space-y-3">
-                {items.map((it) => (
-                  <li key={it} className="flex items-start gap-3 text-[16px] text-[hsl(var(--slate-700))]">
-                    <span className="bullet-dot" />
-                    <span>{it}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-4 mx-auto max-w-[260px] text-[14px] md:text-[15px] leading-relaxed text-white/80">
+                {s.label}
+              </p>
             </div>
-          </div>
+          ))}
         </div>
+
+        <p className="mt-12 mx-auto max-w-[680px] italic text-[13px] md:text-[14px] text-white/60">
+          This page is informational, not tax advice. Tax outcomes depend on individual circumstances and current IRS regulations. Plans are administered in coordination with qualified benefits and tax professionals. Talk to your CPA before adopting any benefit plan.
+        </p>
       </div>
     </section>
   );

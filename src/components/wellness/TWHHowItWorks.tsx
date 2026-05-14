@@ -1,67 +1,61 @@
 const steps = [
   {
-    n: "01",
+    num: "01",
     name: "Census and savings analysis",
-    desc: "We review your payroll census and calculate exactly what the plan is worth to your business and your employees. Quick, non-intrusive, requires minimal information.",
+    body: "We review your payroll census and calculate what the plan is worth in actual dollars to the business and your employees. Non-intrusive, requires minimal information.",
   },
   {
-    n: "02",
+    num: "02",
     name: "Plan documentation",
-    desc: "We draft the written plan document, summary plan description, and supporting paperwork the IRS expects for a properly documented pre-tax wellness benefit plan.",
+    body: "We draft the written plan document, summary plan description, and supporting paperwork the IRS expects for a properly documented pre-tax wellness benefit plan.",
   },
   {
-    n: "03",
+    num: "03",
     name: "Payroll integration",
-    desc: "We coordinate with your existing payroll provider to set up the pre-tax deduction codes and wellness benefit codes. Most setups are complete within two weeks.",
+    body: "We coordinate with your existing payroll provider to set up the pre-tax deduction codes and wellness benefit codes. Most setups are complete within two weeks.",
   },
   {
-    n: "04",
+    num: "04",
     name: "Employee enrollment",
-    desc: "We provide the enrollment materials, host an explainer session for your team, and run the open-enrollment window. Employees opt in voluntarily.",
+    body: "We provide enrollment materials, host an explainer session for your team, and run the open-enrollment window. Employees opt in voluntarily.",
   },
 ];
 
 const TWHHowItWorks = () => {
   return (
-    <section className="relative bg-background">
-      <div
-        aria-hidden
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "none",
-        }}
-      />
-      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
-        <div className="text-center max-w-[760px] mx-auto">
-          <h2
-            className="font-serif-display text-slate-ink tracking-section"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}
-          >
-            How a plan gets stood up.
-          </h2>
-          <p className="mt-6 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-            We handle the structuring, documentation, and compliance work. You handle informing your team. The plan integrates with your existing payroll provider.
-          </p>
-        </div>
+    <section className="bg-[hsl(220_30%_98%)] border-t border-slate-ink/10">
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
+        <h2
+          className="font-serif-display text-slate-ink mx-auto max-w-[820px]"
+          style={{
+            fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+            lineHeight: 1.05,
+            letterSpacing: "-0.025em",
+          }}
+        >
+          Four steps. Four to six weeks. <span className="text-brand-blue ppx-italic">Plan live</span>.
+        </h2>
 
-        <div className="mt-16 grid md:grid-cols-4 gap-12 md:gap-6">
-          {steps.map((s, i) => (
-            <div key={s.n} className="relative">
-              <p
-                className="font-serif-display text-gradient-warm"
-                style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)", lineHeight: 1 }}
-              >
-                {s.n}
+        <p className="mt-8 mx-auto max-w-[640px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
+          We handle the structuring, documentation, and compliance. You handle informing your team. The plan integrates with your existing payroll provider.
+        </p>
+
+        <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 text-left">
+          {steps.map((s) => (
+            <article
+              key={s.num}
+              className="rounded-2xl bg-white p-7 md:p-8 border border-slate-ink/10 flex flex-col"
+            >
+              <span className="font-serif-display text-brand-blue text-[18px] tracking-tight">
+                {s.num}
+              </span>
+              <h3 className="mt-5 font-serif-display text-[20px] md:text-[22px] leading-tight text-slate-ink">
+                {s.name}
+              </h3>
+              <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
+                {s.body}
               </p>
-              <h3 className="mt-4 font-serif-display text-slate-ink text-[24px]">{s.name}</h3>
-              <p className="mt-4 text-[16px] text-[hsl(var(--slate-700))] leading-relaxed max-w-[240px]">
-                {s.desc}
-              </p>
-              {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-6 -right-3 w-6 h-px bg-brand-blue" />
-              )}
-            </div>
+            </article>
           ))}
         </div>
       </div>

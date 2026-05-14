@@ -2,28 +2,26 @@ import Layout from "@/components/site/Layout";
 import TWHHero from "@/components/wellness/TWHHero";
 import TWHStats from "@/components/wellness/TWHStats";
 import TWHWhy from "@/components/wellness/TWHWhy";
-import TWHMath from "@/components/wellness/TWHMath";
-import TWHBenefits from "@/components/wellness/TWHBenefits";
 import TWHHowItWorks from "@/components/wellness/TWHHowItWorks";
+import TWHBenefits from "@/components/wellness/TWHBenefits";
 import TWHCompliance from "@/components/wellness/TWHCompliance";
-import TWHPricing from "@/components/wellness/TWHPricing";
 import TWHApply from "@/components/wellness/TWHApply";
+import TWHOutro from "@/components/wellness/TWHOutro";
 
 const TeamWellnessHub = () => (
   <Layout
     title="Team Wellness Hub"
-    description="A supplemental, pre-tax wellness program: better health benefits for your team, $1,500+ more in employee take-home pay, and around $640 a year per employee in payroll-tax savings for the business. Sits alongside existing health insurance with no disruption."
+    description="A supplemental, pre-tax wellness program. Real wellness benefits for your team, $1,500+ more take-home pay per employee, and ~$640 per employee per year in payroll-tax savings for the business. Sits alongside existing insurance with no disruption."
     canonical="/team-wellness-hub"
   >
     <TWHHero />
     <TWHStats />
     <TWHWhy />
-    <TWHMath />
-    <TWHBenefits />
     <TWHHowItWorks />
+    <TWHBenefits />
     <TWHCompliance />
-    <TWHPricing />
     <TWHApply />
+    <TWHOutro />
   </Layout>
 );
 
