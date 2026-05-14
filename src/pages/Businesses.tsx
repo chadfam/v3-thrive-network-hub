@@ -2,13 +2,11 @@ import Layout from "@/components/site/Layout";
 import BizHero from "@/components/businesses/BizHero";
 import BizArgument from "@/components/businesses/BizArgument";
 import BizPowerTeam from "@/components/businesses/BizPowerTeam";
-import BizProfitPartners from "@/components/businesses/BizProfitPartners";
-import BizMastermindPassport from "@/components/businesses/BizMastermindPassport";
-import BizCommandCentral from "@/components/businesses/BizCommandCentral";
+import BizProcess from "@/components/businesses/BizProcess";
+import BizPrograms from "@/components/businesses/BizPrograms";
 import BizWer1Band from "@/components/businesses/BizWer1Band";
-import BizTeamWellness from "@/components/businesses/BizTeamWellness";
-import BizWhoInside from "@/components/businesses/BizWhoInside";
 import BizApply from "@/components/businesses/BizApply";
+import BizOutro from "@/components/businesses/BizOutro";
 
 const Businesses = () => (
   <Layout
@@ -19,13 +17,11 @@ const Businesses = () => (
     <BizHero />
     <BizArgument />
     <BizPowerTeam />
-    <BizProfitPartners />
-    <BizMastermindPassport />
-    <BizCommandCentral />
+    <BizProcess />
+    <BizPrograms />
     <BizWer1Band />
-    <BizTeamWellness />
-    <BizWhoInside />
     <BizApply />
+    <BizOutro />
   </Layout>
 );
 
