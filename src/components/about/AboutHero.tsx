@@ -51,7 +51,7 @@ const AboutHero = () => {
             </h1>
 
             <p className="mt-7 max-w-[520px] text-[15px] md:text-[16px] leading-[1.65] text-[hsl(var(--slate-700))]">
-              United to Thrive is the company behind Profit Partners, FAM Central, Local Leaders, and the WER1 referral platform. We acquired the platforms, integrated the programs, and built one community around them.
+              United to Thrive is the company behind Profit Partners, FAM Central, Local Leaders, and the WER1 referral platform. One connected WEcosystem of programs and platforms, all running on the same referral engine underneath.
             </p>
 
             <div className="mt-9">

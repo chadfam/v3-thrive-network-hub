@@ -17,7 +17,7 @@ const W1WhyOwn = () => {
             The chain that connected the deal in the first place stays invisible because the platform wasn't built to see it.
           </p>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            We acquired WER1 specifically so the platform underneath United to Thrive could be built around the principle that the chain is the point.
+            WER1 sits at the foundation of United to Thrive precisely so the platform underneath operates on the principle that the chain is the point.
           </p>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
             The Waves of Pay model is real, and the platform is built for it. We can configure it for partner businesses because we own the WER1 brand and the integration. The math was designed first. The platform was built to deliver it.

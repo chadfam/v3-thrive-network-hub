@@ -29,7 +29,7 @@ const AboutStats = () => {
         </h2>
 
         <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          United to Thrive runs as a connected WEcosystem of programs and platforms. Each one was built or acquired to play a specific role. Each one runs on the same referral engine underneath.
+          United to Thrive runs as a connected WEcosystem of programs and platforms. Each one plays a specific role. Each one runs on the same referral engine underneath.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-10 md:gap-8">
