@@ -14,8 +14,8 @@ const Index = () => (
     canonical="/"
   >
     <Hero />
-    <Argument />
     <WhyFamilies />
+    <Argument />
     <ThreePaths />
     <FullNetwork />
     <HowWer1Works />
