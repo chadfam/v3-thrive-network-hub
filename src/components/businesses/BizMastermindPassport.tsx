@@ -1,49 +1,68 @@
+import { Link } from "react-router-dom";
+import heroMastermind from "@/assets/hero-mastermind.jpg";
+
 const benefits = [
-  "Guest invitations into curated mastermind communities",
-  "Strategic introductions to other Passport members",
-  "Curated networking events and entrepreneur retreats",
-  "Investor gatherings and joint venture opportunities",
-  "Access to the Mastermind Passport member directory",
-  "Priority introductions to qualified leaders in your field",
+  "Curated access to top mastermind communities",
+  "Peer operators, investors, and partners in every room",
+  "Quarterly strategy sessions",
+  "Proximity to where deals and capital actually move",
 ];
 
 const BizMastermindPassport = () => {
   return (
-    <section id="mastermind-passport" style={{ backgroundColor: "#0B1F3F" }} className="text-white">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32 grid md:grid-cols-2 gap-12 md:gap-16 items-start">
-        <div>
-          <p className="font-serif-display text-[28px] text-white/50 leading-none">02</p>
-          <h2 className="mt-2 font-serif-display tracking-section" style={{ fontSize: "clamp(2.25rem, 5.5vw, 4rem)", lineHeight: 1.05 }}>
-            Mastermind Passport™
-          </h2>
-          <p className="mt-6 max-w-[440px] text-[17px] md:text-[19px] font-medium">
-            Guest access into elite mastermind communities through one membership.
-          </p>
-          <p className="mt-8 max-w-[440px] text-[17px] leading-relaxed text-white/90">
-            Most of the rooms worth being in are invite-only, hard to find, and expensive to test. People spend years getting into the right one and end up paying retail to figure out it wasn't the right one.
-          </p>
-          <p className="mt-6 max-w-[440px] text-[17px] leading-relaxed text-white/90">
-            The Passport is a single membership that gets you guest invitations into a curated set of those rooms. You walk in introduced. You meet the room. You find out which one fits without committing to any of them.
-          </p>
-          <a href="/mastermind-passport" className="mt-8 inline-block text-[15px] text-white hover:text-brand-gold transition-colors">
-            Mastermind Passport details →
-          </a>
-        </div>
-        <div>
-          <p className="text-[13px] font-medium tracking-[0.14em] uppercase text-brand-gold">
-            INSIDE THE PASSPORT
-          </p>
-          <ul className="mt-6 space-y-3">
-            {benefits.map((b) => (
-              <li key={b} className="flex gap-3 items-start text-[16px] md:text-[18px] leading-relaxed text-white/90">
-                <span aria-hidden className="mt-[10px] inline-block w-2 h-2 rounded-full bg-brand-gold flex-shrink-0" />
-                <span>{b}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-6 italic text-[15px] text-white/60">
-            Specific community access is shared during the membership conversation.
-          </p>
+    <section id="mastermind-passport" className="scroll-mt-24 bg-[hsl(220_30%_98%)] border-t border-slate-ink/10">
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="lg:order-2">
+            <h2
+              className="font-serif-display text-slate-ink"
+              style={{
+                fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.025em",
+              }}
+            >
+              Mastermind Passport™. <span className="text-brand-blue ppx-italic">Proximity is power</span>.
+            </h2>
+
+            <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              The elite mastermind communities most owners spend years trying to find. We curate the rooms. You walk in.
+            </p>
+
+            <ul className="mt-10 space-y-4 max-w-[560px]">
+              {benefits.map((b) => (
+                <li key={b} className="flex items-start gap-3">
+                  <span aria-hidden className="bullet-dot" />
+                  <span className="text-[16px] md:text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
+                    {b}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[20px] leading-snug max-w-[560px]">
+              The rooms most owners can't get into without an introduction.
+            </p>
+
+            <Link
+              to="/mastermind-passport"
+              className="group mt-10 inline-flex items-center text-[15px] font-semibold text-brand-blue"
+            >
+              See Mastermind Passport
+              <span aria-hidden className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+            </Link>
+          </div>
+
+          <div className="lg:order-1">
+            <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
+              <img
+                src={heroMastermind}
+                alt="Business owners in a mastermind session around a wooden table in warm daylight."
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

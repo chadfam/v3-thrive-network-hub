@@ -1,12 +1,12 @@
-import heroFounders from "@/assets/hero-founders.jpg";
+import familyDinner from "@/assets/family-dinner.jpg";
 
 const BizOutro = () => {
   return (
     <section className="bg-[#F8F9FB]">
       <div className="relative w-full h-[36vh] min-h-[260px] md:h-[44vh] md:min-h-[360px] overflow-hidden">
         <img
-          src={heroFounders}
-          alt="Founders together in conversation in warm light."
+          src={familyDinner}
+          alt="A family at the dinner table together in warm light."
           loading="lazy"
           className="absolute inset-0 w-full h-full object-cover"
         />
