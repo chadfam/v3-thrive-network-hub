@@ -1,60 +1,58 @@
-import familyDinner from "@/assets/family-dinner.jpg";
+import roomMastermind from "@/assets/room-mastermind.jpg";
 
-const proofs = [
-  "Referred prospects already know you, like you, and trust you before the first call.",
-  "Trust transfers from the person who sent them. The relationship starts ahead.",
-  "Customers who arrive through families tend to stay longer and refer more themselves.",
+const items = [
+  "Real partnerships, not LinkedIn connections.",
+  "Active referrals, not passive directories.",
+  "Co-marketing campaigns, not solo grinding.",
+  "Family champions, not faceless leads.",
 ];
 
 const WhyFamilies = () => {
   return (
-    <section className="warm-tint-bg">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-28">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          <div className="lg:col-span-5">
+    <section className="bg-white border-t border-slate-ink/10">
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div>
+            <h2
+              className="font-serif-display text-slate-ink"
+              style={{
+                fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.025em",
+              }}
+            >
+              Built on <span className="text-brand-blue ppx-italic">real recommendations</span>, not transactions.
+            </h2>
+
+            <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              United to Thrive is a private network of values-aligned businesses, community leaders, and trusted experts who actively recommend each other to the families they already serve. A customer who recommends you to three other parents in the school pickup line beats ten Facebook clicks every time.
+            </p>
+
+            <ul className="mt-10 space-y-4 max-w-[560px]">
+              {items.map((it) => (
+                <li key={it} className="flex items-start gap-3">
+                  <span aria-hidden className="bullet-dot" />
+                  <span className="text-[16px] md:text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
+                    {it}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[20px] leading-snug max-w-[560px]">
+              This is the first faith, family, and business community of its kind in the Valley.
+            </p>
+          </div>
+
+          <div>
             <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
               <img
-                src={familyDinner}
-                alt="A family at the dinner table together in warm light."
+                src={roomMastermind}
+                alt="Business owners around a mastermind room in warm daylight."
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>
-          </div>
-
-          <div className="lg:col-span-7">
-            <span className="block h-0.5 w-20 bg-brand-gold rounded-full mb-8" aria-hidden />
-            <h2 className="font-serif-display section-headline text-slate-ink">
-              Three parents at school pickup beat ten Facebook clicks.
-            </h2>
-
-            <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[600px]">
-              Most businesses don't have affiliates. They don't have customers actively sending them more business. They know that would change everything. Most never build it.
-            </p>
-
-            <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[600px]">
-              We help you turn the families you serve into brand champions who recommend you by name.
-            </p>
-
-            <div className="mt-8 rounded-2xl bg-white p-7 md:p-8 border border-brand-gold/30">
-              <p className="font-serif-display text-[18px] md:text-[20px] text-slate-ink">
-                Why referrals win.
-              </p>
-              <ul className="mt-5 space-y-4">
-                {proofs.map((p) => (
-                  <li key={p} className="flex items-start gap-3">
-                    <span aria-hidden className="bullet-dot" />
-                    <span className="text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
-                      {p}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <p className="mt-8 text-[16px] md:text-[18px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[600px]">
-              Our network skews toward owners who think in decades, not quarters. If that's you, you're already in the right room.
-            </p>
           </div>
         </div>
       </div>

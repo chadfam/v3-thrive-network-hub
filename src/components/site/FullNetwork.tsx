@@ -1,112 +1,95 @@
 import { Link } from "react-router-dom";
-import heroFamily from "@/assets/hero-family.jpg";
 
-type Program = { name: string; to: string };
-type Lane = {
-  label: string;
-  body: string;
-  programs: Program[];
-  accent: "blue" | "gold" | "slate";
-};
-
-const lanes: Lane[] = [
+const tiles = [
   {
-    label: "For Businesses",
-    body: "Grow through partnerships, masterminds, and a vetted board of advisors.",
-    accent: "blue",
-    programs: [
-      { name: "Profit Partners™", to: "/profit-partners" },
-      { name: "Mastermind Passport™", to: "/mastermind-passport" },
-      { name: "Command Central™", to: "/command-central" },
-    ],
+    name: "Profit Partners™",
+    body: "A working alliance of complementary business owners who actively recommend each other to the families they already serve.",
+    to: "/profit-partners",
   },
   {
-    label: "For Leaders",
-    body: "Paid roles for the connectors, coaches, and category experts already serving their community.",
-    accent: "gold",
-    programs: [
-      { name: "Local Leaders", to: "/local-leaders" },
-      { name: "FAM Guides", to: "/fam-guides" },
-      { name: "Expert Faculty", to: "/expert-faculty" },
-    ],
+    name: "Mastermind Passport™",
+    body: "Proximity is power. Walk into the rooms most owners spend years trying to find.",
+    to: "/mastermind-passport",
   },
   {
-    label: "Solutions",
-    body: "Tools that sit alongside the network for the work most businesses also have to do.",
-    accent: "slate",
-    programs: [
-      { name: "Promo Engine", to: "/promo-engine" },
-      { name: "Team Wellness Hub", to: "/team-wellness-hub" },
-      { name: "WER1", to: "/wer1" },
-    ],
+    name: "Command Central™",
+    body: "Your own board of advisors, experts, and service providers. Vetted, with set pricing.",
+    to: "/command-central",
+  },
+  {
+    name: "Local Leaders",
+    body: "The trusted connector in your area, one per industry. Earn through impact.",
+    to: "/local-leaders",
+  },
+  {
+    name: "FAM Guides",
+    body: "Help families feel more connected through the FAM Plan. A coaching practice with a platform underneath.",
+    to: "/fam-guides",
+  },
+  {
+    name: "Expert Faculty",
+    body: "Five income streams for authors, speakers, and category leaders whose work helps families thrive.",
+    to: "/expert-faculty",
   },
 ];
 
-const accentDot: Record<Lane["accent"], string> = {
-  blue: "bg-brand-blue",
-  gold: "bg-brand-gold",
-  slate: "bg-[hsl(var(--slate-700))]",
-};
-
 const FullNetwork = () => {
   return (
-    <section id="for-businesses" className="surface-muted scroll-mt-24">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-28">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          <div className="lg:col-span-7">
-            <span className="block h-0.5 w-20 bg-brand-gold rounded-full mb-8" aria-hidden />
-            <h2 className="font-serif-display section-headline text-slate-ink">
-              One network. Three lanes in.
-            </h2>
-            <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[560px]">
-              Three core programs for businesses. Three leadership roles for connectors and coaches. Three solutions for the work that sits alongside.
-            </p>
+    <section id="for-businesses" className="scroll-mt-24 bg-white border-t border-slate-ink/10">
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
+        <h2
+          className="font-serif-display text-slate-ink mx-auto max-w-[820px]"
+          style={{
+            fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+            lineHeight: 1.05,
+            letterSpacing: "-0.025em",
+          }}
+        >
+          What you get inside <span className="text-brand-blue ppx-italic">United to Thrive</span>.
+        </h2>
 
-            <div className="mt-10 space-y-7">
-              {lanes.map((lane) => (
-                <div
-                  key={lane.label}
-                  className="rounded-2xl bg-white p-7 md:p-8 border border-slate-ink/10"
-                >
-                  <div className="flex items-center gap-3">
-                    <span aria-hidden className={`inline-block w-2.5 h-2.5 rounded-full ${accentDot[lane.accent]}`} />
-                    <h3 className="font-serif-display text-[20px] md:text-[22px] text-slate-ink leading-tight">
-                      {lane.label}
-                    </h3>
-                  </div>
-                  <p className="mt-3 text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
-                    {lane.body}
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
-                    {lane.programs.map((p, i) => (
-                      <span key={p.name} className="flex items-center">
-                        <Link
-                          to={p.to}
-                          className="text-[15px] font-medium text-slate-ink hover:text-brand-blue transition-colors"
-                        >
-                          {p.name}
-                        </Link>
-                        {i < lane.programs.length - 1 && (
-                          <span aria-hidden className="ml-5 text-slate-300">·</span>
-                        )}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+        <p className="mt-8 mx-auto max-w-[640px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
+          Three core programs for businesses. Three leadership roles for connectors and coaches. One network underneath all of it.
+        </p>
 
-          <div className="lg:col-span-5">
-            <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl lg:sticky lg:top-24">
-              <img
-                src={heroFamily}
-                alt="A family at home in soft daylight, the people the network is built to serve."
-                loading="lazy"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+        <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 text-left">
+          {tiles.map((t) => (
+            <article
+              key={t.name}
+              className="rounded-2xl bg-white p-7 md:p-8 border border-slate-ink/10 flex flex-col hover:border-brand-blue/30 transition-colors"
+            >
+              <h3 className="font-serif-display text-[22px] md:text-[24px] leading-tight text-slate-ink">
+                {t.name}
+              </h3>
+              <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))] flex-1">
+                {t.body}
+              </p>
+              <Link
+                to={t.to}
+                className="group mt-6 inline-flex items-center text-[14px] font-semibold text-brand-blue"
+              >
+                Learn more
+                <span aria-hidden className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+              </Link>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-16 pt-10 border-t border-slate-ink/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+          <p className="text-[14px] font-medium text-[hsl(var(--slate-500))]">
+            Also in the network:
+          </p>
+          <Link to="/promo-engine" className="text-[15px] text-slate-ink hover:text-brand-blue transition-colors">
+            Promo Engine
+          </Link>
+          <span aria-hidden className="text-slate-300">·</span>
+          <Link to="/team-wellness-hub" className="text-[15px] text-slate-ink hover:text-brand-blue transition-colors">
+            Team Wellness Hub
+          </Link>
+          <span aria-hidden className="text-slate-300">·</span>
+          <Link to="/wer1" className="text-[15px] text-slate-ink hover:text-brand-blue transition-colors">
+            WER1
+          </Link>
         </div>
       </div>
     </section>

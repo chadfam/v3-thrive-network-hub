@@ -1,11 +1,12 @@
 import Layout from "@/components/site/Layout";
 import Hero from "@/components/site/Hero";
 import Argument from "@/components/site/Argument";
+import WhyFamilies from "@/components/site/WhyFamilies";
 import ThreePaths from "@/components/site/ThreePaths";
 import FullNetwork from "@/components/site/FullNetwork";
 import HowWer1Works from "@/components/site/HowWer1Works";
-import WhyFamilies from "@/components/site/WhyFamilies";
 import NextStep from "@/components/site/NextStep";
+import Outro from "@/components/site/Outro";
 
 const Index = () => (
   <Layout
@@ -14,11 +15,12 @@ const Index = () => (
   >
     <Hero />
     <Argument />
-    <ThreePaths />
-    <HowWer1Works />
-    <FullNetwork />
     <WhyFamilies />
+    <ThreePaths />
+    <FullNetwork />
+    <HowWer1Works />
     <NextStep />
+    <Outro />
   </Layout>
 );
 
