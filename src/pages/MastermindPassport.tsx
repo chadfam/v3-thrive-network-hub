@@ -5,7 +5,6 @@ import PassHowItWorks from "@/components/passport/PassHowItWorks";
 import PassExperience from "@/components/passport/PassExperience";
 import PassMath from "@/components/passport/PassMath";
 import PassWhoFor from "@/components/passport/PassWhoFor";
-import PassAccess from "@/components/passport/PassAccess";
 import PassApply from "@/components/passport/PassApply";
 
 const MastermindPassport = () => (
@@ -20,7 +19,6 @@ const MastermindPassport = () => (
     <PassExperience />
     <PassMath />
     <PassWhoFor />
-    <PassAccess />
     <PassApply />
   </Layout>
 );
