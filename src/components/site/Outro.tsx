@@ -30,11 +30,11 @@ const Outro = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          Build something that <span className="text-brand-blue ppx-italic">means something</span>.
+          Help families <span className="text-brand-blue ppx-italic">F.E.E.L.</span> again.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          You weren't meant to build alone. Join a network where your business grows, your relationships deepen, and your work reflects what you believe in.
+          You weren't meant to build alone. Step into the WEcosystem where your business grows, your relationships deepen, and your work strengthens the families you serve.
         </p>
 
         <div className="mt-10">

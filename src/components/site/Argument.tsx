@@ -29,7 +29,7 @@ const Argument = () => {
         </h2>
 
         <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          Most owners burn cash on ads they don't control, chase algorithms that change overnight, and join networking groups that never turn into real revenue. The owners who keep growing stopped buying attention and started getting recommended.
+          Most owners burn cash on ads they don't control, chase algorithms that change overnight, and join networking groups that never turn into real revenue. United to Thrive is the WEcosystem behind the owners who stopped buying attention and started getting recommended.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-10 md:gap-8">

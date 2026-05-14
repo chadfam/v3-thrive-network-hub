@@ -25,11 +25,11 @@ const HowWer1Works = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          A proven system, now <span className="ppx-italic" style={{ color: "#FBBF24" }}>built into a network</span>.
+          A movement. <span className="ppx-italic" style={{ color: "#FBBF24" }}>Not a marketing campaign</span>.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-white/85">
-          Our team has been building relationship-driven growth systems for two decades. United to Thrive brings that proven framework to every market we open, starting in Phoenix.
+          Our team has been building relationship-driven growth systems for two decades. United to Thrive brings that proven framework to every market we open, with families, entrepreneurs, experts, and causes aligned underneath.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-12 md:gap-8">

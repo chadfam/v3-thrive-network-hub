@@ -45,11 +45,11 @@ const FullNetwork = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          What you get inside <span className="text-brand-blue ppx-italic">United to Thrive</span>.
+          Inside the <span className="text-brand-blue ppx-italic">WEcosystem</span>.
         </h2>
 
-        <p className="mt-8 mx-auto max-w-[640px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          Three core programs for businesses. Three leadership roles for connectors and coaches. One network underneath all of it.
+        <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
+          Three core programs for businesses. Three leadership roles for connectors and coaches. One referral engine underneath all of it, aligning families, entrepreneurs, experts, and causes.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 text-left">

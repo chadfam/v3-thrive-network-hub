@@ -40,7 +40,7 @@ const WhyFamilies = () => {
             </ul>
 
             <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[20px] leading-snug max-w-[560px]">
-              This is the first faith, family, and business community of its kind in the Valley.
+              A movement, not a marketing campaign. Connection over attention.
             </p>
           </div>
 
