@@ -32,10 +32,10 @@ const PassProblem = () => {
           <div>
             <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
               <img
-                src="https://images.unsplash.com/photo-1768508948485-a7adc1f3427f?auto=format&fit=crop&q=80&w=1200"
-                srcSet="https://images.unsplash.com/photo-1768508948485-a7adc1f3427f?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1768508948485-a7adc1f3427f?auto=format&fit=crop&q=80&w=1200 1200w"
+                src="https://images.unsplash.com/photo-1598284444079-ab715eed2b88?auto=format&fit=crop&q=80&w=1200"
+                srcSet="https://images.unsplash.com/photo-1598284444079-ab715eed2b88?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1598284444079-ab715eed2b88?auto=format&fit=crop&q=80&w=1200 1200w"
                 sizes="(max-width: 1200px) 100vw, 600px"
-                alt="A formal private cocktail event with attendees in business attire engaged in conversation, warm wood-paneled venue with sconce lighting."
+                alt="An intimate, exclusive winery dinner: a server pouring wine at a candlelit table set for a small group of guests in business-casual attire."
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
