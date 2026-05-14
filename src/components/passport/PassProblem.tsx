@@ -1,4 +1,3 @@
-import roomMastermind from "@/assets/room-mastermind.jpg";
 
 const PassProblem = () => {
   return (
@@ -33,8 +32,10 @@ const PassProblem = () => {
           <div>
             <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
               <img
-                src={roomMastermind}
-                alt="Business owners in a mastermind room around a wooden table in warm daylight."
+                src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&q=80&w=1200"
+                srcSet="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&q=80&w=1200 1200w"
+                sizes="(max-width: 1200px) 100vw, 600px"
+                alt="An empty boardroom with floor-to-ceiling windows looking onto an open landscape, the kind of room most owners spend years trying to get into."
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
