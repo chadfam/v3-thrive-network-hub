@@ -1,35 +1,45 @@
 import { Link } from "react-router-dom";
 
-const tiles = [
+type Offering = {
+  name: string;
+  body: string;
+  benefits: string[];
+  to: string;
+};
+
+const offerings: Offering[] = [
   {
     name: "Profit Partners™",
     body: "A working alliance of complementary business owners actively recommending each other to the families they already serve.",
+    benefits: [
+      "Monthly mastermind days with values-aligned owners",
+      "Co-marketing campaigns across the alliance",
+      "Promoted inside FAM Central to the families already using it",
+      "Category exclusivity, one per industry per market",
+    ],
     to: "/profit-partners",
   },
   {
     name: "Mastermind Passport™",
-    body: "Proximity is power. Walk into the elite mastermind rooms most owners spend years trying to find.",
+    body: "Walk into the elite mastermind rooms most owners spend years trying to find.",
+    benefits: [
+      "Curated access to top mastermind communities",
+      "Peer operators, investors, and partners in every room",
+      "Quarterly strategy sessions and partner introductions",
+      "Proximity to where capital and deals actually move",
+    ],
     to: "/mastermind-passport",
   },
   {
     name: "Command Central™",
-    body: "Your own board of advisors, experts, and service providers. Vetted, with set pricing, across five disciplines.",
+    body: "Your own board of advisors, experts, and service providers, vetted with set pricing across the disciplines you actually need.",
+    benefits: [
+      "Marketing, sales, finance, legal, and technology partners",
+      "Pre-vetted, accountable to the network on every referral",
+      "Set pricing visible in advance, no vendor casino",
+      "Access scales with your tier in the alliance",
+    ],
     to: "/command-central",
-  },
-  {
-    name: "Lifetime Client Agency™",
-    body: "Activate your past clients. Generate repeat business. Turn old relationships into ongoing referral sources.",
-    to: "/profit-partners",
-  },
-  {
-    name: "FAM Central promotion",
-    body: "Members get promoted inside the FAM Central app to the families using it every day.",
-    to: "/profit-partners",
-  },
-  {
-    name: "Team Wellness Hub",
-    body: "Real wellness benefits for your team that save you payroll taxes. Adds $1,500+ to employee take-home pay annually.",
-    to: "/team-wellness-hub",
   },
 ];
 
@@ -45,28 +55,40 @@ const BizPrograms = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          What your year inside <span className="text-brand-blue ppx-italic">Profit Partners</span> includes.
+          Inside the <span className="text-brand-blue ppx-italic">alliance</span>.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          Six programs and tools, one application, one alliance. Tier-based access opens more of the network as you go deeper.
+          Apply once. The alliance opens from there, with access scaling by tier as you grow into the work.
         </p>
 
-        <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 text-left">
-          {tiles.map((t) => (
+        <div className="mt-16 md:mt-20 grid md:grid-cols-3 gap-6 md:gap-7 text-left">
+          {offerings.map((o) => (
             <article
-              key={t.name}
+              key={o.name}
               className="rounded-2xl bg-white p-7 md:p-8 border border-slate-ink/10 flex flex-col hover:border-brand-blue/30 transition-colors"
             >
-              <h3 className="font-serif-display text-[22px] md:text-[24px] leading-tight text-slate-ink">
-                {t.name}
+              <h3 className="font-serif-display text-[22px] md:text-[26px] leading-tight text-slate-ink">
+                {o.name}
               </h3>
-              <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))] flex-1">
-                {t.body}
+              <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
+                {o.body}
               </p>
+
+              <ul className="mt-6 space-y-3 flex-1">
+                {o.benefits.map((b) => (
+                  <li key={b} className="flex items-start gap-3">
+                    <span aria-hidden className="bullet-dot" />
+                    <span className="text-[14px] md:text-[15px] leading-relaxed text-[hsl(var(--slate-700))]">
+                      {b}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
               <Link
-                to={t.to}
-                className="group mt-6 inline-flex items-center text-[14px] font-semibold text-brand-blue"
+                to={o.to}
+                className="group mt-7 inline-flex items-center text-[14px] font-semibold text-brand-blue"
               >
                 Learn more
                 <span aria-hidden className="ml-2 transition-transform group-hover:translate-x-1">→</span>
