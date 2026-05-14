@@ -74,11 +74,11 @@ const Argument = () => {
               letterSpacing: "-0.02em",
             }}
           >
-            Four audiences inside <span className="text-brand-blue ppx-italic">F.E.E.L.</span>
+            Inside <span className="text-brand-blue ppx-italic">F.E.E.L.</span>
           </h3>
 
           <p className="mt-6 mx-auto max-w-[680px] text-center text-[16px] md:text-[18px] leading-[1.65] text-[hsl(var(--slate-700))]">
-            F.E.E.L. is the framework underneath everything we make. Four audiences, one community, aligned around the people they all share.
+            F.E.E.L. is the framework underneath everything we make. One community, aligned around the people they share.
           </p>
 
           <div className="mt-12 md:mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 text-left">

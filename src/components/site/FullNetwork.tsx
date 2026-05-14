@@ -28,7 +28,7 @@ const tiles = [
   },
   {
     name: "Expert Faculty",
-    body: "Five income streams for authors, speakers, and category leaders whose work helps families thrive.",
+    body: "Recurring income for authors, speakers, and category leaders whose work helps families thrive.",
     to: "/expert-faculty",
   },
 ];
