@@ -3,10 +3,10 @@ const CCHero = () => {
     <section className="hero-fullbleed bg-background">
       <img
         className="hero-fullbleed-img"
-        src="https://images.unsplash.com/photo-1758518730037-a16581a040e8?auto=format&fit=crop&q=80&w=1200"
-        srcSet="https://images.unsplash.com/photo-1758518730037-a16581a040e8?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1758518730037-a16581a040e8?auto=format&fit=crop&q=80&w=1200 1200w, https://images.unsplash.com/photo-1758518730037-a16581a040e8?auto=format&fit=crop&q=80&w=2400 2400w"
+        src="https://images.unsplash.com/photo-1624555130581-1d9cca783bc0?auto=format&fit=crop&q=80&w=1200"
+        srcSet="https://images.unsplash.com/photo-1624555130581-1d9cca783bc0?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1624555130581-1d9cca783bc0?auto=format&fit=crop&q=80&w=1200 1200w, https://images.unsplash.com/photo-1624555130581-1d9cca783bc0?auto=format&fit=crop&q=80&w=2400 2400w"
         sizes="(max-width: 640px) 100vw, (max-width: 1200px) 100vw, 2400px"
-        alt="A board of advisors meeting around a conference table, one advisor standing to address the group during an active working session."
+        alt="A table of small business owners in a working meeting, business casual attire, gathered around a long wood table with coffee cups and laptops."
         loading="eager"
       />
       <div className="hero-fullbleed-scrim" />
