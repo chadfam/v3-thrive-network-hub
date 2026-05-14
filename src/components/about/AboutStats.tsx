@@ -25,11 +25,11 @@ const AboutStats = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          One network. <span className="text-brand-blue ppx-italic">Many doors in</span>.
+          One <span className="text-brand-blue ppx-italic">WEcosystem</span>. Many doors in.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          United To Thrive LLC owns and operates a connected suite of programs and platforms. Each one was built or acquired to play a specific role in the network. Each one runs on the same referral engine underneath.
+          United to Thrive runs as a connected WEcosystem of programs and platforms. Each one was built or acquired to play a specific role. Each one runs on the same referral engine underneath.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-10 md:gap-8">

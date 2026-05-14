@@ -50,11 +50,11 @@ const AboutCompanies = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          The companies <span className="text-brand-blue ppx-italic">inside</span>.
+          Inside the <span className="text-brand-blue ppx-italic">WEcosystem</span>.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          United To Thrive LLC owns and operates the programs and platforms below. Each was built or acquired to play a specific role in the network.
+          United to Thrive runs as a connected WEcosystem of programs and platforms. Each one was built or acquired to play a specific role in the network, and each one runs on the same referral engine underneath.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 text-left">
@@ -95,7 +95,7 @@ const AboutCompanies = () => {
         </div>
 
         <p className="mt-10 mx-auto max-w-[640px] italic text-[14px] text-[hsl(var(--slate-500))]">
-          Trademarks of United To Thrive LLC. The network grows as new programs come into the family.
+          Trademarks of United To Thrive LLC. The WEcosystem grows as new programs come into the family.
         </p>
       </div>
     </section>
