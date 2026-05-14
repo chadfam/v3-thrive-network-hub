@@ -35,7 +35,7 @@ const tiles = [
 
 const FullNetwork = () => {
   return (
-    <section id="for-businesses" className="scroll-mt-24 bg-white border-t border-slate-ink/10">
+    <section id="for-businesses" className="scroll-mt-24 bg-[hsl(220_30%_98%)] border-t border-slate-ink/10">
       <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
         <h2
           className="font-serif-display text-slate-ink mx-auto max-w-[820px]"

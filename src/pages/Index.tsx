@@ -1,8 +1,7 @@
 import Layout from "@/components/site/Layout";
 import Hero from "@/components/site/Hero";
-import Argument from "@/components/site/Argument";
 import WhyFamilies from "@/components/site/WhyFamilies";
-import ThreePaths from "@/components/site/ThreePaths";
+import Argument from "@/components/site/Argument";
 import FullNetwork from "@/components/site/FullNetwork";
 import HowWer1Works from "@/components/site/HowWer1Works";
 import NextStep from "@/components/site/NextStep";
@@ -16,7 +15,6 @@ const Index = () => (
     <Hero />
     <WhyFamilies />
     <Argument />
-    <ThreePaths />
     <FullNetwork />
     <HowWer1Works />
     <NextStep />
