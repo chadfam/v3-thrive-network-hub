@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
-
-const rows = [
-  { tier: "Profit Partner", access: "Selected services on request, case-by-case" },
-  { tier: "Mastermind", access: "Selected services on request, case-by-case" },
-  { tier: "Inner Circle", access: "Full board of advisors, on-demand, every discipline" },
+const benefits = [
+  "Stop hunting for the right marketer, accountant, or operator",
+  "Set pricing visible on the platform before any work begins",
+  "Request the service, the right person picks up",
+  "Consistent quality across every discipline",
+  "Time back to do the part only you can do",
 ];
 
 const CCAccess = () => {
@@ -20,28 +20,20 @@ const CCAccess = () => {
                 letterSpacing: "-0.025em",
               }}
             >
-              How to access <span className="text-brand-blue ppx-italic">Command Central</span>.
+              What changes with a <span className="text-brand-blue ppx-italic">board</span>.
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Command Central is included at the Inner Circle tier of Profit Partners. Members at that tier have on-demand access across all five disciplines without per-engagement upcharges from the network.
+              You stop hunting for the right marketer, accountant, lawyer, or operator. You stop comparing four quotes and hoping. You stop paying retail at a name-brand firm just because at least they'll show up.
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Specific partners may carry their own service fees. Those are pre-priced and visible inside the platform before any work begins.
+              You request the service through the platform. The right person picks up. The pricing is visible before any work begins. The work gets done by someone we've personally worked with.
             </p>
 
-            <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              At Profit Partner and Mastermind tiers, individual services can be requested on a case-by-case basis. The full board of advisors unlocks at Inner Circle.
+            <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">
+              Less time guessing. More time building.
             </p>
-
-            <Link
-              to="/profit-partners"
-              className="group mt-10 inline-flex items-center text-[15px] font-semibold text-brand-blue"
-            >
-              See more on Profit Partners
-              <span aria-hidden className="ml-2 transition-transform group-hover:translate-x-1">→</span>
-            </Link>
           </div>
 
           <div>
@@ -49,25 +41,19 @@ const CCAccess = () => {
               className="rounded-2xl bg-white p-7 sm:p-9 md:p-10"
               style={{ border: "1px solid #E0E3E7" }}
             >
-              <p className="text-[13px] font-medium uppercase tracking-[0.18em] text-[hsl(var(--slate-500))]">
-                Command Central access by tier
-              </p>
-              <div className="mt-7">
-                {rows.map((r, i) => (
-                  <div
-                    key={r.tier}
-                    className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-1 sm:gap-4 py-5"
-                    style={i > 0 ? { borderTop: "1px solid #E0E3E7" } : undefined}
-                  >
-                    <span className="font-serif-display text-[18px] md:text-[20px] text-slate-ink leading-snug">
-                      {r.tier}
+              <h3 className="font-serif-display text-[22px] md:text-[24px] text-slate-ink leading-tight">
+                What you get back
+              </h3>
+              <ul className="mt-7 space-y-5">
+                {benefits.map((b) => (
+                  <li key={b} className="flex items-start gap-3">
+                    <span aria-hidden className="bullet-dot" />
+                    <span className="text-[16px] md:text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
+                      {b}
                     </span>
-                    <span className="text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
-                      {r.access}
-                    </span>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
         </div>

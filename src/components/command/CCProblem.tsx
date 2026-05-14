@@ -24,11 +24,11 @@ const CCProblem = () => {
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Command Central is the response. Your own board of advisors, experts, and service providers across the disciplines you actually need. Each one is accountable to the network because their next referral depends on the last one going well.
+              Command Central is the response. Your own board of advisors, experts, and service providers across the disciplines you actually need. Every one of them is someone we've personally worked with.
             </p>
 
             <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">
-              Skin in the game on both sides.
+              The right people. Already trusted.
             </p>
           </div>
 

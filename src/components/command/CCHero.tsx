@@ -19,10 +19,7 @@ const CCHero = () => {
             A board of advisors. Not a vendor list.
           </h1>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[540px]">
-            Command Central is your own board of advisors, experts, and service providers underneath Profit Partners. Pre-vetted, with set pricing, across five disciplines and thirty-plus services.
-          </p>
-          <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[540px]">
-            Each one is accountable to the network because their next referral depends on the last one going well. So you stop guessing who to trust.
+            You stop guessing who to trust. Command Central is your own board of advisors, experts, and service providers underneath Profit Partners. Pre-vetted, with set pricing, across every discipline you need.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
