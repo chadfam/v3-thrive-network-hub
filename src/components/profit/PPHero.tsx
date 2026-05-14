@@ -17,7 +17,7 @@ const PPHero = () => {
             The <span className="ppx-italic">working alliance</span>.
           </h1>
           <p className="mt-8 max-w-[540px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            A working alliance of business owners building predictable referral revenue together. The only program in the United to Thrive network you apply to directly. Everything else opens up once you're in.
+            A working alliance of business owners building predictable referral revenue together. The single application that opens the rest of the WEcosystem.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="/apply" className="btn-primary">

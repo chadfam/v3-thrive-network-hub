@@ -1,26 +1,50 @@
+import heroMastermind from "@/assets/hero-mastermind.jpg";
+
 const PPJoining = () => {
   return (
-    <section className="bg-background">
-      <div className="mx-auto max-w-[760px] px-6 sm:px-8 md:px-10 py-16 md:py-32 text-center">
-        <span className="block mx-auto section-accent" aria-hidden />
-        <h2 className="mt-10 font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-          What you're joining.
-        </h2>
-        <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Profit Partners is a structured referral alliance. Members commit annually. They show up to monthly masterminds. They build co-marketing campaigns together. They send each other deal flow.
-        </p>
-        <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Each tier opens up more of the network and more of the operating support that makes the introductions actually convert.
-        </p>
-        <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          The premise is simple. Most owners spend more on customer acquisition than they need to because they haven't built a working referral system.
-        </p>
-        <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          We built the alliance, the playbooks, and the platform. You bring the business.
-        </p>
-        <p className="mt-10 font-serif-display italic text-slate-ink" style={{ fontSize: "clamp(1.25rem, 2.4vw, 1.5rem)" }}>
-          This is where the network's other programs become available to you.
-        </p>
+    <section className="bg-brand-blue/5 border-t border-slate-ink/10">
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <h2
+              className="font-serif-display text-slate-ink"
+              style={{
+                fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.025em",
+              }}
+            >
+              What you're <span className="text-brand-blue ppx-italic">joining</span>.
+            </h2>
+
+            <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              A working alliance of complementary owners. Members commit annually. Monthly masterminds. Co-marketing campaigns. Deal flow that compounds across the room.
+            </p>
+
+            <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              Each tier opens more of the alliance — the rooms, the bench, the introductions. The premise is simple. Most owners spend more on customer acquisition than they need to because they haven't built a working referral system.
+            </p>
+
+            <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              We built the alliance, the playbooks, and the platform. You bring the business.
+            </p>
+
+            <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">
+              Apply once. The rest of the WEcosystem opens up from there.
+            </p>
+          </div>
+
+          <div>
+            <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
+              <img
+                src={heroMastermind}
+                alt="Business owners in a mastermind session around a wooden table in warm daylight."
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -29,7 +29,7 @@ const PPPhoenix = () => {
         <div>
           <p className="text-[13px] font-medium tracking-[0.14em] uppercase text-[hsl(var(--slate-500))]">THE FIRST CHAPTER</p>
           <h2 className="mt-6 font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-            What the Phoenix room actually looks like.
+            What the <span className="text-brand-blue ppx-italic">Phoenix room</span> actually looks like.
           </h2>
           <p className="mt-8 max-w-[540px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
             Phoenix is the original Profit Partners chapter, and the first market where the full network is operating end to end.

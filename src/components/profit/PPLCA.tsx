@@ -11,7 +11,7 @@ const PPLCA = () => {
         <div>
           <p className="text-[13px] font-medium tracking-[0.14em] uppercase text-[hsl(var(--slate-500))]">INCLUDED AT EVERY TIER</p>
           <h2 className="mt-6 font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-            The Lifetime Client Agency™ system, explained.
+            The Lifetime Client Agency™ system, <span className="text-brand-blue ppx-italic">explained</span>.
           </h2>
           <p className="mt-8 max-w-[540px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
             Most businesses spend years acquiring clients and then quietly let those relationships fade. The Lifetime Client Agency™ system is the operating playbook for not doing that.

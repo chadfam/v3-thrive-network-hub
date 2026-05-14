@@ -11,7 +11,7 @@ const PPApplication = () => {
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
         <div className="text-center max-w-[760px] mx-auto">
           <h2 className="font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-            How the application works.
+            How the <span className="text-brand-blue ppx-italic">application</span> works.
           </h2>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
             Membership is by application. We review every one. The process is structured so that both sides know whether the fit is right before any commitment.

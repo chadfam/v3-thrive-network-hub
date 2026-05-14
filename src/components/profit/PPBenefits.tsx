@@ -79,10 +79,10 @@ const PPBenefits = () => {
             EVERYTHING THAT'S INCLUDED
           </p>
           <h2 className="mt-6 font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-            One alliance.<br />Built around your business.
+            One <span className="text-brand-blue ppx-italic">alliance</span>.<br />Built around your business.
           </h2>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Profit Partners is one program with one purpose: build a referral-driven business that compounds. The benefits below are the full menu of what the alliance brings. We work with you on a private call to fit the right blend to your stage, market, and goals.
+            Profit Partners exists for one purpose: build a referral-driven business that compounds. The benefits below are the full menu of what the alliance brings. We work with you on a private call to fit the right blend to your stage, market, and goals.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ const PPBenefits = () => {
 
         <div className="mt-16 md:mt-20 mx-auto max-w-[680px] text-center">
           <h3 className="font-serif-display text-slate-ink" style={{ fontSize: "clamp(1.6rem, 3vw, 2.25rem)", lineHeight: 1.1 }}>
-            We customize the program to fit your business.
+            We customize the alliance to fit your business.
           </h3>
           <p className="mt-6 text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
             Every Profit Partner relationship is shaped on a private call. We talk through where you are, what you need, and what makes sense to invest in.
