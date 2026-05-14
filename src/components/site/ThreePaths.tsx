@@ -1,23 +1,23 @@
-const steps = [
+const feel = [
   {
-    num: "01",
-    name: "Find your people",
-    body: "Apply once. We match you to the role that fits: owner, leader, expert, or cause. One front door, multiple paths.",
+    letter: "F",
+    name: "Families",
+    body: "Find trusted people, businesses, experts, and experiences that strengthen real life at home. Save and earn for sharing what you already love.",
   },
   {
-    num: "02",
-    name: "Build real connection",
-    body: "Monthly masterminds, neighborhood gatherings, family events, expert content. The trust-based work that the internet stopped doing for you.",
+    letter: "E",
+    name: "Entrepreneurs",
+    body: "Grow through the families who already trust you and the partners who serve them, instead of ad spend you can't control.",
   },
   {
-    num: "03",
-    name: "Strengthen the families you serve",
-    body: "FAM Central is where families are already looking for what you offer. Your business, your wisdom, your cause shows up there.",
+    letter: "E",
+    name: "Experts",
+    body: "Reach the audience your work was built for. Get rewarded for the impact, not just the impressions.",
   },
   {
-    num: "04",
-    name: "Grow as the network grows",
-    body: "Every introduction strengthens the people on both ends of it. The platform pays the chain that made it happen, automatically.",
+    letter: "L",
+    name: "Love (Charities)",
+    body: "Causes and community organizations monetize their reach by recommending the people and resources families already need.",
   },
 ];
 
@@ -33,27 +33,27 @@ const ThreePaths = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          Four steps. <span className="text-brand-blue ppx-italic">Many ways in</span>.
+          Four audiences inside <span className="text-brand-blue ppx-italic">F.E.E.L.</span>
         </h2>
 
-        <p className="mt-8 mx-auto max-w-[640px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          A clear path from wherever you are now into a community built on family, partnership, and shared growth.
+        <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
+          F.E.E.L. is the framework underneath everything we make. Four audiences, one community, aligned around the people they all share.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 text-left">
-          {steps.map((s) => (
+          {feel.map((f) => (
             <article
-              key={s.num}
+              key={f.name}
               className="rounded-2xl bg-white p-7 md:p-8 border border-slate-ink/10 flex flex-col"
             >
-              <span className="font-serif-display text-brand-blue text-[18px] tracking-tight">
-                {s.num}
+              <span className="font-serif-display text-brand-blue text-[40px] md:text-[48px] leading-none tracking-tight">
+                {f.letter}
               </span>
               <h3 className="mt-5 font-serif-display text-[20px] md:text-[22px] leading-tight text-slate-ink">
-                {s.name}
+                {f.name}
               </h3>
               <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
-                {s.body}
+                {f.body}
               </p>
             </article>
           ))}

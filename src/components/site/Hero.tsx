@@ -56,7 +56,7 @@ const Hero = () => {
             </h1>
 
             <p className="mt-7 max-w-[520px] text-[15px] md:text-[16px] leading-[1.65] text-[hsl(var(--slate-700))]">
-              A community of values-aligned owners, leaders, and experts serving the families they care about most. Built for the people who'd rather earn a reputation than rent attention.
+              A community of values-aligned owners, leaders, and experts serving the families they care about most. For everyone who'd rather earn a reputation than rent attention.
             </p>
 
             <div className="mt-9">

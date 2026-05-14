@@ -30,7 +30,7 @@ const Outro = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          Help families <span className="text-brand-blue ppx-italic">F.E.E.L.</span> again.
+          Step into something <span className="text-brand-blue ppx-italic">better</span>.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">

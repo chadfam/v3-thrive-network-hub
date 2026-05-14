@@ -1,15 +1,15 @@
-const stats = [
+const values = [
   {
-    value: "F.E.E.L.",
-    label: "Families, Entrepreneurs, Experts, Love. The four audiences we align.",
+    name: "Family First",
+    body: "Every decision is judged by whether it strengthens families and the relationships that hold them together.",
   },
   {
-    value: "20+",
-    label: "Years of family-first leadership behind the WEcosystem.",
+    name: "Connection over addiction",
+    body: "We design for real experiences and meaningful participation, not the endless scroll.",
   },
   {
-    value: "0",
-    label: "Algorithms standing between you and the people who already trust you.",
+    name: "Ownership over consumption",
+    body: "Families and owners show up as contributors, leaders, and creators. Not passive consumers.",
   },
 ];
 
@@ -25,24 +25,25 @@ const Argument = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          More than a network. <span className="text-brand-blue ppx-italic">A movement</span>.
+          Help families <span className="text-brand-blue ppx-italic">F.E.E.L.</span> again.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          We started United to Thrive because the ad-driven internet stopped working for the people it was supposed to serve. Owners are renting attention from their own customers. Families are losing dinner-table conversation to a feed. We're a movement for everyone who'd rather build something that matters.
+          United to Thrive is a family-first community platform connecting the people, businesses, experts, and causes who help families thrive. We started this because the ad-driven internet has been quietly making families more alone, distracted, and divided. We don't think that's how this is supposed to go.
         </p>
 
-        <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-10 md:gap-8">
-          {stats.map((s) => (
-            <div key={s.value}>
-              <p
-                className="font-serif-display text-brand-blue leading-none"
-                style={{ fontSize: "clamp(2.5rem, 5.5vw, 4.25rem)", letterSpacing: "-0.02em" }}
-              >
-                {s.value}
+        <p className="mt-6 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
+          So we made something different. A WEcosystem that aligns Families, Entrepreneurs, Experts, and Love (Charities) around the work of making real life better. F.E.E.L. is the framework. Movement is the goal.
+        </p>
+
+        <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-8 md:gap-10 text-left">
+          {values.map((v) => (
+            <div key={v.name} className="border-t border-brand-blue/30 pt-6">
+              <p className="font-serif-display text-brand-blue text-[22px] md:text-[26px] leading-tight">
+                {v.name}
               </p>
-              <p className="mt-4 mx-auto max-w-[260px] text-[14px] md:text-[15px] leading-relaxed text-[hsl(var(--slate-700))]">
-                {s.label}
+              <p className="mt-3 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
+                {v.body}
               </p>
             </div>
           ))}
