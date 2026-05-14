@@ -49,7 +49,7 @@ const FullNetwork = () => {
         </h2>
 
         <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          Three core programs for businesses. Three leadership roles for connectors and coaches. One referral engine underneath all of it, aligning families, entrepreneurs, experts, and causes.
+          Three core programs for owners. Three roles for the leaders and experts who serve them. One platform underneath all of it.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 text-left">

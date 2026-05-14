@@ -1,15 +1,15 @@
 const stats = [
   {
-    value: "1",
-    label: "Movement, not a marketing campaign. Connection over attention.",
+    value: "F.E.E.L.",
+    label: "Families, Entrepreneurs, Experts, Love. The four audiences we align.",
   },
   {
     value: "20+",
     label: "Years of family-first leadership behind the WEcosystem.",
   },
   {
-    value: "F.E.E.L.",
-    label: "Families, Entrepreneurs, Experts, Love. The four audiences we serve.",
+    value: "0",
+    label: "Algorithms standing between you and the people who already trust you.",
   },
 ];
 
@@ -29,7 +29,7 @@ const Argument = () => {
         </h2>
 
         <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          We built United to Thrive because families today feel disconnected and overwhelmed, business owners feel like they're renting attention from their own customers, and the platforms in between have stopped working for both. We're not another ad-driven app. We're a WEcosystem helping people F.E.E.L. again.
+          We started United to Thrive because the ad-driven internet stopped working for the people it was supposed to serve. Owners are renting attention from their own customers. Families are losing dinner-table conversation to a feed. We're a movement for everyone who'd rather build something that matters.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-10 md:gap-8">

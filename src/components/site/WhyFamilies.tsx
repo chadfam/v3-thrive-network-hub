@@ -25,7 +25,7 @@ const WhyFamilies = () => {
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              United to Thrive exists because the ad-driven internet stopped working for the people it was supposed to serve. Families feel more alone. Owners feel more invisible. Experts feel buried. Causes feel like an afterthought. We built a different kind of platform for all of them.
+              Most platforms optimize attention, transactions, or addiction. We exist for everyone they leave behind: the people whose work, presence, and reputation deserve more than an algorithm's leftover impressions.
             </p>
 
             <ul className="mt-10 space-y-4 max-w-[560px]">

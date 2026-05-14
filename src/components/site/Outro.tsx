@@ -34,7 +34,7 @@ const Outro = () => {
         </h2>
 
         <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          You weren't meant to build alone. Step into the WEcosystem where your business grows, your relationships deepen, and your work strengthens the families you serve.
+          You weren't meant to do this alone. Step in where your business grows, your relationships deepen, and your work strengthens the families you serve.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">

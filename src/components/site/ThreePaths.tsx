@@ -2,7 +2,7 @@ const steps = [
   {
     num: "01",
     name: "Find your people",
-    body: "Apply once, and we match you to the WEcosystem role that fits: business owner, community leader, expert, or cause. One front door, many ways in.",
+    body: "Apply once. We match you to the role that fits: owner, leader, expert, or cause. One front door, multiple paths.",
   },
   {
     num: "02",
@@ -12,7 +12,7 @@ const steps = [
   {
     num: "03",
     name: "Strengthen the families you serve",
-    body: "FAM Central is the consumer side of the WEcosystem. Your business, your wisdom, your cause shows up where families are already looking for it.",
+    body: "FAM Central is where families are already looking for what you offer. Your business, your wisdom, your cause shows up there.",
   },
   {
     num: "04",
@@ -33,11 +33,11 @@ const ThreePaths = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          Four steps. One WEcosystem. <span className="text-brand-blue ppx-italic">Real connection</span>.
+          Four steps. <span className="text-brand-blue ppx-italic">Many ways in</span>.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[640px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          A clear path from wherever you are now into a network built on family, partnership, and shared growth.
+          A clear path from wherever you are now into a community built on family, partnership, and shared growth.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 text-left">
