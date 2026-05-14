@@ -1,29 +1,59 @@
+import heroFamily from "@/assets/hero-family.jpg";
+
+const bullets = [
+  "The realtor whose neighbors text her about contractors. The pediatrician's wife who runs the school auction every year.",
+  "The coach whose pastoral work is closer to family coaching than they admit. The educator who naturally runs family workshops on the side.",
+  "The author or speaker whose audience already trusts them on parenting, faith, finance, or relationships.",
+];
+
 const LeadWhy = () => {
   return (
-    <section className="bg-background">
-      <div className="mx-auto max-w-[760px] px-6 sm:px-8 md:px-10 py-16 md:py-32 text-center">
-        <div className="mx-auto mb-10 section-accent" />
-        <h2 className="font-serif-display tracking-section text-slate-ink" style={{ fontSize: "clamp(1.75rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-          Why we built this for leaders.
-        </h2>
-        <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          The work of strengthening families used to happen in church basements, school PTAs, and around the kitchen table. It still does.
-        </p>
-        <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          But the connectors who hold those rooms together usually do it for free, on the side, while their day jobs absorb most of their attention. The people best at building community end up with the least time to build it.
-        </p>
-        <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          United to Thrive is the network behind that work.
-        </p>
-        <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Local Leaders get paid to do what they're already doing in their area. FAM Guides get paid to help families feel more connected. Expert Faculty get paid for the knowledge they've already spent decades building.
-        </p>
-        <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          WER1 attributes every connection back to its source, so the right people earn from the right introductions.
-        </p>
-        <p className="mt-10 font-serif-display italic text-slate-ink text-[20px] md:text-[24px] leading-snug">
-          If your work already looks like this, the question is whether to keep doing it on the side or step into it.
-        </p>
+    <section className="bg-white border-t border-slate-ink/10">
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <h2
+              className="font-serif-display text-slate-ink"
+              style={{
+                fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.025em",
+              }}
+            >
+              The work you're <span className="text-brand-blue ppx-italic">already doing</span>, now a position.
+            </h2>
+
+            <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              The work of strengthening families used to happen in church basements, school PTAs, and around the kitchen table. It still does. The connectors who hold those rooms together usually do it for free, on the side.
+            </p>
+
+            <ul className="mt-10 space-y-4 max-w-[560px]">
+              {bullets.map((b) => (
+                <li key={b} className="flex items-start gap-3">
+                  <span aria-hidden className="bullet-dot" />
+                  <span className="text-[16px] md:text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
+                    {b}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[20px] leading-snug max-w-[560px]">
+              If your work already looks like this, the question is whether to keep doing it on the side or step into it.
+            </p>
+          </div>
+
+          <div>
+            <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
+              <img
+                src={heroFamily}
+                alt="A family together at home in soft daylight, the people leaders serve."
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
