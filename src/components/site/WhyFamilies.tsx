@@ -25,7 +25,7 @@ const WhyFamilies = () => {
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Most platforms optimize attention, transactions, or addiction. We exist for everyone they leave behind: the people whose work, presence, and reputation deserve more than an algorithm's leftover impressions.
+              We replaced paid attention with real partnerships. Owners get recommended by the families they already serve. Leaders become the trusted connector in their area. Experts reach the audience their work was built for. Causes monetize community by recommending what families already need.
             </p>
 
             <ul className="mt-10 space-y-4 max-w-[560px]">

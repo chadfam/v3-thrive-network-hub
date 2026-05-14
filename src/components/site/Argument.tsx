@@ -29,11 +29,11 @@ const Argument = () => {
         </h2>
 
         <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          United to Thrive is a family-first community platform connecting the people, businesses, experts, and causes who help families thrive. We started this because the ad-driven internet has been quietly making families more alone, distracted, and divided. We don't think that's how this is supposed to go.
+          United to Thrive is a family-first community connecting business owners, community leaders, and trusted experts to the families they serve.
         </p>
 
         <p className="mt-6 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          So we made something different. A WEcosystem that aligns Families, Entrepreneurs, Experts, and Love (Charities) around the work of making real life better. F.E.E.L. is the framework. Movement is the goal.
+          It runs on real partnerships. Profit Partners is the alliance where complementary owners actively recommend each other. Local Leaders are the trusted connector in your area, one per industry. FAM Guides coach families through the FAM Plan. Expert Faculty bring distributed wisdom. Team Wellness Hub takes care of the team behind every business. Every introduction strengthens the people on both sides.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-8 md:gap-10 text-left">
