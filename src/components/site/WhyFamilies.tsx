@@ -1,10 +1,10 @@
 import roomMastermind from "@/assets/room-mastermind.jpg";
 
 const items = [
-  "Real partnerships, not LinkedIn connections.",
-  "Active referrals, not passive directories.",
-  "Co-marketing campaigns, not solo grinding.",
-  "Family champions, not faceless leads.",
+  "Families who feel disconnected, distracted, and pulled apart by screens.",
+  "Owners who'd rather build reputation than rent attention.",
+  "Experts whose work changes lives but gets buried by algorithms.",
+  "Causes that need community, not another corporate logo.",
 ];
 
 const WhyFamilies = () => {
@@ -21,11 +21,11 @@ const WhyFamilies = () => {
                 letterSpacing: "-0.025em",
               }}
             >
-              Built on <span className="text-brand-blue ppx-italic">real recommendations</span>, not transactions.
+              Built for the people <span className="text-brand-blue ppx-italic">the algorithm forgot</span>.
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              United to Thrive is a private network of values-aligned businesses, community leaders, and trusted experts who actively recommend each other to the families they already serve. A customer who recommends you to three other parents in the school pickup line beats ten Facebook clicks every time.
+              United to Thrive exists because the ad-driven internet stopped working for the people it was supposed to serve. Families feel more alone. Owners feel more invisible. Experts feel buried. Causes feel like an afterthought. We built a different kind of platform for all of them.
             </p>
 
             <ul className="mt-10 space-y-4 max-w-[560px]">
@@ -40,7 +40,7 @@ const WhyFamilies = () => {
             </ul>
 
             <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[20px] leading-snug max-w-[560px]">
-              A movement, not a marketing campaign. Connection over attention.
+              A customer who recommends you to three other parents in the school pickup line beats ten Facebook clicks every time.
             </p>
           </div>
 

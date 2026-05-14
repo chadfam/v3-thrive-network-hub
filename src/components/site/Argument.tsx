@@ -1,15 +1,15 @@
 const stats = [
   {
-    value: "3-5x",
-    label: "Higher close rate from referred leads vs. cold outreach.",
+    value: "1",
+    label: "Movement, not a marketing campaign. Connection over attention.",
   },
   {
-    value: "92%",
-    label: "Of buyers trust personal recommendations above any other form of marketing.",
+    value: "20+",
+    label: "Years of family-first leadership behind the WEcosystem.",
   },
   {
-    value: "$0",
-    label: "Ad spend required to grow when families recommend you by name.",
+    value: "F.E.E.L.",
+    label: "Families, Entrepreneurs, Experts, Love. The four audiences we serve.",
   },
 ];
 
@@ -25,11 +25,11 @@ const Argument = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          You don't have a <span className="text-brand-blue ppx-italic">lead problem</span>. You have a referral problem.
+          More than a network. <span className="text-brand-blue ppx-italic">A movement</span>.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          Most owners burn cash on ads they don't control, chase algorithms that change overnight, and join networking groups that never turn into real revenue. United to Thrive is the WEcosystem behind the owners who stopped buying attention and started getting recommended.
+          We built United to Thrive because families today feel disconnected and overwhelmed, business owners feel like they're renting attention from their own customers, and the platforms in between have stopped working for both. We're not another ad-driven app. We're a WEcosystem helping people F.E.E.L. again.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-10 md:gap-8">
@@ -37,7 +37,7 @@ const Argument = () => {
             <div key={s.value}>
               <p
                 className="font-serif-display text-brand-blue leading-none"
-                style={{ fontSize: "clamp(3rem, 6vw, 4.5rem)", letterSpacing: "-0.02em" }}
+                style={{ fontSize: "clamp(2.5rem, 5.5vw, 4.25rem)", letterSpacing: "-0.02em" }}
               >
                 {s.value}
               </p>

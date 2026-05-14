@@ -37,12 +37,18 @@ const Outro = () => {
           You weren't meant to build alone. Step into the WEcosystem where your business grows, your relationships deepen, and your work strengthens the families you serve.
         </p>
 
-        <div className="mt-10">
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Link
             to="/apply"
             className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-brand-blue text-white text-[15px] font-semibold tracking-tight hover:bg-brand-blue/90 transition-colors shadow-sm"
           >
             Apply to Profit Partners
+          </Link>
+          <Link
+            to="/about#meet-the-team"
+            className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-white text-slate-ink text-[15px] font-semibold border-2 border-slate-ink/15 hover:border-brand-blue hover:text-brand-blue transition-colors"
+          >
+            Meet the team
           </Link>
         </div>
       </div>

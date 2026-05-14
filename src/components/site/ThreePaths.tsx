@@ -1,23 +1,23 @@
 const steps = [
   {
     num: "01",
-    name: "Strategic partner matching",
-    body: "We map your ideal client and connect you with values-aligned businesses already serving them. Every match is intentional, never random.",
+    name: "Find your people",
+    body: "Apply once, and we match you to the WEcosystem role that fits: business owner, community leader, expert, or cause. One front door, many ways in.",
   },
   {
     num: "02",
-    name: "Co-marketing campaigns",
-    body: "Coordinated email, social, and event marketing across partners. Your message reaches their audience. Their message reaches yours. Everyone wins.",
+    name: "Build real connection",
+    body: "Monthly masterminds, neighborhood gatherings, family events, expert content. The trust-based work that the internet stopped doing for you.",
   },
   {
     num: "03",
-    name: "Your referral playbook",
-    body: "A custom strategy document showing exactly who to partner with, how to approach each conversation, and how to turn relationships into recurring revenue.",
+    name: "Strengthen the families you serve",
+    body: "FAM Central is the consumer side of the WEcosystem. Your business, your wisdom, your cause shows up where families are already looking for it.",
   },
   {
     num: "04",
-    name: "Community activation",
-    body: "Quarterly masterminds, monthly partner intros, classes and clubs that bring your community together around your business.",
+    name: "Grow as the network grows",
+    body: "Every introduction strengthens the people on both ends of it. The platform pays the chain that made it happen, automatically.",
   },
 ];
 
@@ -33,11 +33,11 @@ const ThreePaths = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          Four steps. One year. <span className="text-brand-blue ppx-italic">Real growth</span>.
+          Four steps. One WEcosystem. <span className="text-brand-blue ppx-italic">Real connection</span>.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[640px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          A clear path from where you are now to consistent, predictable referrals from partners who share your values.
+          A clear path from wherever you are now into a network built on family, partnership, and shared growth.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 text-left">
