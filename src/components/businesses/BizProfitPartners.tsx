@@ -68,7 +68,7 @@ const BizProfitPartners = () => {
           <div>
             <div className="relative w-full">
               <svg
-                viewBox="0 0 500 420"
+                viewBox="-50 -50 600 520"
                 className="w-full h-auto"
                 role="img"
                 aria-label="Hub-and-spoke diagram with the homeowner at the center and six professional roles around the edge, each connected to the center by a line."
