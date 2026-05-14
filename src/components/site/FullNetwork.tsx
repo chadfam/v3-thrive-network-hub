@@ -49,7 +49,7 @@ const FullNetwork = () => {
         </h2>
 
         <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          Six core programs across the WEcosystem, plus three solutions that sit alongside. A connected network of partnerships, roles, and tools serving owners, leaders, experts, and the families they all share.
+          Grow through real partnerships. Get paid for the work you already do. Reach the families who already trust you.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 text-left">
