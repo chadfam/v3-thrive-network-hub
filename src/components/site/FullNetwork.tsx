@@ -35,7 +35,7 @@ const tiles = [
 
 const FullNetwork = () => {
   return (
-    <section id="for-businesses" className="scroll-mt-24 bg-[hsl(220_30%_98%)] border-t border-slate-ink/10">
+    <section id="for-businesses" className="scroll-mt-24 bg-brand-blue/5 border-t border-slate-ink/10">
       <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
         <h2
           className="font-serif-display text-slate-ink mx-auto max-w-[820px]"
@@ -48,8 +48,8 @@ const FullNetwork = () => {
           Inside the <span className="text-brand-blue ppx-italic">WEcosystem</span>.
         </h2>
 
-        <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          Three core programs for owners. Three roles for the leaders and experts who serve them. One platform underneath all of it.
+        <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
+          Six core programs across the WEcosystem, plus three solutions that sit alongside. A connected network of partnerships, roles, and tools serving owners, leaders, experts, and the families they all share.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 text-left">
