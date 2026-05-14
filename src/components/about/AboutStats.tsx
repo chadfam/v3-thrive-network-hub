@@ -1,15 +1,15 @@
 const stats = [
   {
-    value: "10",
-    label: "Programs and platforms operating inside the United to Thrive network.",
+    value: "4",
+    label: "Audiences inside F.E.E.L.: Families, Entrepreneurs, Experts, and Love (Charities).",
   },
   {
-    value: "8",
-    label: "Founding team members building, acquiring, and integrating the network.",
+    value: "10",
+    label: "Programs and platforms operating inside the WEcosystem.",
   },
   {
     value: "1",
-    label: "Referral platform underneath every program, paying everyone in the chain.",
+    label: "Movement, not a marketing campaign. Connection over attention.",
   },
 ];
 
@@ -25,11 +25,11 @@ const AboutStats = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          One <span className="text-brand-blue ppx-italic">WEcosystem</span>. Many doors in.
+          Four audiences. One <span className="text-brand-blue ppx-italic">WEcosystem</span>.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          United to Thrive runs as a connected WEcosystem of programs and platforms. Each one plays a specific role. Each one runs on the same referral engine underneath.
+          United to Thrive runs a connected WEcosystem organized around helping people F.E.E.L. again: Families, Entrepreneurs, Experts, and Love. Every program plays a specific role. Every program runs on the same referral engine underneath.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-10 md:gap-8">

@@ -1,23 +1,23 @@
-const principles = [
+const feel = [
   {
-    num: "01",
-    name: "The chain is the point.",
-    body: "Most networks pay one person per deal. We pay everyone in the chain that made the deal happen, so the chain holds together.",
+    letter: "F",
+    name: "Families",
+    body: "Parents and families seeking stronger connection, trusted resources, real-life experiences, and a community that helps them thrive together.",
   },
   {
-    num: "02",
-    name: "Reputation is a 20-year asset.",
-    body: "Marketing tactics depreciate the moment the algorithm changes. Reputation accumulates. Our owners think in decades, not quarters.",
+    letter: "E",
+    name: "Entrepreneurs",
+    body: "Business owners growing through trust, referrals, and loyal customers, instead of paying social platforms to rent attention from their own community.",
   },
   {
-    num: "03",
-    name: "Families are the math.",
-    body: "A customer who recommends you to three other parents at school pickup is worth more than ten Facebook clicks. We built the network around that arithmetic.",
+    letter: "E",
+    name: "Experts",
+    body: "Coaches, authors, speakers, and category leaders whose work helps families thrive, distributed across the WEcosystem instead of fighting an algorithm.",
   },
   {
-    num: "04",
-    name: "Movement, not campaigns.",
-    body: "We don't run marketing campaigns or pay influencers per post. We build connected economies where introductions move outward and the platform pays everyone the introduction touched.",
+    letter: "L",
+    name: "Love (Charities)",
+    body: "Nonprofits and mission-driven partners monetizing their community by recommending the businesses, experts, and experiences families already trust.",
   },
 ];
 
@@ -33,27 +33,27 @@ const AboutBeliefs = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          Four principles. <span className="text-brand-blue ppx-italic">One network</span>.
+          Helping people <span className="text-brand-blue ppx-italic">F.E.E.L.</span> again.
         </h2>
 
-        <p className="mt-8 mx-auto max-w-[640px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          The beliefs that show up in the way the network is built and the way it runs every day.
+        <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
+          F.E.E.L. is the framework the WEcosystem runs on. Four audiences aligned around connection, trust, transformation, and shared growth, instead of attention, transactions, or addiction.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 text-left">
-          {principles.map((p) => (
+          {feel.map((f) => (
             <article
-              key={p.num}
+              key={f.name}
               className="rounded-2xl bg-white p-7 md:p-8 border border-slate-ink/10 flex flex-col"
             >
-              <span className="font-serif-display text-brand-blue text-[18px] tracking-tight">
-                {p.num}
+              <span className="font-serif-display text-brand-blue text-[40px] md:text-[48px] leading-none tracking-tight">
+                {f.letter}
               </span>
               <h3 className="mt-5 font-serif-display text-[20px] md:text-[22px] leading-tight text-slate-ink">
-                {p.name}
+                {f.name}
               </h3>
               <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
-                {p.body}
+                {f.body}
               </p>
             </article>
           ))}

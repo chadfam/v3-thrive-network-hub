@@ -25,11 +25,11 @@ const AboutProvenSystem = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          A proven system. <span className="ppx-italic" style={{ color: "#FBBF24" }}>Twenty years deep</span>.
+          A movement. <span className="ppx-italic" style={{ color: "#FBBF24" }}>Not a marketing campaign</span>.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-white/85">
-          Our team has been building relationship-driven growth systems for two decades. United to Thrive brings that proven framework to every market we open, with the platforms underneath that make it run.
+          Our team has been building relationship-driven growth systems for two decades. United to Thrive brings that proven framework to every market we open, with the platforms underneath that make it run for families, entrepreneurs, experts, and causes alike.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-12 md:gap-8">

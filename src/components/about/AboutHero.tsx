@@ -47,11 +47,11 @@ const AboutHero = () => {
                 letterSpacing: "-0.025em",
               }}
             >
-              The network behind the businesses families <span className="text-brand-blue ppx-italic">recommend by name</span>.
+              A WEcosystem built to help families <span className="text-brand-blue ppx-italic">F.E.E.L.</span> again.
             </h1>
 
             <p className="mt-7 max-w-[520px] text-[15px] md:text-[16px] leading-[1.65] text-[hsl(var(--slate-700))]">
-              United to Thrive is the company behind Profit Partners, FAM Central, Local Leaders, and the WER1 referral platform. One connected WEcosystem of programs and platforms, all running on the same referral engine underneath.
+              United to Thrive is the company behind FAM Central, Profit Partners, Local Leaders, and the WER1 referral platform. One connected WEcosystem aligning Families, Entrepreneurs, Experts, and Love (Charities) around the work of strengthening real life together.
             </p>
 
             <div className="mt-9">

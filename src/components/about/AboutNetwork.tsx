@@ -1,10 +1,10 @@
 import roomMastermind from "@/assets/room-mastermind.jpg";
 
 const bullets = [
-  "Profit Partners had been running in Phoenix for years as a referral alliance for business owners.",
-  "WER1, the affiliate and referral platform, had been built independently and needed a home network big enough to run on.",
-  "FAM Central had been built around the principle that strong families build strong communities.",
-  "Local Leaders, FAM Guides, Mastermind Passport, and Command Central had been operating in separate rooms.",
+  "FAM Central is the safe place to social for families, where everyone finds trusted businesses, experts, experiences, and causes.",
+  "Profit Partners is the working alliance of business owners growing through partnerships and family recommendations.",
+  "WER1 is the referral and affiliate engine that quietly attributes every introduction and pays the right people.",
+  "Local Leaders, FAM Guides, Mastermind Passport, and Command Central round out the roles families and businesses use every day.",
 ];
 
 const AboutNetwork = () => {
@@ -21,11 +21,11 @@ const AboutNetwork = () => {
                 letterSpacing: "-0.025em",
               }}
             >
-              How the network <span className="text-brand-blue ppx-italic">came together</span>.
+              How the <span className="text-brand-blue ppx-italic">WEcosystem</span> came together.
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Most companies start with one product and add features. United to Thrive started with the opposite problem: a set of working programs that needed a single front door.
+              Most companies start with one product and add features. We started with the opposite problem: a set of mission-aligned platforms that each served part of the family-and-business story, with no shared front door.
             </p>
 
             <ul className="mt-10 space-y-4 max-w-[560px]">
@@ -40,7 +40,7 @@ const AboutNetwork = () => {
             </ul>
 
             <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[20px] leading-snug max-w-[560px]">
-              We put them under one roof. Introductions made in one program pay people in all the others.
+              One WEcosystem under one roof. Every introduction pays the chain that made it happen.
             </p>
           </div>
 

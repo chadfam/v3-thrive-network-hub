@@ -29,11 +29,11 @@ const AboutOutro = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          A network that pays the <span className="text-brand-blue ppx-italic">relationships</span> back.
+          Help families <span className="text-brand-blue ppx-italic">F.E.E.L.</span> again.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          Three ways in: as a business owner applying to Profit Partners, as a leader stepping into a paid role, or as a promoter sharing what you already love through WER1.
+          Step into the WEcosystem as a business owner growing through partnerships, as a leader serving your community, or as a promoter sharing what you already love. Every introduction strengthens the people on both ends of it.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">

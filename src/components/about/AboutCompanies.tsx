@@ -54,7 +54,7 @@ const AboutCompanies = () => {
         </h2>
 
         <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          United to Thrive runs as a connected WEcosystem of programs and platforms. Each one plays a specific role in the network, and each one runs on the same referral engine underneath.
+          The programs and platforms that serve the four F.E.E.L. audiences. Each one plays a specific role in the WEcosystem, and each one runs on the same referral engine underneath.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 text-left">
