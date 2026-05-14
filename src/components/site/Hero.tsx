@@ -3,70 +3,78 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section id="top" className="relative bg-white overflow-hidden">
-      <div className="relative mx-auto max-w-[1440px] grid lg:grid-cols-12 items-stretch min-h-[88vh]">
-        <div className="lg:col-span-6 xl:col-span-7 relative z-10 px-6 sm:px-10 md:px-16 lg:px-20 py-20 lg:py-32 flex flex-col justify-center">
-          <h1
-            className="font-serif-display text-slate-ink"
-            style={{
-              fontSize: "clamp(2.75rem, 6vw, 5rem)",
-              lineHeight: 1.02,
-              letterSpacing: "-0.03em",
-            }}
-          >
-            Where businesses become{" "}
-            <span className="text-brand-blue ppx-italic">famous for families</span>.
-          </h1>
+    <section
+      id="top"
+      className="relative bg-white overflow-hidden"
+      style={{ minHeight: "720px" }}
+    >
+      {/* Image bleeds to the right edge of the viewport */}
+      <div
+        aria-hidden
+        className="absolute top-0 bottom-0 right-0 hidden lg:block"
+        style={{ width: "48%" }}
+      >
+        <img
+          src={heroImg}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        />
+        {/* Left-edge fade into white */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 12%, rgba(255,255,255,0) 30%)",
+          }}
+        />
+      </div>
 
-          <p className="mt-8 max-w-[560px] text-[17px] md:text-[19px] leading-[1.6] text-[hsl(var(--slate-700))]">
-            A select network of values-aligned business leaders building trust, serving real families, and growing through referrals. The network behind the businesses families recommend by name.
-          </p>
+      {/* Mobile image: below text, stacked */}
+      <div className="lg:hidden">
+        <img
+          src={heroImg}
+          alt="Business owners around a wooden table in warm daylight."
+          className="w-full h-[260px] sm:h-[320px] object-cover"
+          loading="eager"
+        />
+      </div>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              to="/apply"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-brand-blue text-white text-[15px] font-semibold tracking-tight hover:bg-brand-blue/90 transition-colors shadow-sm"
+      <div className="relative mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 lg:px-20">
+        <div className="grid lg:grid-cols-12 items-center">
+          <div className="lg:col-span-7 py-16 lg:py-32">
+            <h1
+              className="font-serif-display text-slate-ink"
+              style={{
+                fontSize: "clamp(2.5rem, 5.5vw, 4.5rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.025em",
+              }}
             >
-              Apply to Profit Partners
-            </Link>
-            <Link
-              to="/businesses"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-white text-slate-ink text-[15px] font-semibold border-2 border-slate-ink/15 hover:border-brand-blue hover:text-brand-blue transition-colors"
-            >
-              See the network
-            </Link>
+              Where businesses become{" "}
+              <span className="text-brand-blue ppx-italic">famous for families</span>.
+            </h1>
+
+            <p className="mt-7 max-w-[520px] text-[15px] md:text-[16px] leading-[1.65] text-[hsl(var(--slate-700))]">
+              A select network of values-aligned business leaders building trust, serving real families, and growing through referrals. The network behind the businesses families recommend by name.
+            </p>
+
+            <div className="mt-9">
+              <Link
+                to="/apply"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-brand-blue text-white text-[14px] font-semibold tracking-tight hover:bg-brand-blue/90 transition-colors"
+              >
+                Apply to Profit Partners
+              </Link>
+            </div>
+
+            <p className="mt-8 text-[12px] tracking-wide text-[hsl(var(--slate-500))]">
+              Applications reviewed weekly. One per industry per market.
+            </p>
           </div>
 
-          <p className="mt-8 text-[13px] tracking-wide text-[hsl(var(--slate-500))]">
-            Applications reviewed weekly. One per industry per market.
-          </p>
-        </div>
-
-        <div className="lg:col-span-6 xl:col-span-5 relative min-h-[40vh] lg:min-h-0">
-          <img
-            src={heroImg}
-            alt="Business owners around a wooden table in warm daylight."
-            width={1200}
-            height={1440}
-            loading="eager"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div
-            aria-hidden
-            className="absolute inset-0 hidden lg:block"
-            style={{
-              background:
-                "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 15%, rgba(255,255,255,0) 35%)",
-            }}
-          />
-          <div
-            aria-hidden
-            className="absolute inset-0 lg:hidden"
-            style={{
-              background:
-                "linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgba(255,255,255,1) 100%)",
-            }}
-          />
+          {/* Spacer for desktop right column (the absolute-positioned image covers this area) */}
+          <div className="hidden lg:block lg:col-span-5" />
         </div>
       </div>
     </section>
