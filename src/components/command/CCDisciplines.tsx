@@ -18,7 +18,7 @@ const CCDisciplines = () => {
             Every discipline you <span className="text-brand-blue ppx-italic">need</span>.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Each discipline holds a curated set of vetted partners. Members request what they need through the platform and get matched directly.
+            Each discipline opens a curated set of advisors, experts, and service providers. Members request what they need through the platform and get matched directly.
           </p>
         </div>
         <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">

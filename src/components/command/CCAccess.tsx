@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const rows = [
   { tier: "Profit Partner", access: "Selected services on request, case-by-case" },
   { tier: "Mastermind", access: "Selected services on request, case-by-case" },
-  { tier: "Inner Circle", access: "Full bench, on-demand, all five disciplines" },
+  { tier: "Inner Circle", access: "Full board of advisors, on-demand, every discipline" },
 ];
 
 const CCAccess = () => {
@@ -32,7 +32,7 @@ const CCAccess = () => {
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              At Profit Partner and Mastermind tiers, individual services can be requested on a case-by-case basis. The full bench unlocks at Inner Circle.
+              At Profit Partner and Mastermind tiers, individual services can be requested on a case-by-case basis. The full board of advisors unlocks at Inner Circle.
             </p>
 
             <Link

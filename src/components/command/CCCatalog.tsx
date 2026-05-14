@@ -75,10 +75,10 @@ const CCCatalog = () => {
             className="font-serif-display text-slate-ink tracking-section"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}
           >
-            Inside the <span className="text-brand-blue ppx-italic">bench</span>.
+            Inside your <span className="text-brand-blue ppx-italic">board of advisors</span>.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Every service available through the network. Members request what they need through the platform and get routed to the right partner.
+            The advisors, experts, and service providers available through the network. Members request what they need through the platform and get routed to the right partner.
           </p>
         </div>
 

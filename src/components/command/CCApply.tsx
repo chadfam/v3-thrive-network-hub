@@ -10,7 +10,7 @@ const CCApply = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          The bench unlocks through <span className="text-brand-blue ppx-italic">Profit Partners</span>.
+          Your <span className="text-brand-blue ppx-italic">board</span> unlocks through Profit Partners.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
