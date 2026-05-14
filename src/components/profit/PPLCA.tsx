@@ -14,13 +14,13 @@ const PPLCA = () => {
             The Lifetime Client Agency™ system, <span className="text-brand-blue ppx-italic">explained</span>.
           </h2>
           <p className="mt-8 max-w-[540px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Most businesses spend years acquiring clients and then quietly let those relationships fade. The Lifetime Client Agency™ system is the operating playbook for not doing that.
+            Your existing clients are the cheapest customers you'll ever acquire. Most businesses still let those relationships fade.
           </p>
           <p className="mt-6 max-w-[540px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            LCA gives Profit Partners members a structured way to activate their existing client database, generate repeat business, and turn past clients into ongoing referral sources.
+            The Lifetime Client Agency™ system gives Profit Partners members a structured way to wake up the database, generate repeat business, and turn past clients into ongoing referral sources. Built around the principle that the families you already served are the best argument for the next ones.
           </p>
           <p className="mt-5 max-w-[540px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            It's included at every tier. The depth of deployment scales with the tier: one user license at Tier One, two at Mastermind, and full implementation across the business with ten user licenses at Inner Circle.
+            Included at every tier. Deployment depth scales with your tier: one user license at Tier One, two at Mastermind, and full implementation with ten user licenses at Inner Circle.
           </p>
         </div>
         <ol className="space-y-8">

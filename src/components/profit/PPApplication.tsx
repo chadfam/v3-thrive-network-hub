@@ -14,7 +14,7 @@ const PPApplication = () => {
             How the <span className="text-brand-blue ppx-italic">application</span> works.
           </h2>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Membership is by application. We review every one. The process is structured so that both sides know whether the fit is right before any commitment.
+            Membership is by application, by design. A room is only as strong as the owners in it, so we review every application personally and confirm fit on both sides before any commitment.
           </p>
         </div>
 

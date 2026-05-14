@@ -18,15 +18,15 @@ const PPJoining = () => {
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              A working alliance of complementary owners building customer loyalty through the families they already serve. Members commit annually. Monthly masterminds. Co-marketing campaigns. Deal flow that compounds across the room.
+              A room of values-aligned owners who'd rather earn a reputation than rent attention. Family-first. Trust-driven. Tired of buying customers when the better ones come through introductions.
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Each tier opens more of the alliance: the rooms, the bench, the introductions. Most owners spend more on customer acquisition than they need to because they haven't built a real referral system. We did. You bring the business and the families you serve.
+              Inside, you find customer loyalty that compounds, referral revenue that grows with the community, peer counsel from owners running similar businesses, and a board of advisors when you need one. Promotion inside FAM Central to the families already using it daily.
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Trust over attention. Loyalty over acquisition. Community over campaigns.
+              You're not just growing a business. You're joining a movement to help families F.E.E.L. again, with the people who already serve them at the center of strengthening real life at home.
             </p>
 
             <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">

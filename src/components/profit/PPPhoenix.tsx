@@ -32,16 +32,13 @@ const PPPhoenix = () => {
             What the <span className="text-brand-blue ppx-italic">Phoenix room</span> actually looks like.
           </h2>
           <p className="mt-8 max-w-[540px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Phoenix is the original Profit Partners chapter, and the first market where the full network is operating end to end.
-          </p>
-          <p className="mt-5 max-w-[540px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            The Phoenix room has owners across financial services, real estate, mortgage, insurance, home services, professional services, construction, automotive, and the trades.
+            Phoenix is where the full alliance is operating end to end. Owners across financial services, real estate, mortgage, insurance, home services, professional services, construction, automotive, and the trades. All serving the same families. All recommending each other.
           </p>
           <p className="mt-6 max-w-[540px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Category exclusivity at the Mastermind tier and above means one partner per industry in the Phoenix market.
+            Category exclusivity at the Mastermind tier and above means one partner per industry in your market. A room built to send each other business instead of compete for the same customer.
           </p>
           <p className="mt-5 max-w-[540px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            The result is a room built to send each other business instead of compete for the same customer. Members typically know each other a quarter in and have moved at least one referral by month four.
+            Members typically know each other a quarter in and have moved at least one referral by month four. The longer you're in, the more the network compounds.
           </p>
           <p className="mt-6 max-w-[540px] text-[15px] italic text-[hsl(var(--slate-500))]">
             New chapters open as the network grows. If you fit a category in a market we haven't opened yet, the application puts you on the early list for that market.
