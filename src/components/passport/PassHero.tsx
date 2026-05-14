@@ -3,10 +3,10 @@ const PassHero = () => {
     <section style={{ backgroundColor: "#0B1F3F" }} className="hero-fullbleed text-white">
       <img
         className="hero-fullbleed-img"
-        src="https://images.unsplash.com/photo-1557804506-d8017c1e4856?auto=format&fit=crop&q=80&w=1200"
-        srcSet="https://images.unsplash.com/photo-1557804506-d8017c1e4856?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1557804506-d8017c1e4856?auto=format&fit=crop&q=80&w=1200 1200w, https://images.unsplash.com/photo-1557804506-d8017c1e4856?auto=format&fit=crop&q=80&w=2400 2400w"
+        src="https://images.unsplash.com/photo-1642957323739-5632d8a2ff3d?auto=format&fit=crop&q=80&w=1200"
+        srcSet="https://images.unsplash.com/photo-1642957323739-5632d8a2ff3d?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1642957323739-5632d8a2ff3d?auto=format&fit=crop&q=80&w=1200 1200w, https://images.unsplash.com/photo-1642957323739-5632d8a2ff3d?auto=format&fit=crop&q=80&w=2400 2400w"
         sizes="(max-width: 640px) 100vw, (max-width: 1200px) 100vw, 2400px"
-        alt="A small private gathering of business owners in conversation on a hedge-enclosed patio."
+        alt="A small business mastermind in session: a presenter at a whiteboard, peers engaged on a couch with laptops, marked-up goals on the board."
         loading="eager"
       />
       <div className="hero-fullbleed-scrim-navy" />
