@@ -3,10 +3,10 @@ const CCHero = () => {
     <section className="hero-fullbleed bg-background">
       <img
         className="hero-fullbleed-img"
-        src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=1200"
-        srcSet="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=1200 1200w, https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=2400 2400w"
+        src="https://images.unsplash.com/photo-1624555130296-e551faf8969b?auto=format&fit=crop&q=80&w=1200"
+        srcSet="https://images.unsplash.com/photo-1624555130296-e551faf8969b?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1624555130296-e551faf8969b?auto=format&fit=crop&q=80&w=1200 1200w, https://images.unsplash.com/photo-1624555130296-e551faf8969b?auto=format&fit=crop&q=80&w=2400 2400w"
         sizes="(max-width: 640px) 100vw, (max-width: 1200px) 100vw, 2400px"
-        alt="A small group of advisors taking notes at a sunlit wooden table in a working strategy session."
+        alt="A board of advisors gathered around a long wooden boardroom table, ten diverse professionals representing different disciplines."
         loading="eager"
       />
       <div className="hero-fullbleed-scrim" />
