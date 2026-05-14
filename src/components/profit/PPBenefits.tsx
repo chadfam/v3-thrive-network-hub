@@ -82,7 +82,7 @@ const PPBenefits = () => {
             One <span className="text-brand-blue ppx-italic">alliance</span>.<br />Built around your business.
           </h2>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Profit Partners exists for one purpose: build a referral-driven business that compounds. The benefits below are the full menu of what the alliance brings. We work with you on a private call to fit the right blend to your stage, market, and goals.
+            Profit Partners exists for one purpose: become famous for families and let the alliance compound the rest. The benefits below are the full menu of what membership brings. We work with you on a private call to fit the right blend to your stage, market, and goals.
           </p>
         </div>
 

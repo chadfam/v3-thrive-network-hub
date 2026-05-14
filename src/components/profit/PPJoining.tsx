@@ -18,15 +18,15 @@ const PPJoining = () => {
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              A working alliance of complementary owners. Members commit annually. Monthly masterminds. Co-marketing campaigns. Deal flow that compounds across the room.
+              A working alliance of complementary owners building customer loyalty through the families they already serve. Members commit annually. Monthly masterminds. Co-marketing campaigns. Deal flow that compounds across the room.
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Each tier opens more of the alliance — the rooms, the bench, the introductions. The premise is simple. Most owners spend more on customer acquisition than they need to because they haven't built a working referral system.
+              Each tier opens more of the alliance: the rooms, the bench, the introductions. Most owners spend more on customer acquisition than they need to because they haven't built a real referral system. We did. You bring the business and the families you serve.
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              We built the alliance, the playbooks, and the platform. You bring the business.
+              Trust over attention. Loyalty over acquisition. Community over campaigns.
             </p>
 
             <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">
