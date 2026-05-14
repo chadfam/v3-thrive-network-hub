@@ -9,14 +9,20 @@ const BizArgument = () => {
   return (
     <section className="bg-background">
       <div className="mx-auto max-w-[860px] px-6 sm:px-8 md:px-10 py-16 md:py-32 text-center">
-        <span className="block mx-auto section-accent" aria-hidden />
+        <p
+          className="font-serif-display text-slate-ink"
+          style={{ fontSize: "clamp(3rem, 8vw, 6rem)", lineHeight: 0.95, letterSpacing: "-0.03em" }}
+        >
+          Got <span className="text-brand-blue ppx-italic">partnerships</span>?
+        </p>
+        <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+          Every owner has the same answer when asked about their biggest problem: getting customers.
+        </p>
+
+        <span className="block mx-auto section-accent mt-12" aria-hidden />
         <h2 className="mt-10 font-serif-display section-headline text-slate-ink">
           What this network actually does.
         </h2>
-
-        <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Ask any owner what their biggest problem is and you'll hear the same answer: getting customers.
-        </p>
         <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
           The owners who keep growing solved it the same way. They stopped buying attention and started getting recommended. Referrals close at a far higher rate than any ad, because trust transfers from the person who sent them.
         </p>

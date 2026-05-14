@@ -4,6 +4,7 @@ import EFWhy from "@/components/expert/EFWhy";
 import EFDistribution from "@/components/expert/EFDistribution";
 import EFStreams from "@/components/expert/EFStreams";
 import EFCategories from "@/components/expert/EFCategories";
+import EFFaculty from "@/components/expert/EFFaculty";
 import EFHowItWorks from "@/components/expert/EFHowItWorks";
 import EFWhoFits from "@/components/expert/EFWhoFits";
 import EFApply from "@/components/expert/EFApply";
@@ -19,6 +20,7 @@ const ExpertFaculty = () => (
     <EFDistribution />
     <EFStreams />
     <EFCategories />
+    <EFFaculty />
     <EFHowItWorks />
     <EFWhoFits />
     <EFApply />

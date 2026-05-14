@@ -2,6 +2,7 @@ import Layout from "@/components/site/Layout";
 import AboutHero from "@/components/about/AboutHero";
 import AboutNetwork from "@/components/about/AboutNetwork";
 import AboutBeliefs from "@/components/about/AboutBeliefs";
+import AboutTeam from "@/components/about/AboutTeam";
 import AboutCompanies from "@/components/about/AboutCompanies";
 import AboutWhere from "@/components/about/AboutWhere";
 import AboutEngage from "@/components/about/AboutEngage";
@@ -15,6 +16,7 @@ const About = () => (
     <AboutHero />
     <AboutNetwork />
     <AboutBeliefs />
+    <AboutTeam />
     <AboutCompanies />
     <AboutWhere />
     <AboutEngage />
