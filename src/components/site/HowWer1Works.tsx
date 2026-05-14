@@ -29,7 +29,7 @@ const HowWer1Works = () => {
         </h2>
 
         <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-white/85">
-          The Raving Referrals system has powered relationship-driven growth for two decades. United to Thrive brings that proven framework to every market we open, starting in Phoenix.
+          Our team has been building relationship-driven growth systems for two decades. United to Thrive brings that proven framework to every market we open, starting in Phoenix.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-12 md:gap-8">

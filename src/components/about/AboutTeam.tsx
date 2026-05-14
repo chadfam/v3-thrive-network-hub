@@ -11,10 +11,9 @@ const team: Member[] = [
   {
     name: "Brandon Barnum",
     role: "CEO",
-    bio: "Refer.com co-founder (5M+ members, exited 2019), Brandon personally closed $500M+ in referral-driven sales before founding HOA.com. He brings his proven Raving Referrals partnership and community-platform growth expertise to United to Thrive.",
+    bio: "Refer.com co-founder (5M+ members, exited 2019), Brandon personally closed $500M+ in referral-driven sales before founding HOA.com. He brings two decades of partnership and community-platform growth expertise to United to Thrive.",
     photo: "/team/brandon-barnum.jpg",
     initials: "BB",
-    link: { href: "https://ravingreferrals.com", label: "ravingreferrals.com" },
   },
   {
     name: "Jashin Howell",

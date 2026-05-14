@@ -29,7 +29,7 @@ const AboutProvenSystem = () => {
         </h2>
 
         <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-white/85">
-          The Raving Referrals methodology has powered relationship-driven growth for two decades. United to Thrive brings that framework to every market we open, with the platforms underneath that make it run.
+          Our team has been building relationship-driven growth systems for two decades. United to Thrive brings that proven framework to every market we open, with the platforms underneath that make it run.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-12 md:gap-8">

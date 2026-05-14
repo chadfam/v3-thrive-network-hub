@@ -99,7 +99,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-6 border-t border-[#E2E8F0] flex flex-col md:flex-row md:items-start md:justify-between gap-4">
           <p className="text-[13px] text-[#94A3B8] leading-relaxed max-w-3xl">
-            © 2026 United To Thrive LLC. All rights reserved. Profit Partners™, Mastermind Passport™, Command Central™, Lifetime Client Agency™, and Raving Referrals® are trademarks of United To Thrive LLC.
+            © 2026 United To Thrive LLC. All rights reserved. Profit Partners™, Mastermind Passport™, Command Central™, and Lifetime Client Agency™ are trademarks of United To Thrive LLC.
           </p>
           <p className="text-[13px] text-[#94A3B8] leading-relaxed md:text-right shrink-0">
             Headquartered in Tempe, AZ. Serving Phoenix and the broader network.
