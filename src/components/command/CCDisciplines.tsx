@@ -1,5 +1,5 @@
 const tiles = [
-  { name: "Coaching and Training", desc: "Seven programs across coaching, sales, and leadership" },
+  { name: "Coaching and Training", desc: "Seven services across coaching, sales, and leadership" },
   { name: "Marketing", desc: "Six services from automation to ad management" },
   { name: "Finance", desc: "Eight services from bookkeeping to fractional CFO" },
   { name: "Legal", desc: "Six services from agreements to estate planning" },

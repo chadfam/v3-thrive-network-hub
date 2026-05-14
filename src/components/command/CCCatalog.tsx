@@ -11,7 +11,7 @@ const disciplines: Discipline[] = [
       { name: "Personal Accountability Coach", desc: "A dedicated coach who helps you stay focused, implement priorities, and follow through on goals with structure and consistent check-ins." },
       { name: "Abundance Opportunity Access", desc: "Introductions to vetted income, partnership, and investment opportunities focused on long-term, values-aligned wealth building." },
       { name: "Executive Coaching", desc: "One-on-one strategic coaching for founders and executives focused on clarity, leadership effectiveness, and scalable growth." },
-      { name: "Strategic Sales Training", desc: "A structured sales training program that equips professionals to lead value-driven conversations and convert opportunities into revenue." },
+      { name: "Strategic Sales Training", desc: "Structured sales training that equips owners and operators to lead value-driven conversations and convert opportunities into revenue." },
       { name: "WER1 Team Leadership Program", desc: "Leadership development that helps teams align, communicate, and perform at higher levels while building culture and accountability." },
     ],
   },
