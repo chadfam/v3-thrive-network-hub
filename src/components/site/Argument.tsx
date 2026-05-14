@@ -15,7 +15,7 @@ const values = [
 
 const Argument = () => {
   return (
-    <section className="bg-brand-blue/5 border-t border-slate-ink/10">
+    <section className="bg-white border-t border-slate-ink/10">
       <div className="mx-auto max-w-[1080px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
         <h2
           className="font-serif-display text-slate-ink mx-auto max-w-[920px]"
@@ -33,7 +33,7 @@ const Argument = () => {
         </p>
 
         <p className="mt-6 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          We exist to help families reconnect, build meaningful relationships, and live stronger lives. Every introduction inside the network strengthens the people on both sides of it. F.E.E.L. is the framework. Movement is the goal.
+          We exist to help families reconnect, build meaningful relationships, and live stronger lives. Every introduction inside the network strengthens the people on both sides of it. Movement is the goal.
         </p>
 
         <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-8 md:gap-10 text-left">

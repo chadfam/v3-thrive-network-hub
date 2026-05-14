@@ -9,7 +9,7 @@ const items = [
 
 const WhyFamilies = () => {
   return (
-    <section className="bg-white border-t border-slate-ink/10">
+    <section className="bg-brand-blue/5 border-t border-slate-ink/10">
       <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div>
