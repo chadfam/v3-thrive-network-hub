@@ -1,4 +1,5 @@
-import roomMastermind from "@/assets/room-mastermind.jpg";
+const heroImage = "https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?auto=format&fit=crop&q=80&w=1600";
+const heroImageSrcSet = "https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?auto=format&fit=crop&q=80&w=800 800w, https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?auto=format&fit=crop&q=80&w=1600 1600w";
 
 const BizHero = () => {
   return (
@@ -14,7 +15,9 @@ const BizHero = () => {
         style={{ width: "48%" }}
       >
         <img
-          src={roomMastermind}
+          src={heroImage}
+          srcSet={heroImageSrcSet}
+          sizes="(max-width: 1280px) 100vw, 1600px"
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
           loading="eager"
@@ -32,8 +35,10 @@ const BizHero = () => {
       {/* Mobile: image stacks above text */}
       <div className="lg:hidden">
         <img
-          src={roomMastermind}
-          alt="Business owners around a mastermind room table in warm daylight."
+          src={heroImage}
+          srcSet={heroImageSrcSet}
+          sizes="100vw"
+          alt="Two business partners working together on a laptop in a sunlit high-rise lounge."
           className="w-full h-[260px] sm:h-[320px] object-cover"
           loading="eager"
         />

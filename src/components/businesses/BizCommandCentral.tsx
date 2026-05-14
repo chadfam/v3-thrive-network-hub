@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import heroFounders from "@/assets/hero-founders.jpg";
+
+const advisorImage = "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&q=80&w=1200";
+const advisorImageSrcSet = "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&q=80&w=1200 1200w";
 
 const benefits = [
   "Marketing, sales, finance, legal, and technology partners",
@@ -56,8 +58,10 @@ const BizCommandCentral = () => {
           <div>
             <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
               <img
-                src={heroFounders}
-                alt="A board of advisors together in conversation in warm office light."
+                src={advisorImage}
+                srcSet={advisorImageSrcSet}
+                sizes="(max-width: 1024px) 100vw, 600px"
+                alt="An advisor and a business owner reviewing strategy on a tablet at a wooden table, exposed-brick studio in warm daylight."
                 loading="lazy"
                 className="w-full h-full object-cover"
               />

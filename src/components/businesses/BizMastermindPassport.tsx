@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import heroMastermind from "@/assets/hero-mastermind.jpg";
+
+const mastermindImage = "https://images.unsplash.com/photo-1646066490017-c935b1a1eb0f?auto=format&fit=crop&q=80&w=1200";
+const mastermindImageSrcSet = "https://images.unsplash.com/photo-1646066490017-c935b1a1eb0f?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1646066490017-c935b1a1eb0f?auto=format&fit=crop&q=80&w=1200 1200w";
 
 const benefits = [
   "Curated access to top mastermind communities",
@@ -56,8 +58,10 @@ const BizMastermindPassport = () => {
           <div className="lg:order-1">
             <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
               <img
-                src={heroMastermind}
-                alt="Business owners in a mastermind session around a wooden table in warm daylight."
+                src={mastermindImage}
+                srcSet={mastermindImageSrcSet}
+                sizes="(max-width: 1024px) 100vw, 600px"
+                alt="A small mastermind session in a warm, intimate room: a facilitator leading a focused discussion with a tight group of operators."
                 loading="lazy"
                 className="w-full h-full object-cover"
               />

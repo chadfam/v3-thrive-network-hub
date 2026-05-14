@@ -1,12 +1,15 @@
-import familyDinner from "@/assets/family-dinner.jpg";
+const familyImage = "https://images.unsplash.com/photo-1756982784227-e0e9e509f483?auto=format&fit=crop&q=80&w=1600";
+const familyImageSrcSet = "https://images.unsplash.com/photo-1756982784227-e0e9e509f483?auto=format&fit=crop&q=80&w=800 800w, https://images.unsplash.com/photo-1756982784227-e0e9e509f483?auto=format&fit=crop&q=80&w=1600 1600w";
 
 const BizOutro = () => {
   return (
     <section className="bg-[#F8F9FB]">
       <div className="relative w-full h-[36vh] min-h-[260px] md:h-[44vh] md:min-h-[360px] overflow-hidden">
         <img
-          src={familyDinner}
-          alt="A family at the dinner table together in warm light."
+          src={familyImage}
+          srcSet={familyImageSrcSet}
+          sizes="100vw"
+          alt="A young family of five on a wooden porch at golden hour, kids in their parents' arms."
           loading="lazy"
           className="absolute inset-0 w-full h-full object-cover"
         />
