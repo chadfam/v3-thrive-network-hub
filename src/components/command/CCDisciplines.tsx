@@ -15,7 +15,7 @@ const CCDisciplines = () => {
             className="font-serif-display text-slate-ink tracking-section"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}
           >
-            Five disciplines. Thirty-plus services.
+            Every discipline you <span className="text-brand-blue ppx-italic">need</span>.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
             Each discipline holds a curated set of vetted partners. Members request what they need through the platform and get matched directly.

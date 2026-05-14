@@ -75,10 +75,10 @@ const CCCatalog = () => {
             className="font-serif-display text-slate-ink tracking-section"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}
           >
-            What's in the catalog.
+            Inside the <span className="text-brand-blue ppx-italic">bench</span>.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            The current Command Central service catalog. Each entry has a brief description below. Members request services through the platform and get routed to the right partner.
+            Every service available through the network. Members request what they need through the platform and get routed to the right partner.
           </p>
         </div>
 
