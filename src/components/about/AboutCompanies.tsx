@@ -1,42 +1,101 @@
-const programs = [
-  { name: "Profit Partners™", desc: "The flagship business alliance. A working referral network of owners building joint ventures and partnerships." },
-  { name: "WER1", desc: "The referral platform underneath every program in the network. The technical layer that tracks introductions and pays everyone who helped. Also available white-label for partner businesses." },
-  { name: "FAM Central", desc: "The family engagement platform. Where families connect with local leaders, expert content, and the businesses that earn their recommendation. Operates as a related property to United to Thrive." },
-  { name: "Local Leaders", desc: "The community connector role. One leader per industry in their area. Featured at FAM Central events. Earns through introductions made inside the local network." },
-  { name: "FAM Guides", desc: "The family coaching role. Coaches who work with families one-on-one or in small cohorts on helping their family feel more connected, with a plan that's actually theirs. Recurring monthly revenue." },
-  { name: "Expert Faculty", desc: "The expertise role. Authors, speakers, coaches, and category leaders whose content gets distributed across the network, with more income streams than a single offer." },
-  { name: "Mastermind Passport™", desc: "Guest access into elite mastermind communities through one membership. Included with Profit Partners participation at the right level." },
-  { name: "Command Central™", desc: "Your own board of advisors, experts, and service providers across coaching, marketing, sales, operations, technology, legal, and finance. Vetted, with set pricing. Available to Profit Partners members." },
-  { name: "Team Wellness Hub", desc: "A supplemental, pre-tax wellness program for businesses with W-2 employees. Saves the business in payroll taxes. Adds $1,500 or more to employee take-home pay." },
-  { name: "Promo Engine", desc: "A B2B platform that helps in-person businesses sell promotions online and capture revenue before customers walk in. Built for multi-location operators." },
+import { Link } from "react-router-dom";
+
+const tiles = [
+  {
+    name: "Profit Partners™",
+    body: "The flagship business alliance. A working referral network of complementary owners building joint ventures and partnerships.",
+    to: "/profit-partners",
+  },
+  {
+    name: "WER1",
+    body: "The referral platform underneath every program. Tracks every introduction and pays everyone in the chain.",
+    to: "/wer1",
+  },
+  {
+    name: "FAM Central",
+    body: "The family engagement platform. Where families connect with local leaders, expert content, and the businesses they trust.",
+    to: "/fam-central",
+  },
+  {
+    name: "Local Leaders + FAM Guides",
+    body: "Community connector and family coaching roles. Paid positions for the leaders already doing the work informally.",
+    to: "/leaders",
+  },
+  {
+    name: "Expert Faculty",
+    body: "Five income streams for authors, speakers, coaches, and category leaders whose work helps families thrive.",
+    to: "/expert-faculty",
+  },
+  {
+    name: "Mastermind Passport™ + Command Central™",
+    body: "Elite mastermind access and your own vetted board of advisors. Both unlock through Profit Partners tier-based membership.",
+    to: "/businesses",
+  },
+];
+
+const also = [
+  { name: "Team Wellness Hub", to: "/team-wellness-hub" },
+  { name: "Promo Engine", to: "/promo-engine" },
 ];
 
 const AboutCompanies = () => {
   return (
-    <section style={{ backgroundColor: "#0B1F3F" }} className="text-white">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32">
-        <div className="text-center max-w-[720px] mx-auto">
-          <h2 className="font-serif-display text-white section-headline tracking-section">The companies inside.</h2>
-          <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-white/90">
-            United To Thrive LLC owns and operates the programs and platforms below. Each was built or acquired to play a specific role in the network.
-          </p>
-        </div>
-        <div className="mt-14 md:mt-20 max-w-[880px] mx-auto">
-          {programs.map((p, idx) => (
-            <div key={p.name}>
-              <div className="flex items-start gap-6 py-8">
-                <span className="mt-3 inline-block h-3 w-3 rounded-full bg-brand-blue shrink-0" aria-hidden />
-                <div className="min-w-0">
-                  <h3 className="font-serif-display text-white text-[24px] md:text-[28px] leading-tight">{p.name}</h3>
-                  <p className="mt-2 text-[17px] leading-relaxed text-white/80 max-w-[640px]">{p.desc}</p>
-                </div>
-              </div>
-              {idx < programs.length - 1 && <div className="h-px w-full" style={{ backgroundColor: "rgba(224,227,231,0.2)" }} aria-hidden />}
-            </div>
+    <section className="bg-white border-t border-slate-ink/10">
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
+        <h2
+          className="font-serif-display text-slate-ink mx-auto max-w-[820px]"
+          style={{
+            fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+            lineHeight: 1.05,
+            letterSpacing: "-0.025em",
+          }}
+        >
+          The companies <span className="text-brand-blue ppx-italic">inside</span>.
+        </h2>
+
+        <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
+          United To Thrive LLC owns and operates the programs and platforms below. Each was built or acquired to play a specific role in the network.
+        </p>
+
+        <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 text-left">
+          {tiles.map((t) => (
+            <article
+              key={t.name}
+              className="rounded-2xl bg-white p-7 md:p-8 border border-slate-ink/10 flex flex-col hover:border-brand-blue/30 transition-colors"
+            >
+              <h3 className="font-serif-display text-[22px] md:text-[24px] leading-tight text-slate-ink">
+                {t.name}
+              </h3>
+              <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))] flex-1">
+                {t.body}
+              </p>
+              <Link
+                to={t.to}
+                className="group mt-6 inline-flex items-center text-[14px] font-semibold text-brand-blue"
+              >
+                Learn more
+                <span aria-hidden className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+              </Link>
+            </article>
           ))}
         </div>
-        <p className="mt-12 mx-auto max-w-[640px] text-center font-sans-ui italic text-[16px] text-white/60">
-          Trademarks of United To Thrive LLC. Network grows as new programs come into the family.
+
+        <div className="mt-16 pt-10 border-t border-slate-ink/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+          <p className="text-[14px] font-medium text-[hsl(var(--slate-500))]">
+            Also operating:
+          </p>
+          {also.map((a, i) => (
+            <span key={a.name} className="flex items-center">
+              <Link to={a.to} className="text-[15px] text-slate-ink hover:text-brand-blue transition-colors">
+                {a.name}
+              </Link>
+              {i < also.length - 1 && <span aria-hidden className="ml-6 text-slate-300">·</span>}
+            </span>
+          ))}
+        </div>
+
+        <p className="mt-10 mx-auto max-w-[640px] italic text-[14px] text-[hsl(var(--slate-500))]">
+          Trademarks of United To Thrive LLC. The network grows as new programs come into the family.
         </p>
       </div>
     </section>

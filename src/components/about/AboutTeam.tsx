@@ -27,7 +27,7 @@ const team: Member[] = [
   {
     name: "Chris Lange",
     role: "CEO, Hownd",
-    bio: "Marketing technology executive with 25+ years of experience building automated promotion platforms that help local businesses drive customer engagement, retention, and measurable revenue growth. Leads Hownd, a FAM Project subsidiary.",
+    bio: "Marketing technology executive with 25+ years building automated promotion platforms that help local businesses drive customer engagement, retention, and measurable revenue growth. Leads Hownd, a FAM Project subsidiary.",
     photo: "/team/chris-lange.jpg",
     initials: "CL",
     link: { href: "https://hownd.com", label: "hownd.com" },
@@ -73,23 +73,28 @@ const team: Member[] = [
 
 const AboutTeam = () => {
   return (
-    <section id="meet-the-team" className="bg-background scroll-mt-24">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32">
-        <div className="text-center max-w-[720px] mx-auto">
-          <div className="mx-auto mb-8 section-accent" aria-hidden />
-          <h2 className="font-serif-display text-slate-ink section-headline tracking-section">
-            Meet the team.
-          </h2>
-          <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            The operators behind United to Thrive. Each one carries a slice of the work, from the network and the platforms to the families and the partnerships.
-          </p>
-        </div>
+    <section id="meet-the-team" className="scroll-mt-24 bg-white border-t border-slate-ink/10">
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
+        <h2
+          className="font-serif-display text-slate-ink mx-auto max-w-[820px]"
+          style={{
+            fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+            lineHeight: 1.05,
+            letterSpacing: "-0.025em",
+          }}
+        >
+          Meet the <span className="text-brand-blue ppx-italic">team</span>.
+        </h2>
 
-        <div className="mt-14 md:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
+          The operators behind United to Thrive. Each one carries a slice of the work: the network, the platforms, the families, the partnerships.
+        </p>
+
+        <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 text-left">
           {team.map((m) => (
             <article
               key={m.name}
-              className="card-surface card-surface-hover rounded-2xl p-7 md:p-8 flex flex-col items-start"
+              className="rounded-2xl bg-white p-7 md:p-8 border border-slate-ink/10 flex flex-col items-start hover:border-brand-blue/30 transition-colors"
             >
               <div className="w-20 h-20 rounded-full bg-brand-blue/10 border border-brand-blue/30 flex items-center justify-center overflow-hidden">
                 {m.photo ? (
@@ -98,15 +103,17 @@ const AboutTeam = () => {
                   <span className="font-serif-display text-brand-blue text-[22px]">{m.initials}</span>
                 )}
               </div>
-              <h3 className="mt-5 font-serif-display text-[22px] leading-tight text-slate-ink">{m.name}</h3>
+              <h3 className="mt-5 font-serif-display text-[22px] md:text-[24px] leading-tight text-slate-ink">
+                {m.name}
+              </h3>
               <p className="mt-1 text-[14px] text-[hsl(var(--slate-500))]">{m.role}</p>
-              <p className="mt-4 text-[15px] leading-relaxed text-[hsl(var(--slate-700))]">{m.bio}</p>
+              <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">{m.bio}</p>
               {m.link && (
                 <a
                   href={m.link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 text-[14px] text-brand-blue hover:underline underline-offset-4"
+                  className="mt-4 text-[14px] font-semibold text-brand-blue hover:underline underline-offset-4"
                 >
                   {m.link.label} →
                 </a>

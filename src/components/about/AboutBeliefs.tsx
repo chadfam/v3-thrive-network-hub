@@ -1,42 +1,60 @@
 const principles = [
   {
-    label: "PRINCIPLE 01",
-    headline: "The chain is the point.",
-    body: "Most networks pay one person per deal. Most platforms extract value from a single audience. The mom who recommended the business, the local leader who introduced the family, and the person who got the affiliate involved in the first place are all part of the chain. When the platform pays everyone in the chain, the chain holds together.",
+    num: "01",
+    name: "The chain is the point.",
+    body: "Most networks pay one person per deal. We pay everyone in the chain that made the deal happen, so the chain holds together.",
   },
   {
-    label: "PRINCIPLE 02",
-    headline: "Reputation is a twenty-year asset.",
-    body: "Marketing tactics depreciate the moment the algorithm changes. Reputation accumulates. Most of the owners in our network are past needing more attention and are tired of paying for it. They're focused on who recommends them in 2045, not who clicks in Q4.",
+    num: "02",
+    name: "Reputation is a 20-year asset.",
+    body: "Marketing tactics depreciate the moment the algorithm changes. Reputation accumulates. Our owners think in decades, not quarters.",
   },
   {
-    label: "PRINCIPLE 03",
-    headline: "Families are the math.",
-    body: "Most B2B networks treat families as an afterthought, customers, or noise. We treat them as the math. The customer who recommends you to three other parents in the school pickup line is worth more than ten Facebook clicks. The Local Leader who introduces fifteen households a year is worth more than a whole funnel. We built the network around that arithmetic.",
+    num: "03",
+    name: "Families are the math.",
+    body: "A customer who recommends you to three other parents at school pickup is worth more than ten Facebook clicks. We built the network around that arithmetic.",
   },
   {
-    label: "PRINCIPLE 04",
-    headline: "Movement, not campaigns.",
-    body: "We don't run marketing campaigns. We don't pay influencers per post. We build connected economies where introductions move outward through the network and the platform pays everyone the introduction touched. We call it movement-driven commerce because it's a movement first, and commerce because that's how movements scale.",
+    num: "04",
+    name: "Movement, not campaigns.",
+    body: "We don't run marketing campaigns or pay influencers per post. We build connected economies where introductions move outward and the platform pays everyone the introduction touched.",
   },
 ];
 
 const AboutBeliefs = () => {
   return (
-    <section className="bg-background">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32">
-        <div className="text-center max-w-[720px] mx-auto">
-          <h2 className="font-serif-display text-slate-ink section-headline tracking-section">What we believe.</h2>
-          <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Four principles that show up in the way the network is built and the way it runs.
-          </p>
-        </div>
-        <div className="mt-14 md:mt-20 grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+    <section className="bg-[hsl(220_30%_98%)] border-t border-slate-ink/10">
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
+        <h2
+          className="font-serif-display text-slate-ink mx-auto max-w-[820px]"
+          style={{
+            fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+            lineHeight: 1.05,
+            letterSpacing: "-0.025em",
+          }}
+        >
+          Four principles. <span className="text-brand-blue ppx-italic">One network</span>.
+        </h2>
+
+        <p className="mt-8 mx-auto max-w-[640px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
+          The beliefs that show up in the way the network is built and the way it runs every day.
+        </p>
+
+        <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 text-left">
           {principles.map((p) => (
-            <article key={p.label} className="rounded-2xl border border-[hsl(var(--slate)/0.12)] bg-background p-8 md:p-12">
-              <div className="text-[13px] font-medium uppercase tracking-[0.16em] text-[hsl(var(--slate-500))]">{p.label}</div>
-              <h3 className="mt-4 font-serif-display text-slate-ink text-[26px] md:text-[32px] leading-tight">{p.headline}</h3>
-              <p className="mt-5 text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">{p.body}</p>
+            <article
+              key={p.num}
+              className="rounded-2xl bg-white p-7 md:p-8 border border-slate-ink/10 flex flex-col"
+            >
+              <span className="font-serif-display text-brand-blue text-[18px] tracking-tight">
+                {p.num}
+              </span>
+              <h3 className="mt-5 font-serif-display text-[20px] md:text-[22px] leading-tight text-slate-ink">
+                {p.name}
+              </h3>
+              <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
+                {p.body}
+              </p>
             </article>
           ))}
         </div>
