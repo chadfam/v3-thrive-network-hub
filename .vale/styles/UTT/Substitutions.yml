@@ -1,0 +1,8 @@
+extends: substitution
+message: "Use '%s' instead of '%s' per CHAD_FEEDBACK §3."
+level: error
+ignorecase: true
+swap:
+  'Three Ways In': 'Three Ways to Win'
+  'the work of being more present': 'help families feel more connected'
+  'five income streams': 'more income streams than a single offer'

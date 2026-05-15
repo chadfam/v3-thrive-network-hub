@@ -1,0 +1,10 @@
+extends: existence
+message: "'%s' is an AI-template section label. Use a benefit-led headline instead per CHAD_FEEDBACK §3 + §4."
+level: error
+tokens:
+  - 'What it is'
+  - "Who it's for"
+  - "What's included"
+  - 'Why we built'
+  - 'What changes when'
+  - 'Inside the X'

@@ -1,0 +1,12 @@
+# Vale exclusions. These paths intentionally contain banned phrases as examples
+# or are not part of the shipped site.
+
+_context/
+node_modules/
+dist/
+build/
+.git/
+.claude/
+public/
+*.lock
+*.lockb

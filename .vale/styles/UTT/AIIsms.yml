@@ -1,0 +1,15 @@
+extends: existence
+message: "'%s' reads as AI-template language. Drop or rephrase per CHAD_FEEDBACK §3."
+level: warning
+ignorecase: true
+tokens:
+  - 'leverage'
+  - 'synergy'
+  - 'seamlessly'
+  - 'best-in-class'
+  - 'cutting-edge'
+  - 'game-changing'
+  - 'pre-vetted'
+  - 'curated set'
+  - 'first and foremost'
+  - "it's about more than just"
