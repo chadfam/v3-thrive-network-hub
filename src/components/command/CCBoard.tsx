@@ -37,7 +37,7 @@ const CCBoard = () => {
               The advisors are familiar. The conversations build on what came before. Each new question can pick up where the last one left off.
             </p>
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))]">
-              Over time, the advisors come to know the member's business well, and the work moves faster as a result.
+              Over time, the advisors come to know the member's business well, and the work moves faster.
             </p>
           </div>
         </div>

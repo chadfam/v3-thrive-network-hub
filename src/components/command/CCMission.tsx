@@ -4,7 +4,7 @@ const CCMission = () => {
       style={{ backgroundColor: "#0B1F3F" }}
       className="text-white border-t border-slate-ink/10"
     >
-      <div className="mx-auto max-w-[820px] px-6 sm:px-8 md:px-10 py-20 md:py-32 text-center">
+      <div className="mx-auto max-w-[760px] px-6 sm:px-8 md:px-10 py-20 md:py-28 text-center">
         <h2
           className="font-serif-display tracking-section"
           style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}
@@ -17,11 +17,14 @@ const CCMission = () => {
         </h2>
 
         <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-white/90">
-          Command Central is one piece of a larger network. The same network includes Profit Partners, Mastermind Passport, FAM Guides, Local Leaders, and the experts whose work reaches families across the country.
+          Command Central is one piece of a network built around businesses that families recommend.
         </p>
 
-        <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-white/90">
-          Everyone in it is working toward the same thing. Businesses that families recommend. Communities built around the people who serve them well. The board of advisors is part of how that happens.
+        <p
+          className="mt-10 font-serif-display italic text-white"
+          style={{ fontSize: "clamp(1.25rem, 2.4vw, 1.5rem)" }}
+        >
+          Famous for families.
         </p>
       </div>
     </section>

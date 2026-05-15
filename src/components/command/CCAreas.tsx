@@ -139,7 +139,7 @@ const CCAreas = () => {
             </p>
           </div>
 
-          <div className="mt-12 md:mt-16 grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
+          <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
             {areas.map((area) => {
               const Icon = area.Icon;
               return (
@@ -215,7 +215,7 @@ const CCAreas = () => {
                       {area.items.map((s) => (
                         <li
                           key={s.name}
-                          className="border-l-2 border-brand-blue/30 pl-5 hover:border-brand-blue transition-colors"
+                          className="border-l-2 border-brand-blue/50 pl-5 hover:border-brand-blue transition-colors"
                         >
                           <h4 className="font-serif-display text-[18px] md:text-[20px] text-slate-ink leading-snug">
                             {s.name}
