@@ -24,7 +24,7 @@ const CCProblem = () => {
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Command Central is the response. Your own board of advisors, experts, and service providers across the disciplines you actually need. Every one of them is someone we've personally worked with.
+              Command Central is the response. Your own board of advisors, experts, and service providers, ready for what you're working on now.
             </p>
 
             <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">

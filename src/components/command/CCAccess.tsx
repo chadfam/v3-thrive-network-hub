@@ -2,7 +2,7 @@ const benefits = [
   "Hours back from researching who to hire",
   "Confidence the work will actually get done",
   "Consistent quality across every discipline",
-  "Trust that compounds with every introduction",
+  "A partner who shows up next time too",
   "Focus stays on the part only you can do",
 ];
 
@@ -24,11 +24,11 @@ const CCAccess = () => {
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              You stop comparing four quotes from people you don't know. You stop paying retail at a name-brand firm just because at least they show up. You stop hoping the next vendor will be different.
+              No more researching unknowns. No more comparing four proposals from people you can't verify. No more wondering if this one's going to ghost you in month two.
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              When you need help, the right person from the board is the one we send. Someone we've personally worked with, in the discipline you actually need.
+              Instead, the board is sitting there. The next person you bring in is already trusted.
             </p>
 
             <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">

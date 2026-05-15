@@ -99,7 +99,7 @@ const CCCatalog = () => {
               Inside your <span className="text-brand-blue ppx-italic">board of advisors</span>.
             </h2>
             <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-              The advisors, experts, and service providers available through the network. Every one of them is someone we've personally worked with.
+              The full catalog, by discipline. Every entry is a service the board can take on.
             </p>
           </div>
         </div>

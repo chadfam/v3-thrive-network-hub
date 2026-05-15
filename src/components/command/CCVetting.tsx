@@ -14,7 +14,7 @@ const CCVetting = () => {
         </p>
 
         <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-white/90">
-          You're not getting recommendations from strangers. You're getting introductions to people we already trust, because we've already used them.
+          The due diligence is already done. We've used them, paid them, and trusted them with our own work before you ever showed up.
         </p>
 
         <p className="mt-10 font-serif-display italic text-white" style={{ fontSize: "clamp(1.25rem, 2.4vw, 1.5rem)" }}>
