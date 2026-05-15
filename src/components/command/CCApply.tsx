@@ -10,11 +10,11 @@ const CCApply = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          Your <span className="text-brand-blue ppx-italic">board</span> unlocks through Profit Partners.
+          Join the <span className="text-brand-blue ppx-italic">WEcosystem</span>.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          Apply at the tier that matches your business. Inner Circle members get full Command Central access from day one. Other tiers can request specific services as needed.
+          One application. Tell us what you're building and which parts of the network fit. We'll route you to the right place inside the WEcosystem, Command Central included.
         </p>
 
         <div className="mt-12 flex flex-wrap justify-center gap-4">
@@ -22,13 +22,13 @@ const CCApply = () => {
             href="/apply"
             className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-brand-blue text-white text-[15px] font-semibold tracking-tight hover:bg-brand-blue/90 transition-colors shadow-sm"
           >
-            Apply to Profit Partners
+            Apply to join
           </a>
           <a
             href="/contact?topic=command-central"
             className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-white text-slate-ink text-[15px] font-semibold border-2 border-slate-ink/15 hover:border-brand-blue hover:text-brand-blue transition-colors"
           >
-            Talk about a specific service
+            Start a conversation
           </a>
         </div>
       </div>

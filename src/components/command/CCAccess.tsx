@@ -1,9 +1,9 @@
 const benefits = [
-  "Stop hunting for the right marketer, accountant, or operator",
-  "Set pricing visible on the platform before any work begins",
-  "Request the service, the right person picks up",
+  "Hours back from researching who to hire",
+  "Confidence the work will actually get done",
   "Consistent quality across every discipline",
-  "Time back to do the part only you can do",
+  "One platform for the help you need next",
+  "Focus stays on the part only you can do",
 ];
 
 const CCAccess = () => {
@@ -24,11 +24,11 @@ const CCAccess = () => {
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              You stop hunting for the right marketer, accountant, lawyer, or operator. You stop comparing four quotes and hoping. You stop paying retail at a name-brand firm just because at least they'll show up.
+              You stop comparing four quotes from people you don't know. You stop paying retail at a name-brand firm just because at least they show up. You stop hoping the next vendor will be different.
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              You request the service through the platform. The right person picks up. The pricing is visible before any work begins. The work gets done by someone we've personally worked with.
+              You request the service through the platform. The right person picks up. The work gets done by someone we've personally worked with.
             </p>
 
             <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">

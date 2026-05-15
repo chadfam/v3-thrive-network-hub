@@ -16,20 +16,20 @@ const CCHero = () => {
             className="font-serif-display text-slate-ink tracking-hero"
             style={{ fontSize: "clamp(2.25rem, 6vw, 4.5rem)", lineHeight: 1.02 }}
           >
-            A board of advisors. Not a vendor list.
+            Your own board of advisors.
           </h1>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[540px]">
-            You stop guessing who to trust. Command Central is your own board of advisors, experts, and service providers underneath Profit Partners. Pre-vetted, with set pricing, across every discipline you need.
+            You stop guessing who to trust. Command Central is your own board of advisors, experts, and service providers. Pre-vetted, personally worked with, across every discipline you need.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#catalog"
               className="btn-primary"
             >
-            See what's in the catalog
-          </a>
-            <a href="/profit-partners" className="btn-secondary">
-              Apply through Profit Partners
+              See what's on the board
+            </a>
+            <a href="/apply" className="btn-secondary">
+              Apply to join
             </a>
           </div>
         </div>
