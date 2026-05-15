@@ -1,9 +1,9 @@
 const tiles = [
-  { name: "Coaching and Training", desc: "Mentorship and structure for the next level of you and your team." },
-  { name: "Marketing", desc: "Get found, sell more, and stop guessing at your funnel." },
-  { name: "Finance", desc: "Cash flow, tax strategy, and financial leadership done right." },
-  { name: "Legal", desc: "Agreements that protect every deal you make." },
-  { name: "Tech", desc: "Tools and systems that actually run your business." },
+  { name: "Coaching and Training", desc: "Mentorship, coaching, and leadership development." },
+  { name: "Marketing", desc: "Marketing, automation, content, and ads." },
+  { name: "Finance", desc: "Bookkeeping, financial planning, taxes, and fractional CFO." },
+  { name: "Legal", desc: "Agreements, NDAs, succession, and estate planning." },
+  { name: "Tech", desc: "Tools, websites, CRM, automation, and AI." },
 ];
 
 const CCDisciplines = () => {

@@ -1,9 +1,9 @@
-const benefits = [
-  "Hours back from researching who to hire",
-  "Confidence the work will actually get done",
+const included = [
+  "An established set of partners across coaching, marketing, finance, legal, and tech",
+  "Each one vetted through direct working relationship",
   "Consistent quality across every front",
-  "A partner who shows up next time too",
-  "Focus stays on the part only you can do",
+  "A partner you can bring back next time",
+  "One source for the help you need next",
 ];
 
 const CCAccess = () => {
@@ -20,19 +20,19 @@ const CCAccess = () => {
                 letterSpacing: "-0.025em",
               }}
             >
-              What changes with a <span className="text-brand-blue ppx-italic">board</span>.
+              What's included with <span className="text-brand-blue ppx-italic">membership</span>.
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              No more researching unknowns. No more comparing four proposals from people you can't verify. No more wondering if this one's going to ghost you in month two.
+              Members can call on the same partners we engage with in our own work, across coaching, marketing, finance, legal, and tech.
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Instead, the board is sitting there. The next person you bring in is already trusted.
+              Each one is someone we've worked with directly. The trust is established before the introduction is made.
             </p>
 
             <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">
-              Less time guessing. More time building.
+              An established board. Available across every front.
             </p>
           </div>
 
@@ -42,10 +42,10 @@ const CCAccess = () => {
               style={{ border: "1px solid #E0E3E7" }}
             >
               <h3 className="font-serif-display text-[22px] md:text-[24px] text-slate-ink leading-tight">
-                What you get back
+                Included
               </h3>
               <ul className="mt-7 space-y-5">
-                {benefits.map((b) => (
+                {included.map((b) => (
                   <li key={b} className="flex items-start gap-3">
                     <span aria-hidden className="bullet-dot" />
                     <span className="text-[16px] md:text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">

@@ -12,23 +12,19 @@ const CCProblem = () => {
                 letterSpacing: "-0.025em",
               }}
             >
-              You shouldn't have to <span className="text-brand-blue ppx-italic">guess</span>.
+              Built on <span className="text-brand-blue ppx-italic">relationships</span>, not lists.
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Most owners spend years cycling through vendors. The marketing person who didn't deliver. The bookkeeper who left at tax season. The lawyer who billed for the call where they said hello.
+              Command Central is a curated set of advisors, experts, and service providers we've engaged with directly in our own work. Not a vendor marketplace. Not a directory. Not a paid placement list.
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              By the third or fourth one you stop trusting recommendations entirely. Eventually you pay retail at a name-brand firm just to feel safe. That solves the trust problem and creates a billing problem.
-            </p>
-
-            <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Command Central is the response. Your own board of advisors, experts, and service providers, ready for what you're working on now.
+              Members get access to the same partners we already use. Coaching, marketing, finance, legal, and tech. Every front where help has to be reliable.
             </p>
 
             <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">
-              The right people. Already trusted.
+              Relationships first. Recommendations second.
             </p>
           </div>
 
