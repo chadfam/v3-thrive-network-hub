@@ -1,8 +1,13 @@
+import { Users, Megaphone, Calculator, Scale, Code } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
 type Item = { name: string; desc: string };
 type Area = {
   num: string;
   slug: string;
   name: string;
+  scope: string;
+  Icon: LucideIcon;
   image: string;
   alt: string;
   intro: string[];
@@ -14,6 +19,8 @@ const areas: Area[] = [
     num: "01",
     slug: "coaching-and-training",
     name: "Coaching and training",
+    scope: "Leadership, sales, accountability.",
+    Icon: Users,
     image: "https://images.unsplash.com/photo-1511376979163-f804dff7ad7b?auto=format&fit=crop&q=80&w=1200",
     alt: "Two people in a private coaching conversation across a table in warm daylight.",
     intro: [
@@ -34,6 +41,8 @@ const areas: Area[] = [
     num: "02",
     slug: "marketing",
     name: "Marketing",
+    scope: "Campaigns, video, ads, content.",
+    Icon: Megaphone,
     image: "https://images.unsplash.com/photo-1702047063975-0841a0621b5a?auto=format&fit=crop&q=80&w=1200",
     alt: "A small marketing team at laptops around a table with a campaign on the screen behind them.",
     intro: [
@@ -53,8 +62,10 @@ const areas: Area[] = [
     num: "03",
     slug: "finance",
     name: "Finance",
-    image: "https://images.unsplash.com/photo-1709880945165-d2208c6ad2ec?auto=format&fit=crop&q=80&w=1200",
-    alt: "A calculator on financial charts with a laptop in the background, clean planning workspace.",
+    scope: "Books, taxes, CFO oversight.",
+    Icon: Calculator,
+    image: "https://images.unsplash.com/photo-1551135049-8a33b5883817?auto=format&fit=crop&q=80&w=1200",
+    alt: "Four people in business attire gathered at a table, reviewing a printed financial document together.",
     intro: [
       "Finance is where the work of a business meets the math. Bookkeeping, financial statements, tax planning, expense audits, insurance reviews, cash-flow modeling, fractional CFO oversight.",
       "The advisors here include bookkeepers, CFOs, tax preparers, financial planners, and analysts. Questions range from this month's cash to next year's tax strategy to the architecture of an eventual exit.",
@@ -74,8 +85,10 @@ const areas: Area[] = [
     num: "04",
     slug: "legal",
     name: "Legal",
-    image: "https://images.unsplash.com/photo-1758518731462-d091b0b4ed0d?auto=format&fit=crop&q=80&w=1200",
-    alt: "A lawyer with two clients at a desk reviewing and signing a contract.",
+    scope: "Agreements, partnerships, estate.",
+    Icon: Scale,
+    image: "https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&q=80&w=1200",
+    alt: "Two women in an office reviewing and signing documents at a desk.",
     intro: [
       "Legal coverage shows up in agreements, contracts, partnerships, succession plans, and estate plans. The work is often invisible until a question lands that requires it.",
       "The advisors here are practicing attorneys across business, transactions, and estate. The scope depends on what the member's situation calls for.",
@@ -93,6 +106,8 @@ const areas: Area[] = [
     num: "05",
     slug: "tech",
     name: "Technology",
+    scope: "Sites, CRM, integrations, AI.",
+    Icon: Code,
     image: "https://images.unsplash.com/photo-1623281185000-6940e5347d2e?auto=format&fit=crop&q=80&w=1200",
     alt: "A dual-monitor developer workstation with code on screen, clean home-office setup.",
     intro: [
@@ -114,7 +129,7 @@ const CCAreas = () => {
     <section id="catalog">
       {/* Section intro */}
       <div className="bg-brand-blue/5 border-t border-slate-ink/10">
-        <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 pt-20 md:pt-32 pb-12 md:pb-16">
+        <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 pt-20 md:pt-32 pb-16 md:pb-20">
           <div className="max-w-[820px]">
             <h2
               className="font-serif-display text-slate-ink"
@@ -135,6 +150,33 @@ const CCAreas = () => {
               Each section below describes the area, the kinds of advisors who stand in it, and the work that typically falls inside it.
             </p>
           </div>
+
+          {/* 5-up area grid */}
+          <div className="mt-12 md:mt-16 grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
+            {areas.map((area) => {
+              const Icon = area.Icon;
+              return (
+                <a
+                  key={area.slug}
+                  href={`#${area.slug}`}
+                  className="group rounded-2xl bg-background border border-slate-ink/10 p-5 md:p-6 hover:border-brand-blue/40 hover:shadow-md transition-all"
+                >
+                  <div className="flex items-center justify-between">
+                    <Icon className="w-7 h-7 text-brand-blue/80 group-hover:text-brand-blue transition-colors" strokeWidth={1.5} />
+                    <span className="font-serif-display text-[20px] md:text-[22px] text-gradient-warm leading-none">
+                      {area.num}
+                    </span>
+                  </div>
+                  <p className="mt-5 font-serif-display text-[17px] md:text-[19px] text-slate-ink leading-snug group-hover:text-brand-blue transition-colors">
+                    {area.name}
+                  </p>
+                  <p className="mt-2 text-[13px] md:text-[14px] leading-relaxed text-[hsl(var(--slate-700))]">
+                    {area.scope}
+                  </p>
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
 
@@ -148,24 +190,29 @@ const CCAreas = () => {
             id={area.slug}
             className={`${bg} scroll-mt-24 border-t border-slate-ink/10`}
           >
-            <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-24">
+            <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-28">
               <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                 <div className={imageFirst ? "lg:order-1" : "lg:order-2"}>
-                  <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
-                    <img
-                      src={area.image}
-                      srcSet={`${area.image.replace("w=1200", "w=640")} 640w, ${area.image} 1200w`}
-                      sizes="(max-width: 1024px) 100vw, 600px"
-                      alt={area.alt}
-                      loading="lazy"
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="lg:sticky lg:top-24">
+                    <div className="aspect-[3/4] w-full overflow-hidden rounded-2xl">
+                      <img
+                        src={area.image}
+                        srcSet={`${area.image.replace("w=1200", "w=640")} 640w, ${area.image} 1200w`}
+                        sizes="(max-width: 1024px) 100vw, 600px"
+                        alt={area.alt}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className={imageFirst ? "lg:order-2" : "lg:order-1"}>
-                  <p className="font-serif-display text-[28px] md:text-[32px] text-gradient-warm leading-none">
-                    {area.num}
-                  </p>
+                  <div className="flex items-baseline gap-4">
+                    <p className="font-serif-display text-[28px] md:text-[32px] text-gradient-warm leading-none">
+                      {area.num}
+                    </p>
+                    <area.Icon className="w-6 h-6 text-brand-blue/70" strokeWidth={1.5} />
+                  </div>
                   <h3
                     className="mt-3 font-serif-display text-slate-ink"
                     style={{

@@ -2,7 +2,7 @@ const CCTrust = () => {
   return (
     <section className="bg-background border-t border-slate-ink/10">
       <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className="lg:order-2">
             <h2
               className="font-serif-display text-slate-ink"
@@ -29,15 +29,17 @@ const CCTrust = () => {
           </div>
 
           <div className="lg:order-1">
-            <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1573496267526-08a69e46a409?auto=format&fit=crop&q=80&w=1200"
-                srcSet="https://images.unsplash.com/photo-1573496267526-08a69e46a409?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1573496267526-08a69e46a409?auto=format&fit=crop&q=80&w=1200 1200w"
-                sizes="(max-width: 1200px) 100vw, 600px"
-                alt="A business owner and a trusted advisor in a one-on-one working session, both taking notes at a sunlit office table."
-                loading="lazy"
-                className="w-full h-full object-cover"
-              />
+            <div className="lg:sticky lg:top-24">
+              <div className="aspect-[3/4] w-full overflow-hidden rounded-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1200"
+                  srcSet="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1200 1200w"
+                  sizes="(max-width: 1200px) 100vw, 600px"
+                  alt="Two business owners in conversation at a working table, one introducing context to the other."
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
