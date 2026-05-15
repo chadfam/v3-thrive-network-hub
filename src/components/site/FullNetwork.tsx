@@ -13,7 +13,7 @@ const tiles = [
   },
   {
     name: "Command Central™",
-    body: "Your own board of advisors, experts, and service providers. Vetted, with set pricing.",
+    body: "Your own board of advisors, experts, and service providers we've personally worked with.",
     to: "/command-central",
   },
   {

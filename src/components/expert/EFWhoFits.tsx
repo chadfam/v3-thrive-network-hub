@@ -34,9 +34,9 @@ const EFWhoFits = () => {
           </p>
         </div>
         <div className="md:col-span-5">
-          <div className="text-[13px] font-medium uppercase tracking-[0.14em] text-[hsl(var(--slate-500))]">
-            WHO TENDS TO APPLY
-          </div>
+          <h3 className="font-serif-display text-[22px] md:text-[24px] text-slate-ink leading-tight">
+            Who tends to apply
+          </h3>
           <ul className="mt-6 space-y-4">
             {profile.map((p) => (
               <li key={p} className="flex items-start gap-3 text-[17px] text-[hsl(var(--slate-700))]">

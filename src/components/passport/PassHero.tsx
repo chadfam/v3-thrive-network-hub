@@ -12,11 +12,8 @@ const PassHero = () => {
       <div className="hero-fullbleed-scrim-navy" />
       <div className="hero-fullbleed-content mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pt-20 md:pt-32 pb-20 md:pb-32 grid md:grid-cols-12">
         <div className="md:col-span-7">
-          <p className="text-[13px] font-medium tracking-[0.14em] uppercase text-white/70">
-            ONE MEMBERSHIP. FORTY-PLUS ROOMS.
-          </p>
           <h1
-            className="mt-6 font-serif-display text-white tracking-hero"
+            className="font-serif-display text-white tracking-hero"
             style={{ fontSize: "clamp(2.5rem, 7vw, 5rem)", lineHeight: 1.04 }}
           >
             Mastermind Passport.™<br />Walk in introduced.

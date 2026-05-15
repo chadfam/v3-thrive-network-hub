@@ -36,7 +36,7 @@ const PassWhoFor = () => {
           </p>
         </div>
         <div>
-          <p className="text-[13px] font-medium tracking-[0.14em] uppercase text-[hsl(var(--slate-500))]">TYPICAL MEMBER PROFILE</p>
+          <h3 className="font-serif-display text-[22px] md:text-[24px] text-slate-ink leading-tight">Typical member profile</h3>
           <ul className="mt-6 space-y-4">
             {profile.map((p) => (
               <li key={p} className="flex gap-3 items-start">

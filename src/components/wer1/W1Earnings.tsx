@@ -10,11 +10,8 @@ const W1Earnings = () => {
       <div className="absolute inset-0 bg-brand-blue opacity-[0.04] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32 grid md:grid-cols-2 gap-12 md:gap-16 items-start">
         <div>
-          <p className="text-[13px] font-medium uppercase tracking-[0.16em] text-[hsl(var(--slate-500))]">
-            THE WAVES OF PAY MODEL
-          </p>
           <h2
-            className="mt-6 font-serif-display text-slate-ink"
+            className="font-serif-display text-slate-ink"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
           >
             Earnings move outward. And they don't stop.
@@ -39,9 +36,9 @@ const W1Earnings = () => {
         </div>
 
         <div className="bg-white border border-[#E0E3E7] rounded-2xl p-6 sm:p-8 md:p-10">
-          <p className="text-[13px] font-medium uppercase tracking-[0.16em] text-[hsl(var(--slate-500))]">
-            EARNINGS WAVE EXAMPLE
-          </p>
+          <h3 className="font-serif-display text-[22px] md:text-[24px] text-slate-ink leading-tight">
+            Earnings wave example
+          </h3>
           <div className="mt-6 divide-y divide-[#E0E3E7]">
             {waves.map((w) => (
               <div key={w.label} className="py-4 first:pt-0 last:pb-0 grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-3">

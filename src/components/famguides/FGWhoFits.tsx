@@ -34,9 +34,9 @@ const FGWhoFits = () => {
             </p>
           </div>
           <div className="md:col-span-5">
-            <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-[hsl(var(--slate-500))]">
-              WHO TENDS TO APPLY
-            </p>
+            <h3 className="font-serif-display text-[22px] md:text-[24px] text-slate-ink leading-tight">
+              Who tends to apply
+            </h3>
             <ul className="mt-6 space-y-4">
               {items.map((it) => (
                 <li

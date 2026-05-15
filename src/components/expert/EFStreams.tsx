@@ -81,7 +81,6 @@ const EFStreams = () => {
               <div className="grid md:grid-cols-12 gap-8 md:gap-10">
                 <div className="md:col-span-3">
                   <div className="font-serif-display text-[80px] leading-none text-brand-gold">{s.num}</div>
-                  <div className="mt-3 text-[12px] font-medium uppercase tracking-[0.14em] text-white/70">{s.label}</div>
                 </div>
                 <div className="md:col-span-9">
                   <h3 className="font-serif-display text-[28px] md:text-[32px] text-white leading-tight">{s.name}</h3>

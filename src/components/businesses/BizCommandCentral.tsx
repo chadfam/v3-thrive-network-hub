@@ -4,10 +4,10 @@ const advisorImage = "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?
 const advisorImageSrcSet = "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&q=80&w=1200 1200w";
 
 const benefits = [
-  "Marketing, sales, finance, legal, and technology partners",
-  "Pre-vetted, accountable to the network on every referral",
-  "Set pricing visible before any work begins",
-  "Access scales with your tier in the alliance",
+  "Coaching, marketing, finance, legal, and tech advisors",
+  "Pre-vetted through direct working relationship",
+  "A curated set, not a vendor marketplace",
+  "Inside the WEcosystem alongside Profit Partners and Mastermind Passport",
 ];
 
 const BizCommandCentral = () => {
@@ -28,7 +28,7 @@ const BizCommandCentral = () => {
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              A vetted bench of advisors, experts, and service providers across the disciplines you actually need. Pre-screened. Set pricing. Accountable to the network on every introduction.
+              Your own board of advisors, experts, and service providers we've personally worked with across every front you need.
             </p>
 
             <ul className="mt-10 space-y-4 max-w-[560px]">
@@ -43,7 +43,7 @@ const BizCommandCentral = () => {
             </ul>
 
             <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[20px] leading-snug max-w-[560px]">
-              Skip the vendor casino. Get partners with skin in the game.
+              Personally worked with. Personally vetted.
             </p>
 
             <Link

@@ -35,8 +35,7 @@ const PassAccess = () => {
         <div className="mt-14 grid md:grid-cols-2 gap-6 md:gap-8">
           {cards.map((c) => (
             <div key={c.label} className="flex flex-col rounded-2xl bg-white p-10 md:p-12" style={{ border: "1px solid #E0E3E7" }}>
-              <p className="text-[13px] font-medium tracking-[0.14em] uppercase text-[hsl(var(--slate-500))]">{c.label}</p>
-              <h3 className="mt-4 font-serif-display text-[28px] text-slate-ink leading-tight">{c.heading}</h3>
+              <h3 className="font-serif-display text-[28px] text-slate-ink leading-tight">{c.heading}</h3>
               <p className="mt-5 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] flex-grow">{c.body}</p>
               <a
                 href={c.href}

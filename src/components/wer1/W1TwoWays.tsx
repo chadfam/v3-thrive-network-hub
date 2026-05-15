@@ -44,8 +44,7 @@ const W1TwoWays = () => {
         <div className="mt-16 grid md:grid-cols-2 gap-6 md:gap-8">
           {cards.map((c) => (
             <div key={c.label} className="bg-white border border-[#E0E3E7] rounded-2xl p-10 md:p-14 flex flex-col">
-              <p className="text-[13px] font-medium uppercase tracking-[0.16em] text-[hsl(var(--slate-500))]">{c.label}</p>
-              <h3 className="mt-6 font-serif-display text-slate-ink" style={{ fontSize: "clamp(1.75rem, 3vw, 2.25rem)", letterSpacing: "-0.01em" }}>
+              <h3 className="font-serif-display text-slate-ink" style={{ fontSize: "clamp(1.75rem, 3vw, 2.25rem)", letterSpacing: "-0.01em" }}>
                 {c.heading}
               </h3>
               <p className="mt-6 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[380px]">{c.body}</p>

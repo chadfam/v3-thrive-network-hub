@@ -68,10 +68,7 @@ const FGSpecialty = () => {
         <div className="mt-16 grid md:grid-cols-2 gap-6 md:gap-8">
           {cards.map((c) => (
             <div key={c.label} className="bg-background text-slate-ink rounded-2xl p-10 md:p-12">
-              <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-[hsl(var(--slate-500))]">
-                {c.label}
-              </p>
-              <h3 className="mt-3 font-serif-display text-slate-ink text-[28px]">{c.name}</h3>
+              <h3 className="font-serif-display text-slate-ink text-[28px]">{c.name}</h3>
               <p className="mt-4 text-[16px] text-[hsl(var(--slate-700))] leading-relaxed">
                 {c.body}
               </p>

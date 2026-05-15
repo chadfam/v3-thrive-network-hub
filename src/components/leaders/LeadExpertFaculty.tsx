@@ -39,7 +39,7 @@ const LeadExpertFaculty = () => {
           </a>
         </div>
         <div className="md:col-span-7">
-          <div className="text-[13px] font-medium uppercase tracking-[0.14em] text-[hsl(var(--slate-500))]">HOW EXPERT FACULTY EARN</div>
+          <h3 className="font-serif-display text-[22px] md:text-[24px] text-slate-ink leading-tight">How Expert Faculty earn</h3>
           <ul className="mt-6 space-y-8">
             {streams.map((s) => (
               <li key={s.num} className="flex items-start gap-6">

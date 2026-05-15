@@ -75,10 +75,7 @@ const PPBenefits = () => {
     <section id="benefits" className="bg-background">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
         <div className="text-center max-w-[760px] mx-auto">
-          <p className="text-[13px] font-medium tracking-[0.18em] uppercase text-[hsl(var(--slate-500))]">
-            EVERYTHING THAT'S INCLUDED
-          </p>
-          <h2 className="mt-6 font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
+          <h2 className="font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
             One <span className="text-brand-blue ppx-italic">alliance</span>.<br />Built around your business.
           </h2>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
@@ -89,9 +86,9 @@ const PPBenefits = () => {
         <div className="mt-16 md:mt-20 grid md:grid-cols-2 gap-8 md:gap-10">
           {groups.map((g) => (
             <div key={g.title} className="rounded-2xl bg-white p-8 md:p-10 border border-[hsl(var(--slate-200))]">
-              <p className="text-[13px] font-medium tracking-[0.14em] uppercase text-brand-blue">
+              <h3 className="font-serif-display text-[22px] md:text-[24px] text-slate-ink leading-tight">
                 {g.title}
-              </p>
+              </h3>
               <ul className="mt-6 space-y-3">
                 {g.items.map((i) => (
                   <li key={i} className="flex gap-3 items-start">

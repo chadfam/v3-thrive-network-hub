@@ -59,7 +59,7 @@ const BizHero = () => {
             </h1>
 
             <p className="mt-7 max-w-[520px] text-[15px] md:text-[16px] leading-[1.65] text-[hsl(var(--slate-700))]">
-              Customer acquisition is every owner's biggest problem. Real partnerships solve it. One application opens the working alliance of Profit Partners, the elite mastermind rooms of Mastermind Passport, and the vetted bench of Command Central.
+              Customer acquisition is every owner's biggest problem. Real partnerships solve it. One application opens the working alliance of Profit Partners, the elite mastermind rooms of Mastermind Passport, and your own board of advisors in Command Central.
             </p>
 
             <div className="mt-9">

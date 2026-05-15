@@ -36,8 +36,7 @@ const W1Apply = () => {
         <div className="mt-14 grid md:grid-cols-2 gap-6 md:gap-8">
           {cards.map((c) => (
             <div key={c.label} className="bg-white border border-[#E0E3E7] rounded-2xl p-10 md:p-12 flex flex-col">
-              <p className="text-[13px] font-medium uppercase tracking-[0.16em] text-[hsl(var(--slate-500))]">{c.label}</p>
-              <h3 className="mt-5 font-serif-display text-slate-ink text-[28px]" style={{ letterSpacing: "-0.01em" }}>
+              <h3 className="font-serif-display text-slate-ink text-[28px]" style={{ letterSpacing: "-0.01em" }}>
                 {c.heading}
               </h3>
               <p className="mt-5 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] flex-1">{c.body}</p>

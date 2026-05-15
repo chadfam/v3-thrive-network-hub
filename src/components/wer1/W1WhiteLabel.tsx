@@ -16,11 +16,8 @@ const W1WhiteLabel = () => {
     <section id="for-businesses" style={{ backgroundColor: "#0B1F3F" }} className="text-white">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32 grid md:grid-cols-[55fr_45fr] gap-12 md:gap-16 items-start">
         <div>
-          <p className="text-[13px] font-medium uppercase tracking-[0.16em] text-white/70">
-            WHITE-LABEL
-          </p>
           <h2
-            className="mt-6 font-serif-display text-white"
+            className="font-serif-display text-white"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
           >
             Your affiliate program. Our platform.
@@ -42,9 +39,9 @@ const W1WhiteLabel = () => {
         </div>
 
         <div className="bg-white rounded-2xl p-10">
-          <p className="text-[13px] font-medium uppercase tracking-[0.16em] text-[hsl(var(--slate-500))]">
-            WHAT'S INCLUDED IN A WHITE-LABEL DEPLOYMENT
-          </p>
+          <h3 className="font-serif-display text-[22px] md:text-[24px] text-slate-ink leading-tight">
+            What's included in a white-label deployment
+          </h3>
           <ul className="mt-6 space-y-3">
             {included.map((i) => (
               <li key={i} className="flex gap-3 text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">

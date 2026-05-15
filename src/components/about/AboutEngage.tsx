@@ -12,13 +12,12 @@ const AboutEngage = () => {
         <div className="text-center max-w-[720px] mx-auto">
           <div className="mx-auto mb-8 section-accent" aria-hidden />
           <h2 className="font-serif-display text-slate-ink section-headline tracking-section">How to engage.</h2>
-          <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">Three ways in, depending on what you do.</p>
+          <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">Three Ways to Win, depending on what you do.</p>
         </div>
         <div className="mt-14 md:mt-16 grid md:grid-cols-3 gap-6 md:gap-8">
           {cards.map((c) => (
             <article key={c.label} className="flex flex-col rounded-2xl border border-[hsl(var(--slate)/0.12)] bg-background p-8 md:p-10">
-              <div className="text-[13px] font-medium uppercase tracking-[0.16em] text-[hsl(var(--slate-500))]">{c.label}</div>
-              <h3 className="mt-4 font-serif-display text-slate-ink text-[24px] md:text-[28px] leading-tight">{c.heading}</h3>
+              <h3 className="font-serif-display text-slate-ink text-[24px] md:text-[28px] leading-tight">{c.heading}</h3>
               <p className="mt-4 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] flex-1">{c.body}</p>
               <a href={c.route} className="btn-primary text-[14px] py-3 px-5 min-h-0 mt-8 self-start">
             {c.button}

@@ -30,7 +30,7 @@ const LLEarnings = () => {
             className="font-serif-display text-slate-ink tracking-section"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}
           >
-            Four ways Local Leaders earn.
+            How Local Leaders earn.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
             Most active Local Leaders earn between $3,000 and $10,000 per month within their first year. The income is built from four streams that the WER1 platform tracks and pays automatically.

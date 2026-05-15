@@ -41,10 +41,7 @@ const LLApply = () => {
               className="bg-background rounded-2xl p-12 border flex flex-col"
               style={{ borderColor: "#E0E3E7" }}
             >
-              <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-[hsl(var(--slate-500))]">
-                {c.label}
-              </p>
-              <h3 className="mt-4 font-serif-display text-slate-ink text-[28px]">{c.heading}</h3>
+              <h3 className="font-serif-display text-slate-ink text-[28px]">{c.heading}</h3>
               <p className="mt-4 text-[17px] text-[hsl(var(--slate-700))] leading-relaxed flex-1">
                 {c.body}
               </p>
