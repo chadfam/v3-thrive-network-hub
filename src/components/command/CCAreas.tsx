@@ -8,8 +8,6 @@ type Area = {
   name: string;
   scope: string;
   Icon: LucideIcon;
-  image: string;
-  alt: string;
   intro: string[];
   items: Item[];
 };
@@ -21,8 +19,6 @@ const areas: Area[] = [
     name: "Coaching and training",
     scope: "Leadership, sales, accountability.",
     Icon: Users,
-    image: "https://images.unsplash.com/photo-1511376979163-f804dff7ad7b?auto=format&fit=crop&q=80&w=1200",
-    alt: "Two people in a private coaching conversation across a table in warm daylight.",
     intro: [
       "Coaching is where most members start, because the work of running a business presses on the owner long before it presses on anything else. Time, focus, leadership patterns, follow-through, the conversations the owner is or isn't having.",
       "The advisors here include executive coaches, peer group facilitators, accountability partners, and sales trainers. Engagements range from one-on-one work to peer-group formats to ongoing accountability.",
@@ -43,8 +39,6 @@ const areas: Area[] = [
     name: "Marketing",
     scope: "Campaigns, video, ads, content.",
     Icon: Megaphone,
-    image: "https://images.unsplash.com/photo-1702047063975-0841a0621b5a?auto=format&fit=crop&q=80&w=1200",
-    alt: "A small marketing team at laptops around a table with a campaign on the screen behind them.",
     intro: [
       "Marketing covers the work between an audience and a purchase. Campaigns, videos, ads, social posting, course production, and the systems underneath all of it.",
       "The advisors here include campaign builders, ad managers, video producers, social operators, and the people who design the marketing systems that hold everything together.",
@@ -64,8 +58,6 @@ const areas: Area[] = [
     name: "Finance",
     scope: "Books, taxes, CFO oversight.",
     Icon: Calculator,
-    image: "https://images.unsplash.com/photo-1551135049-8a33b5883817?auto=format&fit=crop&q=80&w=1200",
-    alt: "Four people in business attire gathered at a table, reviewing a printed financial document together.",
     intro: [
       "Finance is where the work of a business meets the math. Bookkeeping, financial statements, tax planning, expense audits, insurance reviews, cash-flow modeling, fractional CFO oversight.",
       "The advisors here include bookkeepers, CFOs, tax preparers, financial planners, and analysts. Questions range from this month's cash to next year's tax strategy to the architecture of an eventual exit.",
@@ -87,8 +79,6 @@ const areas: Area[] = [
     name: "Legal",
     scope: "Agreements, partnerships, estate.",
     Icon: Scale,
-    image: "https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&q=80&w=1200",
-    alt: "Two women in an office reviewing and signing documents at a desk.",
     intro: [
       "Legal coverage shows up in agreements, contracts, partnerships, succession plans, and estate plans. The work is often invisible until a question lands that requires it.",
       "The advisors here are practicing attorneys across business, transactions, and estate. The scope depends on what the member's situation calls for.",
@@ -108,8 +98,6 @@ const areas: Area[] = [
     name: "Technology",
     scope: "Sites, CRM, integrations, AI.",
     Icon: Code,
-    image: "https://images.unsplash.com/photo-1623281185000-6940e5347d2e?auto=format&fit=crop&q=80&w=1200",
-    alt: "A dual-monitor developer workstation with code on screen, clean home-office setup.",
     intro: [
       "Technology underwrites how a business operates day to day. Websites, hosting, CRM, automation, integration, AI tooling.",
       "The advisors here include developers, systems architects, CRM specialists, and AI practitioners. The work ranges from auditing a tech stack to building integrations that connect tools and data across the business.",
@@ -127,7 +115,7 @@ const areas: Area[] = [
 const CCAreas = () => {
   return (
     <section id="catalog">
-      {/* Section intro */}
+      {/* Section intro + 5-up icon grid */}
       <div className="bg-brand-blue/5 border-t border-slate-ink/10">
         <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 pt-20 md:pt-32 pb-16 md:pb-20">
           <div className="max-w-[820px]">
@@ -151,7 +139,6 @@ const CCAreas = () => {
             </p>
           </div>
 
-          {/* 5-up area grid */}
           <div className="mt-12 md:mt-16 grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
             {areas.map((area) => {
               const Icon = area.Icon;
@@ -180,70 +167,52 @@ const CCAreas = () => {
         </div>
       </div>
 
-      {/* Five area sub-sections */}
+      {/* Five area sub-sections: editorial, image-less */}
       {areas.map((area, idx) => {
-        const imageFirst = idx % 2 === 0;
         const bg = idx % 2 === 0 ? "bg-background" : "bg-brand-blue/5";
+        const Icon = area.Icon;
         return (
           <div
             key={area.slug}
             id={area.slug}
             className={`${bg} scroll-mt-24 border-t border-slate-ink/10`}
           >
-            <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-28">
-              <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-                <div className={imageFirst ? "lg:order-1" : "lg:order-2"}>
-                  <div className="lg:sticky lg:top-24">
-                    <div className="aspect-[3/4] w-full overflow-hidden rounded-2xl">
-                      <img
-                        src={area.image}
-                        srcSet={`${area.image.replace("w=1200", "w=640")} 640w, ${area.image} 1200w`}
-                        sizes="(max-width: 1024px) 100vw, 600px"
-                        alt={area.alt}
-                        loading="lazy"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className={imageFirst ? "lg:order-2" : "lg:order-1"}>
-                  <div className="flex items-baseline gap-4">
-                    <p className="font-serif-display text-[28px] md:text-[32px] text-gradient-warm leading-none">
-                      {area.num}
+            <div className="mx-auto max-w-[960px] px-6 sm:px-10 md:px-16 py-20 md:py-28">
+              <div className="flex items-center gap-5">
+                <p className="font-serif-display text-[44px] md:text-[64px] text-gradient-warm leading-none">
+                  {area.num}
+                </p>
+                <Icon className="w-9 h-9 md:w-11 md:h-11 text-brand-blue/80" strokeWidth={1.5} />
+              </div>
+              <h3
+                className="mt-5 font-serif-display text-slate-ink"
+                style={{
+                  fontSize: "clamp(2rem, 4.5vw, 3rem)",
+                  lineHeight: 1.05,
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                {area.name}
+              </h3>
+              {area.intro.map((p, i) => (
+                <p
+                  key={i}
+                  className={`${i === 0 ? "mt-8" : "mt-5"} text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[720px]`}
+                >
+                  {p}
+                </p>
+              ))}
+              <div className="mt-14 md:mt-16 pt-12 md:pt-14 border-t border-slate-ink/10 grid md:grid-cols-2 gap-x-12 gap-y-7">
+                {area.items.map((s) => (
+                  <article key={s.name}>
+                    <h4 className="font-serif-display text-[19px] md:text-[21px] text-slate-ink leading-snug">
+                      {s.name}
+                    </h4>
+                    <p className="mt-2 text-[14px] md:text-[15px] leading-relaxed text-[hsl(var(--slate-700))]">
+                      {s.desc}
                     </p>
-                    <area.Icon className="w-6 h-6 text-brand-blue/70" strokeWidth={1.5} />
-                  </div>
-                  <h3
-                    className="mt-3 font-serif-display text-slate-ink"
-                    style={{
-                      fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
-                      lineHeight: 1.05,
-                      letterSpacing: "-0.02em",
-                    }}
-                  >
-                    {area.name}
-                  </h3>
-                  {area.intro.map((p, i) => (
-                    <p
-                      key={i}
-                      className={`${i === 0 ? "mt-6" : "mt-4"} text-[16px] md:text-[17px] leading-[1.7] text-[hsl(var(--slate-700))]`}
-                    >
-                      {p}
-                    </p>
-                  ))}
-                  <div className="mt-10 space-y-5 pt-8 border-t border-slate-ink/10">
-                    {area.items.map((s) => (
-                      <article key={s.name}>
-                        <h4 className="font-serif-display text-[18px] md:text-[20px] text-slate-ink leading-snug">
-                          {s.name}
-                        </h4>
-                        <p className="mt-1 text-[14px] md:text-[15px] leading-relaxed text-[hsl(var(--slate-700))]">
-                          {s.desc}
-                        </p>
-                      </article>
-                    ))}
-                  </div>
-                </div>
+                  </article>
+                ))}
               </div>
             </div>
           </div>
