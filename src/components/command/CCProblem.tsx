@@ -20,7 +20,7 @@ const CCProblem = () => {
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              By the third or fourth one you stop trusting recommendations entirely. Eventually you give up and pay full retail at a name-brand firm. That solves the trust problem and creates a billing problem.
+              By the third or fourth one you stop trusting recommendations entirely. Eventually you pay retail at a name-brand firm just to feel safe. That solves the trust problem and creates a billing problem.
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
