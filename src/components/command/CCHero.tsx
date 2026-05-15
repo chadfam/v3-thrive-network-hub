@@ -18,8 +18,8 @@ const CCHero = () => {
           >
             Your own board of advisors.
           </h1>
-          <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[540px]">
-            Vetted experts across coaching, marketing, finance, legal, and technology.
+          <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[560px]">
+            Advisors, experts, and service providers across coaching, marketing, finance, legal, and technology.
           </p>
           <div className="mt-10">
             <a href="/apply" className="btn-primary">
