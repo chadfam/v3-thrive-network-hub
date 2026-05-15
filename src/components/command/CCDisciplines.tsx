@@ -15,7 +15,7 @@ const CCDisciplines = () => {
             className="font-serif-display text-slate-ink tracking-section"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}
           >
-            Every discipline you <span className="text-brand-blue ppx-italic">need</span>.
+            Every front you <span className="text-brand-blue ppx-italic">need</span>.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
             Five fronts every business actually fights. We have partners on each one.

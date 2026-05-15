@@ -1,7 +1,7 @@
 const benefits = [
   "Hours back from researching who to hire",
   "Confidence the work will actually get done",
-  "Consistent quality across every discipline",
+  "Consistent quality across every front",
   "A partner who shows up next time too",
   "Focus stays on the part only you can do",
 ];

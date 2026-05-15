@@ -19,7 +19,7 @@ const CCHero = () => {
             Your own board of advisors.
           </h1>
           <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[540px]">
-            You stop guessing who to trust. Command Central is your own board of advisors, experts, and service providers. Pre-vetted, personally worked with, across every discipline you need.
+            You stop guessing who to trust. Command Central is your own board of advisors, experts, and service providers. Pre-vetted, personally worked with, across every front you need.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
