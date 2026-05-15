@@ -2,7 +2,7 @@ const benefits = [
   "Hours back from researching who to hire",
   "Confidence the work will actually get done",
   "Consistent quality across every discipline",
-  "One platform for the help you need next",
+  "Trust that compounds with every introduction",
   "Focus stays on the part only you can do",
 ];
 
@@ -28,7 +28,7 @@ const CCAccess = () => {
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              You request the service through the platform. The right person picks up. The work gets done by someone we've personally worked with.
+              When you need help, the right person from the board is the one we send. Someone we've personally worked with, in the discipline you actually need.
             </p>
 
             <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">

@@ -12,7 +12,7 @@ const CCProblem = () => {
                 letterSpacing: "-0.025em",
               }}
             >
-              Built for <span className="text-brand-blue ppx-italic">trust</span>.
+              You shouldn't have to <span className="text-brand-blue ppx-italic">guess</span>.
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
