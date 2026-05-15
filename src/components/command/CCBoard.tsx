@@ -1,3 +1,20 @@
+type Pillar = { title: string; body: string };
+
+const pillars: Pillar[] = [
+  {
+    title: "It's in place from day one.",
+    body: "Coaching, marketing, finance, legal, and technology. Covered from the start of membership.",
+  },
+  {
+    title: "The advisors know each other.",
+    body: "They share a network and a standard. Introductions across areas carry context.",
+  },
+  {
+    title: "The work compounds.",
+    body: "Each conversation builds on the ones that came before. Over time, the board knows the member's business well.",
+  },
+];
+
 const CCBoard = () => {
   return (
     <section className="bg-background border-t border-slate-ink/10">
@@ -14,7 +31,7 @@ const CCBoard = () => {
           />
         </div>
 
-        {/* 2-col text below */}
+        {/* 2-col text */}
         <div className="mt-12 md:mt-16 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-5">
             <h2
@@ -40,6 +57,20 @@ const CCBoard = () => {
               Over time, the advisors come to know the member's business well, and the work moves faster.
             </p>
           </div>
+        </div>
+
+        {/* 3-up pillar strip */}
+        <div className="mt-16 md:mt-20 pt-12 md:pt-14 border-t border-slate-ink/10 grid md:grid-cols-3 gap-10 md:gap-12">
+          {pillars.map((p) => (
+            <div key={p.title}>
+              <h3 className="font-serif-display text-slate-ink text-[20px] md:text-[22px] leading-snug">
+                {p.title}
+              </h3>
+              <p className="mt-3 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
+                {p.body}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

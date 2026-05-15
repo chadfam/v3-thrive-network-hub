@@ -2,6 +2,7 @@ import Layout from "@/components/site/Layout";
 import CCHero from "@/components/command/CCHero";
 import CCBoard from "@/components/command/CCBoard";
 import CCAreas from "@/components/command/CCAreas";
+import CCWork from "@/components/command/CCWork";
 import CCMission from "@/components/command/CCMission";
 import CCApply from "@/components/command/CCApply";
 
@@ -14,6 +15,7 @@ const CommandCentral = () => (
     <CCHero />
     <CCBoard />
     <CCAreas />
+    <CCWork />
     <CCMission />
     <CCApply />
   </Layout>
