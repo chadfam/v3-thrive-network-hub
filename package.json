@@ -8,6 +8,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
+    "lint:copy": "bash .vale/lint-source.sh",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"

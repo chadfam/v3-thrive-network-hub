@@ -22,7 +22,14 @@ Then install the **Vale** VS Code extension by **chrischinchilla**. The extensio
 
 ## Scope
 
-Vale lints `.tsx`, `.jsx`, `.ts`, `.js`, `.md`, `.html`, `.css` files. Exclusions live in `.valeignore` — notably `_context/` is excluded because those docs intentionally quote banned phrases as examples.
+**Native Vale linting (real-time in editor):** `.md`, `.html`, `.css`.
+
+**JSX/TSX/JS/TS files:** Vale 3 doesn't natively parse JSX text content, so the in-editor extension won't flag the actual visible copy in React components. Two backstops cover this gap:
+
+1. **Claude Code Stop hook** at `.claude/scripts/utt-audit.sh` — runs every time Claude completes a turn, greps changed source files for em-dashes and unconditional banned phrases, blocks completion if found.
+2. **Manual on-demand command** — `npm run lint:copy` runs Vale against every JSX/TSX/JS/TS file in `src/` by piping each file through Vale with `--ext=.html`. Useful before commits or for a one-shot sweep.
+
+Exclusions live in `.valeignore` — notably `_context/` is excluded because those docs intentionally quote banned phrases as examples.
 
 ## Updating the rules
 
