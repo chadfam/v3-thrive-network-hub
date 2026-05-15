@@ -1,6 +1,6 @@
 const CCProblem = () => {
   return (
-    <section className="bg-brand-blue/5 border-t border-slate-ink/10">
+    <section className="bg-background border-t border-slate-ink/10">
       <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
@@ -12,19 +12,19 @@ const CCProblem = () => {
                 letterSpacing: "-0.025em",
               }}
             >
-              Built on <span className="text-brand-blue ppx-italic">relationships</span>, not lists.
+              Trust transfers from the person who sent them.
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Command Central is a curated set of advisors, experts, and service providers we've engaged with directly in our own work. Not a vendor marketplace. Not a directory. Not a paid placement list.
+              The relationships are already in place. The introductions come with the trust already attached.
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Members get access to the same partners we already use. Coaching, marketing, finance, legal, and tech. Every front where help has to be reliable.
+              The advisors and the members are part of the same network. A network built around one idea. Businesses become famous for the families they serve.
             </p>
 
-            <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">
-              Relationships first. Recommendations second.
+            <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              When someone reaches for Command Central, they're reaching for help that's anchored in that purpose.
             </p>
           </div>
 
