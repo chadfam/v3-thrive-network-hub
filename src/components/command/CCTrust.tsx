@@ -28,6 +28,9 @@ const CCTrust = () => {
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))]">
               When a member reaches an advisor, the conversation usually starts a few steps in. The introduction does the warm-up.
             </p>
+            <p className="mt-10 font-serif-display italic text-slate-ink text-[20px] md:text-[24px] leading-snug">
+              Person by person.
+            </p>
           </div>
         </div>
       </div>

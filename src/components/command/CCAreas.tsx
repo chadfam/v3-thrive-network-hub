@@ -167,52 +167,68 @@ const CCAreas = () => {
         </div>
       </div>
 
-      {/* Five area sub-sections: editorial, image-less */}
+      {/* Five area sub-sections: 2-col text + designed card, alternating sides */}
       {areas.map((area, idx) => {
-        const bg = idx % 2 === 0 ? "bg-background" : "bg-brand-blue/5";
+        const sectionBg = idx % 2 === 0 ? "bg-background" : "bg-brand-blue/5";
+        const cardBg = idx % 2 === 0 ? "bg-brand-blue/5" : "bg-white";
+        const cardOnRight = idx % 2 === 0;
         const Icon = area.Icon;
         return (
           <div
             key={area.slug}
             id={area.slug}
-            className={`${bg} scroll-mt-24 border-t border-slate-ink/10`}
+            className={`${sectionBg} scroll-mt-24 border-t border-slate-ink/10`}
           >
-            <div className="mx-auto max-w-[960px] px-6 sm:px-10 md:px-16 py-20 md:py-28">
-              <div className="flex items-center gap-5">
-                <p className="font-serif-display text-[44px] md:text-[64px] text-gradient-warm leading-none">
-                  {area.num}
-                </p>
-                <Icon className="w-9 h-9 md:w-11 md:h-11 text-brand-blue/80" strokeWidth={1.5} />
-              </div>
-              <h3
-                className="mt-5 font-serif-display text-slate-ink"
-                style={{
-                  fontSize: "clamp(2rem, 4.5vw, 3rem)",
-                  lineHeight: 1.05,
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                {area.name}
-              </h3>
-              {area.intro.map((p, i) => (
-                <p
-                  key={i}
-                  className={`${i === 0 ? "mt-8" : "mt-5"} text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[720px]`}
-                >
-                  {p}
-                </p>
-              ))}
-              <div className="mt-14 md:mt-16 pt-12 md:pt-14 border-t border-slate-ink/10 grid md:grid-cols-2 gap-x-12 gap-y-7">
-                {area.items.map((s) => (
-                  <article key={s.name}>
-                    <h4 className="font-serif-display text-[19px] md:text-[21px] text-slate-ink leading-snug">
-                      {s.name}
-                    </h4>
-                    <p className="mt-2 text-[14px] md:text-[15px] leading-relaxed text-[hsl(var(--slate-700))]">
-                      {s.desc}
-                    </p>
-                  </article>
-                ))}
+            <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-28">
+              <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                <div className={`lg:col-span-5 ${cardOnRight ? "lg:order-1" : "lg:order-2"}`}>
+                  <div className="lg:sticky lg:top-24">
+                    <div className="flex items-center gap-5">
+                      <p className="font-serif-display text-[40px] md:text-[56px] text-gradient-warm leading-none">
+                        {area.num}
+                      </p>
+                      <Icon className="w-8 h-8 md:w-10 md:h-10 text-brand-blue/80" strokeWidth={1.5} />
+                    </div>
+                    <h3
+                      className="mt-5 font-serif-display text-slate-ink"
+                      style={{
+                        fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
+                        lineHeight: 1.05,
+                        letterSpacing: "-0.02em",
+                      }}
+                    >
+                      {area.name}
+                    </h3>
+                    {area.intro.map((p, i) => (
+                      <p
+                        key={i}
+                        className={`${i === 0 ? "mt-7" : "mt-5"} text-[16px] md:text-[17px] leading-[1.7] text-[hsl(var(--slate-700))]`}
+                      >
+                        {p}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+
+                <div className={`lg:col-span-7 ${cardOnRight ? "lg:order-2" : "lg:order-1"}`}>
+                  <div className={`rounded-2xl ${cardBg} border border-slate-ink/10 p-7 sm:p-9 md:p-10 shadow-sm`}>
+                    <ul className="space-y-7">
+                      {area.items.map((s) => (
+                        <li
+                          key={s.name}
+                          className="border-l-2 border-brand-blue/30 pl-5 hover:border-brand-blue transition-colors"
+                        >
+                          <h4 className="font-serif-display text-[18px] md:text-[20px] text-slate-ink leading-snug">
+                            {s.name}
+                          </h4>
+                          <p className="mt-1.5 text-[14px] md:text-[15px] leading-relaxed text-[hsl(var(--slate-700))]">
+                            {s.desc}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
