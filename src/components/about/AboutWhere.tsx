@@ -6,7 +6,7 @@ const AboutWhere = () => {
           <h2 className="font-serif-display text-slate-ink section-headline tracking-section">Where we are.</h2>
           <div className="mt-8 space-y-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[520px]">
             <p>United To Thrive LLC is headquartered in Tempe, Arizona. Phoenix is the original Profit Partners chapter and the first market where the full network is operating end to end. The Phoenix room has owners across financial services, real estate, mortgage, insurance, home services, professional services, construction, and the trades. Category exclusivity is one per industry per market.</p>
-            <p>New chapters open as the network grows. The Local Leader and FAM Guide programs operate nationally. Expert Faculty distribution is national from day one. If you're in a market we haven't opened yet and you fit a category, the application puts you on the early list for that market.</p>
+            <p>New chapters open as the network grows. The Local Leader and FAM Guide roles operate nationally. Expert Faculty distribution is national from day one. If you're in a market we haven't opened yet and you fit a category, the application puts you on the early list for that market.</p>
           </div>
         </div>
         <div className="md:col-span-5">

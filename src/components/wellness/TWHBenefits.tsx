@@ -37,7 +37,7 @@ const TWHBenefits = () => {
             letterSpacing: "-0.025em",
           }}
         >
-          What the wellness benefits <span className="text-brand-blue ppx-italic">actually are</span>.
+          What the wellness benefits <span className="text-brand-blue ppx-italic">include</span>.
         </h2>
 
         <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">

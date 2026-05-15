@@ -4,7 +4,7 @@ import Layout from "@/components/site/Layout";
 const Terms = () => (
   <Layout
     title="Terms of Service"
-    description="The agreement between United To Thrive LLC and visitors, members, and partners using the United to Thrive platform and programs."
+    description="The agreement between United To Thrive LLC and visitors, members, and partners using the United to Thrive platform and offerings."
     canonical="/terms"
   >
     <section className="bg-background">
@@ -13,7 +13,7 @@ const Terms = () => (
           Terms of service.
         </h1>
         <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[640px]">
-          The agreement between United To Thrive LLC and visitors, members, and partners using the United to Thrive platform and programs.
+          The agreement between United To Thrive LLC and visitors, members, and partners using the United to Thrive platform and offerings.
         </p>
         <p className="mt-4 italic text-[14px] text-[hsl(var(--slate-500))]">Last updated: November 2026</p>
       </div>

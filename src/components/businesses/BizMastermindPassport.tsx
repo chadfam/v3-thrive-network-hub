@@ -7,7 +7,7 @@ const benefits = [
   "Curated access to top mastermind communities",
   "Peer operators, investors, and partners in every room",
   "Quarterly strategy sessions",
-  "Proximity to where deals and capital actually move",
+  "Proximity to where deals and capital move",
 ];
 
 const BizMastermindPassport = () => {

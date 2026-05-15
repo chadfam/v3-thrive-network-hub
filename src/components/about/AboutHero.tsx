@@ -59,7 +59,7 @@ const AboutHero = () => {
                 href="/businesses"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-brand-blue text-white text-[14px] font-semibold tracking-tight hover:bg-brand-blue/90 transition-colors"
               >
-                See the programs
+                See what's inside
               </a>
             </div>
 

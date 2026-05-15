@@ -13,7 +13,7 @@ const EFDistribution = () => {
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
         <div className="text-center max-w-[760px] mx-auto">
           <h2 className="font-serif-display tracking-section text-slate-ink" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-            Where your content actually goes.
+            Where your content goes.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[720px] mx-auto">
             Five distribution surfaces inside the FAM Central network. Your content gets pushed across all of them based on category fit and engagement.

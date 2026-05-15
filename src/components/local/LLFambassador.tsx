@@ -28,7 +28,7 @@ const LLFambassador = () => {
               Local Leader is the operational role. FAMbassador is the public-facing one. As a FAMbassador, you represent FAM Central in your community and you help bring families together in real life. You're the face of the platform on the ground.
             </p>
             <p className="mt-6 max-w-[480px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-              The two roles are the same person. We use FAMbassador in public-facing materials because it's the role families recognize. We use Local Leader in the back-of-house framework because that's the work the role actually involves.
+              The two roles are the same person. We use FAMbassador in public-facing materials because it's the role families recognize. We use Local Leader in the back-of-house framework because that's the work the role involves.
             </p>
           </div>
           <div className="bg-background rounded-2xl p-10 border" style={{ borderColor: "#E0E3E7" }}>

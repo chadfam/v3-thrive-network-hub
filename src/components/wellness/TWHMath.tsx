@@ -15,7 +15,7 @@ const TWHMath = () => {
               className="font-serif-display tracking-section"
               style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}
             >
-              What pre-tax actually means.
+              What pre-tax means.
             </h2>
             <p className="mt-8 text-[17px] md:text-[19px] text-white/90 leading-relaxed max-w-[480px]">
               A pre-tax wellness plan lets an employee redirect part of their pre-tax compensation toward qualified wellness benefits.

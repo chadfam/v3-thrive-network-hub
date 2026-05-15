@@ -1,7 +1,7 @@
 const steps = [
   { n: "01", name: "Sign up", body: "Create a promoter account in about five minutes. Tell us what you'd be sharing and the audience you reach. No fees to join." },
   { n: "02", name: "Get your links", body: "Receive branded sharing links for the businesses, programs, and offers in the network. Each link tracks back to your account." },
-  { n: "03", name: "Share", body: "Share what's actually relevant to your audience. Social posts, email, conversations. We don't dictate the format. The platform tracks the activity." },
+  { n: "03", name: "Share", body: "Share what's relevant to your audience. Social posts, email, conversations. We don't dictate the format. The platform tracks the activity." },
   { n: "04", name: "Get paid", body: "When someone buys through your link, you earn. Through the Waves of Pay model, you also earn from the people they bring in, indefinitely." },
 ];
 

@@ -37,7 +37,7 @@ const WM = (d: boolean) => (
 // from the end of "thrive" to the hub, so word + mark read as one lockup.
 const LINK_X = 152;       // x where the connecting spoke meets the wordmark
 const LINK_Y = 30;        // y of that connection (optical centre of the word)
-const HUB_X = 184;        // hub centre x — close to the word, with a short spoke between
+const HUB_X = 184;        // hub centre x - close to the word, with a short spoke between
 const HUB_Y = 28;
 const SPOKE = (d: boolean) => (d ? "rgba(255,255,255,0.45)" : "#C2CCD8");
 const SPOKE_FAINT = (d: boolean) => (d ? "rgba(255,255,255,0.3)" : "#DDE3EA");
@@ -65,7 +65,7 @@ const Link = ({ d, to = [HUB_X, HUB_Y], w = 1.5 }: { d: boolean; to?: readonly [
 // FINAL DIRECTION · hub-and-spoke symbol + Montserrat wordmark (a system)
 // Built on a simple 26-unit square grid so the mark survives at favicon size.
 // Gold centre = United to Thrive / the family at the middle.
-// Six nodes = the six programs (all the same blue — equal members of the network).
+// Six nodes = the six programs (all the same blue - equal members of the network).
 // Navy spokes = the structure that connects them.
 // ════════════════════════════════════════════════════════════════════════════
 
@@ -124,7 +124,7 @@ const LightMark = ({ size = 88, tone = "color", ...over }: { size?: number; tone
 );
 
 // ════════════════════════════════════════════════════════════════════════════
-// THE ORGANIC HUB (refined S3) — the chosen direction.
+// THE ORGANIC HUB (refined S3) - the chosen direction.
 // A living network: hub set off-centre, nodes at deliberately-irregular
 // distances and angles, spokes of varying length. Carefully composed so the
 // visual mass stays balanced even though nothing is symmetric.
@@ -140,7 +140,7 @@ const ORG_NODES: Record<string, { hub: readonly [number, number]; nodes: ONode[]
     [5, 6, "navy", 1], [25, 4, "blue", 1.05], [29, 17, "navy", 0.92],
     [22, 28, "blue", 1], [7, 28, "navy", 1], [17, 10, "blue", 0.85],
   ]},
-  // 5 nodes — closer to the original S3 mock
+  // 5 nodes - closer to the original S3 mock
   five:  { hub: [14, 17] as const, nodes: [
     [5, 7, "navy", 1], [27, 5, "blue", 1.05], [29, 19, "navy", 0.95],
     [20, 29, "blue", 1], [7, 28, "navy", 0.95],
@@ -179,7 +179,7 @@ const OrganicMark = ({
   );
 };
 
-// Lockup using the organic mark — wordmark first, mark on the RIGHT.
+// Lockup using the organic mark - wordmark first, mark on the RIGHT.
 const OrgLockup = ({ tone = "color", h = 48, layout = "six", weight = "light" }: { tone?: "color" | "reversed"; h?: number; layout?: keyof typeof ORG_NODES; weight?: "light" | "medium" | "bold" }) => {
   const dark = tone === "reversed";
   const mark = h * 0.72;
@@ -220,7 +220,7 @@ const meshed: Concept[] = [
   {
     id: "X1",
     name: "Word inside the network",
-    note: "A thin ring encircles the whole word; satellites — the programs — sit on the ring; one is the gold hub (United to Thrive / the family). The word isn't NEXT to the network; it's IN it.",
+    note: "A thin ring encircles the whole word; satellites - the programs - sit on the ring; one is the gold hub (United to Thrive / the family). The word isn't NEXT to the network; it's IN it.",
     render: (d) => {
       const cx = 75, cy = 28, rx = 92, ry = 28;
       const pts = [200, 240, 290, 340, 20, 70, 110, 160].map((deg, i) => {
@@ -239,7 +239,7 @@ const meshed: Concept[] = [
   {
     id: "X2",
     name: "The word hangs from the network",
-    note: "A small gold hub floats above the centre of the word; hairline spokes drop from it and touch the tops of t, h, i and v — the word is suspended from the network it belongs to. The 'e' completes it as the last node.",
+    note: "A small gold hub floats above the centre of the word; hairline spokes drop from it and touch the tops of t, h, i and v - the word is suspended from the network it belongs to. The 'e' completes it as the last node.",
     render: (d) => {
       const hx = 64, hy = 4;
       const tops: [number, number][] = [[12, 6], [33, 6], [67, 11], [84, 14], [106, 14]];
@@ -256,7 +256,7 @@ const meshed: Concept[] = [
   {
     id: "X3",
     name: "Network behind the word",
-    note: "A faint hub-and-spoke sits BEHIND the wordmark, centred on the 'rive'. The word is in front, on the network — same space, layered. The hub peeks out above and below the letters; the gold centre glows through.",
+    note: "A faint hub-and-spoke sits BEHIND the wordmark, centred on the 'rive'. The word is in front, on the network - same space, layered. The hub peeks out above and below the letters; the gold centre glows through.",
     render: (d) => {
       const cx = 78, cy = 27, pts = ring6(cx, cy, 24);
       return (
@@ -274,7 +274,7 @@ const meshed: Concept[] = [
   {
     id: "X4",
     name: "The 't' crossbar becomes a spoke",
-    note: "The horizontal stroke of the 't' keeps going — out over the top of the word — and lands on a small hub-and-spoke sitting just past the 'e'. The first letter and the network share the same stroke. They can't be separated.",
+    note: "The horizontal stroke of the 't' keeps going - out over the top of the word - and lands on a small hub-and-spoke sitting just past the 'e'. The first letter and the network share the same stroke. They can't be separated.",
     render: (d) => {
       const hx = 130, hy = 8, pts = ringR(hx, hy, 13);
       return (
@@ -292,7 +292,7 @@ const meshed: Concept[] = [
   {
     id: "X5",
     name: "The 'i' dot is a node",
-    note: "Smallest change, tightest mesh: the tittle of the 'i' in 'thrive' becomes a gold node with a thin halo ring — the network is literally inside the letter. Works because Montserrat's i-dot is already a chunky square; we just make it the centre of a tiny hub.",
+    note: "Smallest change, tightest mesh: the tittle of the 'i' in 'thrive' becomes a gold node with a thin halo ring - the network is literally inside the letter. Works because Montserrat's i-dot is already a chunky square; we just make it the centre of a tiny hub.",
     render: (d) => {
       const ix = 66, iy = 9; // i-dot position
       const minis = [200, 320, 90].map((deg) => {
@@ -314,8 +314,8 @@ const meshed: Concept[] = [
   },
   {
     id: "X6",
-    name: "Hub replaces the 'i' — thr⊙ve",
-    note: "Go all the way: the 'i' is gone — in its place, a small hub-and-spoke at the i's height. The word reads 'thr-(network)-ve'. The network isn't decoration on the wordmark; it IS a letter of it.",
+    name: "Hub replaces the 'i' - thr⊙ve",
+    note: "Go all the way: the 'i' is gone - in its place, a small hub-and-spoke at the i's height. The word reads 'thr-(network)-ve'. The network isn't decoration on the wordmark; it IS a letter of it.",
     render: (d) => (
       <svg viewBox="-2 -6 168 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         <text x="2" y="42" fontFamily={FONT} fontWeight={800} fontSize={44} letterSpacing="-1.5" fill={ink(d)}>thr</text>
@@ -336,7 +336,7 @@ const meshed: Concept[] = [
   {
     id: "X7",
     name: "The network underlines the word",
-    note: "A horizontal line runs beneath 'thrive' with nodes on it like stops on a transit line — the word sits ON the network, its foundation. The middle stop is the gold hub. Echoes the gold accent rule used across the site.",
+    note: "A horizontal line runs beneath 'thrive' with nodes on it like stops on a transit line - the word sits ON the network, its foundation. The middle stop is the gold hub. Echoes the gold accent rule used across the site.",
     render: (d) => {
       const y = 50, xs = [10, 35, 60, 85, 110, 135];
       return (
@@ -351,7 +351,7 @@ const meshed: Concept[] = [
   {
     id: "X8",
     name: "Network canopy over the word",
-    note: "A gentle arc over the wordmark with the programs hanging from it — a canopy, a roof of relationships sheltering the word. The apex of the arc is the gold hub. Reads as 'the network holds the brand up.'",
+    note: "A gentle arc over the wordmark with the programs hanging from it - a canopy, a roof of relationships sheltering the word. The apex of the arc is the gold hub. Reads as 'the network holds the brand up.'",
     render: (d) => {
       const xs = [16, 40, 64, 88, 112, 136];
       const arcY = (x: number) => 6 + 0.0016 * (x - 76) ** 2; // shallow upward arc, low in the middle
@@ -371,8 +371,8 @@ const meshed: Concept[] = [
 const hubStudy: Concept[] = [
   {
     id: "HS1",
-    name: "Refined six-spoke — gold hub, the word is the sixth node",
-    note: "S1, integrated. A connecting spoke runs from the end of 'thrive' into the network — the wordmark is the sixth node. Gold hub with a faint halo; five satellites alternating navy/blue; hairline spokes. Reads as one lockup.",
+    name: "Refined six-spoke - gold hub, the word is the sixth node",
+    note: "S1, integrated. A connecting spoke runs from the end of 'thrive' into the network - the wordmark is the sixth node. Gold hub with a faint halo; five satellites alternating navy/blue; hairline spokes. Reads as one lockup.",
     render: (d) => {
       const pts = ringR(HUB_X, HUB_Y, 18);
       return (
@@ -389,7 +389,7 @@ const hubStudy: Concept[] = [
   },
   {
     id: "HS2",
-    name: "Organic — equal members, the word feeds in",
+    name: "Organic - equal members, the word feeds in",
     note: "S3, integrated. The connecting spoke and five same-blue satellites (every program an equal member) scatter at irregular distances; spokes gently curve. The wordmark connects in as just another node. Gold hub.",
     render: (d) => {
       const sats: [number, number][] = [[174, 9], [206, 14], [202, 38], [170, 46], [192, 50]];
@@ -410,7 +410,7 @@ const hubStudy: Concept[] = [
   },
   {
     id: "HS3",
-    name: "Warm center — the word connects to a home",
+    name: "Warm center - the word connects to a home",
     note: "The hub is a small gold home shape ('famous for families' at the centre). A connecting spoke joins the wordmark to it; five navy satellites complete the network. Subtle, human, still tidy at small sizes.",
     render: (d) => {
       const pts = ringR(HUB_X, HUB_Y, 18);
@@ -427,7 +427,7 @@ const hubStudy: Concept[] = [
   },
   {
     id: "HS4",
-    name: "Orbit ring — the word joins the orbit",
+    name: "Orbit ring - the word joins the orbit",
     note: "No radial spokes. Five satellites sit on a thin orbit ring around the gold hub, and the connecting spoke brings the wordmark onto the same ring. 'Everything circles the centre.' Navy/blue satellites.",
     render: (d) => {
       const R = 17, pts = ringR(HUB_X, HUB_Y, R);
@@ -444,8 +444,8 @@ const hubStudy: Concept[] = [
   },
   {
     id: "HS5",
-    name: "One path lit — and the lit path is the word",
-    note: "Four satellites quietly outlined in navy on hairline spokes; one spoke glows gold — and it's the one running back to 'thrive'. The wordmark is the deal in motion. Navy hub.",
+    name: "One path lit - and the lit path is the word",
+    note: "Four satellites quietly outlined in navy on hairline spokes; one spoke glows gold - and it's the one running back to 'thrive'. The wordmark is the deal in motion. Navy hub.",
     render: (d) => {
       const pts = ringR(HUB_X, HUB_Y, 18);
       return (
@@ -461,8 +461,8 @@ const hubStudy: Concept[] = [
   },
   {
     id: "HS6",
-    name: "Reaching fan — the word powers the broadcast",
-    note: "The connecting spoke feeds into the hub, which fans satellites out to the right at increasing distance — the network reaching, promoting, distributing. 'We put you in front of people.' Gold hub, navy/blue satellites, blue spokes.",
+    name: "Reaching fan - the word powers the broadcast",
+    note: "The connecting spoke feeds into the hub, which fans satellites out to the right at increasing distance - the network reaching, promoting, distributing. 'We put you in front of people.' Gold hub, navy/blue satellites, blue spokes.",
     render: (d) => {
       const hx = HUB_X - 14, hy = HUB_Y;
       const fan: [number, number][] = [[hx + 18, hy - 16], [hx + 24, hy - 6], [hx + 26, hy + 5], [hx + 24, hy + 16], [hx + 18, hy + 25]];
@@ -479,7 +479,7 @@ const hubStudy: Concept[] = [
   },
   {
     id: "HS7",
-    name: "Layered hub — the word connects to family / community / network",
+    name: "Layered hub - the word connects to family / community / network",
     note: "The centre tells the story: a gold dot (family) inside a blue ring (community) inside a navy ring (network). The connecting spoke joins the wordmark to the outer ring; two small satellites complete it. The strongest standalone favicon of the set.",
     render: (d) => (
       <svg viewBox="0 0 208 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
@@ -497,8 +497,8 @@ const hubStudy: Concept[] = [
   },
   {
     id: "HS8",
-    name: "Networks within — the word feeds a network of networks",
-    note: "The connecting spoke joins the wordmark to the centre hub; four satellites, each with its own small dot beyond it — each program brings its own people in. 'A network of networks,' integrated into the lockup.",
+    name: "Networks within - the word feeds a network of networks",
+    note: "The connecting spoke joins the wordmark to the centre hub; four satellites, each with its own small dot beyond it - each program brings its own people in. 'A network of networks,' integrated into the lockup.",
     render: (d) => {
       const mids = [45, 135, 225, 315].map((deg) => {
         const a = (deg * Math.PI) / 180;
@@ -527,7 +527,7 @@ const hubStudy: Concept[] = [
   },
   {
     id: "HS9",
-    name: "Plus-network — the word is the fourth arm",
+    name: "Plus-network - the word is the fourth arm",
     note: "Stripped to a plus/cross: the connecting spoke is the left arm, three satellites are the others, gold hub. The most iconic and favicon-ready of the set; the plus quietly nods to 'more / add value.' Blue spokes.",
     render: (d) => {
       const sats = [[HUB_X, HUB_Y - 18], [HUB_X + 18, HUB_Y], [HUB_X, HUB_Y + 18]] as const;
@@ -544,8 +544,8 @@ const hubStudy: Concept[] = [
   },
   {
     id: "HS10",
-    name: "The 't' hub — the word loops back to its initial",
-    note: "The connecting spoke runs from 'thrive' to a hub that IS a tiny gold lowercase 't' — the brand initial at the centre of the network it labels. Five navy/blue satellites; hairline spokes. The most self-referential, in a good way.",
+    name: "The 't' hub - the word loops back to its initial",
+    note: "The connecting spoke runs from 'thrive' to a hub that IS a tiny gold lowercase 't' - the brand initial at the centre of the network it labels. Five navy/blue satellites; hairline spokes. The most self-referential, in a good way.",
     render: (d) => {
       const pts = ringR(HUB_X, HUB_Y, 18);
       return (
@@ -568,8 +568,8 @@ const shortlist: Concept[] = [
   // ---- HUB AND SPOKE ----
   {
     id: "S1",
-    name: "Hub & spoke — the network, plainly",
-    note: "A gold center hub (United to Thrive / the family) with six satellite hubs around it — Profit Partners, Mastermind Passport, Command Central, FAM Central, WER1, PromoEngine. Thin spokes connect them all. The mark IS the company structure.",
+    name: "Hub & spoke - the network, plainly",
+    note: "A gold center hub (United to Thrive / the family) with six satellite hubs around it - Profit Partners, Mastermind Passport, Command Central, FAM Central, WER1, PromoEngine. Thin spokes connect them all. The mark IS the company structure.",
     render: (d) => {
       const cx = 24, cy = 28, r = 22;
       const pts = [0, 60, 120, 180, 240, 300].map((deg) => {
@@ -591,7 +591,7 @@ const shortlist: Concept[] = [
   {
     id: "S2",
     name: "Hub & spoke as a 'T'",
-    note: "The hub-and-spoke arranged into the letter T — three satellite hubs across the top (the crossbar), the hub at the join, two more dropping down (the stem). Symbol + monogram + network, all at once. Hub gold, satellites navy/blue.",
+    note: "The hub-and-spoke arranged into the letter T - three satellite hubs across the top (the crossbar), the hub at the join, two more dropping down (the stem). Symbol + monogram + network, all at once. Hub gold, satellites navy/blue.",
     render: (d) => (
       <svg viewBox="0 0 215 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         {WM(d)}
@@ -609,7 +609,7 @@ const shortlist: Concept[] = [
   },
   {
     id: "S3",
-    name: "Hub & spoke — organic, real-network",
+    name: "Hub & spoke - organic, real-network",
     note: "Hub off-center; satellites at irregular distances and angles, spokes of varying length. Reads less like a diagram, more like a living network that grew. Hub gold, satellites navy/blue.",
     render: (d) => {
       const cx = 22, cy = 27;
@@ -630,8 +630,8 @@ const shortlist: Concept[] = [
   },
   {
     id: "S4",
-    name: "Hub & spoke — networks within the network",
-    note: "A center hub, a ring of mid-hubs, and each mid-hub has its own two little satellites. Fractal: each program is itself a hub. Says 'a network of networks' — which is exactly what United to Thrive is.",
+    name: "Hub & spoke - networks within the network",
+    note: "A center hub, a ring of mid-hubs, and each mid-hub has its own two little satellites. Fractal: each program is itself a hub. Says 'a network of networks' - which is exactly what United to Thrive is.",
     render: (d) => {
       const cx = 24, cy = 28;
       const mid = [45, 135, 225, 315].map((deg) => {
@@ -665,8 +665,8 @@ const shortlist: Concept[] = [
   },
   {
     id: "S5",
-    name: "Hub & spoke — value flowing outward",
-    note: "The hub sends value OUT to each satellite — spokes drawn as arrows pointing from the center to the programs. Says: United to Thrive promotes you, distributes to you, feeds the network. Arrows blue, hub gold.",
+    name: "Hub & spoke - value flowing outward",
+    note: "The hub sends value OUT to each satellite - spokes drawn as arrows pointing from the center to the programs. Says: United to Thrive promotes you, distributes to you, feeds the network. Arrows blue, hub gold.",
     render: (d) => {
       const cx = 24, cy = 28, r = 21;
       const pts = [0, 72, 144, 216, 288].map((deg) => {
@@ -692,8 +692,8 @@ const shortlist: Concept[] = [
   },
   {
     id: "S6",
-    name: "Hub & spoke — one path lit up (a deal in motion)",
-    note: "The full network sits quietly in grey — except one spoke and one satellite glow gold: a referral flowing through right now. Captures the network AND the action on it. Hub navy, lit path gold.",
+    name: "Hub & spoke - one path lit up (a deal in motion)",
+    note: "The full network sits quietly in grey - except one spoke and one satellite glow gold: a referral flowing through right now. Captures the network AND the action on it. Hub navy, lit path gold.",
     render: (d) => {
       const cx = 24, cy = 28, r = 22;
       const pts = [0, 60, 120, 180, 240, 300].map((deg) => {
@@ -715,8 +715,8 @@ const shortlist: Concept[] = [
   // ---- CHAIN (more like M4) ----
   {
     id: "S7",
-    name: "Ascending chain — straight up (M4, vertical)",
-    note: "Three interlocking links climbing vertically, each a step higher and a colour brighter: navy → blue → gold. Cleaner and more iconic than the diagonal M4. 'The chain is the point' — and the chain rises.",
+    name: "Ascending chain - straight up (M4, vertical)",
+    note: "Three interlocking links climbing vertically, each a step higher and a colour brighter: navy → blue → gold. Cleaner and more iconic than the diagonal M4. 'The chain is the point' - and the chain rises.",
     render: (d) => (
       <svg viewBox="0 0 200 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         {WM(d)}
@@ -747,8 +747,8 @@ const shortlist: Concept[] = [
   },
   {
     id: "S9",
-    name: "Chain loop — the flywheel",
-    note: "Five links forming a closed ring — the referral flywheel, recurring revenue, relationships that loop back and keep paying. One link gold (the active deal). Reads as 'this never stops.'",
+    name: "Chain loop - the flywheel",
+    note: "Five links forming a closed ring - the referral flywheel, recurring revenue, relationships that loop back and keep paying. One link gold (the active deal). Reads as 'this never stops.'",
     render: (d) => {
       const cx = 24, cy = 28, r = 14;
       const links = [0, 72, 144, 216, 288].map((deg) => {
@@ -770,8 +770,8 @@ const shortlist: Concept[] = [
   // ---- SPEECH BUBBLE (more like C4) ----
   {
     id: "S10",
-    name: "Chorus of recommendations — overlapping bubbles",
-    note: "Three speech bubbles cascading — many voices, many recommendations. The business model in a mark: people talking. Back navy, middle blue, front gold.",
+    name: "Chorus of recommendations - overlapping bubbles",
+    note: "Three speech bubbles cascading - many voices, many recommendations. The business model in a mark: people talking. Back navy, middle blue, front gold.",
     render: (d) => (
       <svg viewBox="0 0 222 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         {WM(d)}
@@ -786,7 +786,7 @@ const shortlist: Concept[] = [
   {
     id: "S11",
     name: "Recommendation → chain (the bubble has a tail of links)",
-    note: "A speech bubble whose pointer tail extends into two chain links — a recommendation that connects people downstream, and pays each of them. Word-of-mouth meets 'the chain is the point.' Bubble blue, links navy → gold.",
+    note: "A speech bubble whose pointer tail extends into two chain links - a recommendation that connects people downstream, and pays each of them. Word-of-mouth meets 'the chain is the point.' Bubble blue, links navy → gold.",
     render: (d) => (
       <svg viewBox="0 0 218 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         {WM(d)}
@@ -828,8 +828,8 @@ const shortlist: Concept[] = [
 const meaning: Concept[] = [
   {
     id: "M1",
-    name: "United → Thrive — two forms become one",
-    note: "A 'U' (an open vessel — united, gathering) with a 'T' rising out of it (thrive). One reads into the other: united, then thriving. The literal name as a mark. U in blue, T in navy, gold pivot dot.",
+    name: "United → Thrive - two forms become one",
+    note: "A 'U' (an open vessel - united, gathering) with a 'T' rising out of it (thrive). One reads into the other: united, then thriving. The literal name as a mark. U in blue, T in navy, gold pivot dot.",
     render: (d) => (
       <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         {WM(d)}
@@ -844,8 +844,8 @@ const meaning: Concept[] = [
   },
   {
     id: "M2",
-    name: "Convergence — the many become one, then rise",
-    note: "Several lines (the programs, the people, the chapters) start spread apart and converge to a single point — then continue as one bold stroke lifting upward. 'We unite them all,' and the united thing thrives. Navy lines, gold rising stroke.",
+    name: "Convergence - the many become one, then rise",
+    note: "Several lines (the programs, the people, the chapters) start spread apart and converge to a single point - then continue as one bold stroke lifting upward. 'We unite them all,' and the united thing thrives. Navy lines, gold rising stroke.",
     render: (d) => (
       <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         {WM(d)}
@@ -861,8 +861,8 @@ const meaning: Concept[] = [
   },
   {
     id: "M3",
-    name: "Family at the hub — everyone orbits the family",
-    note: "A gold heart-dot at the center; navy/blue petals radiating out (the businesses, leaders, partners that serve them). 'Famous for families' rendered literally — families at the center, the whole network revolving around them.",
+    name: "Family at the hub - everyone orbits the family",
+    note: "A gold heart-dot at the center; navy/blue petals radiating out (the businesses, leaders, partners that serve them). 'Famous for families' rendered literally - families at the center, the whole network revolving around them.",
     render: (d) => (
       <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         {WM(d)}
@@ -877,8 +877,8 @@ const meaning: Concept[] = [
   },
   {
     id: "M4",
-    name: "The ascending chain — 'the chain is the point'",
-    note: "Interlocking links climbing left-to-right, each a step up — and a colour step too: navy → blue → gold. The referral chain that pays everyone, the relationships that compound, the network rising. The single most literal expression of the WER1 idea.",
+    name: "The ascending chain - 'the chain is the point'",
+    note: "Interlocking links climbing left-to-right, each a step up - and a colour step too: navy → blue → gold. The referral chain that pays everyone, the relationships that compound, the network rising. The single most literal expression of the WER1 idea.",
     render: (d) => (
       <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         {WM(d)}
@@ -892,8 +892,8 @@ const meaning: Concept[] = [
   },
   {
     id: "M5",
-    name: "Roots & sprout — thriving above, network below",
-    note: "Above a horizon line: a two-leaf sprout (visible thriving). Below it: a small web of connected nodes (the partnership network that feeds the growth). The whole philosophy in one mark — what you see growing is built on relationships you don't.",
+    name: "Roots & sprout - thriving above, network below",
+    note: "Above a horizon line: a two-leaf sprout (visible thriving). Below it: a small web of connected nodes (the partnership network that feeds the growth). The whole philosophy in one mark - what you see growing is built on relationships you don't.",
     tall: true,
     render: (d) => (
       <svg viewBox="0 0 220 72" className="h-12 md:h-14 w-auto" aria-label="thrive">
@@ -918,8 +918,8 @@ const meaning: Concept[] = [
   },
   {
     id: "M6",
-    name: "Trust → abundance — the gradient is the message",
-    note: "A simple rising arc (or half-sun on a horizon) filled navy → blue → gold. Brandon's exact framing — blue is trust, gold is wealth — made into the mark itself: you move from trust to abundance. Optimistic, clean, scales to anything.",
+    name: "Trust → abundance - the gradient is the message",
+    note: "A simple rising arc (or half-sun on a horizon) filled navy → blue → gold. Brandon's exact framing - blue is trust, gold is wealth - made into the mark itself: you move from trust to abundance. Optimistic, clean, scales to anything.",
     render: (d) => (
       <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         <defs>
@@ -941,8 +941,8 @@ const meaning: Concept[] = [
   },
   {
     id: "M7",
-    name: "Interlocked rings — the bond, made permanent",
-    note: "Two interlocked rings — the business and the family — with a small third ring (the leader who connects them). Unity, partnership, permanence; the link that doesn't come apart. Navy + blue rings, gold link-point.",
+    name: "Interlocked rings - the bond, made permanent",
+    note: "Two interlocked rings - the business and the family - with a small third ring (the leader who connects them). Unity, partnership, permanence; the link that doesn't come apart. Navy + blue rings, gold link-point.",
     render: (d) => (
       <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         {WM(d)}
@@ -957,7 +957,7 @@ const meaning: Concept[] = [
   {
     id: "M8",
     name: "The home + the growth",
-    note: "A clean roofline (a chevron, a home) with an upward shoot rising through the peak. 'Strong communities start with strong families' — the home is the foundation; thriving grows out of it. Navy roof, gold shoot.",
+    note: "A clean roofline (a chevron, a home) with an upward shoot rising through the peak. 'Strong communities start with strong families' - the home is the foundation; thriving grows out of it. Navy roof, gold shoot.",
     render: (d) => (
       <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         {WM(d)}
@@ -970,7 +970,7 @@ const meaning: Concept[] = [
   },
   {
     id: "M9",
-    name: "The table — united at it, thriving from it",
+    name: "The table - united at it, thriving from it",
     note: "A 'T' whose crossbar is a long meeting table with three figures seated at it (the mastermind, the alliance, the community), the stem its foundation. Everything good here happens at a table; this puts the table in the mark. People dots alternate blue/gold.",
     render: (d) => (
       <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
@@ -985,8 +985,8 @@ const meaning: Concept[] = [
   },
   {
     id: "M10",
-    name: "Growth rings — the network adds a ring every year",
-    note: "Concentric arcs like tree-growth rings — innermost navy, then blue, the outermost (newest) gold. A tree thrives by adding rings; the network grows the same way, outward, year over year. Quiet, organic, premium.",
+    name: "Growth rings - the network adds a ring every year",
+    note: "Concentric arcs like tree-growth rings - innermost navy, then blue, the outermost (newest) gold. A tree thrives by adding rings; the network grows the same way, outward, year over year. Quiet, organic, premium.",
     render: (d) => (
       <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         {WM(d)}
@@ -1005,7 +1005,7 @@ const meaning: Concept[] = [
 const creative: Concept[] = [
   {
     id: "C1",
-    name: "Arrow-i — the 'i' grows upward",
+    name: "Arrow-i - the 'i' grows upward",
     note: "The 'i' in thrive is replaced by an upward arrow (its dot becomes the arrowhead). The word literally points to growth. Gold arrowhead, navy stem.",
     render: (d) => (
       <svg viewBox="0 0 250 60" className="h-10 md:h-12 w-auto" aria-label="thrive">
@@ -1021,7 +1021,7 @@ const creative: Concept[] = [
   },
   {
     id: "C2",
-    name: "Just the 't' — favicon-first identity",
+    name: "Just the 't' - favicon-first identity",
     note: "Drop the wordmark entirely for the symbol: a single bold lowercase 't' with a gold crossbar. The whole brand collapses to one mark. Wordmark sits beneath in small caps when needed.",
     tall: true,
     render: (d) => (
@@ -1037,7 +1037,7 @@ const creative: Concept[] = [
   },
   {
     id: "C3",
-    name: "Rising word — the baseline thrives upward",
+    name: "Rising word - the baseline thrives upward",
     note: "Heavy Montserrat, but each letter sits a notch higher than the last. The word physically climbs. Final letter gets a gold underline-tick.",
     render: (d) => (
       <svg viewBox="0 0 230 60" className="h-10 md:h-12 w-auto" aria-label="thrive">
@@ -1055,8 +1055,8 @@ const creative: Concept[] = [
   },
   {
     id: "C4",
-    name: "Word-of-mouth — thrive in a speech bubble",
-    note: "The wordmark inside a rounded chat bubble with a tail. The whole identity says 'recommendation / referral / what people say' — which is literally the business model.",
+    name: "Word-of-mouth - thrive in a speech bubble",
+    note: "The wordmark inside a rounded chat bubble with a tail. The whole identity says 'recommendation / referral / what people say' - which is literally the business model.",
     tall: true,
     render: (d) => (
       <svg viewBox="0 0 230 90" className="h-14 md:h-16 w-auto" aria-label="thrive">
@@ -1069,7 +1069,7 @@ const creative: Concept[] = [
   },
   {
     id: "C5",
-    name: "Honeycomb — a hex cell mark + wordmark",
+    name: "Honeycomb - a hex cell mark + wordmark",
     note: "A navy hexagon (a building block, a network cell) with a gold dot inside, leading the wordmark. Implies structure, ecosystem, the network you belong to.",
     render: (d) => (
       <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
@@ -1081,7 +1081,7 @@ const creative: Concept[] = [
   },
   {
     id: "C6",
-    name: "The orbit — a family at the center",
+    name: "The orbit - a family at the center",
     note: "The wordmark with a small gold dot orbiting on a thin arc above it. The dot is the family; the word is everything that revolves around them. Subtle, distinctive.",
     render: (d) => (
       <svg viewBox="0 0 230 60" className="h-10 md:h-12 w-auto" aria-label="thrive">
@@ -1093,8 +1093,8 @@ const creative: Concept[] = [
   },
   {
     id: "C7",
-    name: "Negative-space T — the mark is the void",
-    note: "A navy rounded square with a 'T' cut out of it — the letter exists only as empty space. Modern, confident, very strong as an app icon. Wordmark alongside.",
+    name: "Negative-space T - the mark is the void",
+    note: "A navy rounded square with a 'T' cut out of it - the letter exists only as empty space. Modern, confident, very strong as an app icon. Wordmark alongside.",
     render: (d) => (
       <svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         <defs>
@@ -1112,7 +1112,7 @@ const creative: Concept[] = [
   },
   {
     id: "C8",
-    name: "Stacked block — TH / RI / VE as a monogram",
+    name: "Stacked block - TH / RI / VE as a monogram",
     note: "The word broken into three rows of ultra-bold caps, packed into a near-square. Reads as a monogram, works at any size, feels architectural and permanent.",
     tall: true,
     render: (d) => (
@@ -1126,8 +1126,8 @@ const creative: Concept[] = [
   },
   {
     id: "C9",
-    name: "The thread — one line ties the letters together",
-    note: "The wordmark with a single thin line weaving over and under the letters — the network thread that connects everyone. Gold line, navy word.",
+    name: "The thread - one line ties the letters together",
+    note: "The wordmark with a single thin line weaving over and under the letters - the network thread that connects everyone. Gold line, navy word.",
     render: (d) => (
       <svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         <path d="M 0 38 Q 30 24 60 38 T 120 38 T 180 38 Q 200 30 220 38" fill="none" stroke={GOLD} strokeWidth="2.5" strokeLinecap="round" />
@@ -1137,7 +1137,7 @@ const creative: Concept[] = [
   },
   {
     id: "C10",
-    name: "Plus mark — '+thrive' (more, wellness, growth)",
+    name: "Plus mark - '+thrive' (more, wellness, growth)",
     note: "A bold blue equal-armed plus sign leading the wordmark. Reads as 'plus / more / add value' and nods to the wellness side of the business. Plus works alone as a favicon.",
     render: (d) => (
       <svg viewBox="0 0 248 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
@@ -1152,7 +1152,7 @@ const creative: Concept[] = [
   },
   {
     id: "C11",
-    name: "Seedling — life growing out of the word",
+    name: "Seedling - life growing out of the word",
     note: "A small two-leaf sprout grows out of the end of 'thrive'. The most literal take: thrive = growth, life, flourishing. Warm, organic, family-friendly.",
     render: (d) => (
       <svg viewBox="0 0 240 60" className="h-10 md:h-12 w-auto" aria-label="thrive">
@@ -1167,8 +1167,8 @@ const creative: Concept[] = [
   },
   {
     id: "C12",
-    name: "Pixel — the digital-platform take",
-    note: "The wordmark built from a chunky pixel grid. Signals 'this is a tech platform / app', not just a marketing brand. Most polarizing of the set — you'll love it or hate it.",
+    name: "Pixel - the digital-platform take",
+    note: "The wordmark built from a chunky pixel grid. Signals 'this is a tech platform / app', not just a marketing brand. Most polarizing of the set - you'll love it or hate it.",
     render: (d) => {
       // crude pixel rendering of "thrive" using rects on a grid
       const px = 6;
@@ -1177,7 +1177,7 @@ const creative: Concept[] = [
       const grid = [
         "  X      X X X   X       X X X     X       X X X X X ",
       ];
-      // Too complex to hand-bitmap nicely — instead approximate with a "pixel-block" wordmark
+      // Too complex to hand-bitmap nicely - instead approximate with a "pixel-block" wordmark
       void cells; void grid; void px;
       return (
         <svg viewBox="0 0 230 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
@@ -1194,8 +1194,8 @@ const creative: Concept[] = [
   },
   {
     id: "C13",
-    name: "Infinity loop — compounding, recurring",
-    note: "An infinity / loop mark before the wordmark — the referral flywheel, recurring revenue, relationships that keep paying. Blue loop, gold pinch-point.",
+    name: "Infinity loop - compounding, recurring",
+    note: "An infinity / loop mark before the wordmark - the referral flywheel, recurring revenue, relationships that keep paying. Blue loop, gold pinch-point.",
     render: (d) => (
       <svg viewBox="0 0 245 56" className="h-10 md:h-12 w-auto" aria-label="thrive">
         <g transform="translate(2, 8)" fill="none" strokeWidth="5" strokeLinecap="round">
@@ -1208,7 +1208,7 @@ const creative: Concept[] = [
   },
   {
     id: "C14",
-    name: "Underline-arrow — the line turns into direction",
+    name: "Underline-arrow - the line turns into direction",
     note: "Heavy wordmark with a gold underline that lifts into an arrowhead at the end. Stability (the line) plus momentum (the arrow). Reads as 'forward, up, and to the right.'",
     render: (d) => (
       <svg viewBox="0 0 235 64" className="h-11 md:h-13 w-auto" aria-label="thrive">
@@ -1225,7 +1225,7 @@ const wordmarks: Concept[] = [
     render: (d) => (<svg viewBox="0 0 210 56" className="h-10 md:h-12 w-auto"><text x="2" y="42" fontFamily={FONT} fontWeight={800} fontSize={46} letterSpacing="-2" fill={ink(d)}>thrive</text></svg>) },
   { id: "T2", name: "Montserrat ExtraBold · brand blue", note: "Same form, all brand blue.",
     render: (d) => (<svg viewBox="0 0 210 56" className="h-10 md:h-12 w-auto"><text x="2" y="42" fontFamily={FONT} fontWeight={800} fontSize={46} letterSpacing="-2" fill={blu(d)}>thrive</text></svg>) },
-  { id: "T4", name: "Montserrat Medium · UPPERCASE · wide tracking", note: "Spaced caps, lighter weight — refined / editorial.",
+  { id: "T4", name: "Montserrat Medium · UPPERCASE · wide tracking", note: "Spaced caps, lighter weight - refined / editorial.",
     render: (d) => (<svg viewBox="0 0 330 56" className="h-7 md:h-9 w-auto"><text x="2" y="40" fontFamily={FONT} fontWeight={600} fontSize={34} letterSpacing="14" fill={ink(d)}>THRIVE</text></svg>) },
   { id: "T5", name: "Montserrat ExtraBold · two-tone T", note: "Capital T in blue, rest navy.",
     render: (d) => (<svg viewBox="0 0 220 56" className="h-10 md:h-12 w-auto"><text x="2" y="42" fontFamily={FONT} fontWeight={800} fontSize={46} letterSpacing="-1.5"><tspan fill={blu(d)}>T</tspan><tspan fill={ink(d)}>hrive</tspan></text></svg>) },
@@ -1233,7 +1233,7 @@ const wordmarks: Concept[] = [
     render: (d) => (<svg viewBox="0 0 230 56" className="h-10 md:h-12 w-auto"><defs><linearGradient id={`tg-${d ? "d" : "l"}`} x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor={d ? "#fff" : NAVY} /><stop offset="1" stopColor={d ? BLUE_LIGHT : BLUE} /></linearGradient></defs><text x="2" y="42" fontFamily={FONT} fontWeight={800} fontStyle="italic" fontSize={46} letterSpacing="-1.8" fill={`url(#tg-${d ? "d" : "l"})`}>thrive</text></svg>) },
   { id: "T8", name: "Stacked · 'UNITED TO' + thrive", note: "Eyebrow over wordmark; resolves naming ambiguity.", tall: true,
     render: (d) => (<svg viewBox="0 0 215 72" className="h-12 md:h-14 w-auto"><text x="3" y="16" fontFamily={FONT} fontWeight={600} fontSize={12} letterSpacing="5" fill={d ? "rgba(255,255,255,0.65)" : "#64748B"}>UNITED TO</text><text x="2" y="60" fontFamily={FONT} fontWeight={800} fontSize={46} letterSpacing="-2" fill={ink(d)}>thrive</text></svg>) },
-  { id: "T12", name: "T-in-square mark + Montserrat thrive", note: "App-icon mark + clean wordmark — a real logo system.",
+  { id: "T12", name: "T-in-square mark + Montserrat thrive", note: "App-icon mark + clean wordmark - a real logo system.",
     render: (d) => (<svg viewBox="0 0 250 56" className="h-10 md:h-12 w-auto"><rect x="2" y="6" width="44" height="44" rx="11" fill={d ? "#fff" : NAVY} /><rect x="13" y="17" width="22" height="6" rx="1.5" fill={d ? NAVY : "#fff"} /><rect x="21" y="17" width="6" height="22" rx="1.5" fill={d ? NAVY : "#fff"} /><circle cx="40" cy="12" r="4" fill={GOLD} /><text x="58" y="42" fontFamily={FONT} fontWeight={800} fontSize={46} letterSpacing="-2" fill={ink(d)}>thrive</text></svg>) },
 ];
 
@@ -1277,15 +1277,15 @@ const LogoConcepts = () => (
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pt-16 md:pt-24 pb-8">
         <p className="eyebrow">INTERNAL PREVIEW · NOT INDEXED</p>
         <h1 className="mt-6 font-serif-display text-slate-ink" style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-          The chosen direction — S3, the organic hub
+          The chosen direction - S3, the organic hub
         </h1>
         <p className="mt-6 max-w-[820px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Refining <strong>S3</strong> — the living-network hub: gold centre set off to one side (United to Thrive, the family at the middle), nodes at deliberately-irregular distances and angles (the programs), spokes of varying length (the structure that grew, not a diagram). Composed so the visual mass stays balanced even though nothing is symmetric — and drawn on a 32-unit square so it works as a favicon / app icon. Paired with the <strong>Montserrat</strong> wordmark. The light-mark study and earlier explorations stay below for reference.
+          Refining <strong>S3</strong> - the living-network hub: gold centre set off to one side (United to Thrive, the family at the middle), nodes at deliberately-irregular distances and angles (the programs), spokes of varying length (the structure that grew, not a diagram). Composed so the visual mass stays balanced even though nothing is symmetric - and drawn on a 32-unit square so it works as a favicon / app icon. Paired with the <strong>Montserrat</strong> wordmark. The light-mark study and earlier explorations stay below for reference.
         </p>
       </div>
     </section>
 
-    {/* ── REFINING S3 — THE ORGANIC HUB ──────────────────────────────────── */}
+    {/* ── REFINING S3 - THE ORGANIC HUB ──────────────────────────────────── */}
     <section className="bg-background">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pb-12 space-y-10">
         <div className="border-b-2 border-brand-gold pb-4">
@@ -1296,7 +1296,7 @@ const LogoConcepts = () => (
         {/* Primary lockup */}
         <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
           <p className="eyebrow-blue">PRIMARY LOCKUP</p>
-          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">Horizontal — the default (6 nodes, light weight)</h3>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">Horizontal - the default (6 nodes, light weight)</h3>
           <div className="mt-6 grid md:grid-cols-2 gap-4">
             <div className="flex items-center justify-center px-8 py-12 rounded-xl bg-white border border-[hsl(var(--slate-200))]"><OrgLockup tone="color" h={52} /></div>
             <div className="flex items-center justify-center px-8 py-12 rounded-xl bg-brand-navy"><OrgLockup tone="reversed" h={52} /></div>
@@ -1306,7 +1306,7 @@ const LogoConcepts = () => (
         {/* The mark alone */}
         <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
           <p className="eyebrow-blue">THE MARK ALONE</p>
-          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">For square spaces — app icon, social avatar, stamp</h3>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">For square spaces - app icon, social avatar, stamp</h3>
           <div className="mt-6 grid md:grid-cols-3 gap-4">
             <div className="flex items-center justify-center p-12 rounded-xl bg-white border border-[hsl(var(--slate-200))]"><OrganicMark size={96} /></div>
             <div className="flex items-center justify-center p-12 rounded-xl bg-brand-navy"><OrganicMark size={96} tone="reversed" /></div>
@@ -1358,7 +1358,7 @@ const LogoConcepts = () => (
 
         {/* Layout variants */}
         <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
-          <p className="eyebrow-blue">ARRANGEMENT — PICK ONE</p>
+          <p className="eyebrow-blue">ARRANGEMENT - PICK ONE</p>
           <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">Node count & colour mix</h3>
           <div className="mt-6 grid md:grid-cols-3 gap-4">
             {([
@@ -1377,14 +1377,14 @@ const LogoConcepts = () => (
 
         {/* Weight variants of the organic mark */}
         <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
-          <p className="eyebrow-blue">WEIGHT — PICK ONE</p>
+          <p className="eyebrow-blue">WEIGHT - PICK ONE</p>
           <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">Same organic mark, three weights</h3>
           <div className="mt-6 grid md:grid-cols-3 gap-4">
             {(["light", "medium", "bold"] as const).map((w) => (
               <div key={w} className="rounded-xl border border-[hsl(var(--slate-200))] p-6">
                 <div className="flex items-center justify-center py-4"><OrganicMark size={88} weight={w} /></div>
                 <div className="mt-3 flex justify-center gap-3">{[16, 24].map((px) => <div key={px} className="flex items-center justify-center rounded bg-white border border-[hsl(var(--slate-200))]" style={{ width: px + 8, height: px + 8 }}><OrganicMark size={px} weight={w} /></div>)}</div>
-                <p className="mt-2 text-[13px] text-[hsl(var(--slate-700))] text-center capitalize">{w}{w === "light" ? " — your pick (most delicate)" : w === "medium" ? " — favicon-safe middle ground" : " — survives the tiniest"}</p>
+                <p className="mt-2 text-[13px] text-[hsl(var(--slate-700))] text-center capitalize">{w}{w === "light" ? " - your pick (most delicate)" : w === "medium" ? " - favicon-safe middle ground" : " - survives the tiniest"}</p>
               </div>
             ))}
           </div>
@@ -1405,22 +1405,22 @@ const LogoConcepts = () => (
         <div className="border-b-2 border-brand-gold pb-4">
           <p className="eyebrow-gold">REFINING THE LIGHT MARK · GOLD HUB · BLUE NODES · NAVY SPOKES</p>
           <h2 className="mt-2 font-serif-display text-slate-ink text-[26px] md:text-[32px]">Dial in the proportions</h2>
-          <p className="mt-3 max-w-[700px] text-[15px] text-[hsl(var(--slate-700))]">Same recipe in every one (light weight, your colour roles) — varying node count, spoke length, node/hub treatment, and padding. Each shown big, at 16/24 px, and in the lockup. Tell me the letter you like (and any tweak).</p>
+          <p className="mt-3 max-w-[700px] text-[15px] text-[hsl(var(--slate-700))]">Same recipe in every one (light weight, your colour roles) - varying node count, spoke length, node/hub treatment, and padding. Each shown big, at 16/24 px, and in the lockup. Tell me the letter you like (and any tweak).</p>
         </div>
 
         {([
-          { id: "L-A", name: "Baseline — 6 nodes, one pointing up, solid", p: {} },
-          { id: "L-B", name: "6 nodes, flat top (rotated 30°) — more grounded", p: { rotate: 30 } },
-          { id: "L-C", name: "5 nodes — odd count reads more organic / dynamic", p: { weights: 5 } },
-          { id: "L-D", name: "7 nodes — denser network, still light", p: { weights: 7 } },
-          { id: "L-E", name: "8 nodes (flat sides) — fullest wheel", p: { weights: 8, rotate: 22.5 } },
-          { id: "L-F", name: "6 nodes, spokes stop short of the nodes — airier", p: { spokeGapOuter: 4 } },
-          { id: "L-G", name: "6 nodes drawn as open rings — most delicate", p: { nodeStyle: "ring" as const, nodeR: 3.2 } },
-          { id: "L-H", name: "6 nodes, gold halo around the hub — a touch richer", p: { hubStyle: "halo" as const } },
-          { id: "L-I", name: "6 nodes, hub is an open gold ring — 'the space everything holds'", p: { hubStyle: "ring" as const } },
-          { id: "L-J", name: "6 nodes, tighter to the edges — favicon-optimised", p: { ringR: 88 * 0.37, nodeR: 88 * 0.082 } },
-          { id: "L-K", name: "6 nodes, roomier padding — most elegant", p: { ringR: 88 * 0.29 } },
-          { id: "L-L", name: "Delicate combo — open ring nodes + short spokes + solid gold hub", p: { nodeStyle: "ring" as const, nodeR: 3.2, spokeGapOuter: 3 } },
+          { id: "L-A", name: "Baseline - 6 nodes, one pointing up, solid", p: {} },
+          { id: "L-B", name: "6 nodes, flat top (rotated 30°) - more grounded", p: { rotate: 30 } },
+          { id: "L-C", name: "5 nodes - odd count reads more organic / dynamic", p: { weights: 5 } },
+          { id: "L-D", name: "7 nodes - denser network, still light", p: { weights: 7 } },
+          { id: "L-E", name: "8 nodes (flat sides) - fullest wheel", p: { weights: 8, rotate: 22.5 } },
+          { id: "L-F", name: "6 nodes, spokes stop short of the nodes - airier", p: { spokeGapOuter: 4 } },
+          { id: "L-G", name: "6 nodes drawn as open rings - most delicate", p: { nodeStyle: "ring" as const, nodeR: 3.2 } },
+          { id: "L-H", name: "6 nodes, gold halo around the hub - a touch richer", p: { hubStyle: "halo" as const } },
+          { id: "L-I", name: "6 nodes, hub is an open gold ring - 'the space everything holds'", p: { hubStyle: "ring" as const } },
+          { id: "L-J", name: "6 nodes, tighter to the edges - favicon-optimised", p: { ringR: 88 * 0.37, nodeR: 88 * 0.082 } },
+          { id: "L-K", name: "6 nodes, roomier padding - most elegant", p: { ringR: 88 * 0.29 } },
+          { id: "L-L", name: "Delicate combo - open ring nodes + short spokes + solid gold hub", p: { nodeStyle: "ring" as const, nodeR: 3.2, spokeGapOuter: 3 } },
         ] as { id: string; name: string; p: Partial<Parameters<typeof ThriveMark>[0]> }[]).map((v) => {
           // scale node-radius-style props that were given in 88-units down for the small previews
           const small = (px: number) => {
@@ -1456,9 +1456,9 @@ const LogoConcepts = () => (
           <h3 className="mt-2 font-serif-display text-slate-ink text-[18px] md:text-[20px]">Mark size & gap relative to the wordmark</h3>
           <div className="mt-6 space-y-3">
             {[
-              { label: "Mark small, generous gap — wordmark leads", ms: 0.56, gs: 0.26 },
-              { label: "Balanced — the recommended default", ms: 0.66, gs: 0.20 },
-              { label: "Mark large, tight gap — symbol leads", ms: 0.78, gs: 0.14 },
+              { label: "Mark small, generous gap - wordmark leads", ms: 0.56, gs: 0.26 },
+              { label: "Balanced - the recommended default", ms: 0.66, gs: 0.20 },
+              { label: "Mark large, tight gap - symbol leads", ms: 0.78, gs: 0.14 },
             ].map((o) => (
               <div key={o.label}>
                 <div className="flex items-center px-6 py-4 rounded-xl bg-white border border-[hsl(var(--slate-200))]"><ThriveLockup tone="color" h={48} markScale={o.ms} gapScale={o.gs} /></div>
@@ -1475,13 +1475,13 @@ const LogoConcepts = () => (
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-12 md:py-20 space-y-10">
         <div className="border-b border-[hsl(var(--slate-200))] pb-4">
           <p className="eyebrow-blue">THE SYSTEM · HUB-AND-SPOKE SYMBOL + MONTSERRAT WORDMARK</p>
-          <h2 className="mt-2 font-serif-display text-slate-ink text-[24px] md:text-[28px]">United to Thrive — logo system v1 (baseline)</h2>
+          <h2 className="mt-2 font-serif-display text-slate-ink text-[24px] md:text-[28px]">United to Thrive - logo system v1 (baseline)</h2>
         </div>
 
         {/* Primary lockup */}
         <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
           <p className="eyebrow-blue">PRIMARY LOCKUP</p>
-          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">Horizontal — the default</h3>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">Horizontal - the default</h3>
           <div className="mt-6 grid md:grid-cols-2 gap-4">
             <div className="flex items-center justify-center px-8 py-12 rounded-xl bg-white border border-[hsl(var(--slate-200))]"><ThriveLockup tone="color" h={52} /></div>
             <div className="flex items-center justify-center px-8 py-12 rounded-xl bg-brand-navy"><ThriveLockup tone="reversed" h={52} /></div>
@@ -1491,7 +1491,7 @@ const LogoConcepts = () => (
         {/* The mark alone */}
         <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
           <p className="eyebrow-blue">THE MARK ALONE</p>
-          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">For square spaces — app icon, social avatar, stamp</h3>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">For square spaces - app icon, social avatar, stamp</h3>
           <div className="mt-6 grid md:grid-cols-3 gap-4">
             <div className="flex items-center justify-center p-12 rounded-xl bg-white border border-[hsl(var(--slate-200))]"><ThriveMark size={88} spokeW={6.6} nodeR={9.2} hubR={16.3} ringR={29} /></div>
             <div className="flex items-center justify-center p-12 rounded-xl bg-brand-navy"><ThriveMark size={88} tone="reversed" spokeW={6.6} nodeR={9.2} hubR={16.3} ringR={29} /></div>
@@ -1548,12 +1548,12 @@ const LogoConcepts = () => (
         {/* Mark weight options */}
         <article className="border border-[hsl(var(--slate-200))] rounded-2xl p-6 md:p-9">
           <p className="eyebrow-blue">DIAL THE WEIGHT</p>
-          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">Three weights of the same mark — pick one</h3>
+          <h3 className="mt-2 font-serif-display text-slate-ink text-[20px]">Three weights of the same mark - pick one</h3>
           <div className="mt-6 grid md:grid-cols-3 gap-4">
             {[
-              { label: "Light — delicate, more whitespace", sw: 4.4, nr: 7.6, hr: 14, rr: 30 },
-              { label: "Medium — the recommended default", sw: 6.6, nr: 9.2, hr: 16.3, rr: 29 },
-              { label: "Bold — survives tiniest, most confident", sw: 9.2, nr: 11, hr: 18, rr: 27.5 },
+              { label: "Light - delicate, more whitespace", sw: 4.4, nr: 7.6, hr: 14, rr: 30 },
+              { label: "Medium - the recommended default", sw: 6.6, nr: 9.2, hr: 16.3, rr: 29 },
+              { label: "Bold - survives tiniest, most confident", sw: 9.2, nr: 11, hr: 18, rr: 27.5 },
             ].map((w) => (
               <div key={w.label} className="rounded-xl border border-[hsl(var(--slate-200))] p-6">
                 <div className="flex items-center justify-center py-6"><ThriveMark size={88} spokeW={w.sw} nodeR={w.nr} hubR={w.hr} ringR={w.rr} /></div>
@@ -1569,7 +1569,7 @@ const LogoConcepts = () => (
         <div className="rounded-2xl bg-brand-navy p-8 md:p-12 text-white">
           <h3 className="font-serif-display text-[24px] md:text-[28px]">If this is right, I'll wire it in.</h3>
           <p className="mt-4 text-[17px] leading-relaxed text-white/80 max-w-[760px]">
-            Pick a weight (light / medium / bold), confirm the colour roles (gold hub, blue nodes, navy spokes — or want the spokes blue too?), and say the word. I'll then: build a <code>&lt;ThriveLogo&gt;</code> component (so the Montserrat actually renders in the header), swap it into Header & Footer, replace <code>favicon.svg</code> with the simplified mark, and add a short brand sheet (clearspace, min sizes, colour values, do's/don'ts).
+            Pick a weight (light / medium / bold), confirm the colour roles (gold hub, blue nodes, navy spokes - or want the spokes blue too?), and say the word. I'll then: build a <code>&lt;ThriveLogo&gt;</code> component (so the Montserrat actually renders in the header), swap it into Header & Footer, replace <code>favicon.svg</code> with the simplified mark, and add a short brand sheet (clearspace, min sizes, colour values, do's/don'ts).
           </p>
         </div>
       </div>
@@ -1606,7 +1606,7 @@ const LogoConcepts = () => (
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-12 md:py-20">
         <div className="border-b border-[hsl(var(--slate-200))] pb-4">
           <p className="eyebrow-blue">SHORTLIST · HUB-AND-SPOKE · CHAINS · WORD-OF-MOUTH (REFERENCE)</p>
-          <h2 className="mt-2 font-serif-display text-slate-ink text-[24px] md:text-[28px]">Earlier shortlist — incl. the original S1 / S3</h2>
+          <h2 className="mt-2 font-serif-display text-slate-ink text-[24px] md:text-[28px]">Earlier shortlist - incl. the original S1 / S3</h2>
         </div>
         <div className="mt-8 space-y-8">
           {shortlist.map((c) => <ConceptCard key={c.id} c={c} />)}
@@ -1656,7 +1656,7 @@ const LogoConcepts = () => (
         <div className="border-b border-[hsl(var(--slate-200))] pb-4">
           <p className="eyebrow">SECTION 3 · EARLIER ICON CONCEPTS (REFERENCE)</p>
           <h2 className="mt-2 font-serif-display text-slate-ink text-[24px] md:text-[28px]">Icon set</h2>
-          <p className="mt-3 text-[13px] italic text-[hsl(var(--slate-500))]">Loaded as <code>&lt;img&gt;</code>, so the wordmark type here is a system fallback — judge the icons.</p>
+          <p className="mt-3 text-[13px] italic text-[hsl(var(--slate-500))]">Loaded as <code>&lt;img&gt;</code>, so the wordmark type here is a system fallback - judge the icons.</p>
         </div>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {imgConcepts.map((c) => (
@@ -1678,7 +1678,7 @@ const LogoConcepts = () => (
         <div className="rounded-2xl bg-brand-navy p-8 md:p-12 text-white">
           <h2 className="font-serif-display text-[28px] md:text-[32px]">Point at one.</h2>
           <p className="mt-4 text-[17px] leading-relaxed text-white/80 max-w-[700px]">
-            Give me a code — "C7", "T5" — or a hybrid: "C7 negative-space mark + T2 blue wordmark", "C6 orbit but the dot is blue", "C8 stack in two colors". When you pick, I convert the Montserrat to outlined paths and ship it as the live logo + favicon.
+            Give me a code - "C7", "T5" - or a hybrid: "C7 negative-space mark + T2 blue wordmark", "C6 orbit but the dot is blue", "C8 stack in two colors". When you pick, I convert the Montserrat to outlined paths and ship it as the live logo + favicon.
           </p>
         </div>
       </div>

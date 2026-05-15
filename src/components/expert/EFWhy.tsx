@@ -13,7 +13,7 @@ const EFWhy = () => {
           The problem isn't the work. The problem is that the platforms most experts publish on were built to harvest attention, not deliver it.
         </p>
         <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          You chase the algorithm. Your income depends on whether the algorithm liked you that week. The audience you actually want to reach has been buried under noise the platform itself created.
+          You chase the algorithm. Your income depends on whether the algorithm liked you that week. The audience you want to reach has been buried under noise the platform itself created.
         </p>
         <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
           Expert Faculty is structured the other way. The audience is built into the platform.
