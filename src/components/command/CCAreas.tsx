@@ -167,11 +167,10 @@ const CCAreas = () => {
         </div>
       </div>
 
-      {/* Five area sub-sections: 2-col text + designed card, alternating sides */}
+      {/* Five area sub-sections: 2-col text (left) + designed card (right) */}
       {areas.map((area, idx) => {
         const sectionBg = idx % 2 === 0 ? "bg-background" : "bg-brand-blue/5";
         const cardBg = idx % 2 === 0 ? "bg-brand-blue/5" : "bg-white";
-        const cardOnRight = idx % 2 === 0;
         const Icon = area.Icon;
         return (
           <div
@@ -181,7 +180,7 @@ const CCAreas = () => {
           >
             <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-28">
               <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-                <div className={`lg:col-span-5 ${cardOnRight ? "lg:order-1" : "lg:order-2"}`}>
+                <div className="lg:col-span-5">
                   <div className="lg:sticky lg:top-24">
                     <div className="flex items-center gap-5">
                       <p className="font-serif-display text-[40px] md:text-[56px] text-gradient-warm leading-none">
@@ -210,7 +209,7 @@ const CCAreas = () => {
                   </div>
                 </div>
 
-                <div className={`lg:col-span-7 ${cardOnRight ? "lg:order-2" : "lg:order-1"}`}>
+                <div className="lg:col-span-7">
                   <div className={`rounded-2xl ${cardBg} border border-slate-ink/10 p-7 sm:p-9 md:p-10 shadow-sm`}>
                     <ul className="space-y-7">
                       {area.items.map((s) => (
