@@ -20,7 +20,7 @@ const W1Technical = () => {
             What the platform does underneath.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[720px] mx-auto">
-            The technical capabilities that make Waves of Pay work in production. Built into every WER1 deployment.
+            The technical capabilities that make every introduction count. Built into every WER1 deployment.
           </p>
         </div>
 

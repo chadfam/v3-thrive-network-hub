@@ -1,7 +1,7 @@
-const waves = [
-  { label: "WAVE 1 (DIRECT)", body: "You share a link. Someone clicks and buys. You earn the full first-wave commission on that transaction." },
-  { label: "WAVE 2 (INDIRECT)", body: "That person becomes a promoter, signs up someone else, who buys. You earn a smaller second-wave commission. The first promoter earns the direct commission." },
-  { label: "WAVE 3 (OUTWARD)", body: "The chain keeps extending. Each wave pays a smaller percentage. You stay attributed for as long as the chain you started keeps producing." },
+const scenarios = [
+  { label: "Direct purchase", body: "Someone clicks your link and buys. You get paid for that purchase." },
+  { label: "Different offer", body: "Someone clicks your link, looks around, and buys a different program in the network. Still attributed to your link." },
+  { label: "Later purchase", body: "Someone clicks your link, doesn't buy that day, and comes back later. Still attributed." },
 ];
 
 const W1Earnings = () => {
@@ -14,41 +14,35 @@ const W1Earnings = () => {
             className="font-serif-display text-slate-ink"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
           >
-            Earnings move outward. And they don't stop.
+            How payments work.
           </h2>
           <div className="mt-8 space-y-6 max-w-[480px]">
             <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-              A typical affiliate platform pays you when someone clicks your link and buys. That's it. The relationship ends with the first transaction.
+              Your magic link is the universal link. Every share, every click, every purchase across the network ties back to it.
             </p>
             <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-              The person who clicked your link goes on to introduce three other people, and you never see any of it.
+              When someone buys an offer in the network through your link, you get paid for that purchase. Whichever program they choose.
             </p>
             <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-              WER1's Waves of Pay model works differently. The first wave is direct: someone clicks your link, they buy, you earn. The second wave is the people they bring in. The third wave is the next layer out.
-            </p>
-            <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-              The percentages decrease as the wave moves outward, but they don't zero out. The platform tracks the chain and pays accordingly.
-            </p>
-            <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-              Promoters who bring in active people early often build a stream of small payments that rolls in for years. The work was making the introduction. The payment keeps coming because the introduction keeps producing.
+              Payments are processed automatically. You see what came in and from which offer inside your dashboard.
             </p>
           </div>
         </div>
 
         <div className="bg-white border border-[#E0E3E7] rounded-2xl p-6 sm:p-8 md:p-10">
           <h3 className="font-serif-display text-[22px] md:text-[24px] text-slate-ink leading-tight">
-            Earnings wave example
+            What gets attributed
           </h3>
           <div className="mt-6 divide-y divide-[#E0E3E7]">
-            {waves.map((w) => (
-              <div key={w.label} className="py-4 first:pt-0 last:pb-0 grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-3">
-                <div className="text-[15px] font-medium text-slate-ink">{w.label}</div>
-                <div className="text-[14px] leading-relaxed text-[hsl(var(--slate-700))]">{w.body}</div>
+            {scenarios.map((s) => (
+              <div key={s.label} className="py-4 first:pt-0 last:pb-0 grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-3">
+                <div className="text-[15px] font-medium text-slate-ink">{s.label}</div>
+                <div className="text-[14px] leading-relaxed text-[hsl(var(--slate-700))]">{s.body}</div>
               </div>
             ))}
           </div>
           <p className="mt-6 italic text-[14px] text-[hsl(var(--slate-500))]">
-            Specific commission percentages and wave depth are visible in your promoter dashboard after signup. They depend on the partner program and the offer.
+            Specific commission percentages are visible in your promoter dashboard after signup. They depend on the partner program and the offer.
           </p>
         </div>
       </div>

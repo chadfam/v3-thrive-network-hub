@@ -2,7 +2,7 @@ const cards = [
   {
     label: "PROMOTER PATH",
     heading: "Start as a promoter.",
-    body: "No fees to join. Get your branded links and start sharing within minutes. The platform handles the rest, including the Waves of Pay attribution.",
+    body: "No fees to join. Get your magic link and start sharing within minutes. The platform handles the rest: tracking, attribution, and payments.",
     cta: "Become a promoter →",
     href: "/apply?role=promoter",
   },

@@ -1,18 +1,18 @@
 const configs = [
   {
     name: "Single-tier affiliate",
-    body: "A standard affiliate program. One commission level. Affiliates share links, customers buy, affiliates earn. Simple, fast to deploy.",
-    fit: "Brands looking to launch their first affiliate program quickly.",
+    body: "A standard affiliate setup. One commission level. Promoters share links, customers buy, promoters get paid. Simple, fast to deploy.",
+    fit: "Brands launching their first affiliate program.",
   },
   {
-    name: "Two-tier referral",
-    body: "Affiliates earn directly. They also earn a smaller commission when they bring in another affiliate who closes business. The first wave only.",
+    name: "Custom commission rules",
+    body: "Custom rules per offer, per category, or per partner. The platform supports the structure your business already uses.",
     fit: "Coaching businesses, course creators, and service businesses with active communities.",
   },
   {
-    name: "Multi-tier Waves of Pay",
-    body: "The full WER1 model. Wave 1 direct earnings, Wave 2 from people you brought in, Wave 3 and outward at decreasing percentages.",
-    fit: "Businesses where word of mouth keeps building outward and the customer base spreads through introductions.",
+    name: "Network-wide attribution",
+    body: "One magic link tracks across every offer in the network. When someone buys any program through it, the right promoter is paid.",
+    fit: "Networks of complementary offers where one share could lead to many different purchases.",
   },
   {
     name: "Family-unit loyalty",

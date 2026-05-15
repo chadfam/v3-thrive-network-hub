@@ -2,11 +2,11 @@ const cards = [
   {
     label: "PATH ONE",
     heading: "For promoters.",
-    body: "Sign up, share what you love, and earn when people buy. The Waves of Pay model means you also earn from the people you bring into the network, for as long as they keep referring.",
+    body: "Sign up, share what you love, and get paid when people buy. Your magic link tracks every introduction across the network so the payment lands automatically.",
     highlights: [
       "No business of your own required",
       "Branded sharing links and tracking",
-      "Earn from direct shares and from people you brought in",
+      "One link covers every offer in the network",
     ],
     cta: "Become a promoter →",
     href: "/apply?role=promoter",
@@ -14,10 +14,10 @@ const cards = [
   {
     label: "PATH TWO",
     heading: "For businesses.",
-    body: "Run your entire affiliate, referral, or customer-loyalty program on top of the WER1 platform. Branded for your business. Configured for your structure. Underpinned by the Waves of Pay compensation model.",
+    body: "Run your entire affiliate, referral, or customer-loyalty program on top of the WER1 platform. Branded for your business. Configured for your structure.",
     highlights: [
       "White-labeled for your brand",
-      "Single-tier or multi-tier configurations",
+      "Configured for your compensation structure",
       "Family-unit attribution available",
     ],
     cta: "Talk to us about white-label →",
@@ -37,7 +37,7 @@ const W1TwoWays = () => {
             Two ways to use WER1.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[720px] mx-auto">
-            The platform serves two distinct audiences. Promoters share what they trust and earn through the network. Businesses run their entire affiliate or referral program on the platform we built. Both paths use the same Waves of Pay compensation model underneath.
+            The platform serves two distinct audiences. Promoters share what they trust and get paid through the network. Businesses run their entire affiliate or referral program on the platform we built. Same tracking and attribution under both paths.
           </p>
         </div>
 

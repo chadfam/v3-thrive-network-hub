@@ -1,7 +1,7 @@
 const cards = [
   { label: "IF YOU RUN A BUSINESS", heading: "Apply to Profit Partners.", body: "The flagship program and front door for owners building referral revenue.", button: "Apply now →", route: "/apply" },
   { label: "IF YOU LEAD A COMMUNITY", heading: "Apply for a leadership role.", body: "Local Leaders, FAM Guides, and Expert Faculty applications go through the same form.", button: "Apply now →", route: "/apply" },
-  { label: "IF YOU JUST WANT TO SHARE", heading: "Become a WER1 promoter.", body: "Share what you love. Earn through the Waves of Pay compensation model.", button: "Become a promoter →", route: "/apply?role=promoter" },
+  { label: "IF YOU JUST WANT TO SHARE", heading: "Become a WER1 promoter.", body: "Share what you love. Get paid through your magic link whenever someone buys.", button: "Become a promoter →", route: "/apply?role=promoter" },
 ];
 
 const AboutEngage = () => {

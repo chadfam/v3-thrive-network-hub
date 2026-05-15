@@ -1,7 +1,7 @@
 const included = [
   "The full WER1 platform configured for your business",
   "Your branding on dashboards, links, and member-facing pages",
-  "Multi-tier payout configuration with Waves of Pay enabled",
+  "Payout configuration matched to your business structure",
   "Branded landing pages and tracked sharing links",
   "Family-unit attribution available as an option",
   "Real-time reporting dashboards for you and your promoters",
@@ -27,7 +27,7 @@ const W1WhiteLabel = () => {
               If you have a business that needs an affiliate program, a referral program, or a customer-loyalty engine, we can configure WER1 to run it. Branded for your company. Hosted on your domain or ours. Configured for your specific structure.
             </p>
             <p className="text-[17px] md:text-[19px] leading-relaxed text-white/90">
-              The Waves of Pay compensation model is what most off-the-shelf affiliate tools don't do. Your customers become promoters. Your promoters earn from the people they bring in.
+              Off-the-shelf affiliate tools weren't built for the integrated tracking and attribution your business needs. WER1 was. We can configure it for your specific compensation structure, brand, and rules.
             </p>
             <p className="text-[17px] md:text-[19px] leading-relaxed text-white/90">
               The result is a referral program that gets stronger over time, instead of plateauing at the first ring of advocates.

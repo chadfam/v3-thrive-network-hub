@@ -16,8 +16,8 @@ const cards = [
   },
   {
     n: "04",
-    name: "WER1 wave attribution",
-    body: "When you bring another Local Leader, FAM Guide, or member into the network, you earn through the Waves of Pay compensation model on their network activity over time.",
+    name: "WER1 magic link earnings",
+    body: "When someone joins or buys through your magic link, the network tracks it back to you and you get paid. Whichever offer in the WEcosystem they choose.",
   },
 ];
 
