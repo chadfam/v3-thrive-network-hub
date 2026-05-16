@@ -1,5 +1,0 @@
-extends: existence
-message: "Em-dash (—) is banned site-wide. Use period, comma, colon, parens, or reword."
-level: error
-tokens:
-  - '—'
