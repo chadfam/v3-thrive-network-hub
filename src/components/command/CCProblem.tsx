@@ -12,19 +12,19 @@ const CCProblem = () => {
                 letterSpacing: "-0.025em",
               }}
             >
-              Built on <span className="text-brand-blue ppx-italic">relationships</span>, not lists.
+              The search for someone you trust, <span className="text-brand-blue ppx-italic">already done</span>.
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Command Central is a curated set of advisors, experts, and service providers we've engaged with directly in our own work. Not a vendor marketplace. Not a directory. Not a paid placement list.
+              When a real question lands, an unexpected tax exposure, a partnership agreement to sign, a marketing spend that isn't returning, most owners don't have a qualified person to call. They have a search to run.
             </p>
 
             <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              Members get access to the same partners we already use. Coaching, marketing, finance, legal, and tech. Every front where help has to be reliable.
+              That search is slow, and it carries real risk. A name pulled from a Google result. A referral you have no way to fully judge. A vendor who interviews well and disappoints two months in. Every unfamiliar problem starts the search over from nothing.
             </p>
 
             <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">
-              Relationships first. Recommendations second.
+              The decision itself was rarely the bottleneck. Finding the right person to think it through was.
             </p>
           </div>
 

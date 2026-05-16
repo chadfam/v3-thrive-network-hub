@@ -16,12 +16,13 @@ const disciplines: Discipline[] = [
     image: "https://images.unsplash.com/photo-1511376979163-f804dff7ad7b?auto=format&fit=crop&q=80&w=1200",
     alt: "Two people in a private coaching conversation across a table in warm daylight.",
     services: [
-      { name: "WER1 Success Club", desc: "Skills, systems, and community for building sustainable income at home." },
-      { name: "Rise Up Group Coaching", desc: "Mindset, leadership, and growth strategies in a peer group format." },
-      { name: "Personal Accountability Coach", desc: "A dedicated coach for follow-through, focus, and consistency." },
-      { name: "Abundance Opportunity Access", desc: "Introductions to vetted income, partnership, and investment opportunities." },
-      { name: "Executive Coaching", desc: "1:1 strategic coaching for founders and operators." },
-      { name: "WER1 Team Leadership Program", desc: "Team alignment, communication, and culture-building." },
+      { name: "WER1 Success Club", desc: "Skills, systems, and a peer community for building dependable income from a home-based business." },
+      { name: "Rise Up Group Coaching", desc: "Mindset and leadership growth worked through with a small group of other owners." },
+      { name: "Personal Accountability Coach", desc: "A dedicated coach who keeps focus and follow-through from slipping." },
+      { name: "Abundance Opportunity Access", desc: "Introductions to reviewed income, partnership, and investment opportunities." },
+      { name: "Executive Coaching", desc: "One-on-one strategic guidance for founders carrying the weight of the whole business." },
+      { name: "Strategic Sales Training", desc: "Practical training that sharpens how a team sells and closes." },
+      { name: "WER1 Team Leadership Program", desc: "Alignment, communication, and culture work for the people you lead." },
     ],
   },
   {
@@ -31,12 +32,12 @@ const disciplines: Discipline[] = [
     image: "https://images.unsplash.com/photo-1702047063975-0841a0621b5a?auto=format&fit=crop&q=80&w=1200",
     alt: "A small marketing team at laptops around a table with a campaign on the screen behind them.",
     services: [
-      { name: "Appendment AI", desc: "AI-powered marketing and automation for lead capture, follow-up, and conversion." },
-      { name: "Video Profile Production", desc: "Brand-story videos produced for credibility and visibility." },
-      { name: "Campaign Creation", desc: "Sales-focused marketing campaigns, built and executed for you." },
-      { name: "Social Media Management", desc: "Done-for-you planning, posting, and optimization across platforms." },
-      { name: "Ad Management", desc: "Setup, management, and optimization of paid advertising." },
-      { name: "Course Creation", desc: "End-to-end digital course design, production, and launch." },
+      { name: "Appendment AI", desc: "AI-driven lead capture, follow-up, and conversion that runs without constant attention." },
+      { name: "Video Profile Production", desc: "Brand-story video that builds credibility before a prospect ever talks to you." },
+      { name: "Campaign Creation", desc: "Sales-focused marketing campaigns built and run on your behalf." },
+      { name: "Social Media Management", desc: "Planning, posting, and refining your presence across platforms, handled for you." },
+      { name: "Ad Management", desc: "Paid advertising set up, monitored, and adjusted toward results." },
+      { name: "Course Creation", desc: "Digital courses designed, produced, and brought to launch end to end." },
     ],
   },
   {
@@ -46,12 +47,14 @@ const disciplines: Discipline[] = [
     image: "https://images.unsplash.com/photo-1709880945165-d2208c6ad2ec?auto=format&fit=crop&q=80&w=1200",
     alt: "A calculator on financial charts with a laptop in the background, clean planning workspace.",
     services: [
-      { name: "Expense Optimization Audit", desc: "Analysis of business expenses to identify savings and improve cash flow." },
-      { name: "Insurance Review", desc: "Cost-vs-coverage evaluation with tax-advantaged options." },
-      { name: "Bookkeeping", desc: "Accurate, organized financial recordkeeping for clarity and compliance." },
-      { name: "Personal Financial Planning", desc: "Strategy aligning income, investments, taxes, and long-term goals." },
-      { name: "Tax Planning", desc: "Proactive strategies to legally minimize tax liability." },
-      { name: "Fractional CFO Services", desc: "High-level financial leadership without the full-time cost." },
+      { name: "Expense Optimization Audit", desc: "A close look at where money leaves the business and where it does not need to." },
+      { name: "Insurance Review", desc: "Coverage weighed against cost, with tax-aware options on the table." },
+      { name: "Bookkeeping", desc: "Records kept accurate and organized so the numbers can be trusted." },
+      { name: "Personal Financial Planning", desc: "A strategy that ties income, investments, and taxes to long-term goals." },
+      { name: "Financial Statements", desc: "Clear, current statements that show where the business stands." },
+      { name: "Tax Planning", desc: "Forward-looking moves that lower the tax bill within the rules." },
+      { name: "Tax Filing", desc: "Returns prepared and filed accurately and on time." },
+      { name: "Fractional CFO Services", desc: "Senior financial leadership without a full-time salary attached." },
     ],
   },
   {
@@ -61,12 +64,12 @@ const disciplines: Discipline[] = [
     image: "https://images.unsplash.com/photo-1758518731462-d091b0b4ed0d?auto=format&fit=crop&q=80&w=1200",
     alt: "A lawyer with two clients at a desk reviewing and signing a contract.",
     services: [
-      { name: "Referral Rewards Agreements", desc: "Custom legal templates for referral terms, tracking, and compensation." },
-      { name: "Partnership Agreements", desc: "Drafted agreements for strategic partnerships and joint ventures." },
-      { name: "NDAs", desc: "Confidentiality protection for sensitive discussions and negotiations." },
-      { name: "Succession Planning", desc: "Plans for smooth leadership and ownership transitions." },
-      { name: "Merger and Acquisition Consulting", desc: "Guidance through buying, selling, or merging a business." },
-      { name: "Estate Planning", desc: "Asset protection and legacy structuring." },
+      { name: "Referral Rewards Agreements", desc: "Written terms for how referrals are tracked and compensated." },
+      { name: "Partnership Agreements", desc: "Agreements that put strategic partnerships and joint ventures on solid ground." },
+      { name: "NDAs", desc: "Confidentiality protection for sensitive conversations and negotiations." },
+      { name: "Succession Planning", desc: "A plan for handing off leadership and ownership without disruption." },
+      { name: "Merger and Acquisition Consulting", desc: "Guidance through buying, selling, or combining a business." },
+      { name: "Estate Planning", desc: "Structure that protects assets and the legacy behind them." },
     ],
   },
   {
@@ -76,11 +79,11 @@ const disciplines: Discipline[] = [
     image: "https://images.unsplash.com/photo-1623281185000-6940e5347d2e?auto=format&fit=crop&q=80&w=1200",
     alt: "A dual-monitor developer workstation with code on screen, clean home-office setup.",
     services: [
-      { name: "Tech Stack Review", desc: "Evaluation of tools and systems to eliminate redundancy and align with growth." },
-      { name: "Website Design and Hosting", desc: "Site creation and hosting focused on performance, branding, and conversion." },
-      { name: "CRM and Automation Setup", desc: "Implementation of CRM and automated workflows for follow-up and visibility." },
-      { name: "Custom Integrations", desc: "System integrations connecting tools, data, and workflows." },
-      { name: "AI Systems Optimization", desc: "Optimization of AI tools and workflows for productivity and decision-making." },
+      { name: "Tech Stack Review", desc: "An audit of your tools to cut overlap and match what the business is growing into." },
+      { name: "Website Design and Hosting", desc: "A site built and hosted for speed, brand, and conversion." },
+      { name: "CRM and Automation Setup", desc: "A CRM and automated workflows put in place so follow-up never drops." },
+      { name: "Custom Integrations", desc: "Separate tools and data connected into one working system." },
+      { name: "AI Systems Optimization", desc: "AI tools tuned to genuinely save time and sharpen decisions." },
     ],
   },
 ];
@@ -96,10 +99,10 @@ const CCCatalog = () => {
               className="font-serif-display text-slate-ink tracking-section"
               style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}
             >
-              Inside your <span className="text-brand-blue ppx-italic">board of advisors</span>.
+              A closer look at each <span className="text-brand-blue ppx-italic">area</span>.
             </h2>
             <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-              What the board can take on, from coaching to tech.
+              What each part of Command Central can take on, service by service.
             </p>
           </div>
         </div>
