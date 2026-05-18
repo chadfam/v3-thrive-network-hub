@@ -1,17 +1,5 @@
-import { cloneElement, useId, type ReactElement } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Layout from "@/components/site/Layout";
-
-// Areas of interest, alphabetized. Checkbox group: applicants pick all that apply.
-const AREA_OPTIONS = [
-  "Expert Faculty",
-  "FAM Guide",
-  "Local Leader",
-  "Mastermind Passport",
-  "Profit Partners",
-  "Team Wellness Hub",
-  "WER1 promoter",
-];
 
 const STEPS = [
   {
@@ -34,8 +22,19 @@ const STEPS = [
 // Background image for the form section. Sourced from Unsplash, visually verified.
 const FORM_BG = "https://images.unsplash.com/photo-1651514645933-c26e0eb4ace3";
 
+// GHL form embed resize script.
+const GHL_EMBED_SCRIPT = "https://api.appendment.com/js/form_embed.js";
+
 const Apply = () => {
-  const navigate = useNavigate();
+  // Load the GHL embed script once. It listens for the form iframe and
+  // resizes it to fit content (and handles the redirect-on-submit).
+  useEffect(() => {
+    if (document.querySelector(`script[src="${GHL_EMBED_SCRIPT}"]`)) return;
+    const script = document.createElement("script");
+    script.src = GHL_EMBED_SCRIPT;
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <Layout
@@ -106,58 +105,31 @@ const Apply = () => {
               Your application.
             </h2>
             <p className="mt-3 text-[15px] md:text-[16px] leading-relaxed text-white/75">
-              It takes a few minutes. Fields marked with an asterisk are required.
+              It takes a few minutes. Once you submit, you'll book a call with our team.
             </p>
           </div>
 
           <article className="mt-10 rounded-2xl overflow-hidden bg-white shadow-[0_24px_60px_-12px_rgba(0,0,0,0.55)]">
             <div aria-hidden className="h-1.5" style={{ backgroundColor: "#2563EB" }} />
-            <div className="p-6 sm:p-8 md:p-10">
-              {/*
-                Placeholder application form. Replace this <form> with the embedded GHL form
-                when provided. Configure the GHL form to redirect to /booking on submit.
-              */}
-              <form
-                onSubmit={(e) => { e.preventDefault(); navigate("/booking"); }}
-                className="grid gap-6"
-              >
-                <Field label="Full name" required><input required type="text" autoComplete="name" className={inputCls} /></Field>
-                <Field label="Email address" required><input required type="email" autoComplete="email" inputMode="email" className={inputCls} /></Field>
-                <Field label="Phone number"><input type="tel" autoComplete="tel" inputMode="tel" className={inputCls} /></Field>
-                <Field label="Business name (if applicable)"><input type="text" autoComplete="organization" className={inputCls} /></Field>
-                <Field label="Website"><input type="url" autoComplete="url" inputMode="url" className={inputCls} /></Field>
-
-                <fieldset>
-                  <legend className="block text-[13px] font-medium text-slate-ink">
-                    Areas of interest <span className="text-[hsl(var(--slate-500))]" aria-hidden>*</span>
-                    <span className="sr-only"> (required)</span>
-                  </legend>
-                  <p className="mt-1 mb-3 text-[14px] text-[hsl(var(--slate-500))]">
-                    Select all that apply.
-                  </p>
-                  <div className="grid sm:grid-cols-2 gap-x-6 gap-y-3">
-                    {AREA_OPTIONS.map((opt) => (
-                      <label key={opt} className="flex items-center gap-3 text-[15px] text-slate-ink cursor-pointer">
-                        <input
-                          type="checkbox"
-                          name="areas-of-interest"
-                          value={opt}
-                          className="h-[18px] w-[18px] shrink-0 cursor-pointer accent-[#2563EB]"
-                        />
-                        <span>{opt}</span>
-                      </label>
-                    ))}
-                  </div>
-                </fieldset>
-
-                <Field label="Brief description of your business or background">
-                  <textarea rows={5} className={inputCls} />
-                </Field>
-
-                <button type="submit" className="btn-primary mt-2 w-full sm:w-auto sm:self-start">
-                  Submit application →
-                </button>
-              </form>
+            <div className="p-4 sm:p-6">
+              {/* GHL embedded form. Redirect-on-submit (to /booking) is configured in GHL. */}
+              <iframe
+                src="https://api.appendment.com/widget/form/xLPvzS4TrNEZxAviWuQT"
+                style={{ width: "100%", height: "1058px", border: "none", borderRadius: "8px" }}
+                id="inline-xLPvzS4TrNEZxAviWuQT"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Join our WEcosystem"
+                data-height="1058"
+                data-layout-iframe-id="inline-xLPvzS4TrNEZxAviWuQT"
+                data-form-id="xLPvzS4TrNEZxAviWuQT"
+                title="Join our WEcosystem"
+              />
             </div>
           </article>
         </div>
@@ -184,21 +156,6 @@ const Apply = () => {
         </div>
       </section>
     </Layout>
-  );
-};
-
-const inputCls = "w-full min-h-[48px] rounded-lg border border-slate-ink/20 bg-white px-4 py-3 text-[16px] text-slate-ink focus:outline-none focus:border-slate-ink transition-colors";
-
-const Field = ({ label, required, children }: { label: string; required?: boolean; children: ReactElement<{ id?: string }> }) => {
-  const id = useId();
-  return (
-    <div>
-      <label htmlFor={id} className="block text-[13px] font-medium text-slate-ink mb-2">
-        {label} {required && <span className="text-[hsl(var(--slate-500))]" aria-hidden>*</span>}
-        {required && <span className="sr-only"> (required)</span>}
-      </label>
-      {cloneElement(children, { id })}
-    </div>
   );
 };
 
