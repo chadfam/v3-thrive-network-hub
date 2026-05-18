@@ -1,4 +1,4 @@
-import familyImg from "@/assets/family-dinner.jpg";
+import familyImg from "@/assets/parents-talking.jpg";
 
 const FamousForFamilies = () => {
   return (
@@ -34,7 +34,7 @@ const FamousForFamilies = () => {
             <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
               <img
                 src={familyImg}
-                alt="A family together at the dinner table in warm light."
+                alt="A small group of parents standing together in warm light, talking candidly."
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
