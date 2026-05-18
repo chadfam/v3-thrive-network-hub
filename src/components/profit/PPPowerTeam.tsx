@@ -47,7 +47,7 @@ const PPPowerTeam = () => {
             >
               {spokes.map((s) => (
                 <line
-                  key={`line-${s.label}`}
+                  key={`line-${s.lines.join("-")}`}
                   x1={HUB.x}
                   y1={HUB.y}
                   x2={s.x}
