@@ -1,23 +1,21 @@
 import Layout from "@/components/site/Layout";
 import PassHero from "@/components/passport/PassHero";
-import PassProblem from "@/components/passport/PassProblem";
-import PassHowItWorks from "@/components/passport/PassHowItWorks";
-import PassExperience from "@/components/passport/PassExperience";
-import PassMath from "@/components/passport/PassMath";
+import PassWhy from "@/components/passport/PassWhy";
+import PassMembers from "@/components/passport/PassMembers";
+import PassCommunities from "@/components/passport/PassCommunities";
 import PassWhoFor from "@/components/passport/PassWhoFor";
 import PassApply from "@/components/passport/PassApply";
 
 const MastermindPassport = () => (
   <Layout
     title="Mastermind Passport"
-    description="Guest access into elite mastermind communities through one membership. Walk in introduced. Apply to see if you qualify."
+    description="Mastermind Passport is a curated membership that opens guest invitations to multiple elite mastermind communities and entrepreneurial networks through one membership."
     canonical="/mastermind-passport"
   >
     <PassHero />
-    <PassProblem />
-    <PassHowItWorks />
-    <PassExperience />
-    <PassMath />
+    <PassWhy />
+    <PassMembers />
+    <PassCommunities />
     <PassWhoFor />
     <PassApply />
   </Layout>

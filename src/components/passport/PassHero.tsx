@@ -1,34 +1,77 @@
+import { Link } from "react-router-dom";
+
+const heroImage = "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1600";
+const heroImageSrcSet = "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800 800w, https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1600 1600w";
+
 const PassHero = () => {
   return (
-    <section style={{ backgroundColor: "#0B1F3F" }} className="hero-fullbleed text-white">
-      <img
-        className="hero-fullbleed-img"
-        src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1200"
-        srcSet="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1200 1200w, https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=2400 2400w"
-        sizes="(max-width: 640px) 100vw, (max-width: 1200px) 100vw, 2400px"
-        alt="A small business mastermind event in session: a speaker at a podium leading a workshop, an engaged room of business owners seated in front of him."
-        loading="eager"
-      />
-      <div className="hero-fullbleed-scrim-navy" />
-      <div className="hero-fullbleed-content mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pt-20 md:pt-32 pb-20 md:pb-32 grid md:grid-cols-12">
-        <div className="md:col-span-7">
-          <h1
-            className="font-serif-display text-white tracking-hero"
-            style={{ fontSize: "clamp(2.5rem, 7vw, 5rem)", lineHeight: 1.04 }}
-          >
-            Mastermind Passport.™<br />Walk in introduced.
-          </h1>
-          <p className="mt-8 max-w-[540px] text-[18px] md:text-[21px] leading-relaxed text-white/90">
-            Guest access into 40+ elite mastermind communities through one membership. The rooms most owners spend years trying to find. You walk in as a guest of the network instead of paying retail to test each one.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a href="/apply" className="btn-on-dark">
-              Apply now
-            </a>
-            <a href="/profit-partners" className="btn-secondary-on-dark">
-              Through Profit Partners
-            </a>
+    <section
+      id="top"
+      className="relative bg-white overflow-hidden lg:min-h-[720px]"
+    >
+      <div
+        aria-hidden
+        className="absolute top-0 bottom-0 right-0 hidden lg:block"
+        style={{ width: "48%" }}
+      >
+        <img
+          src={heroImage}
+          srcSet={heroImageSrcSet}
+          sizes="(max-width: 1280px) 100vw, 1600px"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 12%, rgba(255,255,255,0) 30%)",
+          }}
+        />
+      </div>
+
+      {/* Mobile: image shown above the text, stacked */}
+      <div className="lg:hidden">
+        <img
+          src={heroImage}
+          srcSet={heroImageSrcSet}
+          sizes="100vw"
+          alt="A mastermind session in progress, owners gathered in a focused working room."
+          className="w-full h-[260px] sm:h-[320px] object-cover"
+          loading="eager"
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16">
+        <div className="grid lg:grid-cols-12 items-center">
+          <div className="lg:col-span-7 py-16 lg:py-32">
+            <h1
+              className="font-serif-display text-slate-ink"
+              style={{
+                fontSize: "clamp(2.5rem, 5.5vw, 4.5rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.025em",
+              }}
+            >
+              <span className="text-brand-blue ppx-italic">Proximity is power</span>.
+            </h1>
+
+            <p className="mt-7 max-w-[520px] text-[15px] md:text-[16px] leading-[1.65] text-[hsl(var(--slate-700))]">
+              Mastermind Passport™ is a curated membership that opens guest invitations to multiple elite mastermind communities and entrepreneurial networks through one membership.
+            </p>
+
+            <div className="mt-9">
+              <Link
+                to="/apply"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-brand-blue text-white text-[15px] font-semibold tracking-tight hover:bg-brand-blue-hover transition-colors shadow-sm"
+              >
+                Join our WEcosystem
+              </Link>
+            </div>
           </div>
+
+          <div className="hidden lg:block lg:col-span-5" />
         </div>
       </div>
     </section>

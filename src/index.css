@@ -156,8 +156,10 @@ All colors MUST be HSL.
     }
   }
 
-  /* Belt-and-suspenders: never let any element force horizontal scroll */
-  html, body { overflow-x: hidden; }
+  /* Belt-and-suspenders: never let any element force horizontal scroll.
+     Use `clip` (not `hidden`) so the body stays a non-scroll container —
+     `overflow-x: hidden` would break the sticky header. */
+  html, body { overflow-x: clip; }
 }
 
 @layer utilities {

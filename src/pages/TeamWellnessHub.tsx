@@ -6,7 +6,6 @@ import TWHHowItWorks from "@/components/wellness/TWHHowItWorks";
 import TWHBenefits from "@/components/wellness/TWHBenefits";
 import TWHCompliance from "@/components/wellness/TWHCompliance";
 import TWHApply from "@/components/wellness/TWHApply";
-import TWHOutro from "@/components/wellness/TWHOutro";
 
 const TeamWellnessHub = () => (
   <Layout
@@ -21,7 +20,6 @@ const TeamWellnessHub = () => (
     <TWHBenefits />
     <TWHCompliance />
     <TWHApply />
-    <TWHOutro />
   </Layout>
 );
 

@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
 
-const mastermindImage = "https://images.unsplash.com/photo-1646066490017-c935b1a1eb0f?auto=format&fit=crop&q=80&w=1200";
-const mastermindImageSrcSet = "https://images.unsplash.com/photo-1646066490017-c935b1a1eb0f?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1646066490017-c935b1a1eb0f?auto=format&fit=crop&q=80&w=1200 1200w";
+const mmImage = "https://images.unsplash.com/photo-1646066490017-c935b1a1eb0f?auto=format&fit=crop&q=80&w=1200";
+const mmImageSrcSet = "https://images.unsplash.com/photo-1646066490017-c935b1a1eb0f?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1646066490017-c935b1a1eb0f?auto=format&fit=crop&q=80&w=1200 1200w";
 
-const benefits = [
-  "Curated access to top mastermind communities",
-  "Peer operators, investors, and partners in every room",
-  "Quarterly strategy sessions",
-  "Proximity to where deals and capital move",
+const points = [
+  "Guest invitations to eleven partner communities",
+  "Private events, investor gatherings, and retreats",
+  "Curated introductions to other qualified members",
+  "A searchable member directory",
 ];
 
 const BizMastermindPassport = () => {
   return (
-    <section id="mastermind-passport" className="scroll-mt-24 bg-[hsl(220_30%_98%)] border-t border-slate-ink/10">
+    <section className="bg-white border-t border-slate-ink/10">
       <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="lg:order-2">
@@ -24,33 +24,30 @@ const BizMastermindPassport = () => {
                 letterSpacing: "-0.025em",
               }}
             >
-              Mastermind Passport™. <span className="text-brand-blue ppx-italic">Proximity is power</span>.
+              Mastermind Passport™ opens the rooms most owners spend years trying to{" "}
+              <span className="text-brand-blue ppx-italic">find</span>.
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              The elite mastermind communities most owners spend years trying to find. We curate the rooms. You walk in.
+              Proximity is power. One curated membership opens guest invitations to elite mastermind communities, private events, and the operators who move the work forward.
             </p>
 
-            <ul className="mt-10 space-y-4 max-w-[560px]">
-              {benefits.map((b) => (
-                <li key={b} className="flex items-start gap-3">
-                  <span aria-hidden className="bullet-dot" />
-                  <span className="text-[16px] md:text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
-                    {b}
+            <ul className="mt-7 space-y-2.5">
+              {points.map((p) => (
+                <li key={p} className="flex items-start gap-2.5">
+                  <span aria-hidden className="bullet-dot mt-[9px]" />
+                  <span className="text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
+                    {p}
                   </span>
                 </li>
               ))}
             </ul>
 
-            <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[20px] leading-snug max-w-[560px]">
-              The rooms most owners can't get into without an introduction.
-            </p>
-
             <Link
               to="/mastermind-passport"
-              className="group mt-10 inline-flex items-center text-[15px] font-semibold text-brand-blue"
+              className="group mt-8 inline-flex items-center text-[15px] font-semibold text-brand-blue"
             >
-              See Mastermind Passport
+              More on Mastermind Passport
               <span aria-hidden className="ml-2 transition-transform group-hover:translate-x-1">→</span>
             </Link>
           </div>
@@ -58,10 +55,10 @@ const BizMastermindPassport = () => {
           <div className="lg:order-1">
             <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
               <img
-                src={mastermindImage}
-                srcSet={mastermindImageSrcSet}
+                src={mmImage}
+                srcSet={mmImageSrcSet}
                 sizes="(max-width: 1024px) 100vw, 600px"
-                alt="A small mastermind session in a warm, intimate room: a facilitator leading a focused discussion with a tight group of operators."
+                alt="A mastermind session in progress, owners gathered in a focused room."
                 loading="lazy"
                 className="w-full h-full object-cover"
               />

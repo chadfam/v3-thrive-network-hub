@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const heroImage = "https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?auto=format&fit=crop&q=80&w=1600";
 const heroImageSrcSet = "https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?auto=format&fit=crop&q=80&w=800 800w, https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?auto=format&fit=crop&q=80&w=1600 1600w";
 
@@ -5,8 +7,7 @@ const BizHero = () => {
   return (
     <section
       id="top"
-      className="relative bg-white overflow-hidden"
-      style={{ minHeight: "720px" }}
+      className="relative bg-white overflow-hidden lg:min-h-[720px]"
     >
       {/* Desktop: image bleeds to the right edge of the viewport */}
       <div
@@ -32,19 +33,19 @@ const BizHero = () => {
         />
       </div>
 
-      {/* Mobile: image stacks above text */}
+      {/* Mobile: image shown above the text, stacked */}
       <div className="lg:hidden">
         <img
           src={heroImage}
           srcSet={heroImageSrcSet}
           sizes="100vw"
-          alt="Two business partners working together on a laptop in a sunlit high-rise lounge."
+          alt="Two business owners working together at a laptop in warm daylight."
           className="w-full h-[260px] sm:h-[320px] object-cover"
           loading="eager"
         />
       </div>
 
-      <div className="relative mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 lg:px-20">
+      <div className="relative mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16">
         <div className="grid lg:grid-cols-12 items-center">
           <div className="lg:col-span-7 py-16 lg:py-32">
             <h1
@@ -55,25 +56,22 @@ const BizHero = () => {
                 letterSpacing: "-0.025em",
               }}
             >
-              Where <span className="text-brand-blue ppx-italic">partnerships</span> replace ads.
+              Grow through the families your community{" "}
+              <span className="text-brand-blue ppx-italic">already trusts</span>.
             </h1>
 
             <p className="mt-7 max-w-[520px] text-[15px] md:text-[16px] leading-[1.65] text-[hsl(var(--slate-700))]">
-              Customer acquisition is every owner's biggest problem. Real partnerships solve it. One application opens the working alliance of Profit Partners, the elite mastermind rooms of Mastermind Passport, and your own board of advisors in Command Central.
+              Three offerings work together to put your business in front of the people most likely to choose you, recommend you, and stay with you.
             </p>
 
             <div className="mt-9">
-              <a
-                href="/apply"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-brand-blue text-white text-[14px] font-semibold tracking-tight hover:bg-brand-blue/90 transition-colors"
+              <Link
+                to="/apply"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-brand-blue text-white text-[15px] font-semibold tracking-tight hover:bg-brand-blue-hover transition-colors shadow-sm"
               >
-                Apply as a Profit Partner
-              </a>
+                Join our WEcosystem
+              </Link>
             </div>
-
-            <p className="mt-8 text-[12px] tracking-wide text-[hsl(var(--slate-500))]">
-              Applications reviewed weekly. One per industry per market.
-            </p>
           </div>
 
           {/* Spacer for desktop right column where image bleed sits */}

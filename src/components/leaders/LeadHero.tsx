@@ -1,13 +1,13 @@
+import { Link } from "react-router-dom";
 import heroFounders from "@/assets/hero-founders.jpg";
 
 const LeadHero = () => {
   return (
     <section
       id="top"
-      className="relative bg-white overflow-hidden"
-      style={{ minHeight: "720px" }}
+      className="relative bg-white overflow-hidden lg:min-h-[720px]"
     >
-      {/* Desktop: image bleeds to right edge */}
+      {/* Desktop: image bleeds to the right edge of the viewport */}
       <div
         aria-hidden
         className="absolute top-0 bottom-0 right-0 hidden lg:block"
@@ -19,6 +19,7 @@ const LeadHero = () => {
           className="absolute inset-0 w-full h-full object-cover"
           loading="eager"
         />
+        {/* Left-edge fade into white */}
         <div
           className="absolute inset-0"
           style={{
@@ -28,17 +29,17 @@ const LeadHero = () => {
         />
       </div>
 
-      {/* Mobile: image stacks above text */}
+      {/* Mobile: image shown above the text, stacked */}
       <div className="lg:hidden">
         <img
           src={heroFounders}
-          alt="Community leaders together in conversation, warm daylight."
+          alt="Community leaders together in conversation in warm daylight."
           className="w-full h-[260px] sm:h-[320px] object-cover"
           loading="eager"
         />
       </div>
 
-      <div className="relative mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 lg:px-20">
+      <div className="relative mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16">
         <div className="grid lg:grid-cols-12 items-center">
           <div className="lg:col-span-7 py-16 lg:py-32">
             <h1
@@ -49,27 +50,25 @@ const LeadHero = () => {
                 letterSpacing: "-0.025em",
               }}
             >
-              Lead the room <span className="text-brand-blue ppx-italic">you're already in</span>.
+              Everything starts with the{" "}
+              <span className="text-brand-blue ppx-italic">family</span>.
             </h1>
 
             <p className="mt-7 max-w-[520px] text-[15px] md:text-[16px] leading-[1.65] text-[hsl(var(--slate-700))]">
-              Three paid roles for the connectors, coaches, and category experts whose work is already changing how families live. Apply, and we'll match you to the role that fits.
+              Three roles give the trusted people in your community a way to genuinely serve the families around them, and earn through the impact they create.
             </p>
 
             <div className="mt-9">
-              <a
-                href="/apply"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-brand-blue text-white text-[14px] font-semibold tracking-tight hover:bg-brand-blue/90 transition-colors"
+              <Link
+                to="/apply"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-brand-blue text-white text-[15px] font-semibold tracking-tight hover:bg-brand-blue-hover transition-colors shadow-sm"
               >
-                Apply now
-              </a>
+                Join our WEcosystem
+              </Link>
             </div>
-
-            <p className="mt-8 text-[12px] tracking-wide text-[hsl(var(--slate-500))]">
-              Applications reviewed weekly. Local Leaders are one per industry per area.
-            </p>
           </div>
 
+          {/* Spacer for desktop right column where image bleed sits */}
           <div className="hidden lg:block lg:col-span-5" />
         </div>
       </div>

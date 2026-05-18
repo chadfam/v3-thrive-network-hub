@@ -27,40 +27,39 @@ const tiles = [
 
 const TWHBenefits = () => {
   return (
-    <section className="bg-white border-t border-slate-ink/10">
-      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
-        <h2
-          className="font-serif-display text-slate-ink mx-auto max-w-[820px]"
-          style={{
-            fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
-            lineHeight: 1.05,
-            letterSpacing: "-0.025em",
-          }}
-        >
-          What the wellness benefits <span className="text-brand-blue ppx-italic">include</span>.
-        </h2>
+    <section id="benefits" className="relative bg-background overflow-hidden">
+      <div className="absolute inset-0 bg-brand-blue opacity-[0.04] pointer-events-none" />
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
+        <div className="text-center max-w-[760px] mx-auto">
+          <h2
+            className="font-serif-display text-slate-ink"
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
+          >
+            What the wellness benefits include.
+          </h2>
+          <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[720px] mx-auto">
+            The plan funds qualified preventive wellness benefits across three categories. Employees use what's relevant to them. Unused dollars don't accumulate or pay out as cash.
+          </p>
+        </div>
 
-        <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          The plan funds qualified preventive wellness benefits across three categories. Employees use what's relevant to them. Unused dollars don't accumulate or pay out as cash.
-        </p>
-
-        <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 text-left">
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {tiles.map((t) => (
-            <article
-              key={t.name}
-              className="rounded-2xl bg-white p-7 md:p-8 border border-slate-ink/10 flex flex-col hover:border-brand-blue/30 transition-colors"
-            >
-              <h3 className="font-serif-display text-[22px] md:text-[24px] leading-tight text-slate-ink">
+            <div key={t.name} className="bg-white border border-[#E0E3E7] rounded-xl p-8 flex flex-col">
+              <div className="w-8 h-[2px] bg-brand-blue" />
+              <h3
+                className="mt-5 font-serif-display text-slate-ink text-[22px]"
+                style={{ letterSpacing: "-0.01em" }}
+              >
                 {t.name}
               </h3>
-              <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))] flex-1">
+              <p className="mt-4 text-[15px] leading-relaxed text-[hsl(var(--slate-700))] flex-1">
                 {t.body}
               </p>
-            </article>
+            </div>
           ))}
         </div>
 
-        <p className="mt-12 mx-auto max-w-[720px] italic text-[14px] text-[hsl(var(--slate-500))]">
+        <p className="mt-12 text-center italic text-[14px] text-[hsl(var(--slate-500))] max-w-[720px] mx-auto">
           Specific benefits and providers are listed in the plan document. The plan must comply with IRS qualified-benefit definitions and is reviewed annually for compliance.
         </p>
       </div>

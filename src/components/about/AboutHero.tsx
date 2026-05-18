@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import heroMastermind from "@/assets/hero-mastermind.jpg";
 
 const AboutHero = () => {
   return (
     <section
       id="top"
-      className="relative bg-white overflow-hidden"
-      style={{ minHeight: "720px" }}
+      className="relative bg-white overflow-hidden lg:min-h-[720px]"
     >
+      {/* Desktop: image bleeds to the right edge of the viewport */}
       <div
         aria-hidden
         className="absolute top-0 bottom-0 right-0 hidden lg:block"
@@ -27,16 +28,17 @@ const AboutHero = () => {
         />
       </div>
 
+      {/* Mobile: image shown above the text, stacked */}
       <div className="lg:hidden">
         <img
           src={heroMastermind}
-          alt="Business owners around a wooden table in warm daylight."
+          alt="The team together in a working session in warm daylight."
           className="w-full h-[260px] sm:h-[320px] object-cover"
           loading="eager"
         />
       </div>
 
-      <div className="relative mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 lg:px-20">
+      <div className="relative mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16">
         <div className="grid lg:grid-cols-12 items-center">
           <div className="lg:col-span-7 py-16 lg:py-32">
             <h1
@@ -47,25 +49,22 @@ const AboutHero = () => {
                 letterSpacing: "-0.025em",
               }}
             >
-              A WEcosystem built to help families <span className="text-brand-blue ppx-italic">F.E.E.L.</span> again.
+              Build a world where every family{" "}
+              <span className="text-brand-blue ppx-italic">thrives</span>.
             </h1>
 
             <p className="mt-7 max-w-[520px] text-[15px] md:text-[16px] leading-[1.65] text-[hsl(var(--slate-700))]">
-              United to Thrive is the company behind FAM Central, Profit Partners, Local Leaders, and the WER1 referral platform. One connected WEcosystem aligning Families, Entrepreneurs, Experts, and Love (Charities) around the work of strengthening real life together.
+              We're a team of operators, connectors, and educators who believe families do better when the people around them are doing better too.
             </p>
 
             <div className="mt-9">
-              <a
-                href="/businesses"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-brand-blue text-white text-[14px] font-semibold tracking-tight hover:bg-brand-blue/90 transition-colors"
+              <Link
+                to="/apply"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-brand-blue text-white text-[15px] font-semibold tracking-tight hover:bg-brand-blue-hover transition-colors shadow-sm"
               >
-                See what's inside
-              </a>
+                Join our WEcosystem
+              </Link>
             </div>
-
-            <p className="mt-8 text-[12px] tracking-wide text-[hsl(var(--slate-500))]">
-              Headquartered in Tempe, Arizona. Phoenix is the founding Profit Partners chapter.
-            </p>
           </div>
 
           <div className="hidden lg:block lg:col-span-5" />

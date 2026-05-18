@@ -1,23 +1,35 @@
+import { Link } from "react-router-dom";
+
 const PassApply = () => {
   return (
-    <section className="bg-background">
-      <div className="mx-auto max-w-3xl px-6 sm:px-8 md:px-10 py-20 md:py-32 text-center">
-        <span className="block mx-auto section-accent" aria-hidden />
-        <h2 className="mt-10 font-serif-display text-slate-ink tracking-section" style={{ fontSize: "clamp(2.25rem, 5.5vw, 4rem)", lineHeight: 1.05 }}>
-          The right <span className="text-brand-blue ppx-italic">rooms</span> find you<br />once you're in the network.
+    <section style={{ backgroundColor: "#0B1F3F" }} className="text-white">
+      <div className="mx-auto max-w-[880px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
+        <h2
+          className="font-serif-display"
+          style={{
+            fontSize: "clamp(2rem, 5vw, 3.5rem)",
+            lineHeight: 1.05,
+            letterSpacing: "-0.02em",
+          }}
+        >
+          Join our <span className="ppx-italic" style={{ color: "#FBBF24" }}>WEcosystem</span>.
         </h2>
-        <p className="mt-8 mx-auto max-w-[640px] text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          Apply for the Passport directly, or apply to Profit Partners at the Mastermind tier and the Passport comes with it. Either path puts you in front of the rooms most owners spend years trying to reach.
+
+        <p className="mt-8 mx-auto max-w-[640px] text-[17px] md:text-[19px] leading-relaxed text-white/90">
+          Walk into the rooms most owners spend years trying to find. The relationships you can't engineer alone become the relationships the network introduces you to.
         </p>
-        <div className="mt-10 flex flex-col items-center gap-4">
-          <a
-            href="/apply?program=mastermind-passport"
-            className="btn-primary">
-            Apply for the Passport →
-          </a>
-          <a href="/profit-partners" className="text-link">
-            Or join through Profit Partners →
-          </a>
+
+        <p className="mt-6 mx-auto max-w-[640px] text-[17px] md:text-[19px] leading-relaxed text-white/90">
+          One application. Tell us what you're building and which parts of the network fit, and we'll be in touch within two to three business days.
+        </p>
+
+        <div className="mt-12 flex justify-center">
+          <Link
+            to="/apply"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-white text-slate-ink text-[15px] font-semibold tracking-tight hover:bg-white/90 transition-colors shadow-sm"
+          >
+            Join our WEcosystem
+          </Link>
         </div>
       </div>
     </section>

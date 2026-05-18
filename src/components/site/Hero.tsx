@@ -5,8 +5,7 @@ const Hero = () => {
   return (
     <section
       id="top"
-      className="relative bg-white overflow-hidden"
-      style={{ minHeight: "720px" }}
+      className="relative bg-white overflow-hidden lg:min-h-[720px]"
     >
       {/* Image bleeds to the right edge of the viewport */}
       <div
@@ -30,7 +29,7 @@ const Hero = () => {
         />
       </div>
 
-      {/* Mobile image: below text, stacked */}
+      {/* Mobile image: shown above the text, stacked */}
       <div className="lg:hidden">
         <img
           src={heroImg}
@@ -40,7 +39,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="relative mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 lg:px-20">
+      <div className="relative mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16">
         <div className="grid lg:grid-cols-12 items-center">
           <div className="lg:col-span-7 py-16 lg:py-32">
             <h1
@@ -56,21 +55,17 @@ const Hero = () => {
             </h1>
 
             <p className="mt-7 max-w-[520px] text-[15px] md:text-[16px] leading-[1.65] text-[hsl(var(--slate-700))]">
-              A community of values-aligned owners, leaders, and experts serving the families they care about most. For everyone who'd rather earn a reputation than rent attention.
+              United to Thrive is the WEcosystem connecting business owners, community leaders, and trusted experts to the families they serve.
             </p>
 
             <div className="mt-9">
               <Link
                 to="/apply"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-brand-blue text-white text-[14px] font-semibold tracking-tight hover:bg-brand-blue/90 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-brand-blue text-white text-[15px] font-semibold tracking-tight hover:bg-brand-blue-hover transition-colors shadow-sm"
               >
-                Apply to Profit Partners
+                Join our WEcosystem
               </Link>
             </div>
-
-            <p className="mt-8 text-[12px] tracking-wide text-[hsl(var(--slate-500))]">
-              Applications reviewed weekly. One per industry per market.
-            </p>
           </div>
 
           {/* Spacer for desktop right column (the absolute-positioned image covers this area) */}

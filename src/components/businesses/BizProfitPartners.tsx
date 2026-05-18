@@ -1,28 +1,19 @@
 import { Link } from "react-router-dom";
 
-type Spoke = { label: string; x: number; y: number };
+const ppImage = "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200";
+const ppImageSrcSet = "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200 1200w";
 
-const spokes: Spoke[] = [
-  { label: "Realtor", x: 250, y: 40 },
-  { label: "Mortgage", x: 410, y: 130 },
-  { label: "Insurance", x: 410, y: 290 },
-  { label: "Home Services", x: 250, y: 380 },
-  { label: "Financial", x: 90, y: 290 },
-  { label: "Legal", x: 90, y: 130 },
-];
-
-const HUB = { x: 250, y: 210 };
-
-const benefits = [
-  "Monthly mastermind days with values-aligned owners",
-  "Co-marketing campaigns across the alliance",
-  "Promoted inside FAM Central to the families already using it",
-  "Category exclusivity, one per industry per market",
+const points = [
+  "Monthly masterminds with your alliance partners",
+  "Co-marketing campaigns and partner introductions",
+  "Mastermind Passport and Command Central access",
+  "Lifetime Client Agency™ to turn past clients into referrals",
+  "Your business promoted to families inside FAM Central",
 ];
 
 const BizProfitPartners = () => {
   return (
-    <section id="profit-partners" className="scroll-mt-24 bg-white border-t border-slate-ink/10">
+    <section style={{ backgroundColor: "#E9EFFB" }}>
       <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
@@ -34,106 +25,44 @@ const BizProfitPartners = () => {
                 letterSpacing: "-0.025em",
               }}
             >
-              Profit Partners™. <span className="text-brand-blue ppx-italic">The alliance</span>.
+              Profit Partners™ turns complementary businesses into a{" "}
+              <span className="text-brand-blue ppx-italic">working alliance</span>.
             </h2>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
-              A working alliance of complementary business owners actively recommending each other to the families they already serve. The flagship offering inside United to Thrive, and the one application that opens everything else.
+              A circle of complementary owners who actively recommend each other to the families they already serve. Trust transfers from the person who sent them.
             </p>
 
-            <ul className="mt-10 space-y-4 max-w-[560px]">
-              {benefits.map((b) => (
-                <li key={b} className="flex items-start gap-3">
-                  <span aria-hidden className="bullet-dot" />
-                  <span className="text-[16px] md:text-[17px] leading-relaxed text-[hsl(var(--slate-700))]">
-                    {b}
+            <ul className="mt-7 space-y-2.5">
+              {points.map((p) => (
+                <li key={p} className="flex items-start gap-2.5">
+                  <span aria-hidden className="bullet-dot mt-[9px]" />
+                  <span className="text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
+                    {p}
                   </span>
                 </li>
               ))}
             </ul>
 
-            <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[20px] leading-snug max-w-[560px]">
-              Your own power team. Built formally, with skin in the game on every introduction.
-            </p>
-
             <Link
               to="/profit-partners"
-              className="group mt-10 inline-flex items-center text-[15px] font-semibold text-brand-blue"
+              className="group mt-8 inline-flex items-center text-[15px] font-semibold text-brand-blue"
             >
-              See what's included
+              More on Profit Partners
               <span aria-hidden className="ml-2 transition-transform group-hover:translate-x-1">→</span>
             </Link>
           </div>
 
           <div>
-            <div className="relative w-full">
-              <svg
-                viewBox="-50 -50 600 520"
-                className="w-full h-auto"
-                role="img"
-                aria-label="Hub-and-spoke diagram with the homeowner at the center and six professional roles around the edge, each connected to the center by a line."
-              >
-                {spokes.map((s) => (
-                  <line
-                    key={`line-${s.label}`}
-                    x1={HUB.x}
-                    y1={HUB.y}
-                    x2={s.x}
-                    y2={s.y}
-                    stroke="#FBBF24"
-                    strokeWidth="1.5"
-                    strokeOpacity="0.5"
-                  />
-                ))}
-
-                {spokes.map((s) => (
-                  <g key={`spoke-${s.label}`}>
-                    <circle
-                      cx={s.x}
-                      cy={s.y}
-                      r="42"
-                      fill="white"
-                      stroke="#2563EB"
-                      strokeWidth="1.5"
-                    />
-                    <text
-                      x={s.x}
-                      y={s.y + 4}
-                      textAnchor="middle"
-                      fontSize="13"
-                      fontWeight="600"
-                      fill="#0F172A"
-                      fontFamily="system-ui, -apple-system, sans-serif"
-                    >
-                      {s.label}
-                    </text>
-                  </g>
-                ))}
-
-                <circle cx={HUB.x} cy={HUB.y} r="62" fill="#2563EB" />
-                <text
-                  x={HUB.x}
-                  y={HUB.y - 4}
-                  textAnchor="middle"
-                  fontSize="14"
-                  fontWeight="700"
-                  fill="white"
-                  fontFamily="system-ui, -apple-system, sans-serif"
-                >
-                  The
-                </text>
-                <text
-                  x={HUB.x}
-                  y={HUB.y + 14}
-                  textAnchor="middle"
-                  fontSize="16"
-                  fontWeight="700"
-                  fill="white"
-                  fontFamily="system-ui, -apple-system, sans-serif"
-                >
-                  Homeowner
-                </text>
-              </svg>
+            <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
+              <img
+                src={ppImage}
+                srcSet={ppImageSrcSet}
+                sizes="(max-width: 1024px) 100vw, 600px"
+                alt="Business owners in a working session around a table in warm daylight."
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

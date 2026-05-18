@@ -1,21 +1,21 @@
 const steps = [
   {
-    num: "01",
+    n: "01",
     name: "Census and savings analysis",
     body: "We review your payroll census and calculate what the plan is worth in actual dollars to the business and your employees. Non-intrusive, requires minimal information.",
   },
   {
-    num: "02",
+    n: "02",
     name: "Plan documentation",
     body: "We draft the written plan document, summary plan description, and supporting paperwork the IRS expects for a properly documented pre-tax wellness benefit plan.",
   },
   {
-    num: "03",
+    n: "03",
     name: "Payroll integration",
     body: "We coordinate with your existing payroll provider to set up the pre-tax deduction codes and wellness benefit codes. Most setups are complete within two weeks.",
   },
   {
-    num: "04",
+    n: "04",
     name: "Employee enrollment",
     body: "We provide enrollment materials, host an explainer session for your team, and run the open-enrollment window. Employees opt in voluntarily.",
   },
@@ -23,39 +23,42 @@ const steps = [
 
 const TWHHowItWorks = () => {
   return (
-    <section className="bg-[hsl(220_30%_98%)] border-t border-slate-ink/10">
-      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
-        <h2
-          className="font-serif-display text-slate-ink mx-auto max-w-[820px]"
-          style={{
-            fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
-            lineHeight: 1.05,
-            letterSpacing: "-0.025em",
-          }}
-        >
-          Four steps. Four to six weeks. <span className="text-brand-blue ppx-italic">Plan live</span>.
-        </h2>
+    <section id="how-it-works" className="bg-background">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
+        <div className="text-center max-w-[760px] mx-auto">
+          <h2
+            className="font-serif-display text-slate-ink"
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
+          >
+            How a plan gets set up.
+          </h2>
+          <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[720px] mx-auto">
+            We handle the structuring, documentation, and compliance. You handle informing your team. The plan integrates with your existing payroll provider.
+          </p>
+        </div>
 
-        <p className="mt-8 mx-auto max-w-[640px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          We handle the structuring, documentation, and compliance. You handle informing your team. The plan integrates with your existing payroll provider.
-        </p>
-
-        <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 text-left">
-          {steps.map((s) => (
-            <article
-              key={s.num}
-              className="rounded-2xl bg-white p-7 md:p-8 border border-slate-ink/10 flex flex-col"
-            >
-              <span className="font-serif-display text-brand-blue text-[18px] tracking-tight">
-                {s.num}
-              </span>
-              <h3 className="mt-5 font-serif-display text-[20px] md:text-[22px] leading-tight text-slate-ink">
+        <div className="mt-16 grid md:grid-cols-4 gap-12 md:gap-6">
+          {steps.map((s, i) => (
+            <div key={s.n} className="relative">
+              <div
+                className="font-serif-display text-gradient-warm"
+                style={{ fontSize: "clamp(2.5rem, 5vw, 3.5rem)", lineHeight: 1 }}
+              >
+                {s.n}
+              </div>
+              <h3
+                className="mt-4 font-serif-display text-slate-ink text-[24px]"
+                style={{ letterSpacing: "-0.01em" }}
+              >
                 {s.name}
               </h3>
-              <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
+              <p className="mt-4 text-[16px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[240px]">
                 {s.body}
               </p>
-            </article>
+              {i < steps.length - 1 && (
+                <div className="hidden md:block absolute top-7 right-[-12px] w-6 h-px bg-brand-blue" />
+              )}
+            </div>
           ))}
         </div>
       </div>

@@ -1,32 +1,31 @@
+import { Link } from "react-router-dom";
+
 const FGApply = () => {
   return (
-    <section className="relative bg-background">
-      <div
-        aria-hidden
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "none",
-        }}
-      />
-      <div className="relative mx-auto max-w-[760px] px-6 sm:px-8 md:px-10 py-20 md:py-32 text-center">
-        <div className="mx-auto section-accent" />
+    <section id="apply" className="scroll-mt-24 bg-white border-t border-slate-ink/10">
+      <div className="mx-auto max-w-[1080px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
         <h2
-          className="mt-10 font-serif-display text-slate-ink tracking-hero"
-          style={{ fontSize: "clamp(2.25rem, 6vw, 4rem)", lineHeight: 1.05 }}
+          className="font-serif-display text-slate-ink mx-auto max-w-[820px]"
+          style={{
+            fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+            lineHeight: 1.05,
+            letterSpacing: "-0.025em",
+          }}
         >
-          Bring your practice into a network that runs.
+          Join our <span className="text-brand-blue ppx-italic">WEcosystem</span>.
         </h2>
-        <p className="mt-8 mx-auto max-w-[640px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-          The application takes about ten minutes. We follow up within five business days with the next step. Onboarding for accepted applicants begins on the first of the following month.
+
+        <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
+          One application. Tell us what you're building and which parts of the network fit. We'll be in touch within two to three business days.
         </p>
-        <div className="mt-10 flex flex-col items-center gap-4">
-          <a href="/apply?role=fam-guide" className="btn-primary">
-            Apply as a FAM Guide →
-          </a>
-          <a href="/contact?topic=fam-guides" className="text-link">
-            Or talk to us about a specialty path first →
-          </a>
+
+        <div className="mt-12 flex justify-center">
+          <Link
+            to="/apply"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-brand-blue text-white text-[15px] font-semibold tracking-tight hover:bg-brand-blue-hover transition-colors shadow-sm"
+          >
+            Join our WEcosystem
+          </Link>
         </div>
       </div>
     </section>

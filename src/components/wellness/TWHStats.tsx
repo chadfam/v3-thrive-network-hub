@@ -15,24 +15,21 @@ const stats = [
 
 const TWHStats = () => {
   return (
-    <section className="bg-brand-blue/5 border-t border-slate-ink/10">
-      <div className="mx-auto max-w-[1080px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
-        <h2
-          className="font-serif-display text-slate-ink mx-auto max-w-[920px]"
-          style={{
-            fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
-            lineHeight: 1.05,
-            letterSpacing: "-0.025em",
-          }}
-        >
-          A raise for your team. <span className="text-brand-blue ppx-italic">Without raising payroll</span>.
-        </h2>
+    <section className="bg-background">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
+        <div className="text-center max-w-[760px] mx-auto">
+          <h2
+            className="font-serif-display text-slate-ink"
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
+          >
+            A raise for your team, without raising payroll.
+          </h2>
+          <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[720px] mx-auto">
+            The math works for both sides because the IRS structures it that way. Employees redirect a portion of pre-tax pay toward qualified wellness benefits, and the business saves on the employer FICA owed on those same dollars.
+          </p>
+        </div>
 
-        <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
-          The math works for both sides because the IRS structures it that way. Employees redirect a portion of pre-tax pay toward qualified wellness benefits, and the business saves on the employer FICA owed on those same dollars.
-        </p>
-
-        <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-10 md:gap-8">
+        <div className="mt-16 grid sm:grid-cols-3 gap-10 md:gap-8 text-center">
           {stats.map((s) => (
             <div key={s.value}>
               <p

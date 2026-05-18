@@ -1,102 +1,69 @@
-const streams = [
+const layers = [
   {
-    num: "01",
-    label: "STREAM ONE",
-    name: "Content consumption rewards.",
-    body: "You get paid as families view, listen to, or complete your content. Blogs, podcasts, videos, courses, and learning modules all qualify. The platform tracks engagement at the family level and pays out monthly based on actual consumption, not impressions or clicks.",
-    items: [
-      "Article views and reading completion",
-      "Podcast plays and completion rate",
-      "Video watch time and full views",
-      "Course module completion",
-      "Learning path progress",
-    ],
+    lead: "Content consumption rewards.",
+    body: "Earned as families view, listen to, and complete your content.",
   },
   {
-    num: "02",
-    label: "STREAM TWO",
-    name: "The Expert Faculty Fund.",
-    body: "A percentage of overall platform revenue is allocated to a shared pool distributed across Expert Faculty members. Your share of the Fund grows with your engagement metrics over time. The pool exists so that even content that doesn't directly drive paid actions still rewards experts whose work shapes the broader culture of the platform.",
-    items: [
-      "Total engagement across your content library",
-      "Watch time and completion rates",
-      "Family retention on your content",
-      "Cross-category influence",
-    ],
+    lead: "A revenue share pool for Faculty.",
+    body: "",
   },
   {
-    num: "03",
-    label: "STREAM THREE",
-    name: "Course and program revenue.",
-    body: "Feature your premium courses, programs, or coaching cohorts directly inside FAM Central. The platform handles enrollment, billing, and delivery infrastructure. You set the price and program structure, the platform integrates it into the broader content network.",
-    items: [
-      "Direct course enrollments",
-      "Cohort program seats",
-      "Bundled inclusion in family learning paths",
-      "Premium tier offerings",
-    ],
+    lead: "Course and program revenue.",
+    body: "",
   },
   {
-    num: "04",
-    label: "STREAM FOUR",
-    name: "Affiliate and referral earnings.",
-    body: "Participate in the WER1 affiliate platform. Your magic link tracks every introduction across the network. When someone you sent in buys anything in the WEcosystem, you get paid for that purchase.",
-    items: [
-      "Commissions on family upgrades through your link",
-      "Earnings tied to your magic link across every offer in the network",
-      "Automatic tracking and payment processing",
-      "Dashboard visibility on what's coming in and from where",
-    ],
+    lead: "Affiliate and referral earnings.",
+    body: "Tracked through the WER1 platform.",
   },
   {
-    num: "05",
-    label: "STREAM FIVE",
-    name: "Sponsorship and brand opportunities.",
-    body: "Get selected for paid campaigns with brands that align with the platform's mission. Lead featured content series, host events, run challenges with sponsor backing, or co-create programs around specific themes. Selection is curated by the platform team based on category fit, audience match, and brand alignment.",
-    items: [
-      "Brand-funded content series",
-      "Sponsored events and challenges",
-      "Co-branded programs",
-      "Speaking and appearance fees through the network",
-    ],
+    lead: "Sponsorship and brand opportunities.",
+    body: "Tied to the audience your work attracts.",
   },
 ];
 
 const EFStreams = () => {
   return (
-    <section id="income-streams" style={{ backgroundColor: "#0B1F3F" }} className="text-white">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32">
-        <div className="text-center max-w-[760px] mx-auto">
-          <h2 className="font-serif-display tracking-section text-white" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-            The five income streams.
-          </h2>
-          <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-white/90 max-w-[720px] mx-auto">
-            The five ways Expert Faculty earn from the platform. Most active members earn from three or four of the five concurrently. The structure is built so that the more your content reaches families, the more streams activate.
-          </p>
-        </div>
-        <div className="mt-16 space-y-20">
-          {streams.map((s, i) => (
-            <div key={s.num}>
-              {i > 0 && <div className="h-px w-full bg-white/20 mb-20" />}
-              <div className="grid md:grid-cols-12 gap-8 md:gap-10">
-                <div className="md:col-span-3">
-                  <div className="font-serif-display text-[80px] leading-none text-brand-gold">{s.num}</div>
-                </div>
-                <div className="md:col-span-9">
-                  <h3 className="font-serif-display text-[28px] md:text-[32px] text-white leading-tight">{s.name}</h3>
-                  <p className="mt-5 text-[17px] leading-relaxed text-white/90 max-w-[640px]">{s.body}</p>
-                  <ul className="mt-6 space-y-3">
-                    {s.items.map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-[15px] text-white/80">
-                        <span className="bullet-dot" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          ))}
+    <section className="border-t border-slate-ink/10" style={{ backgroundColor: "#E9EFFB" }}>
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <h2
+              className="font-serif-display text-slate-ink"
+              style={{
+                fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.025em",
+              }}
+            >
+              More income streams than a{" "}
+              <span className="text-brand-blue ppx-italic">single offer</span> can produce.
+            </h2>
+
+            <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              A single offer reaches one slice of an audience. Inside the network, the same work earns through several layers at once.
+            </p>
+
+            <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              The path is sequential, and the platform handles the tracking. Apply, get approved, upload and integrate your content, then get distributed and earn.
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-white p-7 sm:p-9 md:p-10" style={{ border: "1px solid #E0E3E7" }}>
+            <h3 className="font-serif-display text-[22px] md:text-[24px] leading-tight text-slate-ink">
+              How income reaches Faculty
+            </h3>
+            <ul className="mt-7 space-y-5">
+              {layers.map((layer) => (
+                <li key={layer.lead} className="flex items-start gap-3">
+                  <span aria-hidden className="bullet-dot mt-[9px]" />
+                  <span className="text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
+                    <span className="font-semibold text-slate-ink">{layer.lead}</span>
+                    {layer.body ? ` ${layer.body}` : ""}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
