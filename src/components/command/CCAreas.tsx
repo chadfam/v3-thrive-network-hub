@@ -19,6 +19,10 @@ const areas = [
     name: "Tech",
     desc: "Tech stack reviews, website design and hosting, CRM and automation setup, custom integrations, AI systems optimization.",
   },
+  {
+    name: "Wellness",
+    desc: "Pre-tax wellness benefit plans, employee health and mental wellness programs, financial wellness coaching, preventive care, and annual compliance support.",
+  },
 ];
 
 const CCAreas = () => {
