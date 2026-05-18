@@ -22,6 +22,7 @@ import PromoEngine from "./pages/PromoEngine.tsx";
 import FamCentral from "./pages/FamCentral.tsx";
 import LogoConcepts from "./pages/LogoConcepts.tsx";
 import Apply from "./pages/Apply.tsx";
+import Booking from "./pages/Booking.tsx";
 import Contact from "./pages/Contact.tsx";
 import Nominate from "./pages/Nominate.tsx";
 import Privacy from "./pages/Privacy.tsx";
@@ -54,6 +55,7 @@ const App = () => (
           <Route path="/fam-central" element={<FamCentral />} />
           <Route path="/logo-concepts" element={<LogoConcepts />} />
           <Route path="/apply" element={<Apply />} />
+          <Route path="/booking" element={<Booking />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/nominate" element={<Nominate />} />
           <Route path="/privacy" element={<Privacy />} />

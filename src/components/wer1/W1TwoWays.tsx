@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const cards = [
   {
     label: "PATH ONE",
@@ -8,8 +10,6 @@ const cards = [
       "Branded sharing links and tracking",
       "One link covers every offer in the network",
     ],
-    cta: "Become a promoter →",
-    href: "/apply?role=promoter",
   },
   {
     label: "PATH TWO",
@@ -20,8 +20,6 @@ const cards = [
       "Configured for your compensation structure",
       "Family-unit attribution available",
     ],
-    cta: "Talk to us about white-label →",
-    href: "/contact?topic=white-label",
   },
 ];
 
@@ -56,15 +54,14 @@ const W1TwoWays = () => {
                   </li>
                 ))}
               </ul>
-              <div className="mt-10">
-                <a
-                  href={c.href}
-                  className="btn-primary">
-            {c.cta}
-                </a>
-              </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-14 md:mt-16 text-center">
+          <Link to="/apply" className="btn-primary">
+            Join our WEcosystem
+          </Link>
         </div>
       </div>
     </section>

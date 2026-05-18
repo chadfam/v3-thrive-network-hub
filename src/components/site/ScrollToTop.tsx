@@ -8,12 +8,12 @@ import { useLocation } from "react-router-dom";
  * mid-page instead of at the top.
  */
 const ScrollToTop = () => {
-  const { pathname, hash } = useLocation();
+  const { pathname, search, hash } = useLocation();
 
   useEffect(() => {
     if (hash) return;
     window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
-  }, [pathname, hash]);
+  }, [pathname, search, hash]);
 
   return null;
 };

@@ -34,12 +34,6 @@ const LLApply = () => {
           >
             Join our WEcosystem
           </Link>
-          <Link
-            to="/nominate"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-transparent text-white text-[15px] font-semibold border-2 border-white/30 hover:border-white transition-colors"
-          >
-            Nominate someone
-          </Link>
         </div>
       </div>
     </section>

@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const items = [
   "Professionals and business owners with strong community ties",
   "Entrepreneurial individuals and families",
@@ -29,14 +27,6 @@ const LLWhoFits = () => {
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
               The role gives a name, a playbook, and a network to connecting work many people already do in their communities. It tends to fit a familiar set of people.
-            </p>
-
-            <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">
-              Know someone who's already the connector in their community?{" "}
-              <Link to="/nominate" className="text-brand-blue underline underline-offset-4">
-                Nominate them
-              </Link>
-              .
             </p>
           </div>
 

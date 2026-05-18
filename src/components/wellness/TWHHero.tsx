@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const TWHHero = () => {
   return (
     <section id="top" style={{ backgroundColor: "#0B1F3F" }} className="text-white">
@@ -19,9 +21,9 @@ const TWHHero = () => {
         </p>
 
         <div className="mt-10 flex flex-wrap gap-3 justify-center">
-          <a href="/contact?topic=team-wellness-hub" className="btn-on-dark">
-            Talk to us about setup
-          </a>
+          <Link to="/apply" className="btn-on-dark">
+            Join our WEcosystem
+          </Link>
         </div>
 
         <div className="mt-12 text-[14px] font-medium text-white/70 flex flex-wrap justify-center gap-x-3 gap-y-2">

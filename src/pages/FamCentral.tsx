@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Layout from "@/components/site/Layout";
 
 const FamCentral = () => (
@@ -22,12 +23,9 @@ const FamCentral = () => (
           The platform is in development. This page is a placeholder while the product comes together. If you want to be notified when FAM Central launches, send us a note.
         </p>
         <div className="mt-10 flex flex-wrap gap-3 justify-center">
-          <a href="/contact?topic=fam-central" className="btn-on-dark">
-            Stay informed
-          </a>
-          <a href="/about" className="btn-secondary-on-dark">
-            Learn about the network
-          </a>
+          <Link to="/apply" className="btn-on-dark">
+            Join our WEcosystem
+          </Link>
         </div>
       </div>
     </section>

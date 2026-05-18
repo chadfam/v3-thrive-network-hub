@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const W1Hero = () => {
   return (
     <section style={{ backgroundColor: "#0B1F3F" }} className="text-white">
@@ -21,17 +23,9 @@ const W1Hero = () => {
           We use it to power every program in the network. We also offer it as a white-label engine for partner businesses that want to run their own affiliate or referral program on it.
         </p>
         <div className="mt-10 flex flex-wrap gap-3 justify-center">
-          <a
-            href="/apply?role=promoter"
-            className="btn-on-dark">
-            Become a promoter
-          </a>
-          <a
-            href="/contact?topic=white-label"
-            className="btn-secondary-on-dark"
-          >
-            Run WER1 for your business
-          </a>
+          <Link to="/apply" className="btn-on-dark">
+            Join our WEcosystem
+          </Link>
         </div>
         <div className="mt-12 text-[14px] font-medium text-white/70 flex flex-wrap justify-center gap-x-3 gap-y-2">
           <a href="#two-ways" className="hover:text-white transition-colors">For promoters</a>

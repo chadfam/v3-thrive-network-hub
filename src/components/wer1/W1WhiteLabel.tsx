@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const included = [
   "The full WER1 platform configured for your business",
   "Your branding on dashboards, links, and member-facing pages",
@@ -33,9 +35,9 @@ const W1WhiteLabel = () => {
               The result is a referral program that gets stronger over time, instead of plateauing at the first ring of advocates.
             </p>
           </div>
-          <a href="/contact?topic=white-label" className="mt-8 text-link-on-dark">
-            Talk to us about white-label →
-          </a>
+          <Link to="/apply" className="mt-8 text-link-on-dark">
+            Join our WEcosystem
+          </Link>
         </div>
 
         <div className="bg-white rounded-2xl p-10">

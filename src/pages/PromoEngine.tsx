@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Layout from "@/components/site/Layout";
 
 const features = [
@@ -61,9 +62,9 @@ const PromoEngine = () => (
           >
             Visit promoengine.com →
           </a>
-          <a href="/contact?topic=promo-engine" className="btn-secondary-on-dark">
-            Book a demo
-          </a>
+          <Link to="/apply" className="btn-secondary-on-dark">
+            Join our WEcosystem
+          </Link>
         </div>
         <div className="mt-16 md:mt-20 mx-auto max-w-[760px]">
           <svg viewBox="0 0 760 300" className="w-full h-auto" role="img" aria-label="A promo offer published as its own landing page, distributed across email, text, and social channels, with revenue tracked back to each source.">
@@ -162,9 +163,9 @@ const PromoEngine = () => (
           In just a few minutes, we'll walk you through how it works and what it could look like for your locations.
         </p>
         <div className="mt-10">
-          <a href="/contact?topic=promo-engine" className="btn-on-dark">
-            Book a demo & strategy session
-          </a>
+          <Link to="/apply" className="btn-on-dark">
+            Join our WEcosystem
+          </Link>
         </div>
       </div>
     </section>

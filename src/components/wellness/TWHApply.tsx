@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const TWHApply = () => {
   return (
     <section id="apply" className="scroll-mt-24 relative bg-background overflow-hidden">
@@ -15,15 +17,9 @@ const TWHApply = () => {
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          <a href="/contact?topic=team-wellness-hub-analysis" className="btn-primary">
-            Request a savings analysis →
-          </a>
-          <a
-            href="/profit-partners"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-white text-slate-ink text-[15px] font-semibold border-2 border-slate-ink/15 hover:border-brand-blue hover:text-brand-blue transition-colors"
-          >
-            Apply through Profit Partners
-          </a>
+          <Link to="/apply" className="btn-primary">
+            Join our WEcosystem
+          </Link>
         </div>
 
         <p className="mt-10 italic text-[14px] text-[hsl(var(--slate-500))]">
