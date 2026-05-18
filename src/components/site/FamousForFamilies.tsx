@@ -1,4 +1,4 @@
-import familyImg from "@/assets/family-dinner.jpg";
+import familyImg from "@/assets/parents-talking.jpg";
 
 const FamousForFamilies = () => {
   return (
