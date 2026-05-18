@@ -11,14 +11,17 @@ const W1WhyOwn = () => {
         </h2>
         <div className="mt-8 space-y-6">
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            Most networks rent their referral infrastructure. The platform takes a percentage. The brand pays a fee. The affiliates get paid through whatever rules the platform vendor decided to enforce. The chain that connected the deal in the first place stays invisible because the platform wasn't built to see it.
+            Most networks rent their referral infrastructure. The platform takes a percentage. The brand pays a fee. The promoters get paid through whatever rules the platform vendor decided to enforce.
           </p>
           <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-            We built our network on top of WER1 so the platform underneath United to Thrive could be built around the principle that the chain is the point. The introduction is the unit of value, the platform is what makes it trackable, and the payout is what makes it sustainable. We can configure it for partner businesses because we own the brand and the integration.
+            WER1 sits at the foundation of United to Thrive so the platform underneath operates on the principle that the introduction is the point.
+          </p>
+          <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
+            We own the WER1 brand and the integration, which means we can configure it for partner businesses and account for the introductions our network actually makes.
           </p>
         </div>
         <p className="mt-10 font-serif-display italic text-slate-ink text-[24px]" style={{ letterSpacing: "-0.01em" }}>
-          The chain is the point. The platform was built to pay it.
+          The introduction is the point. The platform was built to pay it.
         </p>
       </div>
     </section>

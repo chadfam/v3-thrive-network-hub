@@ -1,53 +1,60 @@
-import { Link } from "react-router-dom";
-
-const cards = [
+const feel = [
   {
-    headline: "Grow through partnerships, not ads.",
-    body: "Stop spending blind money on cold traffic. Profit Partners is a working alliance where complementary businesses promote each other to the families they already serve. Referrals close at a far higher rate than any ad ever will.",
-    meta: "Profit Partners™ · Mastermind Passport™ · Command Central™",
-    link: "Explore for businesses →",
-    to: "/businesses",
+    letter: "F",
+    name: "Families",
+    body: "Find trusted people, businesses, experts, and experiences that strengthen real life at home. Save and earn for sharing what you already love.",
   },
   {
-    headline: "Lead the room you're already in.",
-    body: "Local Leaders are the trusted connectors in their area, one per industry. FAM Guides help families feel more connected, with a plan that's actually theirs. Expert Faculty bring what they know to the families who need it.",
-    meta: "Local Leaders · FAM Guides · Expert Faculty",
-    link: "Explore for leaders →",
-    to: "/leaders",
+    letter: "E",
+    name: "Entrepreneurs",
+    body: "Grow through the families who already trust you and the partners who serve them, instead of ad spend you can't control.",
   },
   {
-    headline: "Get paid for what you already do.",
-    body: "You already recommend the people and products you trust. WER1 gives you one magic link to promote any program in the network, and you get paid when people buy, no matter which one they choose.",
-    meta: "WER1 · One link · Every program",
-    link: "See how WER1 works →",
-    to: "/wer1",
+    letter: "E",
+    name: "Experts",
+    body: "Reach the audience your work was built for. Get rewarded for the impact, not just the impressions.",
   },
-] as const;
+  {
+    letter: "L",
+    name: "Love (Charities)",
+    body: "Causes and community organizations monetize their reach by recommending the people and resources families already need.",
+  },
+];
 
 const ThreePaths = () => {
   return (
-    <section className="surface-muted">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-14 md:py-20">
-        <h2 className="font-serif-display section-headline text-slate-ink text-center">Three ways to win.</h2>
-        <div className="mt-14 md:mt-20 grid md:grid-cols-3 gap-6 md:gap-8">
-          {cards.map((c) => (
+    <section className="bg-[hsl(220_30%_98%)] border-t border-slate-ink/10">
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
+        <h2
+          className="font-serif-display text-slate-ink mx-auto max-w-[820px]"
+          style={{
+            fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+            lineHeight: 1.05,
+            letterSpacing: "-0.025em",
+          }}
+        >
+          Four audiences inside <span className="text-brand-blue ppx-italic">F.E.E.L.</span>
+        </h2>
+
+        <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
+          F.E.E.L. is the framework underneath everything we make. Four audiences, one community, aligned around the people they all share.
+        </p>
+
+        <div className="mt-16 md:mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 text-left">
+          {feel.map((f) => (
             <article
-              key={c.headline}
-              className="relative card-surface card-surface-hover rounded-2xl p-6 md:p-8 flex flex-col"
+              key={f.name}
+              className="rounded-2xl bg-white p-7 md:p-8 border border-slate-ink/10 flex flex-col"
             >
-              <h3 className="font-serif-display text-[26px] md:text-[28px] leading-[1.15] text-slate-ink">
-                {c.headline}
+              <span className="font-serif-display text-brand-blue text-[40px] md:text-[48px] leading-none tracking-tight">
+                {f.letter}
+              </span>
+              <h3 className="mt-5 font-serif-display text-[20px] md:text-[22px] leading-tight text-slate-ink">
+                {f.name}
               </h3>
-              <p className="mt-5 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] flex-1">
-                {c.body}
+              <p className="mt-4 text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
+                {f.body}
               </p>
-              <p className="mt-6 text-[13px] text-[hsl(var(--slate-500))] leading-relaxed">{c.meta}</p>
-              <Link
-                to={c.to}
-                className="mt-6 inline-block text-[16px] text-slate-ink hover:underline underline-offset-4"
-              >
-                {c.link}
-              </Link>
             </article>
           ))}
         </div>

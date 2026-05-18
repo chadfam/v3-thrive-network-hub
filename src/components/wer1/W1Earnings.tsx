@@ -1,7 +1,7 @@
-const points = [
-  { label: "One link", body: "You get a single magic link to promote any program in the network. No juggling separate affiliate accounts, no choosing which one to share." },
-  { label: "Every program", body: "Whatever someone buys (Profit Partners, Mastermind Passport, Team Wellness Hub, FAM Guides, Local Leaders, Expert Faculty, Promo Engine), the activity attributes back to you and you get paid." },
-  { label: "Automatic attribution", body: "The platform tracks every click and every purchase back to its source. You don't keep records. You don't trust the rest. The system does." },
+const scenarios = [
+  { label: "Direct purchase", body: "Someone clicks your link and buys. You get paid for that purchase." },
+  { label: "Different offer", body: "Someone clicks your link, looks around, and buys a different program in the network. Still attributed to your link." },
+  { label: "Later purchase", body: "Someone clicks your link, doesn't buy that day, and comes back later. Still attributed." },
 ];
 
 const W1Earnings = () => {
@@ -11,35 +11,38 @@ const W1Earnings = () => {
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32 grid md:grid-cols-2 gap-12 md:gap-16 items-start">
         <div>
           <h2
-            className="mt-6 font-serif-display text-slate-ink"
+            className="font-serif-display text-slate-ink"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
           >
-            One link. Every program. Every payout, automatic.
+            How payments work.
           </h2>
           <div className="mt-8 space-y-6 max-w-[480px]">
             <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-              A typical affiliate platform makes you pick a program, register, copy a link, and remember which one goes where. If you recommend three different things, you juggle three different dashboards. Most people never start.
+              Your magic link is the universal link. Every share, every click, every purchase across the network ties back to it.
             </p>
             <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-              WER1 collapses all of it into one universal link. You share what you trust, in whatever channel makes sense, and the platform handles the rest. Every purchase that follows attributes back to you, no matter which program someone ends up buying.
+              When someone buys an offer in the network through your link, you get paid for that purchase. Whichever program they choose.
             </p>
             <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-              The work is making the introduction. The platform does the bookkeeping.
+              Payments are processed automatically. You see what came in and from which offer inside your dashboard.
             </p>
           </div>
         </div>
 
         <div className="bg-white border border-[#E0E3E7] rounded-2xl p-6 sm:p-8 md:p-10">
+          <h3 className="font-serif-display text-[22px] md:text-[24px] text-slate-ink leading-tight">
+            What gets attributed
+          </h3>
           <div className="mt-6 divide-y divide-[#E0E3E7]">
-            {points.map((w) => (
-              <div key={w.label} className="py-4 first:pt-0 last:pb-0 grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-3">
-                <div className="text-[15px] font-medium text-slate-ink">{w.label}</div>
-                <div className="text-[14px] leading-relaxed text-[hsl(var(--slate-700))]">{w.body}</div>
+            {scenarios.map((s) => (
+              <div key={s.label} className="py-4 first:pt-0 last:pb-0 grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-3">
+                <div className="text-[15px] font-medium text-slate-ink">{s.label}</div>
+                <div className="text-[14px] leading-relaxed text-[hsl(var(--slate-700))]">{s.body}</div>
               </div>
             ))}
           </div>
           <p className="mt-6 italic text-[14px] text-[hsl(var(--slate-500))]">
-            Commission rates and specific payout details are visible in your promoter dashboard after signup. They depend on the partner program and the offer.
+            Specific commission percentages are visible in your promoter dashboard after signup. They depend on the partner program and the offer.
           </p>
         </div>
       </div>

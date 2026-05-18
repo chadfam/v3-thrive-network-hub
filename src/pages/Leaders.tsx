@@ -4,14 +4,12 @@ import LeadWhy from "@/components/leaders/LeadWhy";
 import LeadFamGuides from "@/components/leaders/LeadFamGuides";
 import LeadLocalLeaders from "@/components/leaders/LeadLocalLeaders";
 import LeadExpertFaculty from "@/components/leaders/LeadExpertFaculty";
-import LeadWhichRole from "@/components/leaders/LeadWhichRole";
-import LeadWer1Band from "@/components/leaders/LeadWer1Band";
 import LeadApply from "@/components/leaders/LeadApply";
 
 const Leaders = () => (
   <Layout
     title="For Leaders"
-    description="FAM Guides, Local Leaders, and Expert Faculty. Three programs and one referral platform for the coaches, connectors, and experts whose work is already changing how families live."
+    description="FAM Guides, Local Leaders, and Expert Faculty. Three roles for the trusted people who serve the families around them, and earn through the impact they create."
     canonical="/leaders"
   >
     <LeadHero />
@@ -19,8 +17,6 @@ const Leaders = () => (
     <LeadFamGuides />
     <LeadLocalLeaders />
     <LeadExpertFaculty />
-    <LeadWhichRole />
-    <LeadWer1Band />
     <LeadApply />
   </Layout>
 );

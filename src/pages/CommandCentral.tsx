@@ -1,24 +1,20 @@
 import Layout from "@/components/site/Layout";
 import CCHero from "@/components/command/CCHero";
-import CCProblem from "@/components/command/CCProblem";
-import CCDisciplines from "@/components/command/CCDisciplines";
-import CCCatalog from "@/components/command/CCCatalog";
-import CCVetting from "@/components/command/CCVetting";
-import CCAccess from "@/components/command/CCAccess";
+import CCBoard from "@/components/command/CCBoard";
+import CCAreas from "@/components/command/CCAreas";
+import CCWhoFor from "@/components/command/CCWhoFor";
 import CCApply from "@/components/command/CCApply";
 
 const CommandCentral = () => (
   <Layout
     title="Command Central"
-    description="Your own board of advisors, experts, and service providers underneath Profit Partners. Pre-vetted, with set pricing, across coaching, marketing, finance, legal, and tech. Five disciplines, thirty-plus services. So you stop guessing who to trust."
+    description="Command Central gives business owners a standing board of trusted advisors, experts, and service providers across coaching, marketing, finance, legal, and tech."
     canonical="/command-central"
   >
     <CCHero />
-    <CCProblem />
-    <CCDisciplines />
-    <CCCatalog />
-    <CCVetting />
-    <CCAccess />
+    <CCBoard />
+    <CCAreas />
+    <CCWhoFor />
     <CCApply />
   </Layout>
 );

@@ -1,7 +1,7 @@
 const included = [
   "The full WER1 platform configured for your business",
   "Your branding on dashboards, links, and member-facing pages",
-  "Single-tier or multi-tier payout configuration, tuned to your business",
+  "Payout configuration matched to your business structure",
   "Branded landing pages and tracked sharing links",
   "Family-unit attribution available as an option",
   "Real-time reporting dashboards for you and your promoters",
@@ -17,7 +17,7 @@ const W1WhiteLabel = () => {
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32 grid md:grid-cols-[55fr_45fr] gap-12 md:gap-16 items-start">
         <div>
           <h2
-            className="mt-6 font-serif-display text-white"
+            className="font-serif-display text-white"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
           >
             Your affiliate program. Our platform.
@@ -27,7 +27,10 @@ const W1WhiteLabel = () => {
               If you have a business that needs an affiliate program, a referral program, or a customer-loyalty engine, we can configure WER1 to run it. Branded for your company. Hosted on your domain or ours. Configured for your specific structure.
             </p>
             <p className="text-[17px] md:text-[19px] leading-relaxed text-white/90">
-              What most off-the-shelf affiliate tools don't do is track the full chain. Your best customers become promoters. The people they introduce become customers too, and the platform attributes everything back to its source so the right people get paid. The result is a referral program that gets stronger over time instead of plateauing at the first ring of advocates.
+              Off-the-shelf affiliate tools weren't built for the integrated tracking and attribution your business needs. WER1 was. We can configure it for your specific compensation structure, brand, and rules.
+            </p>
+            <p className="text-[17px] md:text-[19px] leading-relaxed text-white/90">
+              The result is a referral program that gets stronger over time, instead of plateauing at the first ring of advocates.
             </p>
           </div>
           <a href="/contact?topic=white-label" className="mt-8 text-link-on-dark">
@@ -36,6 +39,9 @@ const W1WhiteLabel = () => {
         </div>
 
         <div className="bg-white rounded-2xl p-10">
+          <h3 className="font-serif-display text-[22px] md:text-[24px] text-slate-ink leading-tight">
+            What's included in a white-label deployment
+          </h3>
           <ul className="mt-6 space-y-3">
             {included.map((i) => (
               <li key={i} className="flex gap-3 text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">

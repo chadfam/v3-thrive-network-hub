@@ -1,8 +1,8 @@
 const steps = [
   { n: "01", name: "Sign up", body: "Create a promoter account in about five minutes. Tell us what you'd be sharing and the audience you reach. No fees to join." },
   { n: "02", name: "Get your links", body: "Receive branded sharing links for the businesses, programs, and offers in the network. Each link tracks back to your account." },
-  { n: "03", name: "Share", body: "Share what's actually relevant to your audience. Social posts, email, conversations. We don't dictate the format. The platform tracks the activity." },
-  { n: "04", name: "Get paid", body: "When someone buys through your magic link, you earn. Whichever program in the network they choose, you get paid." },
+  { n: "03", name: "Share", body: "Share what's relevant to your audience. Social posts, email, conversations. We don't dictate the format. The platform tracks the activity." },
+  { n: "04", name: "Get paid", body: "When someone buys through your magic link, you get paid. Whichever offer they choose, the link tracks back to you and the payment lands automatically." },
 ];
 
 const W1PromoterHow = () => {
@@ -14,7 +14,7 @@ const W1PromoterHow = () => {
             className="font-serif-display text-slate-ink"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
           >
-            How promoters earn.
+            For promoters, how it works.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[720px] mx-auto">
             The promoter side of WER1 is the simplest way to engage with the platform. No business required. No quotas. You share what you trust and earn from the activity that follows.

@@ -1,26 +1,22 @@
 import Layout from "@/components/site/Layout";
 import PPHero from "@/components/profit/PPHero";
-import PPJoining from "@/components/profit/PPJoining";
+import PPReferrals from "@/components/profit/PPReferrals";
 import PPPowerTeam from "@/components/profit/PPPowerTeam";
-import PPBenefits from "@/components/profit/PPBenefits";
-import PPLCA from "@/components/profit/PPLCA";
-import PPPhoenix from "@/components/profit/PPPhoenix";
-import PPApplication from "@/components/profit/PPApplication";
+import PPInside from "@/components/profit/PPInside";
+import PPLifetimeClient from "@/components/profit/PPLifetimeClient";
 import PPApply from "@/components/profit/PPApply";
 
 const ProfitPartners = () => (
   <Layout
     title="Profit Partners"
-    description="The flagship working alliance of business owners building predictable referral revenue together. Co-marketing, introductions, the Lifetime Client Agency™ system, and more. Apply by category in your market."
+    description="Profit Partners is the working alliance of complementary business owners who actively recommend each other to the families they already serve."
     canonical="/profit-partners"
   >
     <PPHero />
-    <PPJoining />
+    <PPReferrals />
     <PPPowerTeam />
-    <PPBenefits />
-    <PPLCA />
-    <PPPhoenix />
-    <PPApplication />
+    <PPInside />
+    <PPLifetimeClient />
     <PPApply />
   </Layout>
 );

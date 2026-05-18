@@ -31,7 +31,7 @@ const steps = [
   { n: "1", name: "Create it", body: "Use the builder to create your promotion as a buy-now offer or coupon. Set your terms, publish it instantly as its own dedicated landing page." },
   { n: "2", name: "Send it", body: "Promo Engine delivers offers through a variety of distribution channels, each with its own custom tracking links so you can reach customers wherever they engage." },
   { n: "3", name: "Earn it", body: "As soon as a customer purchases an offer, the payment is processed and deposited directly into your bank account." },
-  { n: "4", name: "Track it", body: "Know exactly where revenue comes from with unique links for every channel. See which emails, texts, or posts are actually driving sales." },
+  { n: "4", name: "Track it", body: "Know exactly where revenue comes from with unique links for every channel. See which emails, texts, or posts are driving sales." },
   { n: "5", name: "Scale it", body: "Every purchaser is automatically added to your customer database. Build lasting loyalty through automated birthday offers, referral programs, and ongoing engagement." },
 ];
 

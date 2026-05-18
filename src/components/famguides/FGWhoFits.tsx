@@ -1,47 +1,46 @@
-const items = [
-  "Coaches with established practices",
-  "Therapists and counselors transitioning toward coaching",
-  "Pastors, clergy, and faith-based mentors",
-  "Educators with strong family backgrounds",
-  "Parent educators and parenting authors",
-  "Marriage and family practitioners",
-  "People with deep personal experience in family transitions",
-];
+const fgWhoImage =
+  "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=1200";
+const fgWhoImageSrcSet =
+  "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=1200 1200w";
 
 const FGWhoFits = () => {
   return (
-    <section className="bg-background">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
-        <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-start">
-          <div className="md:col-span-7">
+    <section className="border-t border-slate-ink/10" style={{ backgroundColor: "#E9EFFB" }}>
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
             <h2
-              className="font-serif-display text-slate-ink tracking-section"
-              style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}
+              className="font-serif-display text-slate-ink"
+              style={{
+                fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.025em",
+              }}
             >
-              Who fits the role.
+              The platform underneath{" "}
+              <span className="text-brand-blue ppx-italic">family-centered coaching</span>.
             </h2>
-            <p className="mt-8 max-w-[540px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-              The role is built for practitioners who already do this work or want to. Coaches who have spent years building a practice and are tired of the operational layer. Counselors and clergy whose pastoral work is closer to coaching than they admit. Educators and former educators who naturally end up running family workshops on the side. Parents who built unusual rhythms in their own household and want to help others do the same.
+
+            <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              Family coaches, marriage coaches, parenting coaches, faith-based mentors, wellness coaches, and counselors whose work is already pointed at the home find a natural fit as FAM Guides.
             </p>
-            <p className="mt-6 max-w-[540px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-              We prioritize character, real experience with families, and the kind of grounded presence the work requires. Credentials matter where they matter. Platform mechanics and the FAM Guides framework can be taught. Wisdom about families either shows up in the conversation or it doesn't.
+
+            <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              If your practice is built around helping people live more connected lives, this is the network behind that work, and the structure that lets you do more of it.
             </p>
           </div>
-          <div className="md:col-span-5">
-            <ul className="mt-6 space-y-4">
-              {items.map((it) => (
-                <li
-                  key={it}
-                  className="flex items-start gap-3 text-[17px] text-[hsl(var(--slate-700))]"
-                >
-                  <span className="bullet-dot" />
-                  <span>{it}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-6 italic text-[15px] text-[hsl(var(--slate-500))]">
-              Plus practitioners whose specialty doesn't fit a category but whose work clearly belongs.
-            </p>
+
+          <div>
+            <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
+              <img
+                src={fgWhoImage}
+                srcSet={fgWhoImageSrcSet}
+                sizes="(max-width: 1024px) 100vw, 600px"
+                alt="A coach in conversation with a client in warm daylight."
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>

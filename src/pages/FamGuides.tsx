@@ -1,26 +1,22 @@
 import Layout from "@/components/site/Layout";
 import FGHero from "@/components/famguides/FGHero";
-import FGWhatTheyDo from "@/components/famguides/FGWhatTheyDo";
-import FGSpecialty from "@/components/famguides/FGSpecialty";
-import FGBusinessModel from "@/components/famguides/FGBusinessModel";
-import FGPlatform from "@/components/famguides/FGPlatform";
-import FGTraining from "@/components/famguides/FGTraining";
+import FGPlan from "@/components/famguides/FGPlan";
+import FGSupport from "@/components/famguides/FGSupport";
 import FGWhoFits from "@/components/famguides/FGWhoFits";
+import FGConnected from "@/components/famguides/FGConnected";
 import FGApply from "@/components/famguides/FGApply";
 
 const FamGuides = () => (
   <Layout
     title="FAM Guides"
-    description="Help families feel more connected, with a plan that's actually theirs. A coaching practice with a platform underneath: four specialty paths, a recurring revenue model, and the platform handles billing, scheduling, and family matching while you handle the coaching."
+    description="FAM Guides are coaches with a plan, a practice, and a platform. Help families feel more connected through the FAM Plan, and build a coaching practice inside the WEcosystem."
     canonical="/fam-guides"
   >
     <FGHero />
-    <FGWhatTheyDo />
-    <FGSpecialty />
-    <FGBusinessModel />
-    <FGPlatform />
-    <FGTraining />
+    <FGPlan />
+    <FGSupport />
     <FGWhoFits />
+    <FGConnected />
     <FGApply />
   </Layout>
 );

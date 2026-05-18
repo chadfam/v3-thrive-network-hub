@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 const items = [
-  "Professionals and business owners",
+  "Professionals and business owners with strong community ties",
   "Entrepreneurial individuals and families",
   "Community-minded leaders and connectors",
   "Active parents with strong neighborhood networks",
@@ -9,38 +11,49 @@ const items = [
 
 const LLWhoFits = () => {
   return (
-    <section className="bg-background">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
-        <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-start">
-          <div className="md:col-span-7">
+    <section className="border-t border-slate-ink/10" style={{ backgroundColor: "#E9EFFB" }}>
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div>
             <h2
-              className="font-serif-display text-slate-ink tracking-section"
-              style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}
+              className="font-serif-display text-slate-ink"
+              style={{
+                fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.025em",
+              }}
             >
-              Who fits the role.
+              A formal role for work you're already doing{" "}
+              <span className="text-brand-blue ppx-italic">informally</span>.
             </h2>
-            <p className="mt-8 max-w-[540px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-              The role is built for people who already do this work informally. The realtor whose neighbors text her about contractors. The financial advisor whose clients ask for restaurant recommendations. The pediatrician's wife who runs the school auction every year. You don't need to be a marketer or a salesperson. You need to be the person your community already calls.
+
+            <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              The role gives a name, a playbook, and a network to connecting work many people already do in their communities. It tends to fit a familiar set of people.
             </p>
-            <p className="mt-6 max-w-[540px] text-[17px] md:text-[19px] text-[hsl(var(--slate-700))] leading-relaxed">
-              We're looking for connectors and community-minded leaders, not affiliate promoters. Selection prioritizes character, presence in the community, and a genuine interest in helping families. Income is the consequence of the work, not the reason to do it.
+
+            <p className="mt-10 font-serif-display italic text-slate-ink text-[18px] md:text-[22px] leading-snug max-w-[560px]">
+              Know someone who's already the connector in their community?{" "}
+              <Link to="/nominate" className="text-brand-blue underline underline-offset-4">
+                Nominate them
+              </Link>
+              .
             </p>
           </div>
-          <div className="md:col-span-5">
-            <ul className="mt-6 space-y-4">
+
+          <div className="rounded-2xl bg-white p-7 sm:p-9 md:p-10" style={{ border: "1px solid #E0E3E7" }}>
+            <h3 className="font-serif-display text-[22px] md:text-[24px] leading-tight text-slate-ink">
+              Who the role tends to fit
+            </h3>
+            <ul className="mt-7 space-y-4">
               {items.map((it) => (
-                <li
-                  key={it}
-                  className="flex items-start gap-3 text-[17px] text-[hsl(var(--slate-700))]"
-                >
-                  <span className="bullet-dot" />
-                  <span>{it}</span>
+                <li key={it} className="flex items-start gap-3">
+                  <span aria-hidden className="bullet-dot mt-[9px]" />
+                  <span className="text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
+                    {it}
+                  </span>
                 </li>
               ))}
             </ul>
-            <p className="mt-6 italic text-[15px] text-[hsl(var(--slate-500))]">
-              Plus the people who don't fit a category but are obviously the connector in their area.
-            </p>
           </div>
         </div>
       </div>

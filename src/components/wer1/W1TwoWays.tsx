@@ -1,23 +1,23 @@
 const cards = [
   {
-    label: "Path one",
+    label: "PATH ONE",
     heading: "For promoters.",
-    body: "Sign up, share what you love, and earn when people buy. One magic link works across every program in the network, so you get paid no matter which one people choose.",
+    body: "Sign up, share what you love, and get paid when people buy. Your magic link tracks every introduction across the network so the payment lands automatically.",
     highlights: [
       "No business of your own required",
-      "One link, every program",
-      "Get paid for the recommendations you already make",
+      "Branded sharing links and tracking",
+      "One link covers every offer in the network",
     ],
     cta: "Become a promoter →",
     href: "/apply?role=promoter",
   },
   {
-    label: "Path two",
+    label: "PATH TWO",
     heading: "For businesses.",
-    body: "Run your entire affiliate, referral, or customer-loyalty program on top of the WER1 platform. Branded for your business. Configured for your structure. Built so every introduction gets attributed back to its source and paid automatically.",
+    body: "Run your entire affiliate, referral, or customer-loyalty program on top of the WER1 platform. Branded for your business. Configured for your structure.",
     highlights: [
       "White-labeled for your brand",
-      "Single-tier or multi-tier configurations",
+      "Configured for your compensation structure",
       "Family-unit attribution available",
     ],
     cta: "Talk to us about white-label →",
@@ -37,15 +37,14 @@ const W1TwoWays = () => {
             Two ways to use WER1.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[720px] mx-auto">
-            The platform serves two distinct audiences. Promoters share what they trust and earn through the network. Businesses run their entire affiliate or referral program on the platform we built. Both paths use the same engine underneath: every introduction tracked, every payout automatic.
+            The platform serves two distinct audiences. Promoters share what they trust and get paid through the network. Businesses run their entire affiliate or referral program on the platform we built. Same tracking and attribution under both paths.
           </p>
         </div>
 
         <div className="mt-16 grid md:grid-cols-2 gap-6 md:gap-8">
           {cards.map((c) => (
             <div key={c.label} className="bg-white border border-[#E0E3E7] rounded-2xl p-10 md:p-14 flex flex-col">
-              <p className="text-[14px] text-[hsl(var(--slate-700))]">{c.label}</p>
-              <h3 className="mt-6 font-serif-display text-slate-ink" style={{ fontSize: "clamp(1.75rem, 3vw, 2.25rem)", letterSpacing: "-0.01em" }}>
+              <h3 className="font-serif-display text-slate-ink" style={{ fontSize: "clamp(1.75rem, 3vw, 2.25rem)", letterSpacing: "-0.01em" }}>
                 {c.heading}
               </h3>
               <p className="mt-6 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[380px]">{c.body}</p>

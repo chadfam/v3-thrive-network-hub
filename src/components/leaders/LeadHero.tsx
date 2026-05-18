@@ -1,42 +1,75 @@
+import { Link } from "react-router-dom";
+import heroFounders from "@/assets/hero-founders.jpg";
+
 const LeadHero = () => {
-  const handleAnchor = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    document.getElementById("local-leaders")?.scrollIntoView({ behavior: "smooth" });
-  };
   return (
-    <section id="top" className="hero-fullbleed bg-background">
-      <img
-        className="hero-fullbleed-img"
-        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1200"
-        srcSet="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1200 1200w, https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=2400 2400w"
-        sizes="(max-width: 640px) 100vw, (max-width: 1200px) 100vw, 2400px"
-        alt="Three adults in animated conversation at a casual coffee-shop table, natural light."
-        loading="eager"
-      />
-      <div className="hero-fullbleed-scrim" />
-      <div className="hero-fullbleed-content mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pt-16 md:pt-28 pb-20 md:pb-32 grid md:grid-cols-12">
-        <div className="md:col-span-7">
-          <h1 className="font-serif-display tracking-hero text-slate-ink" style={{ fontSize: "clamp(2.25rem, 6vw, 4.5rem)", lineHeight: 1.02 }}>
-            Lead the room<br />you're already in.
-          </h1>
-          <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[540px]">
-            Three programs for the connectors, coaches, and experts whose work is already changing how families live. Apply, and we'll match you to the role that fits.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <a href="/apply" className="btn-primary">
-            Apply now
-            </a>
-            <a href="#local-leaders" onClick={handleAnchor} className="btn-secondary">
-              See the three programs
-            </a>
+    <section
+      id="top"
+      className="relative bg-white overflow-hidden lg:min-h-[720px]"
+    >
+      {/* Desktop: image bleeds to the right edge of the viewport */}
+      <div
+        aria-hidden
+        className="absolute top-0 bottom-0 right-0 hidden lg:block"
+        style={{ width: "48%" }}
+      >
+        <img
+          src={heroFounders}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        />
+        {/* Left-edge fade into white */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 12%, rgba(255,255,255,0) 30%)",
+          }}
+        />
+      </div>
+
+      {/* Mobile: image shown above the text, stacked */}
+      <div className="lg:hidden">
+        <img
+          src={heroFounders}
+          alt="Community leaders together in conversation in warm daylight."
+          className="w-full h-[260px] sm:h-[320px] object-cover"
+          loading="eager"
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16">
+        <div className="grid lg:grid-cols-12 items-center">
+          <div className="lg:col-span-7 py-16 lg:py-32">
+            <h1
+              className="font-serif-display text-slate-ink"
+              style={{
+                fontSize: "clamp(2.5rem, 5.5vw, 4.5rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.025em",
+              }}
+            >
+              Everything starts with the{" "}
+              <span className="text-brand-blue ppx-italic">family</span>.
+            </h1>
+
+            <p className="mt-7 max-w-[520px] text-[15px] md:text-[16px] leading-[1.65] text-[hsl(var(--slate-700))]">
+              Three roles give the trusted people in your community a way to genuinely serve the families around them, and earn through the impact they create.
+            </p>
+
+            <div className="mt-9">
+              <Link
+                to="/apply"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-brand-blue text-white text-[15px] font-semibold tracking-tight hover:bg-brand-blue-hover transition-colors shadow-sm"
+              >
+                Join our WEcosystem
+              </Link>
+            </div>
           </div>
-          <div className="mt-12 text-[14px] font-medium text-[hsl(var(--slate-500))] flex flex-wrap items-center gap-x-3 gap-y-2">
-            <a href="#local-leaders" className="hover:text-slate-ink transition-colors">Local Leaders</a>
-            <span aria-hidden>·</span>
-            <a href="#fam-guides" className="hover:text-slate-ink transition-colors">FAM Guides</a>
-            <span aria-hidden>·</span>
-            <a href="#expert-faculty" className="hover:text-slate-ink transition-colors">Expert Faculty</a>
-          </div>
+
+          {/* Spacer for desktop right column where image bleed sits */}
+          <div className="hidden lg:block lg:col-span-5" />
         </div>
       </div>
     </section>

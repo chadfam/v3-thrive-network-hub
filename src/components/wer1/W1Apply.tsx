@@ -1,13 +1,13 @@
 const cards = [
   {
-    label: "Promoter path",
+    label: "PROMOTER PATH",
     heading: "Start as a promoter.",
-    body: "No fees to join. Get your magic link and start sharing within minutes. The platform handles the rest, including all the attribution and payout tracking.",
+    body: "No fees to join. Get your magic link and start sharing within minutes. The platform handles the rest: tracking, attribution, and payments.",
     cta: "Become a promoter →",
     href: "/apply?role=promoter",
   },
   {
-    label: "White-label path",
+    label: "WHITE-LABEL PATH",
     heading: "Talk to us about your business.",
     body: "A 30-minute conversation about what you'd configure WER1 to do, your business structure, and a rough sense of timeline. We follow up with implementation specifics.",
     cta: "Talk to us about white-label →",
@@ -36,8 +36,7 @@ const W1Apply = () => {
         <div className="mt-14 grid md:grid-cols-2 gap-6 md:gap-8">
           {cards.map((c) => (
             <div key={c.label} className="bg-white border border-[#E0E3E7] rounded-2xl p-10 md:p-12 flex flex-col">
-              <p className="text-[14px] text-[hsl(var(--slate-700))]">{c.label}</p>
-              <h3 className="mt-5 font-serif-display text-slate-ink text-[28px]" style={{ letterSpacing: "-0.01em" }}>
+              <h3 className="font-serif-display text-slate-ink text-[28px]" style={{ letterSpacing: "-0.01em" }}>
                 {c.heading}
               </h3>
               <p className="mt-5 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] flex-1">{c.body}</p>

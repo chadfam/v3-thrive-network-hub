@@ -27,6 +27,9 @@ const TWHPricing = () => {
           className="mt-16 mx-auto max-w-[640px] bg-background rounded-2xl p-10 border text-left"
           style={{ borderColor: "#E0E3E7" }}
         >
+          <h3 className="font-serif-display text-[22px] md:text-[24px] text-slate-ink leading-tight text-center">
+            Typical timeline
+          </h3>
           <ul className="mt-6 space-y-3">
             {milestones.map((m) => (
               <li key={m} className="flex items-start gap-3 text-[16px] text-[hsl(var(--slate-700))]">

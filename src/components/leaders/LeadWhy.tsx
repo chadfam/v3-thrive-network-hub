@@ -1,19 +1,25 @@
 const LeadWhy = () => {
   return (
-    <section className="bg-background">
-      <div className="mx-auto max-w-[760px] px-6 sm:px-8 md:px-10 py-16 md:py-32 text-center">
-        <div className="mx-auto mb-10 section-accent" />
-        <h2 className="font-serif-display tracking-section text-slate-ink" style={{ fontSize: "clamp(1.75rem, 5vw, 3.5rem)", lineHeight: 1.05 }}>
-          Get paid for the leadership you already provide.
+    <section style={{ backgroundColor: "#0B1F3F" }} className="text-white">
+      <div className="mx-auto max-w-[1080px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
+        <h2
+          className="font-serif-display mx-auto max-w-[860px]"
+          style={{
+            fontSize: "clamp(2rem, 5vw, 3.5rem)",
+            lineHeight: 1.05,
+            letterSpacing: "-0.02em",
+          }}
+        >
+          The work of strengthening families already runs through{" "}
+          <span className="ppx-italic" style={{ color: "#FBBF24" }}>trusted people</span>.
         </h2>
-        <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          The work of strengthening families used to happen in church basements, school PTAs, and around the kitchen table. It still does. But the connectors who hold those rooms together usually do it for free, on the side, while their day jobs absorb most of their attention. The people best at building community end up with the least time to build it.
+
+        <p className="mt-8 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.7] text-white/90">
+          Coaches, connectors, and category experts already shape how the families around them live. Most of that work happens informally, on the side.
         </p>
-        <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-          United to Thrive is the network behind that work. Local Leaders get paid to do what they're already doing in their area. FAM Guides get paid to help families feel more connected, the work most parents don't have a guide for. Expert Faculty get paid for the knowledge they've already spent decades building. The platform underneath, WER1, attributes every connection back to its source so the right people earn from the right introductions.
-        </p>
-        <p className="mt-10 font-serif-display italic text-slate-ink text-[20px] md:text-[24px] leading-snug">
-          If your work already looks like this, the question is whether to keep doing it on the side or step into it.
+
+        <p className="mt-6 mx-auto max-w-[680px] text-[17px] md:text-[19px] leading-[1.7] text-white/90">
+          Three roles inside the WEcosystem give that work a name, a network, and a way to earn through the impact it creates. One application opens all three.
         </p>
       </div>
     </section>

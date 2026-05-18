@@ -3,47 +3,73 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section id="top" className="relative overflow-hidden">
-      <img
-        src={heroImg}
-        alt="Small business owners in a candid mastermind meeting around a wooden table, warm daylight, exposed brick."
-        width={1920}
-        height={1080}
-        loading="eager"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+    <section
+      id="top"
+      className="relative bg-white overflow-hidden lg:min-h-[720px]"
+    >
+      {/* Image bleeds to the right edge of the viewport */}
       <div
         aria-hidden
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to right, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.92) 35%, rgba(255,255,255,0.55) 60%, rgba(255,255,255,0.05) 100%)",
-        }}
-      />
-      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pt-16 md:pt-28 pb-20 md:pb-32 grid md:grid-cols-12">
-        <div className="md:col-span-7">
-          <h1 className="font-serif-display hero-headline text-slate-ink">
-            Where businesses become <span className="ppx-italic">famous for families</span>.
-          </h1>
-          <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[540px]">
-            The network behind the businesses families recommend. We connect business owners, community leaders, and trusted experts so your growth comes from relationships and referrals, not ads.
-          </p>
+        className="absolute top-0 bottom-0 right-0 hidden lg:block"
+        style={{ width: "48%" }}
+      >
+        <img
+          src={heroImg}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        />
+        {/* Left-edge fade into white */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 12%, rgba(255,255,255,0) 30%)",
+          }}
+        />
+      </div>
 
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Link to="/businesses" className="btn-primary">
-              For Businesses
-            </Link>
-            <Link to="/leaders" className="btn-secondary">
-              For Leaders
-            </Link>
+      {/* Mobile image: shown above the text, stacked */}
+      <div className="lg:hidden">
+        <img
+          src={heroImg}
+          alt="Business owners around a wooden table in warm daylight."
+          className="w-full h-[260px] sm:h-[320px] object-cover"
+          loading="eager"
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16">
+        <div className="grid lg:grid-cols-12 items-center">
+          <div className="lg:col-span-7 py-16 lg:py-32">
+            <h1
+              className="font-serif-display text-slate-ink"
+              style={{
+                fontSize: "clamp(2.5rem, 5.5vw, 4.5rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.025em",
+              }}
+            >
+              Where businesses become{" "}
+              <span className="text-brand-blue ppx-italic">famous for families</span>.
+            </h1>
+
+            <p className="mt-7 max-w-[520px] text-[15px] md:text-[16px] leading-[1.65] text-[hsl(var(--slate-700))]">
+              United to Thrive is the WEcosystem connecting business owners, community leaders, and trusted experts to the families they serve.
+            </p>
+
+            <div className="mt-9">
+              <Link
+                to="/apply"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-brand-blue text-white text-[15px] font-semibold tracking-tight hover:bg-brand-blue-hover transition-colors shadow-sm"
+              >
+                Join our WEcosystem
+              </Link>
+            </div>
           </div>
 
-          <Link
-            to="/wer1"
-            className="mt-6 inline-block text-[14px] text-[hsl(var(--slate-500))] hover:text-slate-ink transition-colors"
-          >
-            Want to earn from the recommendations you already make? See WER1 →
-          </Link>
+          {/* Spacer for desktop right column (the absolute-positioned image covers this area) */}
+          <div className="hidden lg:block lg:col-span-5" />
         </div>
       </div>
     </section>

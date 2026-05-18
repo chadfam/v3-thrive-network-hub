@@ -15,13 +15,19 @@ const TWHMath = () => {
               className="font-serif-display tracking-section"
               style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}
             >
-              What pre-tax actually means.
+              What pre-tax means.
             </h2>
             <p className="mt-8 text-[17px] md:text-[19px] text-white/90 leading-relaxed max-w-[480px]">
-              A pre-tax wellness benefit plan lets an employee redirect a portion of their pre-tax compensation toward qualified wellness benefits. The dollars come out of their gross pay before federal income tax and FICA are calculated. The employee's taxable income drops. Their take-home pay rises by the tax that would otherwise have been withheld.
+              A pre-tax wellness plan lets an employee redirect part of their pre-tax compensation toward qualified wellness benefits.
+            </p>
+            <p className="mt-5 text-[17px] md:text-[19px] text-white/90 leading-relaxed max-w-[480px]">
+              The dollars come out of gross pay before federal income tax and FICA are calculated. The employee's taxable income drops. Their take-home pay rises by the tax that would otherwise have been withheld.
             </p>
             <p className="mt-6 text-[17px] md:text-[19px] text-white/90 leading-relaxed max-w-[480px]">
-              At the same time, the employer's FICA obligation drops because the employer's share of FICA is calculated on the same lower taxable wage base. The math works for both sides because the IRS structures it that way. The cost of the wellness benefits comes out of the savings, not out of new payroll.
+              At the same time, the employer's FICA obligation drops on the same lower wage base. The math works for both sides because the IRS structures it that way.
+            </p>
+            <p className="mt-5 text-[17px] md:text-[19px] text-white/90 leading-relaxed max-w-[480px]">
+              The cost of the wellness benefits comes out of the savings, not out of new payroll.
             </p>
           </div>
 

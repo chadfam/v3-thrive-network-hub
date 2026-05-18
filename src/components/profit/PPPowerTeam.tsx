@@ -1,141 +1,90 @@
-const NAVY = "#0F172A";
-const BLUE = "#2563EB";
-const GOLD = "#FBBF24";
-const MUTED = "#94A3B8";
+type Spoke = { lines: string[]; x: number; y: number };
 
-// Six pros who serve the same homeowner. Order is clockwise from the top.
-const pros = [
-  { name: "Realtor",        angleDeg: -90 },
-  { name: "Mortgage lender", angleDeg: -30 },
-  { name: "Accountant",      angleDeg:  30 },
-  { name: "Roofer",          angleDeg:  90 },
-  { name: "Plumber",         angleDeg: 150 },
-  { name: "Painter",         angleDeg: 210 },
+const spokes: Spoke[] = [
+  { lines: ["Realtor"], x: 250, y: 40 },
+  { lines: ["Mortgage"], x: 410, y: 130 },
+  { lines: ["Insurance"], x: 410, y: 290 },
+  { lines: ["Home", "Services"], x: 250, y: 380 },
+  { lines: ["Financial"], x: 90, y: 290 },
+  { lines: ["Legal"], x: 90, y: 130 },
 ];
 
-// Diagram geometry (square, 800x800 viewBox)
-const CX = 400, CY = 400;
-const R_SPOKE = 240;   // distance from hub to each node center
-const R_NODE  = 32;    // node circle radius
-const R_HUB   = 62;    // hub circle radius
-
-const pt = (angleDeg: number, radius: number) => {
-  const a = (angleDeg * Math.PI) / 180;
-  return { x: CX + Math.cos(a) * radius, y: CY + Math.sin(a) * radius };
-};
+const HUB = { x: 250, y: 210 };
 
 const PPPowerTeam = () => {
   return (
-    <section id="power-team" className="bg-background scroll-mt-24">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32">
-        <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-center">
-          <div className="md:col-span-5 order-2 md:order-1">
+    <section className="bg-white border-t border-slate-ink/10">
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
             <h2
-              className="font-serif-display text-slate-ink tracking-section"
-              style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05 }}
+              className="font-serif-display text-slate-ink"
+              style={{
+                fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.025em",
+              }}
             >
-              Your power team.
+              A hub-and-spoke alliance built around the{" "}
+              <span className="text-brand-blue ppx-italic">family</span>.
             </h2>
-            <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-              Every homeowner already pays a circle of professionals: a realtor when they buy, a mortgage lender to finance it, painters and plumbers and roofers to keep it, accountants to make sense of it. Those businesses serve the same family every day. None of them usually send each other work.
+
+            <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              At the center of every alliance is the family you all serve. Each partner becomes a spoke. When the family has a need any partner can fill, the introduction happens through someone they already trust.
             </p>
-            <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-              Profit Partners formalizes the connections between them. Think of it as your own private chapter, organized around the customer you both already serve. Every introduction goes both ways, every introduction gets tracked, and every introduction pays whoever made it.
+
+            <p className="mt-6 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              That's the Power Team. The diagram maps it out.
             </p>
-            <p className="mt-6 italic text-[15px] text-[hsl(var(--slate-500))]">
-              We use the homeowner as the hub because homeowners are the most concentrated, recurring customer in the country. Renters don't pay to fix the roof.
-            </p>
-            <a href="#benefits" className="mt-8 inline-block text-[15px] text-slate-ink hover:text-brand-blue transition-colors underline-offset-4 hover:underline">
-              See what's included in the alliance →
-            </a>
           </div>
 
-          <div className="md:col-span-7 order-1 md:order-2">
+          <div>
             <svg
-              viewBox="0 0 800 800"
-              className="w-full h-auto max-w-[640px] mx-auto"
+              viewBox="-50 -50 600 520"
+              className="w-full h-auto"
               role="img"
-              aria-label="Hub-and-spoke diagram. A homeowner at the center is connected by lines to six surrounding professionals: realtor, mortgage lender, accountant, roofer, plumber, and painter."
+              aria-label="Hub-and-spoke diagram with the family at the center and six professional roles around the edge, each connected to the center by a line."
             >
-              {/* spokes */}
-              {pros.map((p) => {
-                const end = pt(p.angleDeg, R_SPOKE);
-                // shorten the line so it stops at the node edge (not center)
-                const dx = end.x - CX, dy = end.y - CY;
-                const len = Math.hypot(dx, dy);
-                const trimStart = R_HUB + 4;
-                const trimEnd = len - (R_NODE + 4);
-                const x1 = CX + (dx / len) * trimStart;
-                const y1 = CY + (dy / len) * trimStart;
-                const x2 = CX + (dx / len) * trimEnd;
-                const y2 = CY + (dy / len) * trimEnd;
-                return (
-                  <line
-                    key={`spoke-${p.name}`}
-                    x1={x1} y1={y1} x2={x2} y2={y2}
-                    stroke={BLUE}
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    opacity="0.55"
-                  />
-                );
-              })}
+              {spokes.map((s) => (
+                <line
+                  key={`line-${s.label}`}
+                  x1={HUB.x}
+                  y1={HUB.y}
+                  x2={s.x}
+                  y2={s.y}
+                  stroke="#FBBF24"
+                  strokeWidth="1.5"
+                  strokeOpacity="0.5"
+                />
+              ))}
 
-              {/* pro nodes + labels */}
-              {pros.map((p) => {
-                const c = pt(p.angleDeg, R_SPOKE);
-                // label sits a bit further out from the node, biased outward
-                const labelPos = pt(p.angleDeg, R_SPOKE + R_NODE + 26);
-                // anchor based on horizontal angle so labels stay readable
-                const cos = Math.cos((p.angleDeg * Math.PI) / 180);
-                const anchor: "start" | "middle" | "end" = cos > 0.35 ? "start" : cos < -0.35 ? "end" : "middle";
-                return (
-                  <g key={`node-${p.name}`}>
-                    <circle cx={c.x} cy={c.y} r={R_NODE} fill="#FFFFFF" stroke={BLUE} strokeWidth="2" />
-                    <circle cx={c.x} cy={c.y} r={R_NODE / 3.2} fill={BLUE} />
-                    <text
-                      x={labelPos.x}
-                      y={labelPos.y}
-                      textAnchor={anchor}
-                      dominantBaseline="middle"
-                      fontFamily="'Montserrat', system-ui, -apple-system, sans-serif"
-                      fontSize="22"
-                      fontWeight="600"
-                      fill={NAVY}
-                    >
-                      {p.name}
-                    </text>
-                  </g>
-                );
-              })}
+              {spokes.map((s) => (
+                <g key={`spoke-${s.lines.join("-")}`}>
+                  <circle cx={s.x} cy={s.y} r="50" fill="white" stroke="#2563EB" strokeWidth="1.5" />
+                  <text
+                    x={s.x}
+                    y={s.y - (s.lines.length - 1) * 10 + 6}
+                    textAnchor="middle"
+                    fontSize="18"
+                    fontWeight="600"
+                    fill="#0F172A"
+                    fontFamily="system-ui, -apple-system, sans-serif"
+                  >
+                    {s.lines.map((line, i) => (
+                      <tspan key={line} x={s.x} dy={i === 0 ? 0 : 20}>
+                        {line}
+                      </tspan>
+                    ))}
+                  </text>
+                </g>
+              ))}
 
-              {/* the homeowner hub */}
-              <circle cx={CX} cy={CY} r={R_HUB + 10} fill="none" stroke={GOLD} strokeWidth="2" strokeDasharray="2 6" opacity="0.7" />
-              <circle cx={CX} cy={CY} r={R_HUB} fill={NAVY} />
-              <text
-                x={CX}
-                y={CY - 4}
-                textAnchor="middle"
-                dominantBaseline="middle"
-                fontFamily="'Montserrat', system-ui, -apple-system, sans-serif"
-                fontSize="20"
-                fontWeight="700"
-                fill="#FFFFFF"
-              >
-                Homeowner
+              <circle cx={HUB.x} cy={HUB.y} r="66" fill="#2563EB" />
+              <text x={HUB.x} y={HUB.y - 4} textAnchor="middle" fontSize="19" fontWeight="700" fill="white" fontFamily="system-ui, -apple-system, sans-serif">
+                The
               </text>
-              <text
-                x={CX}
-                y={CY + 22}
-                textAnchor="middle"
-                dominantBaseline="middle"
-                fontFamily="'Montserrat', system-ui, -apple-system, sans-serif"
-                fontSize="13"
-                fontWeight="500"
-                fill={MUTED}
-                letterSpacing="0.04em"
-              >
-                family at the center
+              <text x={HUB.x} y={HUB.y + 20} textAnchor="middle" fontSize="22" fontWeight="700" fill="white" fontFamily="system-ui, -apple-system, sans-serif">
+                Family
               </text>
             </svg>
           </div>

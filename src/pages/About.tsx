@@ -1,25 +1,21 @@
 import Layout from "@/components/site/Layout";
 import AboutHero from "@/components/about/AboutHero";
-import AboutNetwork from "@/components/about/AboutNetwork";
-import AboutBeliefs from "@/components/about/AboutBeliefs";
+import AboutMission from "@/components/about/AboutMission";
+import AboutGrow from "@/components/about/AboutGrow";
 import AboutTeam from "@/components/about/AboutTeam";
-import AboutCompanies from "@/components/about/AboutCompanies";
-import AboutWhere from "@/components/about/AboutWhere";
-import AboutEngage from "@/components/about/AboutEngage";
+import AboutApply from "@/components/about/AboutApply";
 
 const About = () => (
   <Layout
     title="About"
-    description="United to Thrive is the company behind Profit Partners, FAM Central, Local Leaders, and the WER1 Impact Network. Headquartered in Tempe, Arizona. Built around the principle that the chain is the point."
+    description="United to Thrive is the WEcosystem connecting business owners, community leaders, and trusted experts to the families they serve. Meet the team and the worldview behind it."
     canonical="/about"
   >
     <AboutHero />
-    <AboutNetwork />
-    <AboutBeliefs />
+    <AboutMission />
+    <AboutGrow />
     <AboutTeam />
-    <AboutCompanies />
-    <AboutWhere />
-    <AboutEngage />
+    <AboutApply />
   </Layout>
 );
 

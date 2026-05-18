@@ -1,6 +1,6 @@
 const caps = [
   { name: "Tracking and attribution", body: "Every link, click, signup, and purchase ties back to its source automatically. The chain is auditable from the moment a link is shared." },
-  { name: "Multi-tier calculation", body: "The platform calculates layered payouts per transaction in real time, configured to your business's rules. No manual reconciliation, no spreadsheets." },
+  { name: "Multi-tier calculation", body: "The platform calculates payouts across multiple waves per transaction in real time. No manual reconciliation. No spreadsheets." },
   { name: "Real-time dashboards", body: "Promoters and program operators see earnings, performance, and chain health updates the moment a transaction closes." },
   { name: "Branded sharing links", body: "Custom-branded short links and landing pages. Optional vanity domains. Trackable across email, social, and direct sharing." },
   { name: "Automated payouts", body: "Direct deposit, PayPal, or platform credit. Payment scheduling configurable per program. Tax documentation generated annually." },
@@ -20,7 +20,7 @@ const W1Technical = () => {
             What the platform does underneath.
           </h2>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[720px] mx-auto">
-            The technical capabilities that make multi-program attribution work in production. Built into every WER1 deployment.
+            The technical capabilities that make every introduction count. Built into every WER1 deployment.
           </p>
         </div>
 

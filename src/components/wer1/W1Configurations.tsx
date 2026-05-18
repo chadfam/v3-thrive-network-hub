@@ -1,18 +1,18 @@
 const configs = [
   {
     name: "Single-tier affiliate",
-    body: "A standard affiliate program. One commission level. Affiliates share links, customers buy, affiliates earn. Simple, fast to deploy.",
-    fit: "Brands looking to launch their first affiliate program quickly.",
+    body: "A standard affiliate setup. One commission level. Promoters share links, customers buy, promoters get paid. Simple, fast to deploy.",
+    fit: "Brands launching their first affiliate program.",
   },
   {
-    name: "Two-tier referral",
-    body: "Affiliates earn directly. They also earn a smaller commission on partners they introduce who close business. Just the first tier, nothing deeper.",
+    name: "Custom commission rules",
+    body: "Custom rules per offer, per category, or per partner. The platform supports the structure your business already uses.",
     fit: "Coaching businesses, course creators, and service businesses with active communities.",
   },
   {
-    name: "Multi-tier referral",
-    body: "Multiple commission layers, configured to match how introductions actually flow through your business. Set the depth, set the rates.",
-    fit: "Businesses where word of mouth keeps building and the customer base spreads through introductions.",
+    name: "Network-wide attribution",
+    body: "One magic link tracks across every offer in the network. When someone buys any program through it, the right promoter is paid.",
+    fit: "Networks of complementary offers where one share could lead to many different purchases.",
   },
   {
     name: "Family-unit loyalty",
@@ -45,7 +45,7 @@ const W1Configurations = () => {
                 {c.name}
               </h3>
               <p className="mt-4 text-[15px] leading-relaxed text-[hsl(var(--slate-700))] flex-1">{c.body}</p>
-              <p className="mt-6 italic text-[14px] text-[hsl(var(--slate-500))]">Fit for: {c.fit}</p>
+              <p className="mt-6 italic text-[13px] text-[hsl(var(--slate-500))]">FIT FOR: {c.fit}</p>
             </div>
           ))}
         </div>

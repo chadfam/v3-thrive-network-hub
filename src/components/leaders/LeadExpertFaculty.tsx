@@ -1,49 +1,70 @@
-const streams = [
-  { num: "01", name: "Content consumption rewards", body: "Get paid as families view, listen to, or complete your content. Blogs, podcasts, videos, courses." },
-  { num: "02", name: "Revenue share pool", body: "A percentage of platform revenue is allocated to Expert Faculty. Your share grows with engagement and watch time." },
-  { num: "03", name: "Course and program revenue", body: "Feature your premium courses inside FAM Central. Earn directly from enrollments and bundled learning paths." },
-  { num: "04", name: "Affiliate and referral earnings", body: "Participate in the WER1 affiliate platform. Earn when families upgrade through your influence." },
-  { num: "05", name: "Sponsorship and brand opportunities", body: "Get selected for paid campaigns with aligned brands. Lead featured content series and challenges." },
+import { Link } from "react-router-dom";
+
+const efImage =
+  "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=1200";
+const efImageSrcSet =
+  "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=640 640w, https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=1200 1200w";
+
+const points = [
+  "Distribution across in-app feeds, community hubs, and email campaigns",
+  "A place in events, member challenges, and curated learning paths",
+  "More income streams than a single offer can produce",
 ];
 
 const LeadExpertFaculty = () => {
   return (
-    <section id="expert-faculty" className="relative bg-background">
-      <div className="absolute inset-0 warm-tint-bg pointer-events-none" aria-hidden style={{ opacity: 0.8 }} />
-      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-32 grid md:grid-cols-12 gap-10 md:gap-16 md:items-start">
-        <div className="md:col-span-5">
-          <div className="font-serif-display text-[28px] text-[hsl(var(--slate-500))]">03</div>
-          <h2 className="mt-2 font-serif-display tracking-section text-slate-ink" style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)", lineHeight: 1.05 }}>
-            Expert Faculty
-          </h2>
-          <p className="mt-6 text-[19px] font-medium text-slate-ink max-w-[440px]">
-            Five income streams for experts whose work is already helping families.
-          </p>
-          <p className="mt-8 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[440px]">
-            If you've spent years building expertise in parenting, faith, health, finance, or relationships, you've probably already built an audience. The problem most experts run into isn't the work or the audience. It's that platforms reward attention instead of impact. You spend your time chasing the algorithm and your income depends on whether the algorithm liked you that month.
-          </p>
-          <p className="mt-4 text-[17px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[440px]">
-            Expert Faculty is built differently. The network has a built-in audience of families who joined the platform specifically to find experts they can trust. Your content gets distributed across the FAM Central app, local community hubs, email campaigns, and events. You earn five different ways for the work you're already doing.
-          </p>
-          <p className="mt-6 italic text-[15px] text-[hsl(var(--slate-500))] max-w-[440px]">
-            Categories include parenting and family dynamics, faith and values, health and wellness, financial literacy, relationships and marriage, and education.
-          </p>
-          <a href="/expert-faculty" className="group mt-6 inline-flex items-center text-[15px] font-medium text-slate-ink">
-            <span className="group-hover:text-gradient-warm transition-colors">Expert Faculty details →</span>
-          </a>
-        </div>
-        <div className="md:col-span-7">
-          <ul className="mt-6 space-y-8">
-            {streams.map((s) => (
-              <li key={s.num} className="flex items-start gap-6">
-                <div className="font-serif-display text-[40px] leading-none text-gradient-warm shrink-0 w-14">{s.num}</div>
-                <div>
-                  <div className="font-serif-display text-[22px] text-slate-ink">{s.name}</div>
-                  <p className="mt-1 text-[16px] leading-relaxed text-[hsl(var(--slate-700))] max-w-[360px]">{s.body}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
+    <section className="border-t border-slate-ink/10" style={{ backgroundColor: "#E9EFFB" }}>
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-10 md:px-16 py-20 md:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <h2
+              className="font-serif-display text-slate-ink"
+              style={{
+                fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.025em",
+              }}
+            >
+              Expert Faculty reach the audience their{" "}
+              <span className="text-brand-blue ppx-italic">work is for</span>.
+            </h2>
+
+            <p className="mt-8 text-[17px] md:text-[19px] leading-[1.7] text-[hsl(var(--slate-700))] max-w-[560px]">
+              Authors, speakers, coaches, podcast hosts, and category leaders whose work helps families thrive. Inside the network, that work reaches the families who came looking for it.
+            </p>
+
+            <ul className="mt-7 space-y-2.5">
+              {points.map((p) => (
+                <li key={p} className="flex items-start gap-2.5">
+                  <span aria-hidden className="bullet-dot mt-[9px]" />
+                  <span className="text-[15px] md:text-[16px] leading-relaxed text-[hsl(var(--slate-700))]">
+                    {p}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <Link
+              to="/expert-faculty"
+              className="group mt-8 inline-flex items-center text-[15px] font-semibold text-brand-blue"
+            >
+              More on Expert Faculty
+              <span aria-hidden className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+            </Link>
+          </div>
+
+          <div>
+            <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl">
+              <img
+                src={efImage}
+                srcSet={efImageSrcSet}
+                sizes="(max-width: 1024px) 100vw, 600px"
+                alt="A writer working on content at a desk in warm daylight."
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

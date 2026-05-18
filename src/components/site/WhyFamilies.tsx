@@ -1,62 +1,56 @@
+const pains = [
+  {
+    word: "Disconnected",
+    label: "Families pulled apart by feeds, screens, and the slow drift of modern life.",
+  },
+  {
+    word: "Drowned out",
+    label: "Owners renting attention from algorithms that change the rules every quarter.",
+  },
+  {
+    word: "Buried",
+    label: "Experts and causes whose work changes lives, lost under noise meant to keep us scrolling.",
+  },
+];
+
 const WhyFamilies = () => {
   return (
-    <section className="warm-tint-bg">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-16 md:py-24">
-        <div className="grid md:grid-cols-12 gap-10 md:gap-14 lg:gap-20 items-start">
-          <div className="md:col-span-12 lg:col-span-7">
-            <div className="relative">
-              <span
-                aria-hidden
-                className="absolute font-serif-display text-brand-gold leading-none select-none pointer-events-none"
-                style={{
-                  fontSize: "clamp(5rem, 12vw, 9rem)",
-                  left: "-0.4rem",
-                  top: "-3rem",
-                  opacity: 0.85,
-                }}
-              >
-                &ldquo;
-              </span>
-              <h2
-                className="relative font-serif-display text-slate-ink"
-                style={{
-                  fontSize: "clamp(2.25rem, 6vw, 4rem)",
-                  lineHeight: 1.08,
-                  letterSpacing: "-0.01em",
-                }}
-              >
-                Three parents at school pickup beat ten Facebook clicks.
-              </h2>
-            </div>
+    <section className="bg-brand-blue/5 border-t border-slate-ink/10">
+      <div className="mx-auto max-w-[1080px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
+        <h2
+          className="font-serif-display text-slate-ink mx-auto max-w-[920px]"
+          style={{
+            fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
+            lineHeight: 1.05,
+            letterSpacing: "-0.025em",
+          }}
+        >
+          Built for the people <span className="text-brand-blue ppx-italic">the algorithm forgot</span>.
+        </h2>
 
-            <div className="mt-10 grid sm:grid-cols-3 gap-6 md:gap-8 max-w-[640px]">
-              <div>
-                <div className="font-serif-display text-brand-blue text-[40px] md:text-[44px] leading-none">3</div>
-                <p className="mt-2 text-[14px] leading-snug text-[hsl(var(--slate-700))]">parents in line, recommending you by name</p>
-              </div>
-              <div>
-                <div className="font-serif-display text-brand-blue text-[40px] md:text-[44px] leading-none">10</div>
-                <p className="mt-2 text-[14px] leading-snug text-[hsl(var(--slate-700))]">cold clicks that almost certainly don't convert</p>
-              </div>
-              <div>
-                <div className="font-serif-display text-brand-blue text-[40px] md:text-[44px] leading-none">20</div>
-                <p className="mt-2 text-[14px] leading-snug text-[hsl(var(--slate-700))]">years out, the owners who'll still be growing</p>
-              </div>
-            </div>
-          </div>
+        <p className="mt-8 mx-auto max-w-[720px] text-[17px] md:text-[19px] leading-[1.65] text-[hsl(var(--slate-700))]">
+          We replaced paid attention with real partnerships. The people who already trust each other do the work together, where they live.
+        </p>
 
-          <div className="md:col-span-12 lg:col-span-5">
-            <p className="text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-              Most businesses don't have affiliates. They don't have customers actively sending them more business. They know that would change everything. Most never build it.
-            </p>
-            <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[hsl(var(--slate-700))]">
-              We do. We help you turn the families you serve into brand champions who recommend you by name. Referred prospects show up already knowing, liking, and trusting you, so they close at a far higher rate than anyone who found you through an ad.
-            </p>
-            <p className="mt-8 pt-6 border-t border-slate-ink/10 text-[15px] md:text-[16px] italic leading-relaxed text-[hsl(var(--slate-500))]">
-              Our network skews toward owners who think about their kids, their community, and their reputation in twenty years. People who'd rather earn a recommendation than buy attention. If that's you, you're already in the right room.
-            </p>
-          </div>
+        <div className="mt-16 md:mt-20 grid sm:grid-cols-3 gap-10 md:gap-8">
+          {pains.map((p) => (
+            <div key={p.word}>
+              <p
+                className="font-serif-display text-brand-blue leading-none"
+                style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)", letterSpacing: "-0.015em" }}
+              >
+                {p.word}
+              </p>
+              <p className="mt-4 mx-auto max-w-[280px] text-[14px] md:text-[15px] leading-relaxed text-[hsl(var(--slate-700))]">
+                {p.label}
+              </p>
+            </div>
+          ))}
         </div>
+
+        <p className="mt-16 md:mt-20 font-serif-display italic text-slate-ink mx-auto max-w-[820px]" style={{ fontSize: "clamp(1.25rem, 2.5vw, 1.75rem)", lineHeight: 1.3 }}>
+          A customer who recommends you to three other parents in the school pickup line beats ten Facebook clicks every time.
+        </p>
       </div>
     </section>
   );
