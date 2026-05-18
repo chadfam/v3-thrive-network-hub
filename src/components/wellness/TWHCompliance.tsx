@@ -15,7 +15,7 @@ const facts = [
 
 const TWHCompliance = () => {
   return (
-    <section id="compliance" style={{ backgroundColor: "#0B1F3F" }} className="text-white">
+    <section id="compliance" style={{ backgroundColor: "#2563EB" }} className="text-white">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32 grid md:grid-cols-[55fr_45fr] gap-12 md:gap-16 items-start">
         <div>
           <h2
@@ -30,7 +30,7 @@ const TWHCompliance = () => {
               This is a pre-tax benefit plan with a defined structure in the IRS code, the same kind of plan large employers have used for decades. Every plan we administer is documented in writing, follows the qualified-benefit definitions, and runs the required annual nondiscrimination testing.
             </p>
           </div>
-          <p className="mt-8 italic text-[13px] md:text-[14px] text-white/60 max-w-[540px]">
+          <p className="mt-8 italic text-[13px] md:text-[14px] text-white/90 max-w-[540px]">
             This page is informational, not tax advice. Tax outcomes depend on individual circumstances and current IRS regulations. Plans are administered in coordination with qualified benefits and tax professionals. Talk to your CPA before adopting any benefit plan.
           </p>
         </div>
@@ -43,7 +43,7 @@ const TWHCompliance = () => {
             {facts.map((f) => (
               <div
                 key={f.value}
-                className="py-5 first:pt-0 last:pb-0 grid grid-cols-1 sm:grid-cols-[110px_1fr] gap-3 sm:gap-5"
+                className="py-5 first:pt-0 last:pb-0 grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-3 sm:gap-5"
               >
                 <div
                   className="font-serif-display text-brand-blue leading-none"

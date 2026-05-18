@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const TWHHero = () => {
   return (
-    <section id="top" style={{ backgroundColor: "#0B1F3F" }} className="text-white">
+    <section id="top" style={{ backgroundColor: "#2563EB" }} className="text-white">
       <div className="mx-auto max-w-[920px] px-6 sm:px-8 md:px-10 pt-24 md:pt-32 pb-20 md:pb-24 text-center">
         <h1
           className="font-serif-display text-white"
@@ -26,7 +26,7 @@ const TWHHero = () => {
           </Link>
         </div>
 
-        <div className="mt-12 text-[14px] font-medium text-white/70 flex flex-wrap justify-center gap-x-3 gap-y-2">
+        <div className="mt-12 text-[14px] font-medium text-white/90 flex flex-wrap justify-center gap-x-3 gap-y-2">
           <a href="#how-it-works" className="hover:text-white transition-colors">How it works</a>
           <span>·</span>
           <a href="#benefits" className="hover:text-white transition-colors">The benefits</a>

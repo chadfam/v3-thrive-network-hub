@@ -1,6 +1,6 @@
 const LeadWhy = () => {
   return (
-    <section style={{ backgroundColor: "#0B1F3F" }} className="text-white">
+    <section style={{ backgroundColor: "#2563EB" }} className="text-white">
       <div className="mx-auto max-w-[1080px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
         <h2
           className="font-serif-display mx-auto max-w-[860px]"

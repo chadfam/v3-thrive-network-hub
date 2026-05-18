@@ -42,7 +42,7 @@ const Apply = () => {
       description="Join the United to Thrive WEcosystem. Complete a short application, then book a call with our team."
       canonical="/apply"
     >
-      {/* Section 1 — intro and what to expect */}
+      {/* Section 1 - intro and what to expect */}
       <section className="bg-background">
         <div className="mx-auto max-w-[1080px] px-6 sm:px-10 md:px-16 pt-24 md:pt-32 pb-20 md:pb-28">
           <div className="max-w-[680px]">
@@ -84,7 +84,7 @@ const Apply = () => {
         </div>
       </section>
 
-      {/* Section 2 — the application form (middle), on a scrimmed photo background */}
+      {/* Section 2 - the application form (middle), on a scrimmed photo background */}
       <section className="relative overflow-hidden">
         <img
           src={`${FORM_BG}?auto=format&fit=crop&q=80&w=1600`}
@@ -94,7 +94,7 @@ const Apply = () => {
           loading="lazy"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div aria-hidden className="absolute inset-0" style={{ backgroundColor: "rgba(11,31,63,0.82)" }} />
+        <div aria-hidden className="absolute inset-0" style={{ backgroundColor: "rgba(37,99,235,0.82)" }} />
 
         <div className="relative mx-auto max-w-2xl px-6 sm:px-10 md:px-16 py-20 md:py-28">
           <div className="text-center">
@@ -104,7 +104,7 @@ const Apply = () => {
             >
               Your application.
             </h2>
-            <p className="mt-3 text-[15px] md:text-[16px] leading-relaxed text-white/75">
+            <p className="mt-3 text-[15px] md:text-[16px] leading-relaxed text-white/90">
               It takes a few minutes. Once you submit, you'll book a call with our team.
             </p>
           </div>
@@ -135,7 +135,7 @@ const Apply = () => {
         </div>
       </section>
 
-      {/* Section 3 — values close */}
+      {/* Section 3 - values close */}
       <section style={{ backgroundColor: "#E9EFFB" }}>
         <div className="mx-auto max-w-[820px] px-6 sm:px-10 md:px-16 py-20 md:py-28 text-center">
           <h2

@@ -42,7 +42,7 @@ const PromoEngine = () => (
     description="Sell high-converting promotions online and capture revenue before customers walk in. Built for in-person businesses with one location or five hundred. Part of the United to Thrive network."
     canonical="/promo-engine"
   >
-    <section style={{ backgroundColor: "#0B1F3F" }} className="text-white">
+    <section style={{ backgroundColor: "#2563EB" }} className="text-white">
       <div className="mx-auto max-w-[920px] px-6 sm:px-8 md:px-10 pt-24 md:pt-32 pb-20 md:pb-24 text-center">
         <h1
           className="font-serif-display text-white"
@@ -159,7 +159,7 @@ const PromoEngine = () => (
         <h2 className="font-serif-display text-white" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}>
           See exactly how Promo Engine can generate revenue <span className="text-brand-gold">before the customer walks in</span>.
         </h2>
-        <p className="mt-6 text-[17px] md:text-[19px] text-white/80 leading-relaxed">
+        <p className="mt-6 text-[17px] md:text-[19px] text-white/90 leading-relaxed">
           In just a few minutes, we'll walk you through how it works and what it could look like for your locations.
         </p>
         <div className="mt-10">

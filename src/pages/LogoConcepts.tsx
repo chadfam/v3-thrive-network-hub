@@ -1392,7 +1392,7 @@ const LogoConcepts = () => (
 
         <div className="rounded-2xl bg-brand-navy p-8 md:p-12 text-white">
           <h3 className="font-serif-display text-[24px] md:text-[28px]">If this is the one, I'll wire it in.</h3>
-          <p className="mt-4 text-[17px] leading-relaxed text-white/80 max-w-[760px]">
+          <p className="mt-4 text-[17px] leading-relaxed text-white/90 max-w-[760px]">
             Confirm the arrangement (6 / 5 / all-blue) and the weight (light / medium / bold for use; the favicon may use a heavier one), and say the word. I'll then: build a <code>&lt;ThriveLogo&gt;</code> component (so Montserrat renders in the header), swap it into Header & Footer, replace <code>favicon.svg</code> with the mark (heavier variant for legibility), export the SVG file set, and add a one-page brand sheet (clearspace, min sizes, colour values, do's/don'ts).
           </p>
         </div>
@@ -1568,7 +1568,7 @@ const LogoConcepts = () => (
 
         <div className="rounded-2xl bg-brand-navy p-8 md:p-12 text-white">
           <h3 className="font-serif-display text-[24px] md:text-[28px]">If this is right, I'll wire it in.</h3>
-          <p className="mt-4 text-[17px] leading-relaxed text-white/80 max-w-[760px]">
+          <p className="mt-4 text-[17px] leading-relaxed text-white/90 max-w-[760px]">
             Pick a weight (light / medium / bold), confirm the colour roles (gold hub, blue nodes, navy spokes - or want the spokes blue too?), and say the word. I'll then: build a <code>&lt;ThriveLogo&gt;</code> component (so the Montserrat actually renders in the header), swap it into Header & Footer, replace <code>favicon.svg</code> with the simplified mark, and add a short brand sheet (clearspace, min sizes, colour values, do's/don'ts).
           </p>
         </div>
@@ -1677,7 +1677,7 @@ const LogoConcepts = () => (
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 pb-16 md:pb-32">
         <div className="rounded-2xl bg-brand-navy p-8 md:p-12 text-white">
           <h2 className="font-serif-display text-[28px] md:text-[32px]">Point at one.</h2>
-          <p className="mt-4 text-[17px] leading-relaxed text-white/80 max-w-[700px]">
+          <p className="mt-4 text-[17px] leading-relaxed text-white/90 max-w-[700px]">
             Give me a code - "C7", "T5" - or a hybrid: "C7 negative-space mark + T2 blue wordmark", "C6 orbit but the dot is blue", "C8 stack in two colors". When you pick, I convert the Montserrat to outlined paths and ship it as the live logo + favicon.
           </p>
         </div>

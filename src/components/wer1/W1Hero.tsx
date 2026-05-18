@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const W1Hero = () => {
   return (
-    <section style={{ backgroundColor: "#0B1F3F" }} className="text-white">
+    <section style={{ backgroundColor: "#2563EB" }} className="text-white">
       <div className="mx-auto max-w-[880px] px-6 sm:px-8 md:px-10 pt-24 md:pt-32 pb-20 md:pb-24 text-center">
         <div
           className="font-serif-display text-white leading-none"
@@ -27,7 +27,7 @@ const W1Hero = () => {
             Join our WEcosystem
           </Link>
         </div>
-        <div className="mt-12 text-[14px] font-medium text-white/70 flex flex-wrap justify-center gap-x-3 gap-y-2">
+        <div className="mt-12 text-[14px] font-medium text-white/90 flex flex-wrap justify-center gap-x-3 gap-y-2">
           <a href="#two-ways" className="hover:text-white transition-colors">For promoters</a>
           <span>·</span>
           <a href="#for-businesses" className="hover:text-white transition-colors">For businesses</a>

@@ -48,8 +48,8 @@ All colors MUST be HSL.
     --brand-blue: #2563EB;            /* PRIMARY BLUE */
     --brand-blue-hover: #1D4ED8;      /* PRIMARY BLUE HOVER */
     --brand-blue-light: #F8FAFC;      /* SUBTLE TINT */
-    --brand-navy: #0B1F3F;            /* NAVY DARK */
-    --brand-navy-pattern: #1E3A5F;    /* NAVY PATTERN ACCENT */
+    --brand-navy: #2563EB;            /* formerly navy; now brand blue */
+    --brand-navy-pattern: #1D4ED8;    /* formerly navy accent; now darker blue */
     --brand-gold: #FBBF24;            /* GOLD */
     --brand-gold-soft: #FCD34D;
     --section-tint: #F1F5F9;          /* LIGHT TINT */
@@ -157,7 +157,7 @@ All colors MUST be HSL.
   }
 
   /* Belt-and-suspenders: never let any element force horizontal scroll.
-     Use `clip` (not `hidden`) so the body stays a non-scroll container —
+     Use `clip` (not `hidden`) so the body stays a non-scroll container -
      `overflow-x: hidden` would break the sticky header. */
   html, body { overflow-x: clip; }
 }
@@ -338,10 +338,10 @@ All colors MUST be HSL.
   .hero-fullbleed > .hero-fullbleed-scrim-navy {
     position: absolute; inset: 0; z-index: 1; pointer-events: none;
     background: linear-gradient(to right,
-      rgba(11,31,63,0.96) 0%,
-      rgba(11,31,63,0.92) 35%,
-      rgba(11,31,63,0.55) 60%,
-      rgba(11,31,63,0.05) 100%);
+      rgba(37,99,235,0.96) 0%,
+      rgba(37,99,235,0.92) 35%,
+      rgba(37,99,235,0.55) 60%,
+      rgba(37,99,235,0.05) 100%);
   }
   .hero-fullbleed > .hero-fullbleed-content { position: relative; z-index: 2; }
   .img-blend-wrap {

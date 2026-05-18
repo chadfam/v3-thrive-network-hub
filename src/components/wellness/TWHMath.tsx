@@ -7,7 +7,7 @@ const Row = ({ label, value }: { label: string; value: string }) => (
 
 const TWHMath = () => {
   return (
-    <section id="the-math" style={{ backgroundColor: "#0B1F3F" }} className="text-white">
+    <section id="the-math" style={{ backgroundColor: "#2563EB" }} className="text-white">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           <div>
