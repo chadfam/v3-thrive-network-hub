@@ -5,7 +5,7 @@ const LLApply = () => {
     <section
       id="apply"
       className="scroll-mt-24 text-white"
-      style={{ backgroundColor: "#16294C" }}
+      style={{ backgroundColor: "#264B73" }}
     >
       <div className="mx-auto max-w-[880px] px-6 sm:px-10 md:px-16 py-20 md:py-32 text-center">
         <h2

@@ -94,7 +94,7 @@ const ThreeWays = () => {
               key={g.title}
               className="rounded-2xl overflow-hidden bg-white flex flex-col shadow-[0_10px_30px_-4px_rgba(15,23,42,0.12)]"
             >
-              <div aria-hidden className="h-1" style={{ backgroundColor: "#16294C" }} />
+              <div aria-hidden className="h-1" style={{ backgroundColor: "#264B73" }} />
               <div className="flex flex-col flex-1 p-7 md:p-8">
                 <h3 className="font-serif-display text-[22px] md:text-[24px] leading-tight text-slate-ink">
                   {g.to ? (

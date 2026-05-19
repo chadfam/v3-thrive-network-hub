@@ -8,7 +8,7 @@ const FamCentral = () => (
     canonical="/fam-central"
     noindex
   >
-    <section style={{ backgroundColor: "#16294C" }} className="text-white">
+    <section style={{ backgroundColor: "#264B73" }} className="text-white">
       <div className="mx-auto max-w-[840px] px-6 sm:px-8 md:px-10 pt-24 md:pt-32 pb-24 md:pb-32 text-center">
         <h1
           className="font-serif-display text-white"

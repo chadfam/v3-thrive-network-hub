@@ -70,7 +70,7 @@ const Apply = () => {
                   <div className="font-serif-display text-brand-blue" style={{ fontSize: 48, lineHeight: 1 }}>
                     {s.n}
                   </div>
-                  <div aria-hidden className="mt-4 h-px w-10" style={{ backgroundColor: "#16294C" }} />
+                  <div aria-hidden className="mt-4 h-px w-10" style={{ backgroundColor: "#264B73" }} />
                   <h3 className="mt-4 font-serif-display text-slate-ink text-[20px] md:text-[22px] leading-tight">
                     {s.name}
                   </h3>
@@ -94,7 +94,7 @@ const Apply = () => {
           loading="lazy"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div aria-hidden className="absolute inset-0" style={{ backgroundColor: "rgba(22,41,76,0.82)" }} />
+        <div aria-hidden className="absolute inset-0" style={{ backgroundColor: "rgba(38,75,115,0.82)" }} />
 
         <div className="relative mx-auto max-w-2xl px-6 sm:px-10 md:px-16 py-20 md:py-28">
           <div className="text-center">
@@ -110,7 +110,7 @@ const Apply = () => {
           </div>
 
           <article className="mt-10 rounded-2xl overflow-hidden bg-white shadow-[0_24px_60px_-12px_rgba(0,0,0,0.55)]">
-            <div aria-hidden className="h-1.5" style={{ backgroundColor: "#16294C" }} />
+            <div aria-hidden className="h-1.5" style={{ backgroundColor: "#264B73" }} />
             <div className="p-4 sm:p-6">
               {/* GHL embedded form. Redirect-on-submit (to /booking) is configured in GHL. */}
               <iframe

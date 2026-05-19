@@ -32,7 +32,7 @@ const EFCategories = () => {
 
           <div className="lg:order-1">
             <article className="rounded-2xl overflow-hidden bg-white shadow-[0_10px_30px_-4px_rgba(15,23,42,0.12)]">
-              <div aria-hidden className="h-1" style={{ backgroundColor: "#16294C" }} />
+              <div aria-hidden className="h-1" style={{ backgroundColor: "#264B73" }} />
               <div className="p-7 sm:p-9 md:p-10">
                 <h3 className="font-serif-display text-[22px] md:text-[24px] leading-tight text-slate-ink">
                   The six content categories

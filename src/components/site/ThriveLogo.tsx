@@ -7,7 +7,7 @@
  * (Profit Partners, Mastermind Passport, Command Central, FAM Central, WER1,
  * PromoEngine) fan out from the hub at deliberately-irregular distances and
  * angles: a network that *grew*, not a diagram. The word is woven into the
- * network. The whole mark is brand blue (#16294C) - single colour, no gold.
+ * network. The whole mark is brand blue (#264B73) - single colour, no gold.
  *
  * Variants:
  *   "lockup"  - wordmark + connected mark, horizontal. The default.
@@ -20,7 +20,7 @@
 import { CSSProperties } from "react";
 
 const NAVY = "#0F172A";   // text-ink - wordmark
-const BLUE = "#16294C";   // brand blue - the whole mark
+const BLUE = "#264B73";   // brand blue - the whole mark
 const FONT = "'Montserrat', system-ui, -apple-system, sans-serif";
 
 type Tone = "default" | "reversed";

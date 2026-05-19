@@ -15,7 +15,7 @@ const included = [
 
 const W1WhiteLabel = () => {
   return (
-    <section id="for-businesses" style={{ backgroundColor: "#16294C" }} className="text-white">
+    <section id="for-businesses" style={{ backgroundColor: "#264B73" }} className="text-white">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-20 md:py-32 grid md:grid-cols-[55fr_45fr] gap-12 md:gap-16 items-start">
         <div>
           <h2

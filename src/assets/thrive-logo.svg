@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- United to Thrive - horizontal lockup: "thrive" wordmark with the organic
      hub-and-spoke mark connecting out of the top-right of the "e". The mark is
-     a single colour - brand blue (#2563EB).
+     a single colour - navy (#264B73).
      The wordmark uses Montserrat with a system fallback; when this file is used
      outside the site (e.g. handed to a printer or another tool), outline the
      "thrive" text in a vector editor for pixel-exact rendering. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 44" role="img" aria-label="United to Thrive">
   <text x="4" y="39" font-family="'Montserrat', system-ui, -apple-system, sans-serif" font-weight="800" font-size="44" letter-spacing="-1.5" fill="#0F172A">thrive</text>
-  <g stroke="#2563EB" stroke-width="2" stroke-linecap="round">
+  <g stroke="#264B73" stroke-width="2" stroke-linecap="round">
     <line x1="116" y1="18" x2="143" y2="21"/>
     <line x1="143" y1="21" x2="133" y2="8"/>
     <line x1="143" y1="21" x2="158" y2="6"/>
@@ -16,7 +16,7 @@
     <line x1="143" y1="21" x2="136" y2="36"/>
     <line x1="143" y1="21" x2="148" y2="13"/>
   </g>
-  <g fill="#2563EB">
+  <g fill="#264B73">
     <circle cx="133" cy="8" r="2.84"/>
     <circle cx="158" cy="6" r="2.97"/>
     <circle cx="163" cy="22" r="2.57"/>

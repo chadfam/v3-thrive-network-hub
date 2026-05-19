@@ -60,7 +60,7 @@ const PPPowerTeam = () => {
 
               {spokes.map((s) => (
                 <g key={`spoke-${s.lines.join("-")}`}>
-                  <circle cx={s.x} cy={s.y} r="50" fill="white" stroke="#16294C" strokeWidth="1.5" />
+                  <circle cx={s.x} cy={s.y} r="50" fill="white" stroke="#264B73" strokeWidth="1.5" />
                   <text
                     x={s.x}
                     y={s.y - (s.lines.length - 1) * 10 + 6}
@@ -79,7 +79,7 @@ const PPPowerTeam = () => {
                 </g>
               ))}
 
-              <circle cx={HUB.x} cy={HUB.y} r="66" fill="#16294C" />
+              <circle cx={HUB.x} cy={HUB.y} r="66" fill="#264B73" />
               <text x={HUB.x} y={HUB.y - 4} textAnchor="middle" fontSize="19" fontWeight="700" fill="white" fontFamily="system-ui, -apple-system, sans-serif">
                 The
               </text>

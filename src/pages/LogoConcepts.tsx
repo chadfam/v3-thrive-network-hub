@@ -19,7 +19,7 @@ import concept15 from "@/assets/logo-concepts/concept-15-diamond-mark.svg";
 import concept16 from "@/assets/logo-concepts/concept-16-pill-mark.svg";
 
 const NAVY = "#0F172A";
-const BLUE = "#16294C";
+const BLUE = "#264B73";
 const BLUE_LIGHT = "#7CA8F8";
 const GOLD = "#FBBF24";
 const FONT = "'Montserrat', system-ui, -apple-system, sans-serif";

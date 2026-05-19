@@ -1,6 +1,6 @@
 const FGConnected = () => {
   return (
-    <section style={{ backgroundColor: "#16294C" }} className="text-white">
+    <section style={{ backgroundColor: "#264B73" }} className="text-white">
       <div className="mx-auto max-w-[760px] px-6 sm:px-10 md:px-16 py-20 md:py-28 text-center">
         <h2
           className="font-serif-display"
