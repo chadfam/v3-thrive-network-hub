@@ -51,7 +51,7 @@ const CCAreas = () => {
               key={a.name}
               className="rounded-2xl overflow-hidden bg-white flex flex-col shadow-[0_10px_30px_-4px_rgba(15,23,42,0.12)]"
             >
-              <div aria-hidden className="h-1" style={{ backgroundColor: "#2563EB" }} />
+              <div aria-hidden className="h-1" style={{ backgroundColor: "#16294C" }} />
               <div className="flex flex-col flex-1 p-7 md:p-8">
                 <h3 className="font-serif-display text-[20px] md:text-[22px] leading-tight text-slate-ink">
                   {a.name}

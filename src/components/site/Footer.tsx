@@ -45,7 +45,7 @@ const renderLink = (l: LinkItem) =>
       href={l.to}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-[14px] text-[#334155] hover:text-[#2563EB] transition-colors"
+      className="text-[14px] text-[#334155] hover:text-[#16294C] transition-colors"
     >
       {l.label}
     </a>
@@ -53,7 +53,7 @@ const renderLink = (l: LinkItem) =>
     <Link
       key={l.label}
       to={l.to}
-      className="text-[14px] text-[#334155] hover:text-[#2563EB] transition-colors"
+      className="text-[14px] text-[#334155] hover:text-[#16294C] transition-colors"
     >
       {l.label}
     </Link>

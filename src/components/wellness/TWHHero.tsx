@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const TWHHero = () => {
   return (
-    <section id="top" style={{ backgroundColor: "#2563EB" }} className="text-white">
+    <section id="top" style={{ backgroundColor: "#16294C" }} className="text-white">
       <div className="mx-auto max-w-[920px] px-6 sm:px-8 md:px-10 pt-24 md:pt-32 pb-20 md:pb-24 text-center">
         <h1
           className="font-serif-display text-white"

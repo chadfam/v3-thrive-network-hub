@@ -42,7 +42,7 @@ const PromoEngine = () => (
     description="Sell high-converting promotions online and capture revenue before customers walk in. Built for in-person businesses with one location or five hundred. Part of the United to Thrive network."
     canonical="/promo-engine"
   >
-    <section style={{ backgroundColor: "#2563EB" }} className="text-white">
+    <section style={{ backgroundColor: "#16294C" }} className="text-white">
       <div className="mx-auto max-w-[920px] px-6 sm:px-8 md:px-10 pt-24 md:pt-32 pb-20 md:pb-24 text-center">
         <h1
           className="font-serif-display text-white"
@@ -76,8 +76,8 @@ const PromoEngine = () => (
             </defs>
             {/* offer card (left) */}
             <rect x="20" y="40" width="220" height="220" rx="14" fill="url(#peCard)" />
-            <rect x="20" y="40" width="220" height="56" rx="14" fill="#2563EB" />
-            <rect x="20" y="82" width="220" height="14" fill="#2563EB" />
+            <rect x="20" y="40" width="220" height="56" rx="14" fill="#16294C" />
+            <rect x="20" y="82" width="220" height="14" fill="#16294C" />
             <circle cx="44" cy="68" r="5" fill="#FFFFFF" opacity="0.85" />
             <rect x="58" y="63" width="120" height="10" rx="5" fill="#FFFFFF" opacity="0.85" />
             <rect x="40" y="118" width="180" height="14" rx="7" fill="#0F172A" opacity="0.85" />
