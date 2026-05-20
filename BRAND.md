@@ -4,7 +4,7 @@ A one-page reference. The logo system lives in code as [`<ThriveLogo>`](src/comp
 
 ## The logo
 
-**Concept.** A horizontal lockup: the **"thrive"** wordmark with an **organic hub-and-spoke mark** growing out of the top-right of the "e". The mark is a hub set off-centre (United to Thrive, the family, at the middle of everything), surrounded by six nodes at deliberately-irregular distances and angles. The six nodes are the six programs: Profit Partners, Mastermind Passport, Command Central, FAM Central, WER1, PromoEngine. Spokes of varying length connect them, reading as a network that *grew* rather than a diagram. The whole mark is one colour, **brand blue**; the wordmark stays navy.
+**Concept.** A horizontal lockup: the **"thrive"** wordmark with an **organic hub-and-spoke mark** growing out of the top-right of the "e". The mark is a hub set off-centre (United to Thrive, the family, at the middle of everything), surrounded by six nodes at deliberately-irregular distances and angles. The six nodes are the six programs: Profit Partners, Mastermind Passport, Command Central, FAM Central, WER1, PromoEngine. Spokes of varying length connect them, reading as a network that *grew* rather than a diagram. The whole mark is one colour, the **brand navy** (`#264B73`); the wordmark is the darker ink (`#0F172A`).
 
 ### Variants
 
@@ -28,7 +28,7 @@ Keep padding around the lockup equal to the **cap-height of "thrive"** on all si
 
 ### Don'ts
 
-- Don't recolour the mark. It's brand blue, single colour (white on dark backgrounds). Don't reintroduce gold or navy into it.
+- Don't recolour the mark. It's the brand navy `#264B73`, single colour (white on dark backgrounds). Don't introduce gold or a second colour into it.
 - Don't add a drop shadow, gradient, or outline.
 - Don't stretch, skew, or rotate it.
 - Don't put the lockup on a busy photo without a scrim. Use the reversed variant over a navy overlay (~55% opacity).
@@ -39,10 +39,12 @@ Keep padding around the lockup equal to the **cap-height of "thrive"** on all si
 | Token | Hex | Role |
 |---|---|---|
 | Navy / ink | `#0F172A` | Wordmark, body text |
-| Brand blue | `#2563EB` | The logo mark (hub, spokes and nodes), primary buttons, links, accents |
+| Brand navy | `#264B73` | The logo mark (hub, spokes and nodes), primary buttons, links, accents, and dark surfaces |
+| Brand navy hover | `#33608F` | Hover state for buttons and links; navy accent |
 | Brand gold | `#FBBF24` | Accent dividers, highlights. Not used in the logo |
-| Brand navy (surfaces) | `#0B1F3F` | Large dark backgrounds (navy sections), reversed-logo backdrop |
 | White | `#FFFFFF` | Reversed wordmark and nodes; backgrounds |
+
+The palette was unified to a single navy (`#264B73`) site-wide; the old separate brand blue (`#2563EB`) and surface navy (`#0B1F3F`) are retired. `src/index.css` is the source of truth for exact token values.
 
 Two to three colours in any single application. The gold is for accents, dividers, and highlights only. Never in the logo, never a full background or large fill.
 

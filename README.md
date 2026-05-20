@@ -16,10 +16,11 @@ Marketing site for United To Thrive LLC, the network behind Profit Partners, Mas
 
 ```bash
 npm install
-npm run dev      # localhost:8080
-npm run build    # production build to dist/
-npm run preview  # preview the production build locally
+npm run dev        # localhost:8080
+npm run build      # production build to dist/
+npm run preview    # preview the production build locally
 npm run lint
+npm run typecheck  # tsc --noEmit
 npm test
 ```
 
@@ -66,7 +67,7 @@ _context/             # gitignored: local content reference for Claude
 
 ## Brand
 
-- **Primary palette:** Brand blue `#2563EB`, navy `#0B1F3F`, gold `#FBBF24` on white. (Tokens defined in [src/index.css](src/index.css).)
+- **Primary palette:** Navy `#264B73` (primary, unified site-wide), navy hover `#33608F`, gold `#FBBF24` (accents only), ink `#0F172A` (text) on white. (Tokens defined in [src/index.css](src/index.css).)
 - **Type:** Montserrat throughout.
 - **Voice:** Direct, specific, mission-first. Avoid stock photo aesthetics; this is a people business.
 

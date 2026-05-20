@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "vitest.explorer",
+    "usernamehw.errorlens",
+    "formulahendry.auto-rename-tag",
+    "streetsidesoftware.code-spell-checker",
+    "chrischinchilla.vale-vscode",
+    "editorconfig.editorconfig",
+    "yoavbls.pretty-ts-errors"
+  ],
+  "unwantedRecommendations": []
+}
