@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Layout from "@/components/site/Layout";
 
 const STEPS = [
@@ -26,8 +27,10 @@ const FORM_BG = "https://images.unsplash.com/photo-1651514645933-c26e0eb4ace3";
 const GHL_EMBED_SCRIPT = "https://api.appendment.com/js/form_embed.js";
 
 const Apply = () => {
+  const navigate = useNavigate();
+
   // Load the GHL embed script once. It listens for the form iframe and
-  // resizes it to fit content (and handles the redirect-on-submit).
+  // resizes it to fit content.
   useEffect(() => {
     if (document.querySelector(`script[src="${GHL_EMBED_SCRIPT}"]`)) return;
     const script = document.createElement("script");
@@ -35,6 +38,45 @@ const Apply = () => {
     script.async = true;
     document.body.appendChild(script);
   }, []);
+
+  // Send applicants to the booking page once they submit the embedded form.
+  // The GHL form posts a window message on submit (it has no redirect set in
+  // GHL), so we listen for that signal and route to /booking ourselves.
+  useEffect(() => {
+    const GHL_ORIGINS = /(^|\.)(leadconnectorhq\.com|appendment\.com|msgsndr\.com)$/i;
+    let handled = false;
+
+    const looksLikeSubmit = (data: unknown): boolean => {
+      let text = "";
+      if (typeof data === "string") {
+        text = data;
+      } else {
+        try {
+          text = JSON.stringify(data ?? "");
+        } catch {
+          text = "";
+        }
+      }
+      return /form[\s_-]?submit(ted)?/i.test(text);
+    };
+
+    const onMessage = (event: MessageEvent) => {
+      if (handled) return;
+      let host = "";
+      try {
+        host = new URL(event.origin).hostname;
+      } catch {
+        return;
+      }
+      if (!GHL_ORIGINS.test(host)) return;
+      if (!looksLikeSubmit(event.data)) return;
+      handled = true;
+      navigate("/booking");
+    };
+
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, [navigate]);
 
   return (
     <Layout
@@ -112,7 +154,7 @@ const Apply = () => {
           <article className="mt-10 rounded-2xl overflow-hidden bg-white shadow-[0_24px_60px_-12px_rgba(0,0,0,0.55)]">
             <div aria-hidden className="h-1.5" style={{ backgroundColor: "#264B73" }} />
             <div className="p-4 sm:p-6">
-              {/* GHL embedded form. Redirect-on-submit (to /booking) is configured in GHL. */}
+              {/* GHL embedded form. On submit, the listener above routes the applicant to /booking. */}
               <iframe
                 src="https://api.appendment.com/widget/form/xLPvzS4TrNEZxAviWuQT"
                 style={{ width: "100%", height: "1058px", border: "none", borderRadius: "8px" }}
