@@ -57,7 +57,13 @@ const Apply = () => {
           text = "";
         }
       }
-      return /form[\s_-]?submit(ted)?/i.test(text);
+      // GHL's documented submit event, kept as a fallback for other form versions.
+      if (/form[\s_-]?submit(ted)?/i.test(text)) return true;
+      // This account's form signals a completed submit by posting a
+      // "set-sticky-contacts" message carrying the newly created contact
+      // (a customer_id plus the submitted email).
+      if (/set-sticky-contacts/i.test(text) && /_ud/.test(text) && /(customer_id|email)/i.test(text)) return true;
+      return false;
     };
 
     const onMessage = (event: MessageEvent) => {
