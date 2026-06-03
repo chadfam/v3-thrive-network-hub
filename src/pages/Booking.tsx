@@ -69,10 +69,10 @@ const Booking = () => {
             <div className="p-4 sm:p-6">
               {/* GHL embedded booking calendar. form_embed.js resizes the iframe to fit. */}
               <iframe
-                src="https://api.appendment.com/widget/booking/2JFBN5TMhdh4yTUNr5hV"
+                src="https://api.appendment.com/widget/booking/w4tfYQjO7AbEe0Ky6TQR"
                 style={{ width: "100%", height: "700px", border: "none", overflow: "hidden" }}
                 scrolling="no"
-                id="2JFBN5TMhdh4yTUNr5hV_1779141004615"
+                id="w4tfYQjO7AbEe0Ky6TQR_1779141004615"
                 title="Book a call with United to Thrive"
               />
             </div>
