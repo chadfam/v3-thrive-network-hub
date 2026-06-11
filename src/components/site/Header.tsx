@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, KeyboardEvent } from "react";
 import { ChevronDown } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import ThriveLogo from "@/components/site/ThriveLogo";
+import uttLogo from "@/assets/utt-logo-stacked-light.svg";
 import { cn } from "@/lib/utils";
 
 type SubItem = { label: string; description: string; href: string; isOverview?: boolean };
@@ -153,9 +153,9 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-slate-ink/10">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 h-16 md:h-20 flex items-center justify-between">
-        <Link to="/" aria-label="Thrive home" className="inline-flex items-center">
-          <ThriveLogo className="h-7 md:h-8 w-auto" />
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 py-3 md:py-4 min-h-[72px] md:min-h-[88px] flex items-center justify-between">
+        <Link to="/" aria-label="United to Thrive" className="inline-flex items-center">
+          <img src={uttLogo} alt="United to Thrive" className="h-12 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 lg:gap-10 h-full">
@@ -263,8 +263,8 @@ const Header = () => {
       {/* Mobile drawer */}
       {mobileOpen && (
         <div id="mobile-menu" className="fixed inset-0 z-50 bg-background md:hidden overflow-y-auto">
-          <div className="h-16 px-6 flex items-center justify-between border-b border-slate-ink/10">
-            <ThriveLogo className="h-7 w-auto" />
+          <div className="min-h-[72px] py-3 px-6 flex items-center justify-between border-b border-slate-ink/10">
+            <img src={uttLogo} alt="United to Thrive" className="h-12 w-auto" />
             <button onClick={() => setMobileOpen(false)} aria-label="Close menu" className="inline-flex items-center justify-center w-11 h-11 text-slate-ink">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
