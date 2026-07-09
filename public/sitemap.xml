@@ -18,4 +18,5 @@
   <url><loc>https://unitedtothrive.com/nominate</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://unitedtothrive.com/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://unitedtothrive.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://unitedtothrive.com/oasis</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>
