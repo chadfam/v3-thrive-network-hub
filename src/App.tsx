@@ -27,6 +27,7 @@ import Contact from "./pages/Contact.tsx";
 import Nominate from "./pages/Nominate.tsx";
 import Privacy from "./pages/Privacy.tsx";
 import Terms from "./pages/Terms.tsx";
+import Oasis from "./pages/Oasis.tsx";
 
 const queryClient = new QueryClient();
 
